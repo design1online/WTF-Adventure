@@ -52,6 +52,7 @@ module.exports = {
       jQuery: 'jquery',
       'windows.jQuery': 'jquery',
     }),
+    // new HtmlWebpackPlugin(),
     // new HtmlWebpackPlugin({
     //   filename: '../index.html',
     //   template: './src/client/index.html',

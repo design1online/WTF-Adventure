@@ -45,7 +45,7 @@
   ],
   "license": "wtfpl-2.0",
   "scripts": {
-    "start": "webpack --mode=development",
+    "start": "webpack --mode=development --watch",
     "wtfserver": "nodemon --exec babel-node src/server/js/main.js",
     "deploy": "webpack --mode=production --config webpack.production.config.js",
     "lint": "eslint ./src/**/**.js",
