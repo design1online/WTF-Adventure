@@ -69,7 +69,9 @@ Running the server is fairly straightforward, for the most part. If you already 
 
 ### Step 1 - Install the dependencies
 
-In the command line run: `npm install`
+Depending on your machine, you may need additional libraries to run the canvas in order to install WTF Adventure correctly. Visit [Canvas](https://github.com/Automattic/node-canvas#compiling) and check the compiling section for any libraries your setup my need and applies these before installing below.
+
+In the command line: `npm install`
 
 ### Step 2 - Setting the config files
 
@@ -121,3 +123,17 @@ Now open your browser and navigate to `http://{ip}:{port}/` as defined in your c
   * When this happens you will need to look at the specific error you are getting from the dependency and try to resolve the issue
   * Sometimes these can be fixed by upgrading to the latest version or bumping back to a previous version
   * Try searching on Stack Overflow or in the GitHub repo click on the issues tab for the NPM package causing the issue to see if there is a possible solution
+
+## Running Unit Tests
+
+In the command line run `npm test`. This project uses jest and will also automatically generate coverage badges for you.
+
+## Running the Linter
+
+In the command line run `npm lint`. This project uses eslint.
+
+## Viewing & Generating Autodocs
+
+In the command line run `npm docs` and the currently generated documentation will open in a new browser window.
+
+If you would like to update the docs to reflect your latest changes use `npm esdocs` to re-build the generated documentation.

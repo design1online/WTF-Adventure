@@ -45,7 +45,6 @@ module.exports = {
     libraryTarget: 'umd',
     filename: '[name].js',
   },
-  watch: true,
   plugins: [
     new CleanWebpackPlugin(['build']),
     new webpack.ProvidePlugin({
@@ -53,23 +52,23 @@ module.exports = {
       jQuery: 'jquery',
       'windows.jQuery': 'jquery',
     }),
-    new HtmlWebpackPlugin({
-      filename: '../index.html',
-      template: './src/client/index.html',
-      chunks: ['vendor', 'app', 'assets'],
-      chunksSortMode: 'manual',
-      minify: {
-        removeAttributeQuotes: false,
-        collapseWhitespace: false,
-        html5: false,
-        minifyCSS: false,
-        minifyJS: false,
-        minifyURLs: false,
-        removeComments: false,
-        removeEmptyAttributes: false,
-      },
-      hash: false,
-    }),
+    // new HtmlWebpackPlugin({
+    //   filename: '../index.html',
+    //   template: './src/client/index.html',
+    //   chunks: ['vendor', 'app', 'assets'],
+    //   chunksSortMode: 'manual',
+    //   minify: {
+    //     removeAttributeQuotes: false,
+    //     collapseWhitespace: false,
+    //     html5: false,
+    //     minifyCSS: false,
+    //     minifyJS: false,
+    //     minifyURLs: false,
+    //     removeComments: false,
+    //     removeEmptyAttributes: false,
+    //   },
+    //   hash: false,
+    // }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
@@ -92,13 +91,10 @@ module.exports = {
         awaitWriteFinish: true,
       },
     }),
-    new ModernizrWebpackPlugin({
-      'feature-detects': ['input', 'canvas', 'css/resize'],
-      output: {
-        comments: true,
-        beautify: true,
-      },
-    }),
+    // new ModernizrWebpackPlugin({
+    //   "minify": true,
+    //   "feature-detects": ['input', 'canvas', 'css/resize']
+    // }),
   ],
   module: {
     rules: [
