@@ -121,3 +121,9 @@ Now open your browser and navigate to `http://{ip}:{port}/` as defined in your c
   * When this happens you will need to look at the specific error you are getting from the dependency and try to resolve the issue
   * Sometimes these can be fixed by upgrading to the latest version or bumping back to a previous version
   * Try searching on Stack Overflow or in the GitHub repo click on the issues tab for the NPM package causing the issue to see if there is a possible solution
+* If you see `Error: error:0308010C:digital envelope routines::unsupported` try one of these
+  * Try downgrading to node v16
+  * Enable legacy OpenSSL provider
+    * on Unix - `export NODE_OPTIONS=--openssl-legacy-provider`
+    * on Windows - `set NODE_OPTIONS=--openssl-legacy-provider`
+    * on Powershell - `$env:NODE_OPTIONS = "--openssl-legacy-provider"`
