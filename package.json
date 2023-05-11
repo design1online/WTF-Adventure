@@ -94,7 +94,8 @@
       "node_modules"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>/setupTests.js"
+      "<rootDir>/setupTests.js",
+      "jest-canvas-mock"
     ]
   },
   "dependencies": {
@@ -111,6 +112,7 @@
     "modernizr": "^3.11.3",
     "modernizr-webpack-plugin": "^1.0.7",
     "mysql": "^2.18.1",
+    "node-sass": "^8.0.0",
     "popper.js": "^1.16.1",
     "request": "^2.88.2",
     "require": "^2.4.20",
@@ -127,6 +129,7 @@
     "@babel/cli": "^7.12.1",
     "@babel/node": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.1",
+    "@types/jsdom": "^21.1.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
@@ -134,7 +137,6 @@
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "^2.2.2",
-    "canvas": "^2.6.1",
     "clean-webpack-plugin": "^1.0.1",
     "codecov": "^3.8.1",
     "copy-webpack-plugin": "^4.6.0",
@@ -150,9 +152,9 @@
     "html-webpack-plugin": "^3.2.0",
     "imports-loader": "^0.8.0",
     "jest": "^25.5.4",
+    "jest-canvas-mock": "^2.5.0",
     "make-coverage-badge": "^1.2.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.14.1",
     "nodemon": "^1.19.4",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
