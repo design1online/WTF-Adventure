@@ -23,7 +23,7 @@ export default class App {
      * loaded from ./assets/data/config.json
      * @type {Object}
      */
-    this.config = null;
+    this.config = { version: 0.0 };
 
     /**
      * An instance of the DOM $('body') element

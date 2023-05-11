@@ -19,7 +19,6 @@ export default {
     const isAndroidTablet = /android/i.test(userAgent);
     return (isAppleTablet || isAndroidTablet) && screenWidth >= 640;
   },
-
   iOSVersion: () => {
     if (window.MSStream) {
       // There is some iOS in Windows Phone...
@@ -42,7 +41,6 @@ export default {
 
     return '';
   },
-
   androidVersion: () => {
     const userAgent = navigator.userAgent.split('Android');
     let version;
@@ -53,7 +51,6 @@ export default {
 
     return version;
   },
-
   isAppleDevice: () => {
     const devices = [
       'iPad Simulator',

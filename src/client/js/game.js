@@ -210,7 +210,7 @@ export default class Game {
      * A reference to a shop
      * @type {Shops}
      */
-    this.bubble = null;
+    this.shop = null;
 
     this.loadRenderer();
     this.loadControllers();
@@ -419,6 +419,9 @@ export default class Game {
     return true;
   }
 
+  /**
+   * What does this do??
+   */
   loadedSpritesCallback() {
     log.debug('loaded sprites callback');
   }
@@ -885,6 +888,11 @@ export default class Game {
     return true;
   }
 
+  /**
+   * Responds to the combat packet
+   * @param {Packet} data
+   * @return null
+   */
   combatCallback(data) {
     log.debug('Game - combatCallback()', data);
 
@@ -966,6 +974,12 @@ export default class Game {
     }
   }
 
+  /**
+   * Respond to an animation callback
+   * @param {string} id ID of the entity 
+   * @param {Packet} info animation, speed and count
+   * @return null
+   */
   animationCallback(id, info) {
     log.debug('Game - animationCallback()', id, info);
 
@@ -981,6 +995,11 @@ export default class Game {
     entity.animate(animation, speed, count);
   }
 
+  /**
+   * Respond to a projectile
+   * @param {number} opcode the packet opcode
+   * @param {Object} info the projectile data
+   */
   projectileCallback(opcode, info) {
     log.debug('Game - projectileCallback()', opcode, info);
 
@@ -993,12 +1012,21 @@ export default class Game {
     }
   }
 
+  /**
+   * The population (number of players) in the game
+   * @param {number} population the new population amount
+   */
   populationCallback(population) {
     log.debug('Game - populationCallback()', population);
 
     this.population = population;
   }
 
+  /**
+   * Adjust the hp and mana on an entity
+   * @param {Packet} data
+   * @return null
+   */
   pointsCallback(data) {
     log.debug('Game - pointsCallback()', data);
 
@@ -1026,12 +1054,20 @@ export default class Game {
     }
   }
 
+  /**
+   * Ping/pong the network connection to keep it active
+   * and prevent timeoutse
+   */
   networkCallback() {
     log.debug('Game - networkCallback()');
 
     this.socket.send(Packets.Network, [Packets.NetworkOpcode.Pong]);
   }
 
+  /**
+   * Callback from chat packet
+   * @param {Object} info
+   */
   chatCallback(info) {
     log.debug('Game - chatCallback()', info);
 
@@ -1057,6 +1093,12 @@ export default class Game {
     this.input.chatHandler.add(info.name, info.text, info.colour);
   }
 
+  /**
+   * Callback from inventory change
+   * @param {number} opcode type of inventory change
+   * @param {Object} info data relevant for the inventory change
+   * @return null
+   */
   inventoryCallback(opcode, info) {
     log.debug('Game - inventoryCallback()', opcode, info);
 
@@ -1098,6 +1140,12 @@ export default class Game {
     }
   }
 
+  /**
+   * Respond to bank changes from the server
+   * @param {number} opcode the type of bank change
+   * @param {Object} info changes to make
+   * @returns 
+   */
   bankCallback(opcode, info) {
     log.debug('Game - bankCallback()', opcode, info);
 
@@ -1125,6 +1173,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Respond to quest changes from the server
+   * @param {number} opcode the quest change
+   * @param {Object} info info to update for the quest
+   */
   questCallback(opcode, info) {
     log.debug('Game - questCallback()', opcode, info, this.interface.getQuestPage());
 
@@ -1149,6 +1202,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Respond to notifications from the server
+   * @param {number} opcode the notification type
+   * @param {*} message the message information
+   */
   notificationCallback(opcode, message) {
     log.debug('Game - notificationCallback()', opcode, message);
 
@@ -1169,6 +1227,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Blink the given entity (show/hide repeatedly)
+   * @param {Entity} instance the instance of the entity
+   * @return null
+   */
   blinkCallback(instance) {
     log.debug('Game - blickCallback()', instance);
 
@@ -1181,6 +1244,11 @@ export default class Game {
     item.blink(150);
   }
 
+  /**
+   * Respond to healing from the server
+   * @param {Object} info the entity to heal
+   * @returns 
+   */
   healCallback(info) {
     log.debug('Game - healCallback()', info);
 
@@ -1223,6 +1291,11 @@ export default class Game {
     entity.triggerHealthBar();
   }
 
+  /**
+   * Respond to experience changes from the server
+   * @param {Object} info the id and experience to change on the entity
+   * @return null
+   */
   experienceCallback(info) {
     log.debug('Game - experienceCallback()', info);
 
@@ -1244,6 +1317,11 @@ export default class Game {
     this.interface.profile.update();
   }
 
+  /**
+   * Respond to a dealth from the server
+   * @param {number} id the ID of the entity that died
+   * @return null 
+   */
   deathCallback(id) {
     log.debug('Game - deathCallback()', id);
 
@@ -1260,6 +1338,11 @@ export default class Game {
     this.app.body.addClass('death');
   }
 
+  /**
+   * Respond to audio changes
+   * @param {Object} song information about the song
+   * @return null
+   */
   audioCallback(song) {
     log.debug('Game - audioCallback()', song);
 
@@ -1272,6 +1355,12 @@ export default class Game {
     this.audio.update();
   }
 
+  /**
+   * Respond to NPC changes from the server
+   * @param {number} opcode the type of NPC change
+   * @param {Object} info what NPC changes to make
+   * @return null
+   */
   npcCallback(opcode, info) {
     log.debug('Game - npcCallback()', opcode, info);
 
@@ -1365,6 +1454,14 @@ export default class Game {
     }
   }
 
+  /**
+   * Respond to respawn changes from the server
+   * by setting the player to a new location on the grid
+   * @param {number} id player id
+   * @param {number} x new x position
+   * @param {number} y new y position
+   * @return null
+   */
   respawnCallback(id, x, y) {
     log.debug('Game - respawnCallback()', id, x, y);
 
@@ -1382,6 +1479,11 @@ export default class Game {
     this.player.dead = false;
   }
 
+  /**
+   * Respond to enchant/magic usage from the server
+   * @param {number} opcode the type of enchant
+   * @param {Object} info information to change
+   */
   enchantCallback(opcode, info) {
     log.debug('Game - enchantCallback()', opcode, info);
 
@@ -1402,6 +1504,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Respond to guild changes from the server
+   * @param {number} opcode the type of change
+   * @param {Object} info what to change
+   */
   guildCallback(opcode, info) {
     log.debug('Game - guildCallback()', opcode, info);
 
@@ -1417,6 +1524,12 @@ export default class Game {
     this.guild = info;
   }
 
+  /**
+   * Respond to pointer changes from the server
+   * @param {number} opcode the type of pointer change
+   * @param {Object} info the pointer information
+   * @return null
+   */
   pointerCallback(opcode, info) {
     log.debug('Game - pointerCallback()', opcode, info);
 
@@ -1450,6 +1563,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Respond to player versus player changes from the server
+   * @param {number} id the player ID
+   * @param {Object} pvp an instance of the player they're in pvp with
+   */
   pvpCallback(id, pvp) {
     log.debug('Game - pvpCallback()', id, pvp);
 
@@ -1463,7 +1581,12 @@ export default class Game {
       }
     }
   }
-
+  
+  /**
+   * Respond to shop changes from the server
+   * @param {number} opcode the type of shop change
+   * @param {Object} info the data for the change
+   */
   shopCallback(opcode, info) {
     log.debug('Game - spawnCallback()', opcode, info);
 
@@ -1493,39 +1616,58 @@ export default class Game {
     // @TODO fix this line
     this.renderer.loadStaticSprites();
 
+    // set the player camera
     this.getCamera().setPlayer(this.player);
 
+    // clear the renderer's first rendered frame
     this.renderer.renderedFrame[0] = -1;
 
+    // add the player to the list of entities
     this.entities.addEntity(this.player);
 
+    // get the player sprite
     const defaultSprite = this.getSprite(this.player.getSpriteName());
-
     this.player.setSprite(defaultSprite);
+
+    // set the player to the idle animation
     this.player.idle();
 
+    // tell the server the player is ready
     this.socket.send(Packets.Ready, [true]);
 
+    // create a new player handler
     this.playerHandler = new PlayerHandler(this, this.player);
 
+    // update the animated tiles on the renderer
     this.renderer.updateAnimatedTiles();
 
+    // set the player to the correct zone
     this.zoning = new Zoning(this);
 
+    // start the other sprites updating
     this.updater.setSprites(this.entities.sprites);
 
+    // force centering the camera on the player's location
     this.renderer.verifyCentration();
 
+    // create new localstorage data if this player is new
     if (this.storage.data.new) {
       this.storage.data.new = false;
       this.storage.save();
     }
 
+    // update localstorage to show the welcome
+    // message if the player is new
     if (this.storage.data.welcome !== false) {
       this.app.body.addClass('welcomeMessage');
     }
   }
 
+  /**
+   * Grabs user information from localstorage
+   * if it's available
+   * @return null
+   */
   implementStorage() {
     log.debug('Game - implementStorage()');
 
@@ -1550,18 +1692,36 @@ export default class Game {
     $('#rememberMe').addClass('active');
   }
 
+  /**
+   * Sets the direction of the player
+   * @param {number} direction 
+   */
   setPlayerMovement(direction) {
     log.debug('Game - setPlayerMovement()', direction);
 
     this.player.direction = direction;
   }
 
+  /**
+   * Sets the spot the player is attempting
+   * to move to
+   * @param {number} x x grid coordinate
+   * @param {number} y y grid coordinate
+   */
   movePlayer(x, y) {
     log.debug('Game - movePlayer()', x, y);
 
     this.moveCharacter(this.player, x, y);
   }
 
+  /**
+   * Attempt to move the character to the given
+   * position
+   * @param {Entity} character the entity to move
+   * @param {number} x x grid coordinate
+   * @param {number} y y grid coordinate
+   * @return null 
+   */
   moveCharacter(character, x, y) {
     log.debug('Game - moveCharacter()', character, x, y);
 
@@ -1572,6 +1732,14 @@ export default class Game {
     character.go(x, y);
   }
 
+  /**
+   * Find a path to the given coordinate
+   * @param {Entity} character the entity to move
+   * @param {number} x x grid position
+   * @param {number} y y grid position
+   * @param {Object[]} ignores an array of coordinate to ignore (typically blocked)
+   * @return {Object[]} array of x,y coordinates to move the player to the new location
+   */
   findPath(character, x, y, ignores) {
     log.debug('Game - findPath()', x, y, ignores);
 
@@ -1597,6 +1765,11 @@ export default class Game {
     return path;
   }
 
+  /**
+   * Handle input
+   * @param  {Modules} inputType the Modules.InputType to handle
+   * @param  {Object} data       data related to the input (keycode, coordinates, etc)
+   */
   onInput(inputType, data) {
     log.debug('Game - onInput()', inputType, data);
 
@@ -1634,6 +1807,9 @@ export default class Game {
     this.app.updateLoader('');
   }
 
+  /**
+   * Respwan the player
+   */
   respawn() {
     log.debug('Game - respawn()');
 
@@ -1643,6 +1819,11 @@ export default class Game {
     this.socket.send(Packets.Respawn, [this.player.id]);
   }
 
+  /**
+   * Trade with the player
+   * @param {Player} player data
+   * @returns null
+   */
   tradeWith(player) {
     log.debug('Game - tradeWith()', player);
 
@@ -1653,6 +1834,9 @@ export default class Game {
     this.socket.send(Packets.Trade, [Packets.TradeOpcode.Request, player.id]);
   }
 
+  /**
+   * Resize the window, re-render the screen
+   */
   resize() {
     log.debug('Game - resize()');
 
@@ -1663,34 +1847,62 @@ export default class Game {
     }
   }
 
+  /**
+   * Create an instance for the player
+   */
   createPlayer() {
     log.debug('Game - createPlayer()');
 
     this.player = new Player();
   }
 
+  /**
+   * Get the proper scale for the graphics to draw to the window
+   * (smaller for mobile, larger for tablet, largest for desktop)
+   * @return {number}
+   */
   getScaleFactor() {
     return this.app.getScaleFactor();
   }
 
+  /**
+   * Return the browser local storage
+   * @return {Storage} browser local storage
+   */
   getStorage() {
     log.debug('Game - getStorage()');
 
     return this.storage;
   }
 
+  /**
+   * Get the instance of the camera
+   * @return {Camera} the game camera
+   */
   getCamera() {
     log.debug('Game - getCamera()');
 
     return this.renderer.camera;
   }
 
+  /**
+   * Find a sprite in the entities list
+   * @param {String} spriteName name (id) of the sprite
+   * @return {Sprite} an instance of the sprite
+   */
   getSprite(spriteName) {
     log.debug('Game - getSprite()', spriteName);
 
     return this.entities.getSprite(spriteName);
   }
 
+  /**
+   * Get an entity at a specific coordinate
+   * @param {Number} x grid x coordinate
+   * @param {Number} y grid y coordinate
+   * @param {Boolean} ignoreSelf if true, won't return the player entity
+   * @return {Entity} the entitiy at this x,y coordinate
+   */
   getEntityAt(x, y, ignoreSelf) {
     log.debug('Game - getEntityAt()', x, y, ignoreSelf);
 
@@ -1716,24 +1928,42 @@ export default class Game {
     return null;
   }
 
+  /**
+   * Get the player's username from local storage
+   * @return {String} player username
+   */
   getStorageUsername() {
     log.debug('Game - getStorageUsername()');
 
     return this.storage.data.player.username;
   }
 
+  /**
+   * Get the player's password from local storage
+   * @TODO remove this for something more secure in the future
+   * @return {String} player password
+   */
   getStoragePassword() {
     log.debug('Game - getStoragePassword()');
 
     return this.storage.data.player.password;
   }
 
+  /**
+   * Check if the player has the remember me
+   * box checked in local storage
+   * @return {Boolean}
+   */
   hasRemember() {
     log.debug('Game - hasRemember()');
 
     return this.storage.data.player.rememberMe;
   }
 
+  /**
+   * Set the instance of the renderer
+   * @param {Renderer} renderer game renderer
+   */
   setRenderer(renderer) {
     log.debug('Game - setRenderer()', renderer);
 
@@ -1742,6 +1972,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the contents of local storage
+   * @param {Object} storage local storage data
+   */
   setStorage(storage) {
     log.debug('Game - setStorage()', storage);
 
@@ -1750,6 +1984,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the game socket
+   * @param {Socket} socket instance of the serve rweb socket
+   */
   setSocket(socket) {
     log.debug('Game - setSocket()', socket);
 
@@ -1758,6 +1996,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the game messages
+   * @param {Messages} messages
+   */
   setMessages(messages) {
     log.debug('Game - setMessages()', messages);
 
@@ -1766,6 +2008,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the game updater
+   * @param {Updater} updater
+   */
   setUpdater(updater) {
     log.debug('Game - setUpdater()', updater);
 
@@ -1774,6 +2020,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the entities controller
+   * @param {Entities} entities
+   */
   setEntityController(entities) {
     log.debug('Game - setEntityController()', entities, this.entities);
 
@@ -1782,6 +2032,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the game input controller
+   * @param {Input} input
+   */
   setInput(input) {
     log.debug('Game - setInput()', input);
 
@@ -1791,6 +2045,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the path finder
+   * @param {Pathfinder} pathfinder
+   */
   setPathfinder(pathfinder) {
     log.debug('Game - setPathfinder()', pathfinder);
 
@@ -1799,6 +2057,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of info
+   * @param {Info} info
+   */
   setInfo(info) {
     log.debug('Game - setInfo()', info);
 
@@ -1807,6 +2069,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the chat bubble
+   * @param {Bubble} bubble
+   */
   setBubble(bubble) {
     log.debug('Game - setBubble()', bubble);
 
@@ -1815,6 +2081,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the pointer
+   * @param {Pointer} pointer
+   */
   setPointer(pointer) {
     log.debug('Game - setPointer()', pointer);
 
@@ -1823,6 +2093,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the interface
+   * @param {Interface} intrface
+   */
   setInterface(intrface) {
     log.debug('Game - setInterface()', intrface);
 
@@ -1831,6 +2105,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Set the instance of the audio
+   * @param {Audio} audio
+   */
   setAudio(audio) {
     log.debug('Game - setAudio()', audio);
 
