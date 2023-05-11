@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">15% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/60</span>
+                <span class='fraction'>9/60</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">7.69% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>1/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">15.25% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/59</span>
+                <span class='fraction'>9/59</span>
             </div>
         
             
@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line low'></div>
     <pre><table class="coverage">
@@ -304,55 +310,55 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -516,7 +522,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import $ from 'jquery';
-import Modules from '../utils/modules';
+import Module from '../utils/modules';
 import Packets from '../network/packets';
 &nbsp;
 /**
@@ -528,60 +534,60 @@ export default class Chat {
    * Default constructor
    * @param {Game} game instance of the game class
    */
-<span class="fstat-no" title="function not covered" >  co</span>nstructor(game) {
+  constructor(game) {
     /**
      * Instance of the game object
      * @type {Game}
      */
-<span class="cstat-no" title="statement not covered" >    this.game = game;</span>
+    this.game = game;
 &nbsp;
     /**
      * Jquery reference to the chat container
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.chat = $('#chat');</span>
+    this.chat = $('#chat');
 &nbsp;
     /**
      * Jquery reference to the chat logs container
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.log = $('#chatLog');</span>
+    this.log = $('#chatLog');
 &nbsp;
     /**
      * Jquery reference to the chat input element
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.input = $('#hud-chat-input');</span>
+    this.input = $('#hud-chat-input');
 &nbsp;
     /**
      * Jquery reference to the chat button
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.button = $('#hud-chat');</span>
+    this.button = $('#hud-chat');
 &nbsp;
     /**
      * The visibility of the chat containers
      * @type {Boolean}
      */
-<span class="cstat-no" title="statement not covered" >    this.visible = false;</span>
+    this.visible = false;
 &nbsp;
     /**
      * The duration before the chat message starts to fade out
      * @type {Number}
      */
-<span class="cstat-no" title="statement not covered" >    this.fadingDuration = 5000;</span>
+    this.fadingDuration = 5000;
 &nbsp;
     /**
      * A reference to the timeout for the chat message
      * @type {Object}
      */
-<span class="cstat-no" title="statement not covered" >    this.fadingTimeout = null;</span>
+    this.fadingTimeout = null;
 &nbsp;
     /**
      * On click handler for the chat button, toggles the visibility
      * @type {Function}
      */
-<span class="cstat-no" title="statement not covered" >    this.button.click(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+    this.button.click(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >      this.button.blur();</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      if (this.input.is(':visible')) {</span>
@@ -630,7 +636,7 @@ export default class Chat {
   */
 <span class="fstat-no" title="function not covered" >  ke</span>y(keyCode) {
 <span class="cstat-no" title="statement not covered" >    switch (keyCode) {</span>
-      case Modules.Keys.Enter:
+      case Module.Keys.Enter:
 <span class="cstat-no" title="statement not covered" >        if (this.input.val() === '') {</span>
 <span class="cstat-no" title="statement not covered" >          this.toggle();</span>
         } else {
@@ -750,10 +756,9 @@ export default class Chat {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Oct 29 2021 18:58:01 GMT-0400 (Eastern Daylight Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-05-11T23:24:49.698Z
             </div>
-        </div>
         <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {

@@ -183,13 +183,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Sprite from &apos;<span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber5">WTF-Adventure/WTF-Adventure/src/client/js/entity/sprite.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Sprite from &apos;<span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber25">WTF-Adventure/WTF-Adventure/src/client/js/entity/sprite.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber5">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber25">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -209,14 +209,42 @@
 
   
   
-  
-  
-
-  
-
+  <div class="description" data-ice="description"><p>A class for generating animations for sprites</p>
+</div>
   
 
   
+
+  <div data-ice="exampleDocs">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">const playerSprite = new Sprite(
+ {
+  id: &apos;player&apos;,
+  animations: {
+    idle: {
+      length: 4,
+      row: 0,
+    },
+  },
+  width: 32,
+  height: 32,
+  offsetX: 0,
+  offsetX: 0
+  offsetAngle: 0
+ }, 1);</code></pre>
+    </div>
+</div>
+
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber6">Sprite</a></span></li>
+</ul>
+  </div>
 
   
 </div>
@@ -241,13 +269,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(sprite: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, scale: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Represents a sprite that can be rendered on the canvas.</p>
+</div>
       </div>
     </td>
     <td>
@@ -276,13 +305,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-animationData">animationData</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-animationData">animationData</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Contains data for each sprite animation</p>
+</div>
       </div>
     </td>
     <td>
@@ -310,7 +340,9 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>The path to load the spritesheet animations based
+on the scale and id of the sprite</p>
+</div>
       </div>
     </td>
     <td>
@@ -332,13 +364,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-height">height</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-height">height</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The height of the sprite</p>
+</div>
       </div>
     </td>
     <td>
@@ -360,13 +393,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-id">id</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-id">id</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Name of the sprite, used in the filepath</p>
+</div>
       </div>
     </td>
     <td>
@@ -388,13 +422,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-image">image</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-image">image</a></span></span><span class="code" data-ice="signature">: <span>Image</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Holds the image generated for the sprite</p>
+</div>
       </div>
     </td>
     <td>
@@ -422,35 +457,9 @@
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-offfsetAngle">offfsetAngle</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>If the sprite has been loaded or not,
+and is set by the onLoadCallback</p>
+</div>
       </div>
     </td>
     <td>
@@ -478,7 +487,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Angle which the sprite is offset</p>
+</div>
       </div>
     </td>
     <td>
@@ -506,7 +516,9 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>X offset for clipping out the sprite from the spritesheet,
+defaults to -16</p>
+</div>
       </div>
     </td>
     <td>
@@ -534,7 +546,9 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Y offset for clipping out the sprite from the spritesheet,
+defaults to -16</p>
+</div>
       </div>
     </td>
     <td>
@@ -556,13 +570,16 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-onLoadCallback">onLoadCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-onLoadCallback">onLoadCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Callback for loading the sprite animations,
+sets the sprite to loaded once all animation
+images are done loading</p>
+</div>
       </div>
     </td>
     <td>
@@ -584,13 +601,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-scale">scale</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-scale">scale</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Scale of the sprite</p>
+</div>
       </div>
     </td>
     <td>
@@ -612,13 +630,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-sprite">sprite</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-sprite">sprite</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Reference to the sprite info</p>
+</div>
       </div>
     </td>
     <td>
@@ -640,13 +659,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-whiteSprite">whiteSprite</a></span></span><span class="code" data-ice="signature">: {&quot;loaded&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-whiteSprite">whiteSprite</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Used for generating the hurt sprites</p>
+</div>
       </div>
     </td>
     <td>
@@ -668,13 +688,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-width">width</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-width">width</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The width of the sprite</p>
+</div>
       </div>
     </td>
     <td>
@@ -703,41 +724,13 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-createAnimations">createAnimations</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-createAnimations">createAnimations</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-createHurtSprite">createHurtSprite</a></span></span><span class="code" data-ice="signature">()</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>This is when an entity gets hit, they turn red then white.</p>
+        <div data-ice="description"><p>Creates an object containing Animation objects for each animation defined in the sprite data.</p>
 </div>
       </div>
     </td>
@@ -760,13 +753,43 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-getHurtSprite">getHurtSprite</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-createHurtSprite">createHurtSprite</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
         
         
+        <div data-ice="description"><p>Creates a new sprite that is tinted red to indicate damage.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-getHurtSprite">getHurtSprite</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
         
+        
+        <div data-ice="description"><p>Retrieves the previously created hurt sprite, or creates a new one if it hasn&apos;t been created yet.</p>
+</div>
       </div>
     </td>
     <td>
@@ -794,7 +817,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Loads the sprite image from a file.</p>
+</div>
       </div>
     </td>
     <td>
@@ -816,13 +840,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-loadSprite">loadSprite</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-onLoad">onLoad</a></span></span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Registers a callback function to be called when the sprite image finishes loading.</p>
+</div>
       </div>
     </td>
     <td>
@@ -844,41 +869,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-onLoad">onLoad</a></span></span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-update">update</a></span></span><span class="code" data-ice="signature">(newScale: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-update">update</a></span></span><span class="code" data-ice="signature">(newScale: <span>*</span>)</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>Updates the sprite&apos;s scale and reloads the sprite image.</p>
+</div>
       </div>
     </td>
     <td>
@@ -904,22 +902,47 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(sprite: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, scale: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber6">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber33">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Represents a sprite that can be rendered on the canvas.</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">sprite</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>An object containing information about the sprite.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">scale</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The scale at which to render the sprite 1, 2, or 3.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -934,7 +957,13 @@
 
   
 
-  
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber24">Sprite constructor()</a></span></li>
+</ul>
+  </div>
 
   
   
@@ -950,18 +979,19 @@
     
     
     
-    <span class="code" data-ice="name">animationData</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">animationData</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber45">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber79">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Contains data for each sprite animation</p>
+</div>
 
   
 
@@ -997,14 +1027,16 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber44">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber73">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The path to load the spritesheet animations based
+on the scale and id of the sprite</p>
+</div>
 
   
 
@@ -1036,18 +1068,19 @@
     
     
     
-    <span class="code" data-ice="name">height</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">height</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber48">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber105">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The height of the sprite</p>
+</div>
 
   
 
@@ -1079,18 +1112,19 @@
     
     
     
-    <span class="code" data-ice="name">id</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">id</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber52">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Name of the sprite, used in the filepath</p>
+</div>
 
   
 
@@ -1122,18 +1156,19 @@
     
     
     
-    <span class="code" data-ice="name">image</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">image</span><span class="code" data-ice="signature">: <span>Image</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber24">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber85">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Holds the image generated for the sprite</p>
+</div>
 
   
 
@@ -1169,14 +1204,16 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber60">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>If the sprite has been loaded or not,
+and is set by the onLoadCallback</p>
+</div>
 
   
 
@@ -1197,50 +1234,7 @@
 
   
 
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-member-offfsetAngle">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">offfsetAngle</span><span class="code" data-ice="signature">: <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber52">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="onLoadCallback">onLoadCallback</a></span></li></ul></div>
   
 </div>
 <div class="detail" data-ice="detail">
@@ -1255,14 +1249,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber125">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Angle which the sprite is offset</p>
+</div>
 
   
 
@@ -1298,14 +1293,16 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber112">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>X offset for clipping out the sprite from the spritesheet,
+defaults to -16</p>
+</div>
 
   
 
@@ -1341,14 +1338,16 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber119">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Y offset for clipping out the sprite from the spritesheet,
+defaults to -16</p>
+</div>
 
   
 
@@ -1380,18 +1379,21 @@
     
     
     
-    <span class="code" data-ice="name">onLoadCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">onLoadCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber161">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber93">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Callback for loading the sprite animations,
+sets the sprite to loaded once all animation
+images are done loading</p>
+</div>
 
   
 
@@ -1423,18 +1425,19 @@
     
     
     
-    <span class="code" data-ice="name">scale</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">scale</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber10">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber46">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Scale of the sprite</p>
+</div>
 
   
 
@@ -1466,18 +1469,19 @@
     
     
     
-    <span class="code" data-ice="name">sprite</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">sprite</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber40">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the sprite info</p>
+</div>
 
   
 
@@ -1509,18 +1513,19 @@
     
     
     
-    <span class="code" data-ice="name">whiteSprite</span><span class="code" data-ice="signature">: {&quot;loaded&quot;: <span>*</span>}</span>
+    <span class="code" data-ice="name">whiteSprite</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber66">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Used for generating the hurt sprites</p>
+</div>
 
   
 
@@ -1552,18 +1557,19 @@
     
     
     
-    <span class="code" data-ice="name">width</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">width</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber47">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber99">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The width of the sprite</p>
+</div>
 
   
 
@@ -1598,18 +1604,19 @@
     
     
     
-    <span class="code" data-ice="name">createAnimations</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">createAnimations</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber63">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber169">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Creates an object containing Animation objects for each animation defined in the sprite data.</p>
+</div>
 
   
 
@@ -1621,8 +1628,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>An object containing Animation objects for each animation defined in the sprite data.</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1640,7 +1648,13 @@
 
   
 
-  
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber69">Sprite createAnimations()</a></span></li>
+</ul>
+  </div>
 
   
   
@@ -1653,18 +1667,19 @@
     
     
     
-    <span class="code" data-ice="name">createHurtSprite</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">createHurtSprite</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber89">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber197">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>This is when an entity gets hit, they turn red then white.</p>
+  <div data-ice="description"><p>Creates a new sprite that is tinted red to indicate damage.
+When an entity gets hit, they turn red then white.</p>
 </div>
 
   
@@ -1672,7 +1687,20 @@
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>A new sprite that is tinted red, or null if an error occurs.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -1697,18 +1725,19 @@
     
     
     
-    <span class="code" data-ice="name">getHurtSprite</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getHurtSprite</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber142">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber255">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Retrieves the previously created hurt sprite, or creates a new one if it hasn&apos;t been created yet.</p>
+</div>
 
   
 
@@ -1720,8 +1749,9 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The hurt sprite, or null if an error occurs.</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -1739,7 +1769,13 @@
 
   
 
-  
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber81">Sprite getHurtSprite()</a></span></li>
+</ul>
+  </div>
 
   
   
@@ -1756,57 +1792,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber134">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
-
-  
-
-  <div data-ice="properties">
+  <div data-ice="description"><p>Loads the sprite image from a file.</p>
 </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-loadSprite">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">loadSprite</span><span class="code" data-ice="signature">()</span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber39">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
 
   
 
@@ -1838,18 +1832,19 @@
     
     
     
-    <span class="code" data-ice="name">onLoad</span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+    <span class="code" data-ice="name">onLoad</span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber159">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber277">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Registers a callback function to be called when the sprite image finishes loading.</p>
+</div>
 
   
 
@@ -1863,9 +1858,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">callback</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The callback function to be called.</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1884,7 +1880,13 @@
 
   
 
-  
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber105">Sprite onLoad()</a></span></li>
+</ul>
+  </div>
 
   
   
@@ -1897,18 +1899,19 @@
     
     
     
-    <span class="code" data-ice="name">update</span><span class="code" data-ice="signature">(newScale: <span>*</span>)</span>
+    <span class="code" data-ice="name">update</span><span class="code" data-ice="signature">(newScale: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber56">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/src/client/js/entity/sprite.js.html#lineNumber157">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Updates the sprite&apos;s scale and reloads the sprite image.</p>
+</div>
 
   
 
@@ -1922,9 +1925,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">newScale</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The new scale to apply to the sprite.</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1943,7 +1947,13 @@
 
   
 
-  
+  <div data-ice="tests">
+    <h4>Test:</h4>
+    <ul>
+      
+    <li data-ice="test"><span><a href="test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber58">Sprite update()</a></span></li>
+</ul>
+  </div>
 
   
   

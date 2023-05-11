@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">7.14% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/84</span>
+                <span class='fraction'>6/84</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">10.52% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>2/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">7.14% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/84</span>
+                <span class='fraction'>6/84</span>
             </div>
         
             
@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line low'></div>
     <pre><table class="coverage">
@@ -370,31 +376,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -626,7 +632,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -640,7 +646,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import $ from 'jquery';
 import _ from 'underscore';
 import Pointer from '../renderer/pointers/pointer';
-import Modules from '../utils/modules';
+import Module from '../utils/modules';
 import log from '../lib/log';
 &nbsp;
 /**
@@ -655,36 +661,36 @@ export default class Cursor {
    * Default constructor
    * @param {Game} game instance of the game
    */
-<span class="fstat-no" title="function not covered" >  co</span>nstructor(game) {
+  constructor(game) {
     /**
      * Instance of the game
      * @type {Game}
      */
-<span class="cstat-no" title="statement not covered" >    this.game = game;</span>
+    this.game = game;
 &nbsp;
     /**
      * Pointer from the renderer
      * @type {Pointer}
      */
-<span class="cstat-no" title="statement not covered" >    this.pointers = {};</span>
+    this.pointers = {};
 &nbsp;
     /**
      * Scale of the device
      * @type {Number}
      */
-<span class="cstat-no" title="statement not covered" >    this.scale = this.getScale();</span>
+    this.scale = this.getScale();
 &nbsp;
     /**
      * The camera used for the pointer
      * @type {Camera}
      */
-<span class="cstat-no" title="statement not covered" >    this.camera = null;</span>
+    this.camera = null;
 &nbsp;
     /**
      * Jquery referencce to the bubble message box
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.container = $('#bubbles');</span>
+    this.container = $('#bubbles');
   }
 &nbsp;
   /**
@@ -710,7 +716,7 @@ export default class Cursor {
 <span class="fstat-no" title="function not covered" >  re</span>size() {
 <span class="cstat-no" title="statement not covered" >    _.each(this.pointers, <span class="fstat-no" title="function not covered" >(p</span>ointer) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >      switch (pointer.type) {</span>
-        case Modules.Pointers.Relative:
+        case Module.Pointers.Relative:
           const scale = <span class="cstat-no" title="statement not covered" >this.getScale();</span> // eslint-disable-line
           const x = <span class="cstat-no" title="statement not covered" >pointer.x;</span> // eslint-disable-line
           const y = <span class="cstat-no" title="statement not covered" >pointer.y;</span> // eslint-disable-line
@@ -863,7 +869,7 @@ export default class Cursor {
 <span class="fstat-no" title="function not covered" >  up</span>date() {
 <span class="cstat-no" title="statement not covered" >    _.each(this.pointers, <span class="fstat-no" title="function not covered" >(p</span>ointer) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >      switch (pointer.type) {</span>
-        case Modules.Pointers.Entity:
+        case Module.Pointers.Entity:
           const entity = <span class="cstat-no" title="statement not covered" >this.game.entities.get(pointer.id);</span> // eslint-disable-line
 &nbsp;
 <span class="cstat-no" title="statement not covered" >          if (entity) {</span>
@@ -872,7 +878,7 @@ export default class Cursor {
 <span class="cstat-no" title="statement not covered" >            this.destroy(pointer);</span>
           }
 <span class="cstat-no" title="statement not covered" >          break;</span>
-        case Modules.Pointers.Position:
+        case Module.Pointers.Position:
 <span class="cstat-no" title="statement not covered" >          if (pointer.x !== -1 &amp;&amp; pointer.y !== -1) {</span>
 <span class="cstat-no" title="statement not covered" >            this.set(pointer, pointer.x, pointer.y);</span>
           }
@@ -915,8 +921,8 @@ export default class Cursor {
    * Return the current scale of the pointer
    * @return {Number} the scale
    */
-<span class="fstat-no" title="function not covered" >  ge</span>tScale() {
-<span class="cstat-no" title="statement not covered" >    return this.game.getScaleFactor();</span>
+  getScale() {
+    return this.game.getScaleFactor();
   }
 &nbsp;
   /**
@@ -933,10 +939,9 @@ export default class Cursor {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Oct 29 2021 18:58:01 GMT-0400 (Eastern Daylight Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-05-11T23:24:49.698Z
             </div>
-        </div>
         <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {

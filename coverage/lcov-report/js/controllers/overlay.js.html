@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">21.62% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/37</span>
+                <span class='fraction'>8/37</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">9.09% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>1/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">21.62% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/37</span>
+                <span class='fraction'>8/37</span>
             </div>
         
             
@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line low'></div>
     <pre><table class="coverage">
@@ -267,50 +273,50 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -454,55 +460,55 @@ export default class Overlay {
    * Default constructor
    * @param {Input} input reference to the Input class
    */
-<span class="fstat-no" title="function not covered" >  co</span>nstructor(input) {
+  constructor(input) {
     /**
      * Input class
      * @type {Input}
      */
-<span class="cstat-no" title="statement not covered" >    this.input = input;</span>
+    this.input = input;
 &nbsp;
     /**
      * A reference to the entity they are hovering over
      * @type {Entity}
      */
-<span class="cstat-no" title="statement not covered" >    this.hovering = null;</span>
+    this.hovering = null;
 &nbsp;
     /**
      * Jquery reference to the attack info box
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.attackInfo = $('#attackInfo');</span>
+    this.attackInfo = $('#attackInfo');
 &nbsp;
     /**
      * Jquery reference to the image section of the attack info box
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.image = this.attackInfo.find('.image div');</span>
+    this.image = this.attackInfo.find('.image div');
 &nbsp;
     /**
      * Jquery reference to the name of the attack info box
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.name = this.attackInfo.find('.name');</span>
+    this.name = this.attackInfo.find('.name');
 &nbsp;
     /**
      * Jquery reference to the details of the attack info box
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.details = this.attackInfo.find('.details');</span>
+    this.details = this.attackInfo.find('.details');
 &nbsp;
     /**
      * Jquery reference to the name of the health bar of the
      * attack info box
      * @type {DOMElement}
      */
-<span class="cstat-no" title="statement not covered" >    this.health = this.attackInfo.find('.health');</span>
+    this.health = this.attackInfo.find('.health');
 &nbsp;
     /**
      * A callback for when the overlay is done updating
      * @type {Function}
      */
-<span class="cstat-no" title="statement not covered" >    this.updateCallback = null;</span>
+    this.updateCallback = null;
   }
 &nbsp;
   /**
@@ -639,10 +645,9 @@ export default class Overlay {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Oct 29 2021 18:58:01 GMT-0400 (Eastern Daylight Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-05-11T23:24:49.698Z
             </div>
-        </div>
         <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {

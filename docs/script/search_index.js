@@ -1038,6 +1038,168 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html#lineNumber3",
+    "EntityHandler",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html#lineNumber25",
+    "EntityHandler constructor",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html#lineNumber34",
+    "EntityHandler constructor should set the entities property to null",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html#lineNumber26",
+    "EntityHandler constructor should set the entity property",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html#lineNumber30",
+    "EntityHandler constructor should set the game property to null",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html#lineNumber39",
+    "EntityHandler load",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html#lineNumber40",
+    "EntityHandler load should return false if no entity or game",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html#lineNumber44",
+    "EntityHandler load should return true if entity and game are set",
+    "test"
+  ],
+  [
+    "sprite wtf-adventure/src/client/js/entity/sprite.js~sprite,sprite",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber6",
+    "Sprite",
+    "test"
+  ],
+  [
+    "sprite#constructor wtf-adventure/src/client/js/entity/sprite.js~sprite#constructor,sprite#constructor",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber24",
+    "Sprite constructor()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber50",
+    "Sprite constructor() should load the sprite",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber26",
+    "Sprite constructor() should set the sprite id",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber34",
+    "Sprite constructor() should set the sprite loaded status to false",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber38",
+    "Sprite constructor() should set the sprite offset X",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber42",
+    "Sprite constructor() should set the sprite offset Y",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber46",
+    "Sprite constructor() should set the sprite offset angle",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber30",
+    "Sprite constructor() should set the sprite scale",
+    "test"
+  ],
+  [
+    "sprite#createanimations wtf-adventure/src/client/js/entity/sprite.js~sprite#createanimations,sprite#createanimations",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber69",
+    "Sprite createAnimations()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber71",
+    "Sprite createAnimations() should create animation objects for all animation data",
+    "test"
+  ],
+  [
+    "sprite#gethurtsprite wtf-adventure/src/client/js/entity/sprite.js~sprite#gethurtsprite,sprite#gethurtsprite",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber81",
+    "Sprite getHurtSprite()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber89",
+    "Sprite getHurtSprite() should create a new hurt sprite if it has not been created yet",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber83",
+    "Sprite getHurtSprite() should return null if the sprite image is not loaded",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber95",
+    "Sprite getHurtSprite() should return the existing hurt sprite if it has already been created",
+    "test"
+  ],
+  [
+    "sprite#onload wtf-adventure/src/client/js/entity/sprite.js~sprite#onload,sprite#onload",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber105",
+    "Sprite onLoad()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber106",
+    "Sprite onLoad() onLoad()",
+    "test"
+  ],
+  [
+    "sprite#update wtf-adventure/src/client/js/entity/sprite.js~sprite#update,sprite#update",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber58",
+    "Sprite update()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html#lineNumber60",
+    "Sprite update() should update the sprite scale",
+    "test"
+  ],
+  [
     "wtf wtf-adventure/src/client/js/main.js~wtf,wtf",
     "test-file/WTF-Adventure/src/client/js/__tests__/main.test.js.html#lineNumber10",
     "WTF",
@@ -1368,9 +1530,21 @@ window.esdocSearchIndex = [
     "testFile"
   ],
   [
+    "wtf-adventure/src/client/js/__tests__/entityhandler.test.js",
+    "test-file/WTF-Adventure/src/client/js/__tests__/entityHandler.test.js.html",
+    "WTF-Adventure/src/client/js/__tests__/entityHandler.test.js",
+    "testFile"
+  ],
+  [
     "wtf-adventure/src/client/js/__tests__/main.test.js",
     "test-file/WTF-Adventure/src/client/js/__tests__/main.test.js.html",
     "WTF-Adventure/src/client/js/__tests__/main.test.js",
+    "testFile"
+  ],
+  [
+    "wtf-adventure/src/client/js/__tests__/sprite.test.js",
+    "test-file/WTF-Adventure/src/client/js/__tests__/sprite.test.js.html",
+    "WTF-Adventure/src/client/js/__tests__/sprite.test.js",
     "testFile"
   ],
   [
@@ -5502,21 +5676,9 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "wtf-adventure/src/client/js/entity/sprite.js~sprite#loadsprite",
-    "class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-method-loadSprite",
-    "WTF-Adventure/src/client/js/entity/sprite.js~Sprite#loadSprite",
-    "method"
-  ],
-  [
     "wtf-adventure/src/client/js/entity/sprite.js~sprite#loaded",
     "class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-loaded",
     "WTF-Adventure/src/client/js/entity/sprite.js~Sprite#loaded",
-    "member"
-  ],
-  [
-    "wtf-adventure/src/client/js/entity/sprite.js~sprite#offfsetangle",
-    "class/WTF-Adventure/src/client/js/entity/sprite.js~Sprite.html#instance-member-offfsetAngle",
-    "WTF-Adventure/src/client/js/entity/sprite.js~Sprite#offfsetAngle",
     "member"
   ],
   [

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">5.55% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/54</span>
+                <span class='fraction'>3/54</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">7.14% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>1/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">5.55% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/54</span>
+                <span class='fraction'>3/54</span>
             </div>
         
             
@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line low'></div>
     <pre><table class="coverage">
@@ -281,19 +287,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -460,7 +466,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from 'underscore';
 import Queue from '../utils/queue';
 import Splat from '../renderer/infos/splat';
-import Modules from '../utils/modules';
+import Module from '../utils/modules';
 import {
   isInt,
 } from '../utils/util';
@@ -476,24 +482,24 @@ export default class Info {
    * Default constructor
    * @param {Game} game instance of the game
    */
-<span class="fstat-no" title="function not covered" >  co</span>nstructor(game) {
+  constructor(game) {
     /**
     * An instance of the game
     * @type {Game}
     */
-<span class="cstat-no" title="statement not covered" >    this.game = game;</span>
+    this.game = game;
 &nbsp;
     /**
     * A collection of all the info entities
     * @type {Object}
     */
-<span class="cstat-no" title="statement not covered" >    this.infos = {};</span>
+    this.infos = {};
 &nbsp;
     /**
     * A queue to destroy the entities over time
     * @type {Queue}
     */
-<span class="cstat-no" title="statement not covered" >    this.destroyQueue = new Queue();</span>
+    this.destroyQueue = new Queue();
   }
 &nbsp;
   /**
@@ -505,17 +511,17 @@ export default class Info {
    */
 <span class="fstat-no" title="function not covered" >  cr</span>eate(type, data, x, y) {
 <span class="cstat-no" title="statement not covered" >    switch (type) {</span>
-      case Modules.Hits.Damage:
-      case Modules.Hits.Stun:
-      case Modules.Hits.Critical:
+      case Module.Hits.Damage:
+      case Module.Hits.Stun:
+      case Module.Hits.Critical:
 <span class="cstat-no" title="statement not covered" >        this.hit(type, data, x, y);</span>
 <span class="cstat-no" title="statement not covered" >        break;</span>
-      case Modules.Hits.Heal:
-      case Modules.Hits.Mana:
-      case Modules.Hits.Experience:
+      case Module.Hits.Heal:
+      case Module.Hits.Mana:
+      case Module.Hits.Experience:
 <span class="cstat-no" title="statement not covered" >        this.regenerate(type, data, x, y);</span>
 <span class="cstat-no" title="statement not covered" >        break;</span>
-      case Modules.Hits.LevelUp:
+      case Module.Hits.LevelUp:
 <span class="cstat-no" title="statement not covered" >        this.levelup(type, x, y);</span>
 <span class="cstat-no" title="statement not covered" >        break;</span>
       default:
@@ -542,8 +548,8 @@ export default class Info {
     const hitSplat = <span class="cstat-no" title="statement not covered" >new Splat(dId, type, damage, x, y, false);</span>
 &nbsp;
     const dColour = <span class="cstat-no" title="statement not covered" >isTarget</span>
-      ? Modules.DamageColours.received
-      : Modules.DamageColours.inflicted;
+      ? Module.DamageColours.received
+      : Module.DamageColours.inflicted;
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    hitSplat.setColours(dColour.fill, dColour.stroke);</span>
 &nbsp;
@@ -567,18 +573,18 @@ export default class Info {
 <span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (type !== Modules.Hits.Experience) {</span>
+<span class="cstat-no" title="statement not covered" >    if (type !== Module.Hits.Experience) {</span>
 <span class="cstat-no" title="statement not covered" >      text = '++';</span>
     }
 &nbsp;
     const splat = <span class="cstat-no" title="statement not covered" >new Splat(id, type, text + amount, x, y, false);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (type === Modules.Hits.Heal) {</span>
-<span class="cstat-no" title="statement not covered" >      colour = Modules.DamageColours.healed;</span>
-    } else <span class="cstat-no" title="statement not covered" >if (type === Modules.Hits.Mana) {</span>
-<span class="cstat-no" title="statement not covered" >      colour = Modules.DamageColours.mana;</span>
-    } else <span class="cstat-no" title="statement not covered" >if (type === Modules.Hits.Experience) {</span>
-<span class="cstat-no" title="statement not covered" >      colour = Modules.DamageColours.exp;</span>
+<span class="cstat-no" title="statement not covered" >    if (type === Module.Hits.Heal) {</span>
+<span class="cstat-no" title="statement not covered" >      colour = Module.DamageColours.healed;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === Module.Hits.Mana) {</span>
+<span class="cstat-no" title="statement not covered" >      colour = Module.DamageColours.mana;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === Module.Hits.Experience) {</span>
+<span class="cstat-no" title="statement not covered" >      colour = Module.DamageColours.exp;</span>
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    splat.setColours(colour.fill, colour.stroke);</span>
@@ -594,7 +600,7 @@ export default class Info {
 <span class="fstat-no" title="function not covered" >  le</span>velup(type, x, y) {
     const lId = <span class="cstat-no" title="statement not covered" >this.generateId('-1', x, y);</span>
     const levelSplat = <span class="cstat-no" title="statement not covered" >new Splat(lId, type, 'Level Up!', x, y, false);</span>
-    const lColour = <span class="cstat-no" title="statement not covered" >Modules.DamageColours.exp;</span>
+    const lColour = <span class="cstat-no" title="statement not covered" >Module.DamageColours.exp;</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    levelSplat.setColours(lColour.fill, lColour.stroke);</span>
 <span class="cstat-no" title="statement not covered" >    this.addInfo(levelSplat);</span>
@@ -663,10 +669,9 @@ export default class Info {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Oct 29 2021 18:58:01 GMT-0400 (Eastern Daylight Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-05-11T23:24:49.698Z
             </div>
-        </div>
         <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {

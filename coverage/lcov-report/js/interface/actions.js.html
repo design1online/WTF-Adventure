@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">22.95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/61</span>
+                <span class='fraction'>14/61</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">9.52% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>2/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">23.72% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/59</span>
+                <span class='fraction'>14/59</span>
             </div>
         
             
@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line low'></div>
     <pre><table class="coverage">
@@ -205,34 +211,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -348,35 +354,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import $ from 'jquery';
 &nbsp;
 export default class Actions {
-<span class="fstat-no" title="function not covered" >  co</span>nstructor(intrfce) {
-<span class="cstat-no" title="statement not covered" >    this.interface = intrfce;</span>
+  constructor(intrfce) {
+    this.interface = intrfce;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.body = $('#actionContainer');</span>
-<span class="cstat-no" title="statement not covered" >    this.drop = $('#dropDialog');</span>
-<span class="cstat-no" title="statement not covered" >    this.dropInput = $('#dropCount');</span>
+    this.body = $('#actionContainer');
+    this.drop = $('#dropDialog');
+    this.dropInput = $('#dropCount');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.pBody = $('#pActions');</span>
-<span class="cstat-no" title="statement not covered" >    this.follow = $('#follow');</span>
-<span class="cstat-no" title="statement not covered" >    this.trade = $('#tradeAction');</span>
+    this.pBody = $('#pActions');
+    this.follow = $('#follow');
+    this.trade = $('#tradeAction');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.activeClass = null;</span>
+    this.activeClass = null;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.miscButton = null;</span>
+    this.miscButton = null;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.load();</span>
+    this.load();
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  lo</span>ad() {
-    const dropAccept = <span class="cstat-no" title="statement not covered" >$('#dropAccept');</span>
-    const dropCancel = <span class="cstat-no" title="statement not covered" >$('#dropcancel');</span>
+  load() {
+    const dropAccept = $('#dropAccept');
+    const dropCancel = $('#dropcancel');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    dropAccept.click(<span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {</span>
+    dropAccept.click(<span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {
 <span class="cstat-no" title="statement not covered" >      if (this.activeClass === 'inventory') {</span>
 <span class="cstat-no" title="statement not covered" >        this.interface.inventory.clickAction(event);</span>
       }
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    dropCancel.click(<span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {</span>
+    dropCancel.click(<span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {
 <span class="cstat-no" title="statement not covered" >      if (this.activeClass === 'inventory') {</span>
 <span class="cstat-no" title="statement not covered" >        this.interface.inventory.clickAction(event);</span>
       }
@@ -495,10 +501,9 @@ export default class Actions {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Oct 29 2021 18:58:01 GMT-0400 (Eastern Daylight Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-05-11T23:24:49.698Z
             </div>
-        </div>
         <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {

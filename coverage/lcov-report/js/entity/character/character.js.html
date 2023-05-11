@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line low'></div>
     <pre><table class="coverage">
@@ -2147,7 +2153,7 @@
 import Entity from '../entity';
 import Transition from '../../utils/transition';
 import Animation from '../animation';
-import Modules from '../../utils/modules';
+import Module from '../../utils/modules';
 &nbsp;
 /**
  * A specific type of {@link Entity}. The base class for a
@@ -2192,7 +2198,7 @@ export default class Character extends Entity {
      * The direction they are pointing
      * @type {Orientation}
      */
-<span class="cstat-no" title="statement not covered" >    this.orientation = Modules.Orientation.Down;</span>
+<span class="cstat-no" title="statement not covered" >    this.orientation = Module.Orientation.Down;</span>
 &nbsp;
     /**
      * How many hit points they have left
@@ -2526,12 +2532,12 @@ export default class Character extends Entity {
 <span class="cstat-no" title="statement not covered" >    this.spriteFlipY = false;</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (orientationOptions.indexOf(animation) &gt; -1) {</span>
-      const characterOrientation = <span class="cstat-no" title="statement not covered" >this.orientation === Modules.Orientation.Left</span>
+      const characterOrientation = <span class="cstat-no" title="statement not covered" >this.orientation === Module.Orientation.Left</span>
         ? 'right'
-        : Modules.Orientation.toString(this.orientation);
+        : Module.Orientation.toString(this.orientation);
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      updatedPosition = `${animation}_${characterOrientation}`;</span>
-<span class="cstat-no" title="statement not covered" >      this.spriteFlipX = this.orientation === Modules.Orientation.Left;</span>
+<span class="cstat-no" title="statement not covered" >      this.spriteFlipX = this.orientation === Module.Orientation.Left;</span>
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    this.setAnimation((updatedPosition || animation), speed, count, onEndCount);</span>
@@ -2543,13 +2549,13 @@ export default class Character extends Entity {
    */
 <span class="fstat-no" title="function not covered" >  lo</span>okAt(character) {
 <span class="cstat-no" title="statement not covered" >    if (character.gridX &gt; this.gridX) {</span>
-<span class="cstat-no" title="statement not covered" >      this.setOrientation(Modules.Orientation.Right);</span>
+<span class="cstat-no" title="statement not covered" >      this.setOrientation(Module.Orientation.Right);</span>
     } else <span class="cstat-no" title="statement not covered" >if (character.gridX &lt; this.gridX) {</span>
-<span class="cstat-no" title="statement not covered" >      this.setOrientation(Modules.Orientation.Left);</span>
+<span class="cstat-no" title="statement not covered" >      this.setOrientation(Module.Orientation.Left);</span>
     } else <span class="cstat-no" title="statement not covered" >if (character.gridY &gt; this.gridY) {</span>
-<span class="cstat-no" title="statement not covered" >      this.setOrientation(Modules.Orientation.Down);</span>
+<span class="cstat-no" title="statement not covered" >      this.setOrientation(Module.Orientation.Down);</span>
     } else <span class="cstat-no" title="statement not covered" >if (character.gridY &lt; this.gridY) {</span>
-<span class="cstat-no" title="statement not covered" >      this.setOrientation(Modules.Orientation.Up);</span>
+<span class="cstat-no" title="statement not covered" >      this.setOrientation(Module.Orientation.Up);</span>
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    this.idle();</span>
@@ -2638,15 +2644,15 @@ export default class Character extends Entity {
 <span class="cstat-no" title="statement not covered" >    this.setOrientation(orientation);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    switch (action) {</span>
-      case Modules.Actions.Idle:
+      case Module.Actions.Idle:
 <span class="cstat-no" title="statement not covered" >        this.animate('idle', this.idleSpeed);</span>
 <span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
-      case Modules.Actions.Attack:
+      case Module.Actions.Attack:
 <span class="cstat-no" title="statement not covered" >        this.animate('atk', this.attackAnimationSpeed, 1);</span>
 <span class="cstat-no" title="statement not covered" >        break;</span>
 &nbsp;
-      case Modules.Actions.Walk:
+      case Module.Actions.Walk:
 <span class="cstat-no" title="statement not covered" >        this.animate('walk', this.walkAnimationSpeed);</span>
 <span class="cstat-no" title="statement not covered" >        break;</span>
       default:
@@ -2661,7 +2667,7 @@ export default class Character extends Entity {
 <span class="fstat-no" title="function not covered" >  id</span>le(direction) {
     const orientation = <span class="cstat-no" title="statement not covered" >direction || this.orientation;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.performAction(orientation, Modules.Actions.Idle);</span>
+<span class="cstat-no" title="statement not covered" >    this.performAction(orientation, Module.Actions.Idle);</span>
   }
 &nbsp;
   /**
@@ -2787,19 +2793,19 @@ export default class Character extends Entity {
     const { step, path } = <span class="cstat-no" title="statement not covered" >this;</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (path[step][0] &lt; path[step - 1][0]) {</span>
-<span class="cstat-no" title="statement not covered" >      this.performAction(Modules.Orientation.Left, Modules.Actions.Walk);</span>
+<span class="cstat-no" title="statement not covered" >      this.performAction(Module.Orientation.Left, Module.Actions.Walk);</span>
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (path[step][0] &gt; path[step - 1][0]) {</span>
-<span class="cstat-no" title="statement not covered" >      this.performAction(Modules.Orientation.Right, Modules.Actions.Walk);</span>
+<span class="cstat-no" title="statement not covered" >      this.performAction(Module.Orientation.Right, Module.Actions.Walk);</span>
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (path[step][1] &lt; path[step - 1][1]) {</span>
-<span class="cstat-no" title="statement not covered" >      this.performAction(Modules.Orientation.Up, Modules.Actions.Walk);</span>
+<span class="cstat-no" title="statement not covered" >      this.performAction(Module.Orientation.Up, Module.Actions.Walk);</span>
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (path[step][1] &gt; path[step - 1][1]) {</span>
-<span class="cstat-no" title="statement not covered" >      this.performAction(Modules.Orientation.Down, Modules.Actions.Walk);</span>
+<span class="cstat-no" title="statement not covered" >      this.performAction(Module.Orientation.Down, Module.Actions.Walk);</span>
     }
   }
 &nbsp;
@@ -2861,7 +2867,7 @@ export default class Character extends Entity {
 <span class="cstat-no" title="statement not covered" >      this.path = null;</span>
 <span class="cstat-no" title="statement not covered" >      this.newDestination = null;</span>
 <span class="cstat-no" title="statement not covered" >      this.movement = new Transition();</span>
-<span class="cstat-no" title="statement not covered" >      this.performAction(this.orientation, Modules.Actions.Idle);</span>
+<span class="cstat-no" title="statement not covered" >      this.performAction(this.orientation, Module.Actions.Idle);</span>
 <span class="cstat-no" title="statement not covered" >      this.nextGridX = this.gridX;</span>
 <span class="cstat-no" title="statement not covered" >      this.nextGridY = this.gridY;</span>
     }
@@ -3192,10 +3198,9 @@ export default class Character extends Entity {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Oct 29 2021 18:58:01 GMT-0400 (Eastern Daylight Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-05-11T23:24:49.698Z
             </div>
-        </div>
         <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
