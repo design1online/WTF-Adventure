@@ -116,12 +116,12 @@ Once you have a build you can start the game using: `npm start`
 Now open your browser and navigate to `http://{ip}:{port}/` as defined in your client configuration file. Typically this will be `http://localhost:3000` if you use the default webpack and client configuration settings provided.
 
 ## Troubleshooting
-* Typically errors with WTF Adventure are due to mysql connection or authentication issues in `src/server/config.json`.
+* Typically errors with WTF Adventure are due to mysql connection or authentication issues in `server/config.json`.
   * If you are using XAMPP or MAMP the correct default values are already configured for you
   * Check that MySQL is running
   * Check that your hostname, port number, user name, password and database are correct
   * Check that your secretKey is base62 encoded
-* Make sure you are running the correct IP and port in the client window in `src/client/config.json`
+* Make sure you are running the correct IP and port in the client window in `client/config.json`
   * If you are using MAMP or XAMPP the correct default values are already configured for you
 * Errors installing dependencies
   * When this happens you will need to look at the specific error you are getting from the dependency and try to resolve the issue
