@@ -1,0 +1,47 @@
+.button {
+    padding: 5px 10px 10px 10px;
+    cursor: pointer;
+    text-align: center;
+    max-width: 160px;
+}
+
+.button.green {
+    background: url("/img/common/hud-button-green.png");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.button.red {
+    background: url("/img/common/hud-button-red.png");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.button.purple {
+    background: url("/img/common/hud-button-purple.png");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#buttons {
+    margin-top: 49%;
+    margin-left: 83%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    z-index: 97;
+}
+
+#buttons ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#buttons ul li {
+    float: left;
+}

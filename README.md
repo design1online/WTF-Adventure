@@ -8,7 +8,9 @@ WTF?! Adventure is completely open-source, allowing its community to collaborate
 
 ### Features & Functionality
 
-- **Webpack:** Dev and prod config files and now utilizes browserSync for easier client side development. A new build folder is created that contains minified versions of the client side resources.
+- **NextJS:** Running on NextJS v13 and using App Router.
+
+- **Typescript:** Now using typescript ;D
 
 - **NodeJS:** Server has been updated to use nodemon for easier restarting and server development
 
@@ -67,15 +69,17 @@ WTF?! Adventure is completely open-source, allowing its community to collaborate
 
 Running the server is fairly straightforward, for the most part. If you already have everything installed and configured you can skip directly to step 3.
 
-### Step 1 - Install the dependencies
+### Step 1 - Install the client dependencies
 
 In the command line run: `npm install`
 
-### Step 2 - Setting the config files
+Open the `client/config.json` file and update the ports and settings to meet your needs.
 
-Convert the server configuration for local usage, go in both `src/server/config.json` and `src/client/config.json` and update the ports and settings to meet your needs.
+### Step 2 - Install the server dependencies
 
-In `src/server/config.json` the **secretKey** should be a strong password that has been [base62 encoded](http://encode-base62.nichabi.com/).
+In the command line run: `cd ./server && npm install`
+
+Open the `server/config.json` file and update the ports and settings to meet your needs. The **secretKey** should be a strong password that has been [base62 encoded](http://encode-base62.nichabi.com/).
 
 ### Step 3 - Install MySQL
 
@@ -101,9 +105,11 @@ Start MySQL and make sure it's running.
 
 In the command line type: `npm run wtfserver`
 
-### Step 6 - Run the HTML5 Client Webpack
+### Step 6 - Run the NextJS app
 
-Open another terminal and then type: `npm start`
+If you've never run the project before then you need to build it first: `npm run build`
+
+Once you have a build you can start the game using: `npm start`
 
 ### Step 7 - View in Browser
 

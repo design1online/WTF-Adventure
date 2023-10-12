@@ -1,6 +1,6 @@
 {
   "name": "WTF-Adventure",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "A modern HTML5 multiplayer adventure!",
   "keywords": [
     "mmo",
@@ -8,6 +8,8 @@
     "html5",
     "multiplayer",
     "nodejs",
+    "nextjs",
+    "hackathon",
     "browserquest",
     "javascript",
     "es6",
@@ -45,38 +47,30 @@
   ],
   "license": "wtfpl-2.0",
   "scripts": {
-    "start": "webpack --mode=development",
-    "wtfserver": "nodemon --exec babel-node src/server/js/main.js",
-    "deploy": "webpack --mode=production --config webpack.production.config.js",
-    "lint": "eslint ./src/**/**.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "wtf": "next start",
+    "wtfserver": "cd ../server && npm start",
     "mac-install-mysql": "brew install mysql",
     "apt-install-mysql": "sudo apt-get update && sudo apt-get install mysql-apt-config && sudo apt-get install mysql-shell",
     "yum-install-mysql": "sudo yum remove mysql-community-release && sudo yum install mysql-shell",
     "dnf-install-mysql": "sudo dnf erase mysql-community-release && sudo dnf install mysql-shell",
     "mac-mysql-start": "brew services start mysql",
     "nix-mysql-start": "mysql-ctl start",
-    "wtf": "npm run mysql-start && npm start",
     "esdocs": "./node_modules/.bin/esdoc",
     "docs": "open ./docs/index.html",
     "test": "jest --env=jsdom --coverage && npm run badges",
     "badges": "make-coverage-badge"
   },
   "engines": {
-    "node": ">=8.0"
+    "node": ">=18.0"
   },
   "engineStrict": true,
-  "nodemonConfig": {
-    "ignore": [
-      "src/client/*",
-      "assets/*",
-      "build/*",
-      "css/*"
-    ],
-    "delay": "2500"
-  },
   "jest": {
     "transform": {
-      "^.+\\.jsx?$": "babel-jest"
+      "^.+\\.tsx?$": "babel-jest"
     },
     "testEnvironment": "jsdom",
     "coverageDirectory": "./coverage/",
@@ -87,8 +81,8 @@
       "lcov"
     ],
     "moduleFileExtensions": [
-      "js",
-      "jsx"
+      "ts",
+      "tsx"
     ],
     "moduleDirectories": [
       "node_modules"
@@ -98,71 +92,24 @@
     ]
   },
   "dependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "bcrypt": "^5.0.0",
-    "bootstrap": "^4.5.3",
-    "commander": "^2.20.3",
-    "connect": "^3.7.0",
-    "http": "0.0.0",
-    "jquery": "^3.5.1",
-    "log": "^1.4.0",
-    "memcache": "^0.3.0",
-    "modernizr": "^3.11.3",
-    "modernizr-webpack-plugin": "^1.0.7",
-    "mysql": "^2.18.1",
-    "popper.js": "^1.16.1",
-    "request": "^2.88.2",
-    "require": "^2.4.20",
-    "sanitizer": "^0.1.3",
-    "semver": "^5.7.1",
-    "serve-static": "^1.14.1",
-    "shutdown-hook": "^1.1.7",
-    "socket.io": "^2.4.0",
-    "socket.io-client": "^2.3.1",
-    "underscore": "^1.11.0",
-    "url": "^0.11.0"
+    "jquery": "^3.7.1",
+    "next": "13.5.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "socket.io-client": "^4.7.2",
+    "underscore": "^1.13.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.1",
-    "@babel/node": "^7.12.1",
-    "@babel/plugin-transform-runtime": "^7.12.1",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "browser-sync": "^2.26.13",
-    "browser-sync-webpack-plugin": "^2.2.2",
-    "canvas": "^2.6.1",
-    "clean-webpack-plugin": "^1.0.1",
-    "codecov": "^3.8.1",
-    "copy-webpack-plugin": "^4.6.0",
-    "css-loader": "^2.1.1",
-    "esdoc": "^1.1.0",
-    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
-    "esdoc-standard-plugin": "^1.0.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "file-loader": "^3.0.1",
-    "fs": "0.0.1-security",
-    "html-webpack-plugin": "^3.2.0",
-    "imports-loader": "^0.8.0",
-    "jest": "^25.5.4",
-    "make-coverage-badge": "^1.2.0",
-    "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.14.1",
-    "nodemon": "^1.19.4",
-    "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "^6.7.0",
-    "postcss-scss": "^2.1.1",
-    "raw-loader": "^1.0.0",
-    "sass-loader": "^7.3.1",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "yarn": "^1.22.10"
+    "@babel/eslint-parser": "^7.22.15",
+    "@types/jquery": "^3.5.21",
+    "@types/node": "20.8.2",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/underscore": "^1.11.9",
+    "bootstrap": "^5.3.2",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "sass": "^1.69.0",
+    "typescript": "^5"
   }
 }

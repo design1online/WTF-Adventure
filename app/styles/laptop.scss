@@ -1,0 +1,31 @@
+// laptops and small desktops, 992px and up
+@media (min-width: 992px) and (max-width: 1439px) {
+    #wrapper header img {
+        max-width: 50%;
+        height: 10%;
+    }
+    
+    #border {
+        position: absolute;
+        width: 980px;
+        height: 520px;
+        left: 50%;
+        top: 0;
+        margin-left: -490px;
+        border: 0;
+        padding: 10px;
+        background: url("/img/2/border.png") no-repeat 0 0;
+        background-size: 100% 100%;
+      }
+    
+      #hud {
+        width: 960px;
+      }
+    
+      #container {
+        width: 980px;
+        height: 520px;
+        margin: -252px auto auto -490px;
+        position: absolute;
+      }
+}

@@ -1,0 +1,89 @@
+#hud-chat,
+#hud-inventory,
+#hud-world,
+#hud-achievements {
+  cursor: pointer;
+}
+
+#hud-chat {
+  margin-bottom: 30px;
+  width: 30%;
+  height: auto;
+}
+
+#hud-inventory {
+  margin-top: 10px;
+  width: 60%;
+  height: auto;
+}
+
+#hud-chat-input {
+  margin-top: 25px;
+  margin-left: -3px;
+  padding: 10px;
+  width: 97%;
+  border: none;
+  height: 100%;
+  color: white;
+  font-family: sans-serif;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px 10px 0px 0px;
+}
+
+#hud-world {
+  margin-top: 14px;
+  width: 60%;
+  height: auto;
+}
+
+#hud-achievements {
+  margin-bottom: 13px;
+  width: 30%;
+  height: auto;
+}
+
+#hud {
+  margin-top: 42%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+}
+
+#hud-bar {
+  background: url("/img/hud-bar-2.png");
+  background-size: 100% 100%;
+  height: 90px;
+  color: #fff;
+}
+
+#hud-bar-right {
+  float: right;
+  width: 25%;
+  height: 100%;
+  z-index: 96;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 10px 0 10px;
+}
+
+#hud-bar-left {
+  float: left;
+  width: 25%;
+  height: 100%;
+  z-index: 96;
+  position: absolute;
+  overflow: hidden;
+  padding: 10px 10px 0 10px;
+  margin-top: -90px;
+}
+
+#hud-bar-center {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  height: inherit;
+  z-index: 95;
+  /* overflow: hidden; */
+  padding-right: 245px;
+  padding-left: 245px;
+}

@@ -1,0 +1,26 @@
+// XX-Large devices (high res desktops and tv screens, 2560px and up)
+@media (min-width: 2560px) {
+    #border {
+        position: absolute;
+        width: 1470px;
+        height: 780px;
+        left: 50%;
+        top: 0;
+        margin-left: -735px;
+        border: 0;
+        padding: 15px;
+        background: url("/img/3/border.png") no-repeat 0 0;
+        background-size: 100% 100%;
+    }
+    
+    #hud {
+        width: 1450px;
+    }
+
+    #container {
+        width: 1470px;
+        height: 798px;
+        margin: -378px auto auto -735px;
+        position: absolute;
+    }
+}
