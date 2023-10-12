@@ -13,6 +13,9 @@ currently being supported with security updates.
 | 8.x     | :white_check_mark: |
 | 10.x    | :white_check_mark: |
 | 12.x    | :white_check_mark: |
+| 14.x    | :white_check_mark: |
+| 16.x    | :white_check_mark: |
+| 18.x    | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
