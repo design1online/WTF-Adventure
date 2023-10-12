@@ -1,4 +1,4 @@
-![WTF?! Adventure](https://github.com/design1online/WTF-Adventure/blob/main/assets/img/wtfadventure.png?raw=true "WTF?! Adventure")
+![WTF?! Adventure](https://github.com/design1online/WTF-Adventure/blob/main/public/img/wtfadventure.png?raw=true "WTF?! Adventure")
 
 
 ![Node CI](https://github.com/design1online/WTF-Adventure/workflows/node%20ci/badge.svg) ![Code Coverage](https://img.shields.io/codecov/c/gh/design1online/WTF-Adventure) ![WTFPL](https://img.shields.io/static/v1?label=license&message=wtfpl--2.0&color=blueviolet) ![ESDocs Coverage](https://raw.githubusercontent.com/design1online/WTF-Adventure/main/docs/badge.svg?sanitize=true) ![Version](https://img.shields.io/github/package-json/v/design1online/WTF-Adventure)
