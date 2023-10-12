@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "allowSyntheticDefaultImports": true,
     "plugins": [
       {
         "name": "next"
@@ -26,11 +27,9 @@
   },
   "include": [
     "next-env.d.ts",
+    "types.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.js",
-    "**/*.json",
-    "images.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules", "server"]

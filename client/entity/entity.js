@@ -1,5 +1,5 @@
-import EntityHandler from '../../../entityhandler';
-import log from '../lib/log';
+import EntityHandler from './entityhandler';
+import log from '@/client/lib/log';
 
 /**
  * Initialize a new entity:

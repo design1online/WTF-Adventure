@@ -4,13 +4,10 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
-
+        node-version: [8.x, 10.x, 12.x, 14.x, 18.x]
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -18,7 +15,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm build
-      run: |
+      run:
         npm ci
         npm run build --if-present
     - name: Running unit tests
