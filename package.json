@@ -70,6 +70,8 @@
   "engineStrict": true,
   "jest": {
     "transform": {
+      "^.+\\.js?$": "babel-jest",
+      "^.+\\.ts?$": "babel-jest",
       "^.+\\.tsx?$": "babel-jest"
     },
     "testEnvironment": "jsdom",
@@ -101,12 +103,16 @@
     "underscore": "^1.13.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.2",
     "@babel/eslint-parser": "^7.22.15",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
     "@types/jquery": "^3.5.22",
     "@types/node": "20.8.2",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/underscore": "^1.11.9",
+    "babel-jest": "^29.7.0",
     "bootstrap": "^5.3.2",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
