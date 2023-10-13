@@ -54,7 +54,7 @@ export default class Creator {
         + 'mana int,'
         + 'pvpKills int,'
         + 'pvpDeaths int,'
-        + 'rank int,'
+        + 'playerRank int,'
         + 'ban int(64),'
         + 'mute varchar(64),'
         + 'membership varchar(64),'
@@ -217,7 +217,7 @@ export default class Creator {
           mana: data.mana.getMana(),
           pvpKills: data.pvpKills,
           pvpDeaths: data.pvpDeaths,
-          rank: data.rank,
+          rank: data.playerRank,
           ban: data.ban,
           mute: data.mute,
           membership: data.membership,
@@ -257,7 +257,7 @@ export default class Creator {
       experience: player.experience ? player.experience : 0,
       ban: player.ban ? player.ban : 0,
       mute: player.mute ? player.mute : 0,
-      rank: player.rank ? player.rank : 0,
+      rank: player.playerRank ? player.playerRank : 0,
       membership: player.membership ? player.membership : 0,
       lastLogin: player.lastLogin ? player.lastLogin : 0,
       guild: player.guild ? player.guild : '',

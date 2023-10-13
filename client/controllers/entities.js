@@ -294,7 +294,7 @@ export default class Entities {
 
     if (info.type !== 'item' && entity.handler) {
       entity.handler.setGame(this.game);
-      entity.handler.loadEntity();
+      entity.handler.load();
     }
   }
 

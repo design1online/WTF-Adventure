@@ -89,7 +89,7 @@ CREATE TABLE `player_data` (
   `mana` int(11) DEFAULT NULL,
   `pvpKills` int(11) DEFAULT NULL,
   `pvpDeaths` int(11) DEFAULT NULL,
-  `rank` int(11) DEFAULT NULL,
+  `playerRank` int(11) DEFAULT NULL,
   `ban` int(64) DEFAULT NULL,
   `mute` int(64) DEFAULT NULL,
   `membership` int(64) DEFAULT NULL,
