@@ -270,9 +270,6 @@ export default class Client {
     this.window.scrollTop(); // why do we do this?
     this.window.resize(this.zoom());
 
-    log.debug('Client - loading client config');
-    this.config = config;
-
     // load the character
     this.loadCharacter();
 
