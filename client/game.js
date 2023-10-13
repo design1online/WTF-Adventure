@@ -1695,7 +1695,6 @@ export default class Game {
   getEntityAt(x, y, ignoreSelf) {
     log.debug('Game - getEntityAt()', x, y, ignoreSelf);
 
-    console.log('getEntityAt', this.entities.grids.renderingGrid);
     const entities = this.entities.grids.renderingGrid[y][x];
 
     if (_.size(entities) > 0) {
