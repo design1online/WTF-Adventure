@@ -70,13 +70,16 @@
   "engineStrict": true,
   "jest": {
     "transform": {
-      "\\.[jt]sx?$": ["babel-jest", {
-        "presets": [
-          "next/babel",
-          "@babel/preset-typescript",
-          "@babel/preset-env"
-        ]
-      }]
+      "\\.[jt]sx?$": [
+        "babel-jest",
+        {
+          "presets": [
+            "next/babel",
+            "@babel/preset-typescript",
+            "@babel/preset-env"
+          ]
+        }
+      ]
     },
     "testEnvironment": "jsdom",
     "coverageDirectory": "./coverage/",
@@ -119,6 +122,9 @@
     "@types/underscore": "^1.11.9",
     "babel-jest": "^29.7.0",
     "bootstrap": "^5.3.2",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "jest": "^29.7.0",

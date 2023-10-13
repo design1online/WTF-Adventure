@@ -4,7 +4,7 @@ import _ from 'underscore';
 import Module from './utils/modules';
 import log from './lib/log';
 import Detect from './utils/detect';
-import config from './config.json';
+import * as config from './config.json';
 
 /**
  * Controls the client side changes for the application and game
