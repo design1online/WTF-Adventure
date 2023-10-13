@@ -1,7 +1,7 @@
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import config from '@/client/config.json' assert { type: 'json'};
+import * as config from '@/client/config.json';
 import Providers from '@/client/contexts/providers';
 
 const inter = Inter({ subsets: ['latin'] });

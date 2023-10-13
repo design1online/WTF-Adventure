@@ -1,28 +1,27 @@
 {
   "source": "./",
   "destination": "./docs",
-  "includes": ["\\.js$"],
+  "includes": ["\\.(j|t)sx?$"],
   "excludes": [
     "node_modules",
+    ".next",
     "build",
-    "world_client.js",
     "coverage",
+    "public",
     "docs/script",
     "setupTests.js",
-    "src/client/js/__tests__",
-    "wallaby.config.js",
-    "webpack.config.js",
-    "webpack.prod.config.js"
+    "__tests__",
+    "wallaby.config.js"
   ],
   "plugins": [
-    { "name": "esdoc-ecmascript-proposal-plugin", "option": { "all": true } },
+    {"name": "esdoc-ecmascript-proposal-plugin", "option": {"all": true}},
     {
       "name": "esdoc-standard-plugin",
       "option": {
         "test": {
           "source": "./",
           "interfaces": ["describe", "it", "context", "suite", "test"],
-          "includes": ["(spec|Spec|test|Test)\\.js$"],
+          "includes": ["(spec|Spec|test|Test)\\.(j|t)sx?$"],
           "excludes": ["node_modules","build"]
         },
         "lint": { "enable": true },
@@ -35,7 +34,7 @@
         "unexportedIdentifier": { "enable": false },
         "typeInference": { "enable": true },
         "brand": {
-          "logo": "./assets/img/wtflogo-small.png",
+          "logo": "./public/img/wtflogo-small.png",
           "title": "WTF Adventure",
           "description": "documentation for your wtf needs",
           "repository": "https://github.com/design1online/WTF-Adventure",

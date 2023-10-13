@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">WTF-Adventure/client/renderer/renderer.js | WTF Adventure</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="documentation for your wtf needs"><meta property="og:type" content="website"><meta property="og:url" content="http://design1online.com"><meta property="og:site_name" content="WTF Adventure"><meta property="og:title" content="WTF Adventure"><meta property="og:image" content="http://design1online.com/logo.png"><meta property="og:description" content="documentation for your wtf needs"><meta property="og:author" content="https://design1online.com"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="WTF Adventure"><meta property="twitter:description" content="documentation for your wtf needs"><meta property="twitter:image" content="http://design1online.com/logo.png"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/design1online/WTF-Adventure"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client">client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/index.js~Client.html">Client</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-controllers">client/controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/audio.js~Audio.html">Audio</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/bubble.js~Bubble.html">Bubble</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/chat.js~Chat.html">Chat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/entities.js~Entities.html">Entities</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/info.js~Info.html">Info</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/input.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/interface.js~Interface.html">Interface</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/overlay.js~Overlay.html">Overlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/pickcharacter.js~PickCharacter.html">PickCharacter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/pointer.js~Cursor.html">Cursor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/sprites.js~Sprites.html">Sprites</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/zoning.js~Zone.html">Zone</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity">client/entity</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/animation.js~Animation.html">Animation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/entity.js~Entity.html">Entity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/entityhandler.js~EntityHandler.html">EntityHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/sprite.js~Sprite.html">Sprite</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character">client/entity/character</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-mob">client/entity/character/mob</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/mob/mob.js~Mob.html">Mob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-npc">client/entity/character/npc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/npc/npc.js~Npc.html">Npc</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-player">client/entity/character/player</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/playerhandler.js~PlayerHandler.html">PlayerHandler</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-player-equipment">client/entity/character/player/equipment</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/armour.js~Armour.html">Armour</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/boots.js~Boots.html">Boots</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/equipment.js~Equipment.html">Equipment</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/pendant.js~Pendant.html">Pendant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/ring.js~Ring.html">Ring</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/weapon.js~Weapon.html">Weapon</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-objects">client/entity/objects</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/chest.js~Chest.html">Chest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/projectile.js~Projectile.html">Projectile</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface">client/interface</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html">Abilities</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/actions.js~Actions.html">Actions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/bank.js~Bank.html">Bank</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/enchant.js~Enchant.html">Enchant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/inventory.js~Inventory.html">Inventory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/warp.js~Warp.html">Warp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface-container">client/interface/container</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/container/container.js~Container.html">Container</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/container/slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface-profile">client/interface/profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/ability.js~Ability.html">Ability</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/gamePage.js~GamePage.html">GamePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/profile.js~Profile.html">Profile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/quest.js~Quest.html">Quest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/settings.js~Settings.html">Settings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/state.js~State.html">State</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-lib">client/lib</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/lib/log.js~Logger.html">Logger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-map">client/map</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html">Map</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-network">client/network</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html">Messages</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/network/socket.js~Socket.html">Socket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Packets">Packets</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer">client/renderer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/camera.js~Camera.html">Camera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/grids.js~Grids.html">Grids</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/renderer.js~Renderer.html">Renderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html">Updater</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-bubbles">client/renderer/bubbles</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/bubbles/blob.js~Blob.html">Blob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-infos">client/renderer/infos</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/infos/splat.js~Splat.html">Splat</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-pointers">client/renderer/pointers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/pointers/pointer.js~Pointer.html">Pointer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-utils">client/utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/pathfinder.js~Pathfinder.html">Pathfinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/queue.js~Queue.html">Queue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html">Storage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/transition.js~Transition.html">Transition</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isInt">isInt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isIntersecting">isIntersecting</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Detect">Detect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Modules">Modules</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-TRANSITIONEND">TRANSITIONEND</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-requestAnimFrame">requestAnimFrame</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-utils---mocks--">client/utils/__mocks__</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Detect">Detect</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-data-combat">server/data/combat</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/greatsquid.js~GreatSquid.html">GreatSquid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/ogrelord.js~OgreLord.html">OgreLord</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/piratecaptain.js~PirateCaptain.html">PirateCaptain</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html">QueenAnt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/skeletonking.js~SkeletonKing.html">SkeletonKing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/tenebris.js~Tenebris.html">Tenebris</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-data-items">server/data/items</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/items/healthFlask.js~Flask.html">Flask</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-controllers">server/js/controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html">Commands</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html">Minigames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/shops.js~Shops.html">Shops</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-database">server/js/database</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html">Creator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/loader.js~Loader.html">Loader</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity">server/js/game/entity</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/entity.js~Entity.html">Entity</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character">server/js/game/entity/character</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/character.js~Character.html">Character</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-combat">server/js/game/entity/character/combat</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html">Combat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combatqueue.js~CombatQueue.html">CombatQueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/hit.js~Hit.html">Hit</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-mob">server/js/game/entity/character/mob</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/mob/mob.js~Mob.html">Mob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player">server/js/game/entity/character/player</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html">Checkpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/handler.js~PlayerHandler.html">PlayerHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html">Trade</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/warp.js~Warp.html">Warp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-ability">server/js/game/entity/character/player/ability</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/abilities.js~Abilities.html">Abilities</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-ability-misc">server/js/game/entity/character/player/ability/misc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/ability.js~Ability.html">Ability</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/firestrike.js~FireStrike.html">FireStrike</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/iceattack.js~IceAttack.html">IceAttack</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/run.js~Run.html">Run</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers">server/js/game/entity/character/player/containers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/container.js~Container.html">Container</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers-bank">server/js/game/entity/character/player/containers/bank</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/bank/bank.js~Bank.html">Bank</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers-inventory">server/js/game/entity/character/player/containers/inventory</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/inventory/inventory.js~Inventory.html">Inventory</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-enchant">server/js/game/entity/character/player/enchant</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html">Enchant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-equipment">server/js/game/entity/character/player/equipment</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/armour.js~Armour.html">Armour</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/boots.js~Boots.html">Boots</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html">Equipment</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/pendant.js~Pendant.html">Pendant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/ring.js~Ring.html">Ring</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/weapon.js~Weapon.html">Weapon</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-points">server/js/game/entity/character/player/points</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/hitpoints.js~HitPoints.html">HitPoints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/mana.js~Mana.html">Mana</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/points.js~Points.html">Points</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-profession">server/js/game/entity/character/player/profession</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/profession/profession.js~Profession.html">Profession</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-profession-impl">server/js/game/entity/character/player/profession/impl</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/profession/impl/foresting.js~Foresting.html">Foresting</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-quest">server/js/game/entity/character/player/quest</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/quest.js~Quest.html">Quest</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-quest-misc">server/js/game/entity/character/player/quest/misc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/bulkysituation.js~BulkySituation.html">BulkySituation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/introduction.js~Introduction.html">Introduction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/thelie.js~TheLie.html">TheLie</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-npc">server/js/game/entity/npc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/npc/npc.js~NPC.html">NPC</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-objects">server/js/game/entity/objects</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/chest.js~Chest.html">Chest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/projectile.js~Projectile.html">Projectile</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-map">server/js/map</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/map/area.js~Area.html">Area</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/map/grids.js~Grids.html">Grids</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-minigames">server/js/minigames</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html">Minigame</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-network">server/js/network</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/network/socket.js~Socket.html">Socket</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-util">server/js/util</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/util/bot.js~Bot.html">Bot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-requireItems">requireItems</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AbilityDictionary">AbilityDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ItemsDictionary">ItemsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MobsDictionary">MobsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-NpcsDictionary">NpcsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ShopsDictionary">ShopsDictionary</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#tools-api">tools/api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/tools/api/registrar.js~Registrar.html">Registrar</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#tools-map">tools/map</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-parse">parse</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/renderer/renderer.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* global document */
+import _ from &apos;underscore&apos;;
+import $ from &apos;jquery&apos;;
+import log from &apos;../lib/log&apos;;
+import Camera from &apos;./camera&apos;;
+import Tile from &apos;./tile&apos;;
+import Character from &apos;../entity/character/character&apos;;
+import Item from &apos;../entity/objects/item&apos;;
+import Detect from &apos;../utils/detect&apos;;
+import { isIntersecting } from &apos;../utils/util&apos;;
+
+const getX = (index, width) =&gt; {
+  if (index === 0) {
+    return 0;
+  }
+
+  return index % width === 0
+    ? width - 1
+    : (index % width) - 1;
+};
+
+export default class Renderer {
+  constructor(backgroundCanvas, entitiesCanvas, foregroundCanvas, textCanvas, cursorCanvas, game) {
+    this.backgroundCanvas = backgroundCanvas;
+    this.entitiesCanvas = entitiesCanvas;
+    this.foregroundCanvas = foregroundCanvas;
+    this.textCanvas = textCanvas;
+    this.cursorCanvas = cursorCanvas;
+
+    this.context = entitiesCanvas.getContext(&apos;2d&apos;);
+    this.backContext = backgroundCanvas.getContext(&apos;2d&apos;);
+    this.foreContext = foregroundCanvas.getContext(&apos;2d&apos;);
+    this.textContext = textCanvas.getContext(&apos;2d&apos;);
+    this.cursorContext = cursorCanvas.getContext(&apos;2d&apos;);
+
+    this.context.imageSmoothingEnabled = false;
+    this.backContext.imageSmoothingEnabled = false;
+    this.foreContext.imageSmoothingEnabled = false;
+    this.textContext.imageSmoothingEnabled = true;
+    this.cursorContext.imageSmoothingEnabled = false;
+
+    this.contexts = [this.backContext, this.foreContext, this.context];
+    this.canvases = [
+      this.backgroundCanvas,
+      this.entitiesCanvas,
+      this.foregroundCanvas,
+      this.textCanvas,
+      this.cursorCanvas,
+    ];
+
+    this.game = game;
+    this.camera = null;
+    this.entities = null;
+    this.input = null;
+
+    this.checkDevice();
+
+    this.scale = 1;
+    this.tileSize = 16;
+    this.fontSize = 10;
+
+    this.screenWidth = 0;
+    this.screenHeight = 0;
+
+    this.time = new Date();
+
+    this.fps = 0;
+    this.frameCount = 0;
+    this.renderedFrame = [0, 0];
+    this.lastTarget = [0, 0];
+
+    this.animatedTiles = [];
+
+    this.resizeTimeout = null;
+    this.autoCentre = false;
+
+    this.drawTarget = false;
+    this.selectedCellVisible = false;
+
+    this.stopRendering = false;
+    this.animateTiles = true;
+    this.debugging = false;
+    this.brightness = 100;
+    this.drawNames = true;
+    this.drawLevels = false;
+    this.forceRendering = false;
+    this.textCanvas = $(&apos;#textCanvas&apos;);
+
+    this.loadRenderer();
+  }
+
+  stop() {
+    log.debug(&apos;Renderer - stop()&apos;);
+
+    this.camera = null;
+    this.input = null;
+    this.stopRendering = true;
+
+    this.forEachContext((context) =&gt; {
+      context.fillStyle = &apos;#12100D&apos;; // eslint-disable-line
+      context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+    });
+  }
+
+  loadRenderer() {
+    log.debug(&apos;Renderer - loadRenderer()&apos;);
+
+    this.scale = this.getScale();
+    this.drawingScale = this.getDrawingScale();
+
+    this.forEachContext((context) =&gt; {
+      context.imageSmoothingEnabled = false; // eslint-disable-line
+      context.webkitImageSmoothingEnabled = false; // eslint-disable-line
+      context.mozImageSmoothingEnabled = false; // eslint-disable-line
+      context.msImageSmoothingEnabled = false; // eslint-disable-line
+      context.oImageSmoothingEnabled = false; // eslint-disable-line
+    });
+  }
+
+  loadSizes() {
+    // log.debug(&apos;Renderer - loadSizes()&apos;);
+
+    if (!this.camera) {
+      return;
+    }
+
+    this.screenWidth = this.camera.gridWidth * this.tileSize;
+    this.screenHeight = this.camera.gridHeight * this.tileSize;
+
+    const width = $(&apos;#container&apos;).width() - this.camera.gridWidth;
+    const height = $(&apos;#container&apos;).height() - this.camera.gridHeight;
+
+    this.forEachCanvas((canvas) =&gt; {
+      canvas.width = width; // eslint-disable-line
+      canvas.height = height; // eslint-disable-line
+    });
+  }
+
+  loadCamera() {
+    // log.debug(&apos;Renderer - loadCamera()&apos;);
+
+    const { storage } = this.game;
+    this.camera = new Camera(this);
+
+    this.loadSizes();
+
+    if (
+      storage.data.new
+      &amp;&amp; (this.firefox
+        || parseFloat(Detect.androidVersion()) &lt; 6.0
+        || parseFloat(Detect.iOSVersion() &lt; 9.0)
+        || Detect.isIpad())
+    ) {
+      this.camera.centered = false;
+
+      storage.data.settings.centerCamera = false;
+      storage.save();
+    }
+  }
+
+  resize() {
+    // log.debug(&apos;Renderer - resize()&apos;);
+
+    this.stopRendering = true;
+
+    this.clearAll();
+    this.checkDevice();
+
+    if (!this.resizeTimeout) {
+      this.resizeTimeout = setTimeout(() =&gt; {
+        this.scale = this.getScale();
+        this.drawingScale = this.getDrawingScale();
+
+        if (this.camera) {
+          this.camera.update();
+        }
+
+        this.updateAnimatedTiles();
+
+        this.loadSizes();
+
+        if (this.entities) {
+          this.entities.update();
+        }
+
+        if (this.map) {
+          this.map.updateTileset();
+        }
+
+        if (this.camera) {
+          this.camera.centreOn(this.game.player);
+        }
+
+        if (this.game.interface) {
+          this.game.interface.resize();
+        }
+
+        this.renderedFrame[0] = -1;
+        this.stopRendering = false;
+        this.resizeTimeout = null;
+      }, 500);
+    }
+  }
+
+  render() {
+    // log.debug(&apos;Renderer - render()&apos;);
+
+    if (this.stopRendering) {
+      return;
+    }
+
+    this.clearScreen(this.context);
+    this.clearText();
+    this.saveAll();
+
+    /**
+     * Rendering related draws
+     */
+    this.draw();
+    this.drawAnimatedTiles();
+
+    // the annoying square under the cursor
+    // this.drawTargetCell();
+
+    this.drawSelectedCell();
+    this.drawEntities();
+    this.drawInfos();
+    this.drawDebugging();
+    this.restoreAll();
+    this.drawCursor();
+  }
+
+  /**
+   * Context Drawing
+   */
+
+  draw() {
+    // log.debug(&apos;Renderer - draw()&apos;);
+
+    if (this.hasRenderedFrame()) {
+      // log.debug(&apos;has rendered rate&apos;, this.hasRenderedFrame());
+      return;
+    }
+
+    this.clearDrawing();
+    this.updateDrawingView();
+
+    this.forEachVisibleTile((id, index) =&gt; {
+      const isHighTile = this.map.isHighTile(id);
+      const context = isHighTile ? this.foreContext : this.backContext;
+
+      if (!this.map.isAnimatedTile(id) || !this.animateTiles) {
+        this.drawTile(
+          context,
+          id,
+          this.tileset,
+          this.tileset.width / this.tileSize,
+          this.map.width,
+          index,
+        );
+      }
+    });
+
+    this.saveFrame();
+  }
+
+  drawAnimatedTiles() {
+    // log.debug(&apos;Renderer - drawAnimatedTiles()&apos;);
+
+    this.setCameraView(this.context);
+
+    if (!this.animateTiles) {
+      return;
+    }
+
+    this.forEachAnimatedTile((tile) =&gt; {
+      this.drawTile(
+        this.context,
+        tile.id,
+        this.tileset,
+        this.tileset.width / this.tileSize,
+        this.map.width,
+        tile.index,
+      );
+      tile.loaded = true; // eslint-disable-line
+    });
+  }
+
+  drawInfos() {
+    // log.debug(&apos;Renderer - drawInfos()&apos;);
+
+    if (this.game.info.getCount() === 0) {
+      return;
+    }
+
+    this.game.info.forEachInfo((info) =&gt; {
+      const factor = this.mobile ? 2 : 1;
+
+      this.textContext.save();
+      this.textContext.font = &apos;24px sans serif&apos;;
+      this.setCameraView(this.textContext);
+      this.textContext.globalAlpha = info.opacity;
+      this.drawText(
+        `${info.text}`,
+        Math.floor((info.x + 8) * factor),
+        Math.floor(info.y * factor),
+        true,
+        info.fill,
+        info.stroke,
+      );
+      this.textContext.restore();
+    });
+  }
+
+  drawDebugging() {
+    // log.debug(&apos;Renderer - drawDebugging()&apos;);
+
+    if (!this.debugging) {
+      return;
+    }
+
+    this.drawFPS();
+
+    if (!this.mobile) {
+      this.drawPosition();
+      this.drawPathing();
+    }
+  }
+
+  drawEntities() {
+    // log.debug(&apos;Renderer - drawEntities()&apos;);
+
+    this.forEachVisibleEntity((entity) =&gt; {
+      if (entity.spriteLoaded) {
+        // log.debug(&apos;drawEntities&apos;, entity);
+        this.drawEntity(entity);
+      }
+    });
+  }
+
+  drawEntity(entity) {
+    // log.debug(&apos;Renderer - drawEntity()&apos;, entity);
+
+    const { sprite } = entity;
+    const animation = entity.currentAnimation;
+    const data = entity.renderingData;
+
+    if (!sprite || !animation || !entity.isVisible()) {
+      return;
+    }
+
+    const frame = animation.currentFrame;
+    const x = frame.x * this.drawingScale;
+    const y = frame.y * this.drawingScale;
+    const dx = entity.x * this.drawingScale;
+    const dy = entity.y * this.drawingScale;
+    const flipX = dx + this.tileSize * this.drawingScale;
+    const flipY = dy + data.height;
+
+    this.context.save();
+
+    if (data.scale !== this.scale || data.sprite !== sprite) {
+      data.scale = this.scale;
+      data.sprite = sprite;
+      data.width = sprite.width * this.drawingScale;
+      data.height = sprite.height * this.drawingScale;
+      data.ox = sprite.offsetX * this.drawingScale;
+      data.oy = sprite.offsetY * this.drawingScale;
+
+      if (entity.angled) {
+        data.angle = (entity.angle * Math.PI) / 180;
+      }
+
+      if (entity.hasShadow()) {
+        data.shadowWidth = this.shadowSprite.width * this.drawingScale;
+        data.shadowHeight = this.shadowSprite.height * this.drawingScale;
+        data.shadowOffsetY = entity.shadowOffsetY * this.drawingScale;
+      }
+    }
+
+    if (entity.fading) {
+      this.context.globalAlpha = entity.fadingAlpha;
+    }
+
+    if (entity.spriteFlipX) {
+      this.context.translate(flipX, dy);
+      this.context.scale(-1, 1);
+    } else if (entity.spriteFlipY) {
+      this.context.translate(dx, flipY);
+      this.context.scale(1, -1);
+    } else this.context.translate(dx, dy);
+
+    if (entity.angled) {
+      this.context.rotate(data.angle);
+    }
+
+    if (entity.hasShadow()) {
+      this.context.drawImage(
+        this.shadowSprite.image,
+        0,
+        0,
+        data.shadowWidth,
+        data.shadowHeight,
+        0,
+        data.shadowOffsetY,
+        data.shadowWidth,
+        data.shadowHeight,
+      );
+    }
+
+    this.drawEntityBack(entity);
+
+    this.context.drawImage(
+      sprite.image,
+      x,
+      y,
+      data.width,
+      data.height,
+      data.ox,
+      data.oy,
+      data.width,
+      data.height,
+    );
+
+    if (
+      entity instanceof Character
+      &amp;&amp; !entity.dead
+      &amp;&amp; !entity.teleporting
+      &amp;&amp; entity.hasWeapon()
+    ) {
+      const weaponSprite = this.entities.getSprite(entity.weapon.getName());
+
+      if (weaponSprite) {
+        if (!weaponSprite.loaded) {
+          weaponSprite.loadSprite();
+        }
+
+        const weaponAnimationData = weaponSprite.animationData[animation.name];
+
+        const index = frame.index &lt; weaponAnimationData.length
+          ? frame.index
+          : frame.index % weaponAnimationData.length;
+
+
+        const weaponX = weaponSprite.width * index * this.drawingScale;
+        const weaponY = weaponSprite.height * animation.row * this.drawingScale;
+        const weaponWidth = weaponSprite.width * this.drawingScale;
+        const weaponHeight = weaponSprite.height * this.drawingScale;
+
+        this.context.drawImage(
+          weaponSprite.image,
+          weaponX,
+          weaponY,
+          weaponWidth,
+          weaponHeight,
+          weaponSprite.offsetX * this.drawingScale,
+          weaponSprite.offsetY * this.drawingScale,
+          weaponWidth,
+          weaponHeight,
+        );
+      }
+    }
+
+    if (entity instanceof Item) {
+      const {
+        sparksAnimation,
+      } = this.entities.sprites;
+      const sparksFrame = sparksAnimation.currentFrame;
+
+      if (data.scale !== this.scale) {
+        data.sparksX = this.sparksSprite.width * sparksFrame.index * this.drawingScale;
+        data.sparksY = this.sparksSprite.height * sparksAnimation.row * this.drawingScale;
+
+        data.sparksWidth = this.sparksSprite.width * this.drawingScale;
+        data.sparksHeight = this.sparksSprite.height * this.drawingScale;
+      }
+
+      this.context.drawImage(
+        this.sparksSprite.image,
+        data.sparksX,
+        data.sparksY,
+        data.sparksWidth,
+        data.sparksHeight,
+        0,
+        0,
+        data.sparksWidth,
+        data.sparksHeight,
+      );
+    }
+
+    this.drawEntityFore(entity);
+
+    this.context.restore();
+
+    this.drawHealth(entity);
+    this.drawName(entity);
+  }
+
+  /**
+   * Function used to draw special effects prior
+   * to rendering the entity.
+   */
+  drawEntityBack(entity) {
+    // const self = this;
+    // @TODO
+  }
+
+  drawEntityFore(entity) {
+    // log.debug(&apos;Renderer - drawEntityFore()&apos;);
+
+    /**
+     * Function used to draw special effects after
+     * having rendererd the entity
+     */
+
+    if (
+      entity.terror
+      || entity.stunned
+      || entity.critical
+      || entity.explosion
+    ) {
+      const sprite = this.entities.getSprite(entity.getActiveEffect());
+
+      if (!sprite.loaded) {
+        sprite.loadSprite();
+      }
+
+      if (sprite) {
+        const animation = entity.getEffectAnimation();
+        const { index } = animation.currentFrame;
+        const x = sprite.width * index * this.drawingScale;
+        const y = sprite.height * animation.row * this.drawingScale;
+        const width = sprite.width * this.drawingScale;
+        const height = sprite.height * this.drawingScale;
+        const offsetX = sprite.offsetX * this.drawingScale;
+        const offsetY = sprite.offsetY * this.drawingScale;
+
+        this.context.drawImage(
+          sprite.image,
+          x,
+          y,
+          width,
+          height,
+          offsetX,
+          offsetY,
+          width,
+          height,
+        );
+      }
+    }
+  }
+
+  drawHealth(entity) {
+    // log.debug(&apos;Renderer - entity()&apos;);
+
+    if (!entity.hitPoints || entity.hitPoints &lt; 0 || !entity.healthBarVisible) {
+      return;
+    }
+
+    const barLength = 16;
+    const healthX = entity.x * this.drawingScale - barLength / 2 + 8;
+    const healthY = (entity.y - 9) * this.drawingScale;
+
+    const healthWidth = Math.round(
+      (entity.hitPoints / entity.maxHitPoints)
+      * barLength
+      * this.drawingScale,
+    );
+
+    const healthHeight = 2 * this.drawingScale;
+
+    this.context.save();
+    this.context.strokeStyle = &apos;#00000&apos;;
+    this.context.lineWidth = 1;
+    this.context.strokeRect(
+      healthX,
+      healthY,
+      barLength * this.drawingScale,
+      healthHeight,
+    );
+    this.context.fillStyle = &apos;#FD0000&apos;;
+    this.context.fillRect(healthX, healthY, healthWidth, healthHeight);
+    this.context.restore();
+  }
+
+  drawName(entity) {
+    // log.debug(&apos;Renderer - drawName()&apos;);
+
+    if (entity.hidden || (!this.drawNames &amp;&amp; !this.drawLevels)) {
+      return;
+    }
+
+    let colour = entity.wanted ? &apos;red&apos; : &apos;white&apos;;
+    const factor = this.mobile ? 2 : 1;
+
+    if (entity.rights &gt; 1) {
+      colour = &apos;#ba1414&apos;;
+    } else if (entity.rights &gt; 0) {
+      colour = &apos;#a59a9a&apos;;
+    }
+
+    if (entity.id === this.game.player.id) {
+      colour = &apos;#fcda5c&apos;;
+    }
+
+    this.textContext.save();
+    this.setCameraView(this.textContext);
+    this.textContext.font = &apos;14px sans serif&apos;;
+
+    if (!entity.hasCounter) {
+      if (this.drawNames &amp;&amp; entity !== &apos;player&apos;) {
+        this.drawText(
+          entity.username,
+          (entity.x + 8) * factor,
+          (entity.y - (this.drawLevels ? 20 : 10)) * factor,
+          true,
+          colour,
+        );
+      }
+
+      if (
+        this.drawLevels
+        &amp;&amp; (entity.type === &apos;mob&apos; || entity.type === &apos;player&apos;)
+      ) {
+        this.drawText(
+          `Level ${entity.level}`,
+          (entity.x + 8) * factor,
+          (entity.y - 10) * factor,
+          true,
+          colour,
+        );
+      }
+
+      if (entity.type === &apos;item&apos; &amp;&amp; entity.count &gt; 1) {
+        this.drawText(
+          entity.count,
+          (entity.x + 8) * factor,
+          (entity.y - 10) * factor,
+          true,
+          colour,
+        );
+      }
+    } else {
+      if (this.game.time - entity.countdownTime &gt; 1000) {
+        entity.countdownTime = this.game.time; // eslint-disable-line
+        entity.counter -= 1; // eslint-disable-line
+      }
+
+      if (entity.counter &lt;= 0) {
+        entity.hasCounter = false; // eslint-disable-line
+      }
+
+      this.drawText(
+        entity.counter,
+        (entity.x + 8) * factor,
+        (entity.y - 10) * factor,
+        true,
+        colour,
+      );
+    }
+
+    this.textContext.restore();
+  }
+
+  drawCursor() {
+    // log.debug(&apos;Renderer - drawCursor()&apos;);
+
+    if (this.tablet || this.mobile) {
+      return;
+    }
+
+    const { cursor } = this.input;
+
+    this.clearScreen(this.cursorContext);
+    this.cursorContext.save();
+
+    if (cursor &amp;&amp; this.scale &gt; 1) {
+      if (!cursor.loaded) {
+        cursor.loadSprite();
+      }
+
+      if (cursor.loaded) {
+        this.cursorContext.drawImage(
+          cursor.image,
+          0,
+          0,
+          14 * this.drawingScale,
+          14 * this.drawingScale,
+          this.input.mouse.x,
+          this.input.mouse.y,
+          14 * this.drawingScale,
+          14 * this.drawingScale,
+        );
+      }
+    }
+
+    this.cursorContext.restore();
+  }
+
+  drawFPS() {
+    // log.debug(&apos;Renderer - drawFPS()&apos;);
+
+    const currentTime = new Date();
+    const timeDiff = currentTime - this.time;
+
+    if (timeDiff &gt;= 1000) {
+      this.realFPS = this.frameCount;
+      this.frameCount = 0;
+      this.time = currentTime;
+      this.fps = this.realFPS;
+    }
+
+    this.frameCount += 1;
+
+    this.drawText(`FPS: ${this.realFPS}`, 10, 11, false, &apos;white&apos;);
+  }
+
+  drawPosition() {
+    // log.debug(&apos;Renderer - drawPosition()&apos;);
+
+    const { player } = this.game;
+
+    this.drawText(
+      `x: ${player.gridX} y: ${player.gridY}`,
+      10,
+      31,
+      false,
+      &apos;white&apos;,
+    );
+  }
+
+  drawPathing() {
+    // log.debug(&apos;Renderer - drawPathing()&apos;);
+
+    const { pathingGrid } = this.entities.grids;
+
+    if (!pathingGrid) {
+      return;
+    }
+
+    this.camera.forEachVisiblePosition((x, y) =&gt; {
+      if (x &lt; 0 || y &lt; 0) {
+        return;
+      }
+
+      if (pathingGrid[y][x] !== 0) {
+        this.drawCellHighlight(x, y, &apos;rgba(50, 50, 255, 0.5)&apos;);
+      }
+    });
+  }
+
+  drawSelectedCell() {
+    // log.debug(&apos;Renderer - drawSelectedCell()&apos;);
+
+    if (!this.input.selectedCellVisible) {
+      return;
+    }
+
+    const posX = this.input.selectedX;
+    const posY = this.input.selectedY;
+
+    // only draw the highlight cell if they are not adjacent
+    // from character&apos;s current position
+    if (!this.game.player.isPositionAdjacent(posX, posY)) {
+      this.drawCellHighlight(posX, posY, this.input.mobileTargetColour);
+    }
+  }
+
+  /**
+   * Primitive drawing functions
+   */
+
+  drawTile(context, tileId, tileset, setWidth, gridWidth, cellId) {
+    // log.debug(&apos;Renderer - draw()&apos;, context, tileId, tileset, setWidth, gridWidth, cellId);
+
+    if (tileId === -1) {
+      return;
+    }
+
+    this.drawScaledImage(
+      context,
+      tileset,
+      getX(tileId + 1, setWidth / this.drawingScale) * this.tileSize,
+      Math.floor(tileId / (setWidth / this.drawingScale)) * this.tileSize,
+      this.tileSize,
+      this.tileSize,
+      getX(cellId + 1, gridWidth) * this.tileSize,
+      Math.floor(cellId / gridWidth) * this.tileSize,
+    );
+  }
+
+  clearTile(context, gridWidth, cellId) {
+    // log.debug(&apos;Renderer - clearTile()&apos;, context, gridWidth, cellId);
+
+    const x = getX(cellId + 1, gridWidth) * this.tileSize * this.drawingScale;
+    const y = Math.floor(cellId / gridWidth) * this.tileSize * this.drawingScale;
+    const w = this.tileSize * this.scale;
+
+    context.clearRect(x, y, w, w);
+  }
+
+  drawText(text, x, y, centered, colour, strokeColour) {
+    // log.debug(&apos;Renderer - drawText()&apos;, text, x, y, centered, colour, strokeColour);
+
+    let strokeSize = 1;
+    const context = this.textContext;
+
+    if (this.scale &gt; 2) {
+      strokeSize = 3;
+    }
+
+    if (text &amp;&amp; x &amp;&amp; y) {
+      context.save();
+
+      if (centered) {
+        context.textAlign = &apos;center&apos;;
+      }
+
+      context.strokeStyle = strokeColour || &apos;#373737&apos;;
+      context.lineWidth = strokeSize;
+      context.strokeText(text, x * this.scale, y * this.scale);
+      context.fillStyle = colour || &apos;white&apos;;
+      context.fillText(text, x * this.scale, y * this.scale);
+
+      context.restore();
+    }
+  }
+
+  drawScaledImage(context, image, x, y, width, height, dx, dy) {
+    // log.debug(&apos;Renderer - drawScaledImage()&apos;, context, image, x, y, width, height, dx, dy);
+
+    if (!context) {
+      return;
+    }
+
+    context.drawImage(
+      image,
+      x * this.drawingScale,
+      y * this.drawingScale,
+      width * this.drawingScale,
+      height * this.drawingScale,
+      dx * this.drawingScale,
+      dy * this.drawingScale,
+      width * this.drawingScale,
+      height * this.drawingScale,
+    );
+  }
+
+  updateAnimatedTiles() {
+    // log.debug(&apos;Renderer - updateAnimatedTiles()&apos;);
+
+    if (!this.animateTiles) {
+      return;
+    }
+
+    const newTiles = [];
+
+    this.forEachVisibleTile((id, index) =&gt; {
+      /**
+       * We don&apos;t want to reinitialize animated tiles that already exist
+       * and are within the visible camera proportions. This way we can parse
+       * it every time the tile moves slightly.
+       */
+
+      if (!this.map.isAnimatedTile(id)) {
+        return;
+      }
+
+      /**
+       * Push the pre-existing tiles.
+       */
+
+      const tileIndex = this.animatedTiles.indexOf(id);
+
+      if (tileIndex &gt; -1) {
+        newTiles.push(this.animatedTiles[tileIndex]);
+        return;
+      }
+
+      const tile = new Tile(
+        id,
+        index,
+        this.map.getTileAnimationLength(id),
+        this.map.getTileAnimationDelay(id),
+      );
+
+      const position = this.map.indexToGridPosition(tile.index);
+
+      tile.setPosition(position);
+      newTiles.push(tile);
+    }, 2);
+
+    this.animatedTiles = newTiles;
+  }
+
+  checkDirty(rectOne, source, x, y) {
+    // log.debug(&apos;Renderer - checkDirty()&apos;, rectOne, source, x, y);
+
+    this.entities.forEachEntityAround(x, y, 2, (entityTwo) =&gt; {
+      if (source &amp;&amp; source.id &amp;&amp; entityTwo.id === source.id) return;
+
+      if (!entityTwo.isDirty &amp;&amp; isIntersecting(rectOne, this.getEntityBounds(entityTwo))) {
+        entityTwo.loadDirty();
+      }
+    });
+
+    if (source &amp;&amp; !source.hasOwnProperty(&apos;index&apos;)) { // eslint-disable-line
+      this.forEachAnimatedTile((tile) =&gt; {
+        if (!tile.isDirty &amp;&amp; isIntersecting(rectOne, this.getTileBounds(tile))) {
+          tile.dirty = true; // eslint-disable-line
+        }
+      });
+    }
+
+    if (!this.drawTarget &amp;&amp; this.input.selectedCellVisible) {
+      const targetRect = this.getTargetBounds();
+
+      if (isIntersecting(rectOne, targetRect)) {
+        this.drawTarget = true;
+        this.targetRect = targetRect;
+      }
+    }
+  }
+
+  drawCellRect(x, y, colour) {
+    // log.debug(&apos;Renderer - drawCellRect()&apos;, x, y, colour);
+
+    const multiplier = this.tileSize * this.drawingScale;
+
+    this.context.save();
+    this.context.lineWidth = 2 * this.drawingScale;
+    this.context.translate(x + 2, y + 2);
+    this.context.strokeStyle = colour;
+    this.context.strokeRect(0, 0, multiplier - 4, multiplier - 4);
+    this.context.restore();
+  }
+
+  drawCellHighlight(x, y, colour) {
+    // log.debug(&apos;Renderer - drawCellHighlight()&apos;, x, y, colour);
+
+    this.drawCellRect(
+      x * this.drawingScale * this.tileSize,
+      y * this.drawingScale * this.tileSize,
+      colour,
+    );
+  }
+
+  drawTargetCell() {
+    // log.debug(&apos;Renderer - drawTargetCell()&apos;);
+
+    if (
+      this.mobile
+      || this.tablet
+      || !this.input.targetVisible
+      || !this.input
+      || !this.camera
+    ) {
+      return;
+    }
+
+    const location = this.input.getCoords();
+
+    if (
+      !(
+        location.x === this.input.selectedX
+        &amp;&amp; location.y === this.input.selectedY
+      )
+    ) {
+      this.drawCellHighlight(location.x, location.y, this.input.targetColour);
+    }
+  }
+
+  /**
+   * Primordial Rendering functions
+   */
+
+  forEachVisibleIndex(callback, offset) {
+    // log.debug(&apos;Renderer - forEachVisibleIndex()&apos;, callback, offset);
+
+    this.camera.forEachVisiblePosition((x, y) =&gt; {
+      if (!this.map.isOutOfBounds(x, y)) callback(this.map.gridPositionToIndex(x, y) - 1);
+    }, offset);
+  }
+
+  forEachVisibleTile(callback, offset) {
+    // log.debug(&apos;Renderer - forEachVisibleTile()&apos;, callback, offset);
+
+    if (!this.map || !this.map.mapLoaded) {
+      return;
+    }
+
+    this.forEachVisibleIndex((index) =&gt; {
+      if (_.isArray(this.map.data[index])) {
+        _.each(this.map.data[index], (id) =&gt; {
+          callback(id - 1, index);
+        });
+      } else if (!isNaN(this.map.data[index] - 1)) { // eslint-disable-line
+        callback(this.map.data[index] - 1, index);
+      }
+    }, offset);
+  }
+
+  forEachAnimatedTile(callback) {
+    // log.debug(&apos;Renderer - forEachAnimatedTile()&apos;, callback);
+
+    _.each(this.animatedTiles, (tile) =&gt; {
+      callback(tile);
+    });
+  }
+
+  forEachVisibleEntity(callback) {
+    // log.debug(&apos;Renderer - forEachVisibleEntity()&apos;, callback);
+
+    if (!this.entities || !this.camera) {
+      return;
+    }
+
+    const { grids } = this.entities;
+
+    this.camera.forEachVisiblePosition((x, y) =&gt; {
+      if (!this.map.isOutOfBounds(x, y) &amp;&amp; grids.renderingGrid[y][x]) {
+        _.each(grids.renderingGrid[y][x], (entity) =&gt; {
+          callback(entity);
+        });
+      }
+    });
+  }
+
+  isVisiblePosition(x, y) {
+    // log.debug(&apos;Renderer - isVisiblePosition()&apos;, x, y);
+
+    return (
+      y &gt;= this.camera.gridY
+      &amp;&amp; y &lt; this.camera.gridY + this.camera.gridHeight
+      &amp;&amp; x &gt;= this.camera.gridX
+      &amp;&amp; x &lt; this.camera.gridX + this.camera.gridWidth
+    );
+  }
+
+  getScale() {
+    // log.debug(&apos;Renderer - getScale()&apos;);
+
+    return this.game.getScaleFactor();
+  }
+
+  getDrawingScale() {
+    // log.debug(&apos;Renderer - getDrawingScale()&apos;);
+
+    let scale = this.getScale();
+
+    if (this.mobile) {
+      scale = 2;
+    }
+
+    return scale;
+  }
+
+  getUpscale() {
+    // log.debug(&apos;Renderer - getUpscale()&apos;);
+
+    let scale = this.getScale();
+
+    if (scale &gt; 2) {
+      scale = 2;
+    }
+
+    return scale;
+  }
+
+  clearContext() {
+    // log.debug(&apos;Renderer - clearContext()&apos;);
+
+    this.context.clearRect(
+      0,
+      0,
+      this.screenWidth * this.scale,
+      this.screenHeight * this.scale,
+    );
+  }
+
+  clearText() {
+    // log.debug(&apos;Renderer - clearText()&apos;);
+
+    this.textContext.clearRect(
+      0,
+      0,
+      this.textCanvas.width * this.scale,
+      this.textCanvas.height * this.scale,
+    );
+  }
+
+  restore() {
+    // log.debug(&apos;Renderer - restore()&apos;);
+
+    this.forEachContext((context) =&gt; {
+      context.restore();
+    });
+  }
+
+  clearAll() {
+    // log.debug(&apos;Renderer - clearAll()&apos;);
+
+    this.forEachContext((context) =&gt; {
+      context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+    });
+  }
+
+  clearDrawing() {
+    // log.debug(&apos;Renderer - clearDrawing()&apos;);
+
+    this.forEachDrawingContext((context) =&gt; {
+      context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+    });
+  }
+
+  saveAll() {
+    // log.debug(&apos;Renderer - saveAll()&apos;);
+
+    this.forEachContext((context) =&gt; {
+      context.save();
+    });
+  }
+
+  restoreAll() {
+    // log.debug(&apos;Renderer - restoreAll()&apos;);
+
+    this.forEachContext((context) =&gt; {
+      context.restore();
+    });
+  }
+
+  focus() {
+    // log.debug(&apos;Renderer - focus()&apos;);
+
+    this.forEachContext((context) =&gt; {
+      context.focus();
+    });
+  }
+
+  /**
+   * Rendering Functions
+   */
+
+  updateView() {
+    // log.debug(&apos;Renderer - updateView()&apos;);
+
+    this.forEachContext((context) =&gt; {
+      this.setCameraView(context);
+    });
+  }
+
+  updateDrawingView() {
+    // log.debug(&apos;Renderer - updateDrawingView()&apos;);
+
+    this.forEachDrawingContext((context) =&gt; {
+      this.setCameraView(context);
+    });
+  }
+
+  setCameraView(context) {
+    // log.debug(&apos;Renderer - setCameraView()&apos;);
+
+    if (!this.camera || this.stopRendering) {
+      return;
+    }
+
+    context.translate(
+      -this.camera.x * this.drawingScale,
+      -this.camera.y * this.drawingScale,
+    );
+  }
+
+  clearScreen(context) {
+    // log.debug(&apos;Renderer - clearScreen()&apos;, context);
+
+    context.clearRect(
+      0,
+      0,
+      this.context.canvas.width,
+      this.context.canvas.height,
+    );
+  }
+
+  hasRenderedFrame() {
+    // log.debug(&apos;Renderer - hasRenderedFrame()&apos;);
+
+    if (this.forceRendering) {
+      return false;
+    }
+
+    if (!this.camera || this.stopRendering || !this.input) {
+      return true;
+    }
+
+    return (
+      this.renderedFrame[0] === this.camera.x
+      &amp;&amp; this.renderedFrame[1] === this.camera.y
+    );
+  }
+
+  saveFrame() {
+    // log.debug(&apos;Renderer - saveFrame()&apos;);
+
+    if (!this.hasRenderedFrame()) {
+      this.renderedFrame[0] = this.camera.x;
+      this.renderedFrame[1] = this.camera.y;
+    }
+  }
+
+  adjustBrightness(level) {
+    // log.debug(&apos;Renderer - adjustBrightness()&apos;, level);
+
+    if (level &lt; 0 || level &gt; 100) {
+      return;
+    }
+
+    this.textCanvas.css(
+      &apos;background&apos;,
+      `rgba(0, 0, 0, ${0.5 - level / 200})`,
+    );
+  }
+
+  loadStaticSprites() {
+    log.debug(&apos;Renderer - loadStaticSprites()&apos;);
+
+    this.shadowSprite = this.entities.getSprite(&apos;shadow16&apos;);
+
+    // if (!this.shadowSprite.loaded) {
+    //   this.shadowSprite.loadSprite();
+    // }
+
+    this.sparksSprite = this.entities.getSprite(&apos;sparks&apos;);
+
+    // if (!this.sparksSprite.loaded) {
+    //   this.sparksSprite.loadSprite();
+    // }
+  }
+
+  /**
+   * Miscellaneous functions
+   */
+
+  forEachContext(callback) {
+    // log.debug(&apos;Renderer - forEachContext()&apos;, callback);
+
+    _.each(this.contexts, (context) =&gt; {
+      callback(context);
+    });
+  }
+
+  forEachDrawingContext(callback) {
+    // log.debug(&apos;Renderer - forEachDrawingContext()&apos;, callback);
+
+    _.each(this.contexts, (context) =&gt; {
+      if (context.canvas.id !== &apos;entities&apos;) {
+        callback(context);
+      }
+    });
+  }
+
+  forEachCanvas(callback) {
+    // log.debug(&apos;Renderer - forEachCanvas()&apos;, callback);
+
+    _.each(this.canvases, (canvas) =&gt; {
+      callback(canvas);
+    });
+  }
+
+  checkDevice() {
+    // log.debug(&apos;Renderer - checkDevice()&apos;);
+
+    this.mobile = this.game.client.isMobile();
+    this.tablet = this.game.client.isTablet();
+    this.firefox = Detect.isFirefox();
+  }
+
+  verifyCentration() {
+    // log.debug(&apos;Renderer - verifyCentration()&apos;);
+
+    this.forceRendering = (this.mobile || this.tablet) &amp;&amp; this.camera.centered;
+  }
+
+  isPortableDevice() {
+    // log.debug(&apos;Renderer - isPortableDevice()&apos;);
+
+    return this.mobile || this.tablet;
+  }
+
+  /**
+   * Setters
+   */
+
+  setTileset(tileset) {
+    log.debug(&apos;Renderer - setTileset()&apos;, tileset);
+
+    this.tileset = tileset;
+  }
+
+  setMap(map) {
+    // log.debug(&apos;Renderer - setMap()&apos;, map);
+
+    this.map = map;
+  }
+
+  setEntities(entities) {
+    // log.debug(&apos;Renderer - entities()&apos;, entities);
+
+    this.entities = entities;
+  }
+
+  setInput(input) {
+    // log.debug(&apos;Renderer - setInput()&apos;, input);
+
+    this.input = input;
+  }
+
+  /**
+   * Getters
+   */
+
+  getTileBounds(tile) {
+    // log.debug(&apos;Renderer - getTileBounds()&apos;, tile);
+
+    const bounds = {};
+    const cellId = tile.index;
+
+    bounds.x = (getX(cellId + 1, this.map.width) * this.tileSize
+        - this.camera.x)
+      * this.drawingScale;
+    bounds.y = (Math.floor(cellId / this.map.width) * this.tileSize - this.camera.y)
+      * this.drawingScale;
+    bounds.width = this.tileSize * this.drawingScale;
+    bounds.height = this.tileSize * this.drawingScale;
+    bounds.left = bounds.x;
+    bounds.right = bounds.x + bounds.width;
+    bounds.top = bounds.y;
+    bounds.bottom = bounds.y + bounds.height;
+
+    return bounds;
+  }
+
+  getEntityBounds(entity) {
+    // log.debug(&apos;Renderer - getEntityBounds()&apos;, entity);
+
+    const bounds = {};
+    const { sprite } = entity;
+
+    // TODO - Ensure that the sprite over there has the correct bounds
+
+    if (!sprite) {
+      log.error(`Sprite malformation for: ${entity.name}`);
+    } else {
+      bounds.x = (entity.x + sprite.offsetX - this.camera.x) * this.drawingScale;
+      bounds.y = (entity.y + sprite.offsetY - this.camera.y) * this.drawingScale;
+      bounds.width = sprite.width * this.drawingScale;
+      bounds.height = sprite.height * this.drawingScale;
+      bounds.left = bounds.x;
+      bounds.right = bounds.x + bounds.width;
+      bounds.top = bounds.y;
+      bounds.bottom = bounds.y + bounds.height;
+    }
+
+    return bounds;
+  }
+
+  getTargetBounds(x, y) {
+    // log.debug(&apos;Renderer - getTargetBounds()&apos;, x, y);
+
+    const bounds = {};
+    const tx = x || this.input.selectedX;
+    const ty = y || this.input.selectedY;
+
+    bounds.x = (tx * this.tileSize - this.camera.x) * this.drawingScale;
+    bounds.y = (ty * this.tileSize - this.camera.y) * this.drawingScale;
+    bounds.width = this.tileSize * this.drawingScale;
+    bounds.height = this.tileSize * this.drawingScale;
+    bounds.left = bounds.x;
+    bounds.right = bounds.x + bounds.width;
+    bounds.top = bounds.y;
+    bounds.bottom = bounds.y + bounds.height;
+
+    return bounds;
+  }
+
+  getTileset() {
+    // log.debug(&apos;Renderer - getTileset()&apos;);
+
+    return this.tileset;
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">WTF-Adventure/client/index.js | WTF Adventure</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="documentation for your wtf needs"><meta property="og:type" content="website"><meta property="og:url" content="http://design1online.com"><meta property="og:site_name" content="WTF Adventure"><meta property="og:title" content="WTF Adventure"><meta property="og:image" content="http://design1online.com/logo.png"><meta property="og:description" content="documentation for your wtf needs"><meta property="og:author" content="https://design1online.com"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="WTF Adventure"><meta property="twitter:description" content="documentation for your wtf needs"><meta property="twitter:image" content="http://design1online.com/logo.png"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/design1online/WTF-Adventure"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client">client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/index.js~Client.html">Client</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-controllers">client/controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/audio.js~Audio.html">Audio</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/bubble.js~Bubble.html">Bubble</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/chat.js~Chat.html">Chat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/entities.js~Entities.html">Entities</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/info.js~Info.html">Info</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/input.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/interface.js~Interface.html">Interface</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/overlay.js~Overlay.html">Overlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/pickcharacter.js~PickCharacter.html">PickCharacter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/pointer.js~Cursor.html">Cursor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/sprites.js~Sprites.html">Sprites</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/zoning.js~Zone.html">Zone</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity">client/entity</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/animation.js~Animation.html">Animation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/entity.js~Entity.html">Entity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/entityhandler.js~EntityHandler.html">EntityHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/sprite.js~Sprite.html">Sprite</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character">client/entity/character</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-mob">client/entity/character/mob</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/mob/mob.js~Mob.html">Mob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-npc">client/entity/character/npc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/npc/npc.js~Npc.html">Npc</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-player">client/entity/character/player</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/playerhandler.js~PlayerHandler.html">PlayerHandler</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-player-equipment">client/entity/character/player/equipment</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/armour.js~Armour.html">Armour</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/boots.js~Boots.html">Boots</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/equipment.js~Equipment.html">Equipment</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/pendant.js~Pendant.html">Pendant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/ring.js~Ring.html">Ring</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/weapon.js~Weapon.html">Weapon</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-objects">client/entity/objects</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/chest.js~Chest.html">Chest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/projectile.js~Projectile.html">Projectile</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface">client/interface</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html">Abilities</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/actions.js~Actions.html">Actions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/bank.js~Bank.html">Bank</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/enchant.js~Enchant.html">Enchant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/inventory.js~Inventory.html">Inventory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/warp.js~Warp.html">Warp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface-container">client/interface/container</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/container/container.js~Container.html">Container</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/container/slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface-profile">client/interface/profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/ability.js~Ability.html">Ability</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/gamePage.js~GamePage.html">GamePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/profile.js~Profile.html">Profile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/quest.js~Quest.html">Quest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/settings.js~Settings.html">Settings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/state.js~State.html">State</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-lib">client/lib</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/lib/log.js~Logger.html">Logger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-map">client/map</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html">Map</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-network">client/network</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html">Messages</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/network/socket.js~Socket.html">Socket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Packets">Packets</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer">client/renderer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/camera.js~Camera.html">Camera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/grids.js~Grids.html">Grids</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/renderer.js~Renderer.html">Renderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html">Updater</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-bubbles">client/renderer/bubbles</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/bubbles/blob.js~Blob.html">Blob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-infos">client/renderer/infos</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/infos/splat.js~Splat.html">Splat</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-pointers">client/renderer/pointers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/pointers/pointer.js~Pointer.html">Pointer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-utils">client/utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/pathfinder.js~Pathfinder.html">Pathfinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/queue.js~Queue.html">Queue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html">Storage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/transition.js~Transition.html">Transition</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isInt">isInt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isIntersecting">isIntersecting</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Detect">Detect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Modules">Modules</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-TRANSITIONEND">TRANSITIONEND</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-requestAnimFrame">requestAnimFrame</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-utils---mocks--">client/utils/__mocks__</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Detect">Detect</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-data-combat">server/data/combat</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/greatsquid.js~GreatSquid.html">GreatSquid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/ogrelord.js~OgreLord.html">OgreLord</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/piratecaptain.js~PirateCaptain.html">PirateCaptain</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html">QueenAnt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/skeletonking.js~SkeletonKing.html">SkeletonKing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/tenebris.js~Tenebris.html">Tenebris</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-data-items">server/data/items</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/items/healthFlask.js~Flask.html">Flask</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-controllers">server/js/controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html">Commands</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html">Minigames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/shops.js~Shops.html">Shops</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-database">server/js/database</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html">Creator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/loader.js~Loader.html">Loader</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity">server/js/game/entity</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/entity.js~Entity.html">Entity</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character">server/js/game/entity/character</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/character.js~Character.html">Character</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-combat">server/js/game/entity/character/combat</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html">Combat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combatqueue.js~CombatQueue.html">CombatQueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/hit.js~Hit.html">Hit</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-mob">server/js/game/entity/character/mob</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/mob/mob.js~Mob.html">Mob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player">server/js/game/entity/character/player</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html">Checkpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/handler.js~PlayerHandler.html">PlayerHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html">Trade</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/warp.js~Warp.html">Warp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-ability">server/js/game/entity/character/player/ability</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/abilities.js~Abilities.html">Abilities</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-ability-misc">server/js/game/entity/character/player/ability/misc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/ability.js~Ability.html">Ability</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/firestrike.js~FireStrike.html">FireStrike</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/iceattack.js~IceAttack.html">IceAttack</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/run.js~Run.html">Run</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers">server/js/game/entity/character/player/containers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/container.js~Container.html">Container</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers-bank">server/js/game/entity/character/player/containers/bank</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/bank/bank.js~Bank.html">Bank</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers-inventory">server/js/game/entity/character/player/containers/inventory</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/inventory/inventory.js~Inventory.html">Inventory</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-enchant">server/js/game/entity/character/player/enchant</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html">Enchant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-equipment">server/js/game/entity/character/player/equipment</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/armour.js~Armour.html">Armour</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/boots.js~Boots.html">Boots</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html">Equipment</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/pendant.js~Pendant.html">Pendant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/ring.js~Ring.html">Ring</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/weapon.js~Weapon.html">Weapon</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-points">server/js/game/entity/character/player/points</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/hitpoints.js~HitPoints.html">HitPoints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/mana.js~Mana.html">Mana</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/points.js~Points.html">Points</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-profession">server/js/game/entity/character/player/profession</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/profession/profession.js~Profession.html">Profession</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-profession-impl">server/js/game/entity/character/player/profession/impl</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/profession/impl/foresting.js~Foresting.html">Foresting</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-quest">server/js/game/entity/character/player/quest</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/quest.js~Quest.html">Quest</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-quest-misc">server/js/game/entity/character/player/quest/misc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/bulkysituation.js~BulkySituation.html">BulkySituation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/introduction.js~Introduction.html">Introduction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/thelie.js~TheLie.html">TheLie</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-npc">server/js/game/entity/npc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/npc/npc.js~NPC.html">NPC</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-objects">server/js/game/entity/objects</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/chest.js~Chest.html">Chest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/projectile.js~Projectile.html">Projectile</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-map">server/js/map</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/map/area.js~Area.html">Area</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/map/grids.js~Grids.html">Grids</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-minigames">server/js/minigames</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html">Minigame</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-network">server/js/network</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/network/socket.js~Socket.html">Socket</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-util">server/js/util</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/util/bot.js~Bot.html">Bot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-requireItems">requireItems</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AbilityDictionary">AbilityDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ItemsDictionary">ItemsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MobsDictionary">MobsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-NpcsDictionary">NpcsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ShopsDictionary">ShopsDictionary</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#tools-api">tools/api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/tools/api/registrar.js~Registrar.html">Registrar</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#tools-map">tools/map</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-parse">parse</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* global document, window */
+import $ from &apos;jquery&apos;;
+import _ from &apos;underscore&apos;;
+import Module from &apos;./utils/modules&apos;;
+import log from &apos;./lib/log&apos;;
+import Detect from &apos;./utils/detect&apos;;
+import * as config from &apos;./config.json&apos;;
+
+/**
+ * Controls the client side changes for the application and game
+ * @class
+ */
+export default class Client {
+  /**
+   * Load all the different windows/UI portions on the index page
+   * relevant for use in the game, set the zoom factor, update the
+   * orientation and then load the login screen
+   */
+  constructor() {
+    log.debug(&apos;Client - constructor()&apos;, this);
+
+    /**
+     * Configuration for the client application
+     * loaded from ./data/config.json
+     * @type {Object}
+     */
+    this.config = config;
+
+    /**
+     * An instance of the DOM $(&apos;body&apos;) element
+     * @type {Object}
+     */
+    this.body = $(&apos;body&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#content&apos;) element
+     * @type {Object}
+     */
+    this.wrapper = $(&apos;#content&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#container&apos;) element
+     * @type {Object}
+     */
+    this.container = $(&apos;#container&apos;);
+
+    /**
+     * An instance of the DOM $(window) element
+     * @type {Object}
+     */
+    this.window = typeof window !== &quot;undefined&quot; ? $(window) : null;
+
+    /**
+     * An instance of the DOM $(&apos;#canvasLayers&apos;) element
+     * @type {Object}
+     */
+    this.canvas = $(&apos;#canvasLayers&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#border&apos;) element
+     * @type {Object}
+     */
+    this.border = $(&apos;#border&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#modal&apos;) element
+     * @type {Object}
+     */
+    this.intro = $(&apos;#modal&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#loginButton&apos;) element
+     * @type {Object}
+     */
+    this.loginButton = $(&apos;#loginButton&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#play&apos;) element
+     * @type {Object}
+     */
+    this.createButton = $(&apos;#play&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#newCharacter&apos;) element
+     * @type {Object}
+     */
+    this.registerButton = $(&apos;#newCharacter&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#helpButton&apos;) element
+     * @type {Object}
+     */
+    this.helpButton = $(&apos;#helpButton&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#cancelButton&apos;) element
+     * @type {Object}
+     */
+    this.cancelButton = $(&apos;#cancelButton&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#yes&apos;) element
+     * @type {Object}
+     */
+    this.yes = $(&apos;#yes&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#no&apos;) element
+     * @type {Object}
+     */
+    this.no = $(&apos;#no&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;.loader&apos;) element
+     * @type {Object}
+     */
+    this.loading = $(&apos;.loader&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;.loader.message&apos;) element
+     * @type {Object}
+     */
+    this.loadingMsg = $(&apos;.loader.message&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;.error.message&apos;) element
+     * @type {Object}
+     */
+    this.errorMsg = $(&apos;.error.message&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#respawn&apos;) element
+     * @type {Object}
+     */
+    this.respawn = $(&apos;#respawn&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#rememberMe&apos;) element
+     * @type {Object}
+     */
+    this.rememberMe = $(&apos;#rememberMe&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#guest&apos;) element
+     * @type {Object}
+     */
+    this.guest = $(&apos;#guest&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#toggle-about&apos;) element
+     * @type {Object}
+     */
+    this.about = $(&apos;#toggle-about&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#toggle-credits&apos;) element
+     * @type {Object}
+     */
+    this.credits = $(&apos;#toggle-credits&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#toggle-git&apos;) element
+     * @type {Object}
+     */
+    this.git = $(&apos;#toggle-git&apos;);
+
+    /**
+     * An instance of the DOM $(&apos;#loginNameInput&apos;) and $(&apos;#loginPasswordInput&apos;) element
+     * @type {Object[]}
+     */
+    this.loginFields = [$(&apos;#loginNameInput&apos;), $(&apos;#loginPasswordInput&apos;)];
+
+    /**
+     * Register fields
+     * @type {Array}
+     */
+    this.registerFields = [];
+
+    /**
+     * An instance of Game class
+     * @type {Game}
+     */
+    this.game = null;
+
+    /**
+     * Used to determine if the player is logging in as a guest or not
+     * @type {Boolean}
+     */
+    this.guestLogin = false;
+
+    /**
+     * Zoom percentage from 0 to 1
+     * @type {Number}
+     */
+    this.zoomFactor = 1;
+
+    /**
+     * Used to figure out whether or not to show the login screen
+     * @type {Boolean}
+     */
+    this.loggingIn = false;
+
+    /**
+     * The width of the player&apos;s browser window
+     * @type {Number}
+     */
+    this.width = this.window.innerWidth;
+
+    /**
+     * The height of the player&apos;s browser window
+     * @type {Number}
+     */
+    this.height = this.window.innerHeight;
+
+    /**
+     * The orientation of the player&apos;s device
+     * @type {String}
+     */
+    this.orientation = &apos;landscape&apos;;
+
+    /**
+     * Callback function when this class is done loading
+     * @type {Function}
+     */
+    this.readyCallback = null;
+
+    /**
+     * Used to display loading status messages
+     * @type {String}
+     */
+    this.statusMessage = null;
+
+    /**
+     * The field whose range is being updated
+     * @type {Object}
+     */
+    this.rangeField = null;
+  }
+
+  /**
+   * Add click listeners for the different parts of the UI
+   */
+  loadClient() {
+    log.debug(&apos;Client - loadClient()&apos;, this);
+
+    // auto-binding
+    this.keydownEventListener = this.keydownEventListener.bind(this);
+    this.keyupEventListener = this.keyupEventListener.bind(this);
+    this.mousemoveEventListener = this.mousemoveEventListener.bind(this);
+    this.mousemoveEventListener = this.mousemoveEventListener.bind(this);
+    this.canvasClickEventListener = this.canvasClickEventListener.bind(this);
+
+    this.sendStatus(&apos;You should turn back now...&apos;);
+    this.zoom();
+    this.updateOrientation();
+
+    this.loginButton.on(&quot;click&quot;, () =&gt; this.login());
+    this.createButton.on(&quot;click&quot;, () =&gt; this.login());
+    this.yes.on(&quot;click&quot;, () =&gt; this.welcomeContinue());
+    this.no.on(&quot;click&quot;, () =&gt; this.welcomeContinue());
+    this.rememberMe.on(&quot;click&quot;, () =&gt; this.rememberLogin());
+    this.guest.on(&quot;click&quot;, () =&gt; this.loginAsGuest());
+    this.registerButton.on(&quot;click&quot;, () =&gt; this.displayScreen(&apos;loadCharacter&apos;, &apos;createCharacter&apos;));
+    this.cancelButton.on(&quot;click&quot;, () =&gt; this.displayScreen(&apos;createCharacter&apos;, &apos;loadCharacter&apos;));
+    this.about.on(&quot;click&quot;, () =&gt; this.displayScroll(&apos;about&apos;));
+    this.credits.on(&quot;click&quot;, () =&gt; this.displayScroll(&apos;credits&apos;));
+    this.git.on(&quot;click&quot;, () =&gt; this.displayScroll(&apos;git&apos;));
+    this.respawn.on(&quot;click&quot;, () =&gt; this.respawnPlayer());
+
+    this.window.scrollTop(); // why do we do this?
+    this.window.resize(this.zoom());
+
+    log.debug(&apos;Client - loading client config&apos;);
+    this.config = config;
+
+    // load the character
+    this.loadCharacter();
+
+    $(document).on(&apos;keydown&apos;, this.keydownEventListener);
+    $(document).on(&apos;keyup&apos;, this.keyupEventListener);
+    $(document).on(&apos;mousemove&apos;, this.mousemoveEventListener);
+    this.canvas.on(&apos;click&apos;, this.canvasClickEventListener);
+
+    // this.canvas.click(this.canvasClickEventListener);
+
+    $(&apos;input[type=&quot;range&quot;]&apos;).on(&apos;input&apos;, () =&gt; {
+      this.updateRange(this);
+    });
+
+    if (this.readyCallback) {
+      log.debug(&apos;Client - loading client config done - readyCallback()&apos;);
+      this.readyCallback();
+    } else {
+      setTimeout(this.load, 3000);
+    }
+  }
+
+  /**
+   * Dismissing the welcome screen when the application has
+   * finished loading
+   */
+  welcomeContinue() {
+    log.debug(&apos;Client - welcomeContinue()&apos;);
+
+    if (!this.game) {
+      return false;
+    }
+
+    // makes sure the welcome screen doesn&apos;t appear again
+    this.game.storage.data.welcome = false;
+    this.game.storage.save();
+    this.body.removeClass(&apos;welcomeMessage&apos;);
+    return true;
+  }
+
+  /**
+   * Try to connect and login to the game
+   * @private
+   * @return {Boolean}
+   */
+  login() {
+    log.debug(&apos;Client - login()&apos;);
+
+    if (
+      this.loggingIn
+      || !this.game
+      || !this.game.loaded
+      || this.statusMessage
+      || !this.verifyForm()
+    ) return false;
+
+    // this.toggleLogin(true);
+    this.game.connect();
+    return true;
+  }
+
+  /**
+   * Try to login as a guest
+   * @private
+   * @return {Boolean}
+   */
+  loginAsGuest() {
+    log.debug(&apos;Client - loginAsGuest()&apos;);
+
+    if (!this.game) {
+      log.debug(&apos;Client - loginAsGuest() - No Game&apos;);
+      return false;
+    }
+
+    this.guestLogin = true;
+    this.login();
+    return true;
+  }
+
+  /**
+   * Switch to the load character screen
+   * @private
+   * @return {Boolean}
+   */
+  loadCharacter() {
+    log.debug(&apos;Client - loadCharacter()&apos;);
+
+    if (
+      this.wrapper.hasClass(&apos;about&apos;)
+      || this.wrapper.hasClass(&apos;credits&apos;)
+      || this.wrapper.hasClass(&apos;git&apos;)
+    ) {
+      this.wrapper.removeClass(&apos;about credits git&apos;);
+      this.displayScroll(&apos;loadCharacter&apos;);
+      return true;
+    }
+
+    return false;
+  }
+
+  /**
+   * Tells the game to toggle remembering this player,
+   * if true will store player information in local storage
+   *
+   * @TODO update this to use the database instead
+   * @private
+   * @return {Boolean}
+   */
+  rememberLogin() {
+    log.debug(&apos;Client - rememberLogin()&apos;);
+
+    if (!this.game || !this.game.storage) {
+      return false;
+    }
+
+    const active = this.rememberMe.hasClass(&apos;active&apos;);
+
+    this.rememberMe.toggleClass(&apos;active&apos;);
+    this.game.storage.toggleRemember(!active);
+    return true;
+  }
+
+  /**
+   * Tells the game to respawn the player
+   * @private
+   * @return {Boolean}
+   */
+  respawnPlayer() {
+    log.debug(&apos;Client - respawnPlayer()&apos;);
+
+    if (!this.game || !this.game.player || !this.game.player.dead) {
+      return false;
+    }
+
+    this.game.respawn();
+    return true;
+  }
+
+  /**
+   * Handles key down presses
+   * @param {Object} event keypress event
+   * @return {Boolean}
+   */
+  keydownEventListener(event) {
+    log.debug(&apos;Client - keydownEventListener()&apos;, event);
+
+    const key = event.which;
+
+    if (!this.game) {
+      return false;
+    }
+
+    this.body.focus();
+
+    if (key === Module.Keys.Enter &amp;&amp; !this.game.started) {
+      this.login();
+      return false;
+    }
+
+    if (this.game.started) {
+      this.game.onInput(Module.InputType.Key, key);
+    }
+
+    return true;
+  }
+
+  /**
+   * Handles key up presses
+   * @param {Object} event keypress event
+   * @return {Boolean}
+   */
+  keyupEventListener(event) {
+    log.debug(&apos;Client - keyupEventListener()&apos;, event);
+
+    const key = event.which;
+
+    if (!this.game || !this.game.started) {
+      return false;
+    }
+
+    this.game.input.keyUp(key);
+    return true;
+  }
+
+  /**
+   * Handles mouse movements
+   * @param {Object} event mouse event
+   */
+  mousemoveEventListener(event) {
+    // log.debug(&apos;Client - mousemoveEventListener()&apos;, event, this);
+
+    if (!this.game || !this.game.input || !this.game.started) {
+      return false;
+    }
+
+    this.game.input.setCoords(event);
+    this.game.input.moveCursor();
+
+    return true;
+  }
+
+  /**
+   * Handles clicks on the HTML5 canvas
+   * @param {Object} event click event
+   * @return {Boolean}
+   */
+  canvasClickEventListener(event) {
+    log.debug(&apos;Client - canvasClickEventListener()&apos;);
+
+    if (!this.game || !this.game.started) {
+      return false;
+    }
+
+    window.scrollTo(0, 1);
+    this.game.input.handle(Module.InputType.LeftClick, event);
+
+    return true;
+  }
+
+  /**
+   * Handles zooming the container to scale the
+   * game to fit porportionally with the player&apos;s window size
+   */
+  zoom() {
+    log.debug(&apos;Client - zoom()&apos;);
+
+    // const containerWidth = this.container.width();
+    // const containerHeight = this.container.height();
+    // const windowWidth = this.window.width();
+    // const windowHeight = this.window.height();
+    // let zoomFactor = windowWidth / containerWidth;
+    //
+    // if (containerHeight + 50 &gt;= windowHeight) {
+    //   zoomFactor = windowHeight / (containerHeight + 50);
+    // }
+    //
+    // if (this.getScaleFactor() === 3) {
+    //   zoomFactor -= 0.1;
+    // }
+
+    // this.body.css({
+    //   zoom: zoomFactor,
+    //   &apos;-moz-transform&apos;: `scale(${zoomFactor})`,
+    // });
+
+    this.border.css(&apos;top&apos;, 0);
+    // this.zoomFactor = zoomFactor;
+  }
+
+  /**
+   * Fades the menu
+   */
+  fadeMenu() {
+    log.debug(&apos;Client - fadeMenu()&apos;);
+
+    this.updateLoader(null);
+
+    setTimeout(() =&gt; {
+      this.body.addClass(&apos;game&apos;);
+      this.body.addClass(&apos;started&apos;);
+      this.body.removeClass(&apos;intro&apos;);
+    }, 500);
+  }
+
+  /**
+   * Shows the menu
+   */
+  showMenu() {
+    log.debug(&apos;Client - showMenu()&apos;);
+
+    this.body.removeClass(&apos;game&apos;);
+    this.body.removeClass(&apos;started&apos;);
+    this.body.addClass(&apos;intro&apos;);
+  }
+
+  /**
+   * Changes from one screen to another
+   * @param {String} origin the old screen to hide
+   * @param {String} destination the new screen to show
+   */
+  displayScreen(origin, destination) {
+    log.debug(&apos;Client - displayScreen()&apos;, origin, destination);
+
+    if (!destination || this.loggingIn) {
+      return false;
+    }
+
+    this.cleanErrors();
+    // this.wrapper.removeClass(origin).addClass(destination);
+    $(`#${origin}`).css(&apos;display&apos;, &apos;none&apos;);
+    $(`#${destination}`).css(&apos;display&apos;, &apos;block&apos;);
+    return true;
+  }
+
+  /**
+   * Display the given screen
+   * @param {String} content - the screen to display
+   */
+  displayScroll(content) {
+    log.debug(&apos;Client - displayScroll()&apos;, content);
+
+    const state = this.wrapper.attr(&apos;class&apos;);
+
+    if (this.game.started) {
+      this.wrapper.removeClass().addClass(content);
+      this.body.removeClass(&apos;credits legal about&apos;).toggleClass(content);
+
+      if (this.game.player) {
+        this.body.toggleClass(&apos;death&apos;);
+      }
+
+      if (content !== &apos;about&apos;) {
+        this.helpButton.removeClass(&apos;active&apos;);
+      }
+    } else if (state !== &apos;animate&apos;) {
+      this.displayScreen(state, state === content ? &apos;loadCharacter&apos; : content);
+    }
+  }
+
+  /**
+   * Verify the active form
+   */
+  verifyForm() {
+    log.debug(&apos;Client - verifyForm()&apos;);
+
+    const activeForm = this.getActiveForm();
+
+    if (activeForm === &apos;null&apos;) {
+      return true;
+    }
+
+    switch (activeForm) {
+      case &apos;loadCharacter&apos;: return this.verifyLoginForm();
+      case &apos;createCharacter&apos;: return this.verifyJoinForm();
+      default: break;
+    }
+
+    return true;
+  }
+
+  /**
+   * Verify the input fields on the join form
+   * @return {Boolean} true if valid
+   */
+  verifyJoinForm() {
+    log.debug(&apos;Client - verifyJoinForm()&apos;);
+
+    const characterName = $(&apos;#registerNameInput&apos;);
+    const registerPassword = $(&apos;#registerPasswordInput&apos;);
+    const email = $(&apos;#registerEmailInput&apos;);
+    const registerPasswordConfirmation = $(&apos;#registerPasswordConfirmationInput&apos;);
+
+    if (this.registerFields.length === 0) {
+      this.registerFields = [
+        characterName,
+        registerPassword,
+        registerPasswordConfirmation,
+        email,
+      ];
+    }
+
+    if (!characterName.val()) {
+      this.sendError(characterName, &apos;A username is necessary you silly.&apos;);
+      return false;
+    }
+
+    if (!registerPassword.val()) {
+      this.sendError(registerPassword, &apos;You must enter a password.&apos;);
+      return false;
+    }
+
+    if (registerPasswordConfirmation.val() !== registerPassword.val()) {
+      this.sendError(
+        registerPasswordConfirmation,
+        &apos;The passwords do not match!&apos;,
+      );
+      return false;
+    }
+
+    if (!email.val() || !this.verifyEmail(email.val())) {
+      this.sendError(email, &apos;An email is required!&apos;);
+      return false;
+    }
+
+    return true;
+  }
+
+  /**
+   * Check to see if the player has entered a valid username and password
+   * before attempting to login
+   * @return {Boolean} true if valid
+   */
+  verifyLoginForm() {
+    log.debug(&apos;Client - verifyLoginForm()&apos;);
+
+    const nameInput = $(&apos;#loginNameInput&apos;);
+    const passwordInput = $(&apos;#loginPasswordInput&apos;);
+
+    if (this.loginFields.length === 0) {
+      this.loginFields = [nameInput, passwordInput];
+    }
+
+    if (!nameInput.val() &amp;&amp; !this.isGuest()) {
+      this.sendError(nameInput, &apos;Please enter a username.&apos;);
+      return false;
+    }
+
+    if (!passwordInput.val() &amp;&amp; !this.isGuest()) {
+      this.sendError(passwordInput, &apos;Please enter a password.&apos;);
+      return false;
+    }
+
+    return true;
+  }
+
+  /* eslint-disable */
+  /**
+   * Verify this is a valid email address
+   * @param  {String} email player&apos;s email address
+   * @return {Boolean} true if valid
+   */
+  verifyEmail(email) {
+    log.debug(&apos;Client - verifyEmail()&apos;, email);
+
+    return /^(([^&lt;&gt;()[\]\\.,;:\s@\&quot;]+(\.[^&lt;&gt;()[\]\\.,;:\s@\&quot;]+)*)|(\&quot;.+\&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      email,
+    );
+  }
+  /* eslint-enable */
+
+  /**
+   * Display a status message to the client
+   * @param {String} message the message
+   */
+  sendStatus(message) {
+    log.debug(&apos;Client - sendStatus()&apos;, message);
+
+    this.cleanErrors();
+
+    this.statusMessage = message;
+
+    if (!message) {
+      this.loadingMsg.html(&apos;&apos;);
+      this.loading.hide();
+      return;
+    }
+
+    this.loading.show();
+    this.loadingMsg.html(message);
+  }
+
+  /**
+   * Set this input field as having an error
+   * @param {Object} field the Jquery instance of the field that has the error
+   * @param {String} error the error message to display telling the player
+   * that this field has an issue
+   */
+  sendError(field, error) {
+    log.debug(&apos;Client - sendError()&apos;, field, error);
+
+    this.cleanErrors();
+    this.errorMsg.html(error);
+    this.errorMsg.show();
+
+    if (!field) {
+      return;
+    }
+
+    field.addClass(&apos;field-error&apos;).select();
+    field.bind(&apos;keypress&apos;, (event) =&gt; {
+      field.removeClass(&apos;field-error&apos;);
+      $(&apos;.validation-error&apos;).remove();
+      $(this).unbind(event);
+    });
+  }
+
+  /**
+   * Clean up any current form validation errors
+   * on the active form&apos;s input fields
+   */
+  cleanErrors() {
+    log.debug(&apos;Client - cleanErrors()&apos;);
+
+    const activeForm = this.getActiveForm();
+    const fields = activeForm === &apos;loadCharacter&apos;
+      ? this.loginFields
+      : this.registerFields;
+
+    for (let i = 0; i &lt; fields.length; i += 1) {
+      fields[i].removeClass(&apos;field-error&apos;);
+    }
+
+    $(&apos;.validation-error&apos;).remove();
+    $(&apos;.status&apos;).remove();
+  }
+
+  /**
+   * Return the active form from the top wrapper&apos;s class name
+   * @return {String} active form&apos;s ID
+   */
+  getActiveForm() {
+    log.debug(&apos;Client - getActiveForm()&apos;);
+
+    return this.wrapper &amp;&amp; this.wrapper[0] &amp;&amp; this.wrapper[0].className;
+  }
+
+  /**
+   * Returns true if the join form is displayed
+   * @return {Boolean} true if on the join form
+   */
+  isRegistering() {
+    log.debug(&apos;Client - isRegistering()&apos;);
+
+    return this.getActiveForm() === &apos;createCharacter&apos;;
+  }
+
+  /**
+   * Returns true if this player is playing as a guest
+   * @return {Boolean} true if player is a guest
+   */
+  isGuest() {
+    log.debug(&apos;Client - isGuest()&apos;);
+
+    return this.guestLogin;
+  }
+
+  /**
+   * Call the game&apos;s resizer function
+   */
+  resize() {
+    log.debug(&apos;Client - resize()&apos;);
+
+    if (this.game) {
+      this.game.resize();
+    }
+  }
+
+  /**
+   * Set the client to use a new instance of the game
+   */
+  setGame(game) {
+    log.debug(&apos;Client - setGame()&apos;, game);
+
+    this.game = game;
+    this.window.wtf = this;
+  }
+
+  /**
+   * Checks to see if the window has a web worker
+   * @return {Boolean} returns true if the window has an active web worker
+   */
+  hasWorker() {
+    log.debug(&apos;Client - hasWorker()&apos;);
+
+    return !!this.window.Worker;
+  }
+
+  /**
+   * Figures out the current scale factor to use
+   * for assets
+   * @return {Number} 1 = mobile, 2 = desktop and 3 = tablet
+   */
+  getScaleFactor() {
+    const mobile = 1;
+    const tablet = 2;
+    const desktop = 3;
+    const tabletOrDesktop = this.width &lt;= 1500 || this.height &lt;= 870
+      ? tablet
+      : desktop;
+
+    /**
+     * These are raw scales, we can adjust
+     * for up-scaled rendering in the actual
+     * rendering file.
+     */
+    return this.width &lt;= 1000
+      ? mobile
+      : tabletOrDesktop;
+  }
+
+  /**
+   * Revert the loader message to it&apos;s default state
+   * of &apos;Connecting to server...&apos;
+   */
+  revertLoader() {
+    log.debug(&apos;Client - revertLoader()&apos;);
+
+    this.updateLoader(&apos;Connecting to server...&apos;);
+  }
+
+  /**
+   * Update the loader to show a specific message
+   * @param  {String} message the loader message to display
+   */
+  updateLoader(message) {
+    log.debug(&apos;Client - updateLoader()&apos;, message);
+
+    if (!message) {
+      this.loading.hide();
+      this.loadingMsg.html(&apos;&apos;);
+      return;
+    }
+
+    this.loading.show();
+    this.loadingMsg.html(message);
+  }
+
+  /**
+   * Toggle displaying the login form
+   * @param  {Boolean} toggle true to hide, false to show
+   */
+  toggleLogin(toggle) {
+    log.debug(&apos;Client - toggleLogin()&apos;, toggle);
+
+    this.revertLoader();
+    this.toggleTyping(toggle);
+    this.loggingIn = toggle;
+
+    if (toggle) {
+      this.loading.hide();
+      this.loginButton.addClass(&apos;disabled&apos;);
+      this.registerButton.addClass(&apos;disabled&apos;);
+    } else {
+      this.loading.hide();
+      this.loginButton.removeClass(&apos;disabled&apos;);
+      this.registerButton.removeClass(&apos;disabled&apos;);
+    }
+  }
+
+  /**
+   * Toggle the read only attribute on the login fields
+   * and form registration fields
+   * @param  {String} state the state to update the fields to
+   */
+  toggleTyping(state) {
+    log.debug(&apos;Client - toggleTyping()&apos;, state);
+
+    if (this.loginFields) {
+      _.each(this.loginFields, (field) =&gt; {
+        field.prop(&apos;readonly&apos;, state);
+      });
+    }
+
+    if (this.registerFields) {
+      _.each(this.registerFields, (field) =&gt; {
+        field.prop(&apos;readOnly&apos;, state);
+      });
+    }
+  }
+
+  /**
+   * Update the range of and object
+   * using a linear gradient on the background color
+   */
+  updateRange(field) {
+    log.debug(&apos;Client - updateRange()&apos;, field);
+
+    const obj = $(field);
+    const val = (obj.val() - obj.attr(&apos;min&apos;)) / (obj.attr(&apos;max&apos;) - obj.attr(&apos;min&apos;));
+
+    obj.css(
+      &apos;background-image&apos;,
+      `-webkit-gradient(linear, left top, right top, color-stop(${val}, #4d4d4d), color-stop(${val}, #C5C5C5)`,
+    );
+
+    this.rangeField = field;
+  }
+
+  /**
+   * Updates the orientation of the application
+   * to match the orientation of the device the
+   * player is using
+   */
+  updateOrientation() {
+    log.debug(&apos;Client - updateOrientation()&apos;);
+
+    // this.zoom();
+    this.orientation = this.getOrientation();
+  }
+
+  /**
+   * Returns the orientation of the device the user is on
+   * @return {String} portrait|landscape
+   */
+  getOrientation() {
+    log.debug(&apos;Client - getOrientation()&apos;);
+
+    return this.height &gt; this.width ? &apos;portrait&apos; : &apos;landscape&apos;;
+  }
+
+  /**
+   * Returns the zoom factor
+   * @return {Number} a value from 0 to 1
+   */
+  getZoom() {
+    // log.debug(&apos;Client - getZoom()&apos;);
+
+    return this.zoomFactor;
+  }
+
+  /**
+   * The callback function when this app class is ready
+   * and done loading
+   * @param {Function} callback the callback function when
+   * this application class is done loading
+   */
+  onReady(callback) {
+    log.debug(&apos;Client - onReady()&apos;, callback);
+
+    this.readyCallback = callback;
+  }
+
+  /**
+   * Check if the player is using a phone
+   * @return {Boolean} true if a phone
+   */
+  isMobile() {
+    log.debug(&apos;Client - isMobile()&apos;);
+
+    return this.getScaleFactor() &lt; 2;
+  }
+
+  /**
+   * Check if the player is using a tablet
+   * @return {Boolean} true if a tablet
+   */
+  isTablet() {
+    log.debug(&apos;Client - isTablet()&apos;);
+
+    return Detect.isIpad() || (Detect.isAndroid() &amp;&amp; this.getScaleFactor() &gt; 1);
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

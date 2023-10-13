@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">WTF-Adventure/client/game.js | WTF Adventure</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="documentation for your wtf needs"><meta property="og:type" content="website"><meta property="og:url" content="http://design1online.com"><meta property="og:site_name" content="WTF Adventure"><meta property="og:title" content="WTF Adventure"><meta property="og:image" content="http://design1online.com/logo.png"><meta property="og:description" content="documentation for your wtf needs"><meta property="og:author" content="https://design1online.com"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="WTF Adventure"><meta property="twitter:description" content="documentation for your wtf needs"><meta property="twitter:image" content="http://design1online.com/logo.png"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/design1online/WTF-Adventure"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client">client</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/index.js~Client.html">Client</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-controllers">client/controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/audio.js~Audio.html">Audio</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/bubble.js~Bubble.html">Bubble</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/chat.js~Chat.html">Chat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/entities.js~Entities.html">Entities</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/info.js~Info.html">Info</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/input.js~Input.html">Input</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/interface.js~Interface.html">Interface</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/overlay.js~Overlay.html">Overlay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/pickcharacter.js~PickCharacter.html">PickCharacter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/pointer.js~Cursor.html">Cursor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/sprites.js~Sprites.html">Sprites</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/controllers/zoning.js~Zone.html">Zone</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity">client/entity</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/animation.js~Animation.html">Animation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/entity.js~Entity.html">Entity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/entityhandler.js~EntityHandler.html">EntityHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/sprite.js~Sprite.html">Sprite</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character">client/entity/character</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-mob">client/entity/character/mob</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/mob/mob.js~Mob.html">Mob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-npc">client/entity/character/npc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/npc/npc.js~Npc.html">Npc</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-player">client/entity/character/player</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/playerhandler.js~PlayerHandler.html">PlayerHandler</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-character-player-equipment">client/entity/character/player/equipment</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/armour.js~Armour.html">Armour</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/boots.js~Boots.html">Boots</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/equipment.js~Equipment.html">Equipment</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/pendant.js~Pendant.html">Pendant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/ring.js~Ring.html">Ring</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/character/player/equipment/weapon.js~Weapon.html">Weapon</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-entity-objects">client/entity/objects</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/chest.js~Chest.html">Chest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/entity/objects/projectile.js~Projectile.html">Projectile</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface">client/interface</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html">Abilities</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/actions.js~Actions.html">Actions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/bank.js~Bank.html">Bank</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/enchant.js~Enchant.html">Enchant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/inventory.js~Inventory.html">Inventory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/warp.js~Warp.html">Warp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface-container">client/interface/container</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/container/container.js~Container.html">Container</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/container/slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-interface-profile">client/interface/profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/ability.js~Ability.html">Ability</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/gamePage.js~GamePage.html">GamePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/profile.js~Profile.html">Profile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/quest.js~Quest.html">Quest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/settings.js~Settings.html">Settings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/interface/profile/state.js~State.html">State</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-lib">client/lib</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/lib/log.js~Logger.html">Logger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-logger">logger</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-map">client/map</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html">Map</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-network">client/network</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html">Messages</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/network/socket.js~Socket.html">Socket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Packets">Packets</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer">client/renderer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/camera.js~Camera.html">Camera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/grids.js~Grids.html">Grids</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/renderer.js~Renderer.html">Renderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/tile.js~Tile.html">Tile</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html">Updater</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-bubbles">client/renderer/bubbles</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/bubbles/blob.js~Blob.html">Blob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-infos">client/renderer/infos</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/infos/splat.js~Splat.html">Splat</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-renderer-pointers">client/renderer/pointers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/pointers/pointer.js~Pointer.html">Pointer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-utils">client/utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/pathfinder.js~Pathfinder.html">Pathfinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/queue.js~Queue.html">Queue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html">Storage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/client/utils/transition.js~Transition.html">Transition</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isInt">isInt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isIntersecting">isIntersecting</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Detect">Detect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Modules">Modules</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-TRANSITIONEND">TRANSITIONEND</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-requestAnimFrame">requestAnimFrame</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#client-utils---mocks--">client/utils/__mocks__</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Detect">Detect</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-data-combat">server/data/combat</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/greatsquid.js~GreatSquid.html">GreatSquid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/ogrelord.js~OgreLord.html">OgreLord</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/piratecaptain.js~PirateCaptain.html">PirateCaptain</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html">QueenAnt</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/skeletonking.js~SkeletonKing.html">SkeletonKing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/tenebris.js~Tenebris.html">Tenebris</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-data-items">server/data/items</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/data/items/healthFlask.js~Flask.html">Flask</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-controllers">server/js/controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html">Commands</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html">Minigames</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/shops.js~Shops.html">Shops</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-database">server/js/database</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html">Creator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/loader.js~Loader.html">Loader</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity">server/js/game/entity</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/entity.js~Entity.html">Entity</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character">server/js/game/entity/character</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/character.js~Character.html">Character</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-combat">server/js/game/entity/character/combat</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html">Combat</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combatqueue.js~CombatQueue.html">CombatQueue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/hit.js~Hit.html">Hit</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-mob">server/js/game/entity/character/mob</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/mob/mob.js~Mob.html">Mob</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player">server/js/game/entity/character/player</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html">Checkpoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/handler.js~PlayerHandler.html">PlayerHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html">Trade</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/warp.js~Warp.html">Warp</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-ability">server/js/game/entity/character/player/ability</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/abilities.js~Abilities.html">Abilities</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-ability-misc">server/js/game/entity/character/player/ability/misc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/ability.js~Ability.html">Ability</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/firestrike.js~FireStrike.html">FireStrike</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/iceattack.js~IceAttack.html">IceAttack</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/ability/misc/run.js~Run.html">Run</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers">server/js/game/entity/character/player/containers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/container.js~Container.html">Container</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/slot.js~Slot.html">Slot</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers-bank">server/js/game/entity/character/player/containers/bank</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/bank/bank.js~Bank.html">Bank</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-containers-inventory">server/js/game/entity/character/player/containers/inventory</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/containers/inventory/inventory.js~Inventory.html">Inventory</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-enchant">server/js/game/entity/character/player/enchant</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html">Enchant</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-equipment">server/js/game/entity/character/player/equipment</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/armour.js~Armour.html">Armour</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/boots.js~Boots.html">Boots</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html">Equipment</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/pendant.js~Pendant.html">Pendant</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/ring.js~Ring.html">Ring</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/weapon.js~Weapon.html">Weapon</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-points">server/js/game/entity/character/player/points</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/hitpoints.js~HitPoints.html">HitPoints</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/mana.js~Mana.html">Mana</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/points/points.js~Points.html">Points</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-profession">server/js/game/entity/character/player/profession</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/profession/profession.js~Profession.html">Profession</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-profession-impl">server/js/game/entity/character/player/profession/impl</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/profession/impl/foresting.js~Foresting.html">Foresting</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-quest">server/js/game/entity/character/player/quest</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/quest.js~Quest.html">Quest</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-character-player-quest-misc">server/js/game/entity/character/player/quest/misc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/bulkysituation.js~BulkySituation.html">BulkySituation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/introduction.js~Introduction.html">Introduction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/quest/misc/thelie.js~TheLie.html">TheLie</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-npc">server/js/game/entity/npc</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/npc/npc.js~NPC.html">NPC</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-game-entity-objects">server/js/game/entity/objects</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/chest.js~Chest.html">Chest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/item.js~Item.html">Item</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/objects/projectile.js~Projectile.html">Projectile</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-map">server/js/map</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/map/area.js~Area.html">Area</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/map/grids.js~Grids.html">Grids</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-minigames">server/js/minigames</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html">Minigame</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-network">server/js/network</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/network/socket.js~Socket.html">Socket</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#server-js-util">server/js/util</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/server/js/util/bot.js~Bot.html">Bot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-requireItems">requireItems</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AbilityDictionary">AbilityDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ItemsDictionary">ItemsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MobsDictionary">MobsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-NpcsDictionary">NpcsDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ShopsDictionary">ShopsDictionary</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#tools-api">tools/api</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/WTF-Adventure/tools/api/registrar.js~Registrar.html">Registrar</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#tools-map">tools/map</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-parse">parse</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/game.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* global window, document */
+import _ from &apos;underscore&apos;;
+import $ from &apos;jquery&apos;;
+import log from &apos;./lib/log&apos;;
+import Renderer from &apos;./renderer/renderer&apos;;
+import LocalStorage from &apos;./utils/storage&apos;;
+import Map from &apos;./map/map&apos;;
+import Socket from &apos;./network/socket&apos;;
+import Player from &apos;./entity/character/player/player&apos;;
+import Updater from &apos;./renderer/updater&apos;;
+import Entities from &apos;./controllers/entities&apos;;
+import Input from &apos;./controllers/input&apos;;
+import PlayerHandler from &apos;./entity/character/player/playerhandler&apos;;
+import Pathfinder from &apos;./utils/pathfinder&apos;;
+import Zoning from &apos;./controllers/zoning&apos;;
+import Info from &apos;./controllers/info&apos;;
+import Bubble from &apos;./controllers/bubble&apos;;
+import Interface from &apos;./controllers/interface&apos;;
+import Audio from &apos;./controllers/audio&apos;;
+import Pointer from &apos;./controllers/pointer&apos;;
+import Modules from &apos;./utils/modules&apos;;
+import Packets from &apos;./network/packets&apos;;
+import Detect from &apos;./utils/detect&apos;;
+import { requestAnimFrame } from &apos;./utils/util&apos;;
+
+/**
+ * Creates an instance of the game
+ * @class
+ */
+export default class Game {
+  /**
+   * Keep track of the game logic and the HTML5 canvas
+   * @param {Client} client an instance of the client application
+   */
+  constructor(client) {
+    log.debug(&apos;Game - constructor()&apos;, client);
+
+    /**
+     * An instance of the client application
+     * @type {Client}
+     */
+    this.client = client;
+
+    /**
+     * An ID used to identify the player after they&apos;ve
+     * been given a handshake by the Node server
+     * @type {Number}
+     */
+    this.id = -1;
+
+    /**
+     * An instance of the web socket used to talk to the node server
+     * @type {Socket}
+     */
+    this.socket = null;
+
+    /**
+     * An array of mesages from the web socket
+     * @type {Messages}
+     */
+    this.messages = null;
+
+    /**
+     * An instance of the renderer
+     * @type {Renderer}
+     */
+    this.renderer = null;
+
+    /**
+     * An instance of the updater
+     * @type {Updater}
+     */
+    this.updater = null;
+
+    /**
+     * A reference to the player&apos;s LocalStorage
+     * @type {Object}
+     */
+    this.storage = null;
+
+    /**
+     * An array of entities in the game
+     * @type {Array&lt;Entity&gt;}
+     */
+    this.entities = null;
+
+    /**
+     * Controls all of the game&apos;s input
+     * @type {Input}
+     */
+    this.input = null;
+
+    /**
+     * An instance of the game&apos;s map
+     * @type {Map}
+     */
+    this.map = null;
+
+    /**
+     * An instance of the game&apos;s player handler
+     * @type {PlayerHandler}
+     */
+    this.playerHandler = null;
+
+    /**
+     * Used to find paths of entities
+     * @type {Pathfinder}
+     */
+    this.pathfinder = null;
+
+    /**
+     * Used to figure out direction
+     * @type {Zoning}
+     */
+    this.zoning = null;
+
+    /**
+     * Used to display additional information
+     * on the screen (ie level up and hits and
+     * health/exp regeneration)
+     * @type {Info}
+     */
+    this.info = null;
+
+    /**
+     * Controls the interface in the game
+     * @type {Interface}
+     */
+    this.interface = null;
+
+    /**
+     * Controls the game music and sfx
+     * @type {Audio}
+     */
+    this.audio = null;
+
+    /**
+     * An instance of the player
+     * @type {Player}
+     */
+    this.player = null;
+
+    /**
+     * Whether or not the game is started
+     * @type {Boolean}
+     */
+    this.started = false;
+
+    /**
+     * Whether or not the game is ready
+     * @type {Boolean}
+     */
+    this.ready = false;
+
+    /**
+     * Whether or not the map is loaded
+     * @type {Boolean}
+     */
+    this.loaded = false;
+
+    /**
+     * Used for rendering fame ticks
+     * @type {Date}
+     */
+    this.time = new Date();
+
+    /**
+     * True if there is currently pvp combat
+     * @type {Boolean}
+     */
+    this.pvp = false;
+
+    /**
+     * How many players are in the game, defaults to -1
+     * @type {Number}
+     */
+    this.population = -1;
+
+    /**
+     * Last time (used for renderer??)
+     * @type {Boolean}
+     */
+    this.lastTime = new Date().getTime();
+
+    /**
+     * Returns server/config.json =&gt; devClient value
+     * @type {Boolean}
+     */
+    this.development = null;
+
+    /**
+     * The pointer shown on the HTML5 canvas
+     * @type {Pointer}
+     */
+    this.pointer = null;
+
+    /**
+     * A reference to the chat bubbles controller
+     * @type {Bubble}
+     */
+    this.bubble = null;
+
+    /**
+     * A reference to a guild
+     * @type {Guild}
+     */
+    this.guild = null;
+
+    /**
+     * A reference to a shop
+     * @type {Shops}
+     */
+    this.bubble = null;
+
+    this.loadRenderer();
+    this.loadControllers();
+  }
+
+  /**
+   * Start the game
+   * @return {Boolean} true if the game was successfully started,
+   * false if the game is already running
+   */
+  start() {
+    log.debug(&apos;Game - start()&apos;, this.started);
+
+    if (this.started) {
+      return false;
+    }
+
+    this.client.fadeMenu();
+
+    this.started = true;
+    this.tick();
+
+    return true;
+  }
+
+  /**
+   * Stop the game, sets started and ready to false
+   */
+  stop() {
+    log.debug(&apos;Game - stop()&apos;);
+
+    this.started = false;
+    this.ready = false;
+  }
+
+  /**
+   * Calls the renderer to draw to the HTML5 canvas
+   * if the game is ready and requests animations if
+   * the game is started
+   */
+  tick() {
+    // log.debug(&apos;Game - tick()&apos;, this.ready, this.updater, this.started);
+
+    if (this.ready) {
+      // log.debug(&apos;Game - tick() - ready&apos;);
+      this.time = new Date().getTime();
+      this.renderer.render();
+      this.updater.update();
+
+      if (this.started) {
+        // log.debug(&apos;Game - tick() - started&apos;, window);
+        requestAnimFrame(this.tick.bind(this));
+      }
+    }
+  }
+
+  /**
+   * Resets all of the controllers, storage and
+   * entities in the game. Stops all audio too.
+   * Sets the game to a totally blank state so that
+   * it can be initialized like a new game all over again
+   * @return {Boolean}
+   */
+  unload() {
+    log.debug(&apos;Game - unload()&apos;);
+
+    this.socket = null;
+    this.messages = null;
+    this.renderer = null;
+    this.updater = null;
+    this.storage = null;
+    this.entities = null;
+    this.input = null;
+    this.map = null;
+    this.playerHandler = null;
+    this.pathfinder = null;
+    this.zoning = null;
+    this.info = null;
+    this.interface = null;
+    this.audio.stop();
+    this.audio = null;
+
+    return true;
+  }
+
+  /**
+   * Load the HTML5 canvas renderer layers for:
+   * * background
+   * * foreground
+   * * text
+   * * entities
+   * * cursor
+   * @return {Boolean}
+   */
+  loadRenderer() {
+    const background = document.getElementById(&apos;background&apos;);
+    const foreground = document.getElementById(&apos;foreground&apos;);
+    const textCanvas = document.getElementById(&apos;textCanvas&apos;);
+    const entities = document.getElementById(&apos;entities&apos;);
+    const cursor = document.getElementById(&apos;cursor&apos;);
+
+    log.debug(&apos;Game - loadRenderer()&apos;, background, entities, foreground, textCanvas, cursor);
+
+    this.client.sendStatus(&apos;Soul sucking monster...&apos;);
+
+    const renderer = new Renderer(background, entities, foreground, textCanvas, cursor, this);
+
+    this.setRenderer(renderer);
+
+    return true;
+  }
+
+  /**
+   * Load all of the game controllers
+   * @return {Boolean}
+   */
+  loadControllers() {
+    log.debug(&apos;Game - loadControllers()&apos;);
+
+    const hasWorker = this.client.hasWorker();
+
+    this.client.sendStatus(hasWorker ? &apos;I tried to tell you...&apos; : null);
+
+    if (hasWorker) {
+      this.loadGameMap();
+    }
+
+    this.client.sendStatus(&apos;Too late now...&apos;);
+    this.setStorage(new LocalStorage(this.client));
+    this.client.sendStatus(&quot;You&apos;re already doomed...&quot;);
+
+    this.setSocket(new Socket(this));
+    this.setMessages(this.socket.messages);
+    this.setInput(new Input(this));
+    this.client.sendStatus(&quot;Stop! Before it&apos;s too late...&quot;);
+
+    const entity = new Entities(this);
+    this.setEntityController(entity);
+
+    const info = new Info(this);
+    this.setInfo(info);
+
+    const bubble = new Bubble(this);
+    this.setBubble(bubble);
+
+    const pointer = new Pointer(this);
+    this.setPointer(pointer);
+
+    const audio = new Audio(this);
+    this.setAudio(audio);
+
+    const gameInterface = new Interface(this);
+    this.setInterface(gameInterface);
+
+    this.implementStorage();
+
+    if (!hasWorker) { // is this for offline mode?
+      this.client.sendStatus(null);
+      this.loaded = true;
+    }
+
+    return true;
+  }
+
+  /**
+   * Load the game map data
+   * @return {Boolean}
+   */
+  loadGameMap() {
+    log.debug(&apos;Game - loadGameMap()&apos;);
+
+    this.map = new Map(this);
+    this.map.onReady(() =&gt; {
+      log.debug(&apos;Game - loadGameMap() - map ready&apos;);
+      this.mapReadyCallback();
+    });
+    return true;
+  }
+
+  /**
+   * Callback for when the map data is done loading
+   * @return {Boolean}
+   */
+  mapReadyCallback() {
+    log.debug(&apos;Game - mapReadyCallback()&apos;);
+
+    this.client.sendStatus(&apos;Okay I give up...&apos;);
+    this.setPathfinder(new Pathfinder(this.map.width, this.map.height));
+
+    this.renderer.setMap(this.map);
+    this.renderer.loadCamera();
+
+    this.client.sendStatus(&quot;You&apos;re beyond help at this point...&quot;);
+    this.setUpdater(new Updater(this));
+
+    this.entities.loadEntities();
+    log.debug(&apos;Game - mapReadyCallback() - setting entities&apos;, this.entities);
+    this.renderer.setEntities(this.entities);
+
+    // this.postLoad();
+
+    // clears the status message out now that we&apos;ve loaded everything
+    this.client.sendStatus(null);
+    this.ready = true;
+    this.loaded = true;
+    this.postLoad();
+    return true;
+  }
+
+  loadedSpritesCallback() {
+    log.debug(&apos;loaded sprites callback&apos;);
+  }
+
+  /**
+   * Connect to the nodeJS server and setup all the
+   * server to client callback messages
+   * @return {Boolean}
+   */
+  connect() {
+    log.debug(&apos;Game - connect()&apos;);
+
+    this.client.cleanErrors();
+    setTimeout(() =&gt; this.socket.connect(), 1000);
+
+    /**
+     * This is for random miscellaneous commands that require
+     * a specific action done by the client as opposed to
+     * packet-oriented ones.
+     */
+    this.messages.onCommand(() =&gt; {});
+    this.messages.onHandshake(data =&gt; this.handshakeCallback(data));
+    this.messages.onWelcome(data =&gt; this.welcomeCallback(data));
+    this.messages.onEquipment((opcode, info) =&gt; this.equipmentCallback(opcode, info));
+    this.messages.onSpawn(data =&gt; this.spawnCallback(data));
+    this.messages.onEntityList(data =&gt; this.entityListCallback(data));
+    this.messages.onSync(data =&gt; this.syncCallback(data));
+    this.messages.onMovement(data =&gt; this.movementCallback(data));
+    this.messages.onTeleport(data =&gt; this.teleportCallback(data));
+    this.messages.onDespawn(id =&gt; this.despawnCallback(id));
+    this.messages.onCombat(data =&gt; this.combatCallback(data));
+    this.messages.onAnimation((id, info) =&gt; this.animationCallback(id, info));
+    this.messages.onProjectile((opcode, info) =&gt; this.projectileCallback(opcode, info));
+    this.messages.onPopulation(population =&gt; this.populationCallback(population));
+    this.messages.onPoints(data =&gt; this.pointsCallback(data));
+    this.messages.onNetwork(this.networkCallback);
+    this.messages.onChat(info =&gt; this.chatCallback(info));
+    this.messages.onInventory((opcode, info) =&gt; this.inventoryCallback(opcode, info));
+    this.messages.onBank((opcode, info) =&gt; this.bankCallback(opcode, info));
+    this.messages.onAbility(() =&gt; {});
+    this.messages.onQuest((opcode, info) =&gt; this.questCallback(opcode, info));
+    this.messages.onNotification((opcode, message) =&gt; this.notificationCallback(opcode, message));
+    this.messages.onBlink(instance =&gt; this.blinkCallback(instance));
+    this.messages.onHeal(info =&gt; this.healCallback(info));
+    this.messages.onExperience(info =&gt; this.experienceCallback(info));
+    this.messages.onDeath(id =&gt; this.deathCallback(id));
+    this.messages.onAudio(song =&gt; this.audioCallback(song));
+    this.messages.onNPC((opcode, info) =&gt; this.npcCallback(opcode, info));
+    this.messages.onRespawn((id, x, y) =&gt; this.respawnCallback(id, x, y));
+    this.messages.onEnchant((opcode, info) =&gt; this.enchantCallback(opcode, info));
+    this.messages.onGuild((opcode, info) =&gt; this.guildCallback(opcode, info));
+    this.messages.onPointer((opcode, info) =&gt; this.pointerCallback(opcode, info));
+    this.messages.onPVP((id, pvp) =&gt; this.pvpCallback(id, pvp));
+    this.messages.onShop((opcode, info) =&gt; this.shopCallback(opcode, info));
+
+    return true;
+  }
+
+  /**
+   * Callback for when the server has acknowledged the client connection
+   * then it creates the player object, makes sure the map is loaded,
+   * and if the user is registering or logging in it handles player
+   * registration or login requests
+   * @param  {Messages} data server network message
+   * @return {Boolean}
+   */
+  handshakeCallback(data) {
+    log.debug(&apos;Game - handshakeCallback()&apos;, data);
+
+    this.id = data.shift();
+    this.development = data.shift();
+
+    if (!this.player) {
+      this.createPlayer();
+    }
+
+    if (!this.map) {
+      this.loadGameMap();
+    }
+
+    this.client.updateLoader(&apos;Logging in...&apos;);
+
+    if (this.client.isRegistering()) {
+      log.debug(&apos;Game - handshakeCallback() - creating an account&apos;);
+
+      const registerInfo = this.client.registerFields;
+      const username = registerInfo[0].val();
+      const password = registerInfo[1].val();
+      const email = registerInfo[3].val();
+
+      this.socket.send(Packets.Intro, [
+        Packets.IntroOpcode.Register,
+        username,
+        password,
+        email,
+      ]);
+    } else if (this.client.isGuest()) {
+      log.debug(&apos;Game - handshakeCallback() - guest logging in&apos;);
+      this.socket.send(Packets.Intro, [
+        Packets.IntroOpcode.Guest,
+        &apos;n&apos;,
+        &apos;n&apos;,
+        &apos;n&apos;,
+      ]);
+    } else {
+      log.debug(&apos;Game - handshakeCallback() - player logging in&apos;);
+      const loginInfo = this.client.loginFields;
+      const name = loginInfo[0].val();
+      const pass = loginInfo[1].val();
+
+      this.socket.send(Packets.Intro, [
+        Packets.IntroOpcode.Login,
+        name,
+        pass,
+        &apos;n&apos;,
+      ]);
+
+      if (this.hasRemember()) {
+        this.storage.data.player.username = name;
+        this.storage.data.player.password = pass;
+      } else {
+        this.storage.data.player.username = &apos;&apos;;
+        this.storage.data.player.password = &apos;&apos;;
+      }
+
+      this.storage.save();
+    }
+
+    return true;
+  }
+
+  /**
+   * The callback for when the welcome message for brand new
+   * players is done. Loads the player data and sets their
+   * starting position then calls this.postLoad()
+   * @param  {Object} playerData the data needed to load the player
+   * @return {Boolean}
+   */
+  welcomeCallback(playerData) {
+    log.debug(&apos;Game - welcomeCallback()&apos;, playerData);
+
+    this.player.loadPlayer(playerData);
+    this.input.setPosition(this.player.getX(), this.player.getY());
+
+    // this.start();
+    // this.postLoad();
+
+    return true;
+  }
+
+  /**
+   * Callback for when player equipment is done loading
+   * @param  {Number} action the equipment action
+   * @param  {Object} info information about the equipment
+   * @return {Boolean}
+   */
+  equipmentCallback(action, info) {
+    log.debug(&apos;Game - equipmentCallback()&apos;, action, info);
+
+    switch (action) {
+      case Packets.EquipmentOpcode.Batch:
+        for (let i = 0; i &lt; info.length; i += 1) {
+          this.player.setEquipment(i, info[i]);
+        }
+        this.interface.loadProfile();
+        break;
+      case Packets.EquipmentOpcode.Equip:
+        const equipmentType = info.shift(); // eslint-disable-line
+        const name = info.shift(); // eslint-disable-line
+        const string = info.shift(); // eslint-disable-line
+        const count = info.shift(); // eslint-disable-line
+        const ability = info.shift(); // eslint-disable-line
+        const abilityLevel = info.shift(); // eslint-disable-line
+
+        this.player.setEquipment(equipmentType, [
+          name,
+          string,
+          count,
+          ability,
+          abilityLevel,
+        ]);
+
+        this.interface.profile.update();
+        break;
+      case Packets.EquipmentOpcode.Unequip:
+        const type = info.shift(); // eslint-disable-line
+        this.player.unequip(type);
+        if (type === &apos;armour&apos;) {
+          this.player.setSprite(this.getSprite(this.player.getSpriteName()));
+        }
+        this.interface.profile.update();
+        break;
+      default:
+        break;
+    }
+  }
+
+  /**
+   * Triggered when an entity has finished being spawned
+   * @param  {Object} data entity id
+   * @return {Boolean}
+   */
+  spawnCallback(data) {
+    log.debug(&apos;Game - spawnCallback()&apos;, data);
+    return this.entities.create(data.shift());
+  }
+
+  /**
+   * Callback for when the list of entities is done loading
+   * and adds the new entities to the screen
+   * @param  {Array&lt;Entity&gt;} data array of entities
+   * @return {Boolean}
+   */
+  entityListCallback(data) {
+    log.debug(&apos;Game - entityListCallback()&apos;, data);
+    const ids = _.pluck(this.entities.getAll(), &apos;id&apos;);
+    const known = _.intersection(ids, data);
+    const newIds = _.difference(data, known);
+
+    this.entities.decrepit = _.reject(
+      this.entities.getAll(),
+      entity =&gt; _.include(known, entity.id) || entity.id === this.player.id,
+    );
+
+    // this.entities.clean();
+    this.entities.loadEntities();
+    this.socket.send(Packets.Who, newIds);
+    return true;
+  }
+
+  /**
+   * Callback for when server side sync is done.
+   * Used to make sure the player&apos;s information
+   * doesn&apos;t differntiate from what the server has
+   * for them
+   * @param  {Entity&lt;Player&gt;} playerEntity player entity object
+   * @return {Boolean} false if this entity is not a player type
+   */
+  syncCallback(playerEntity) {
+    log.debug(&apos;Game - syncCallback()&apos;, playerEntity);
+
+    const entity = this.entities.get(playerEntity.id);
+
+    if (!entity || entity.type !== &apos;player&apos;) {
+      return false;
+    }
+
+    if (playerEntity.hitPoints) {
+      entity.hitPoints = playerEntity.hitPoints;
+      entity.maxHitPoints = playerEntity.maxHitPoints;
+    }
+
+    if (playerEntity.mana) {
+      entity.mana = playerEntity.mana;
+      entity.maxMana = playerEntity.maxMana;
+    }
+
+    if (playerEntity.experience) {
+      entity.experience = playerEntity.experience;
+      entity.level = playerEntity.level;
+    }
+
+    if (playerEntity.armour) {
+      entity.setSprite(this.getSprite(playerEntity.armour));
+    }
+
+    if (playerEntity.weapon) {
+      entity.setEquipment(Modules.Equipment.Weapon, playerEntity.weapon);
+    }
+
+    this.interface.profile.update();
+    return true;
+  }
+
+  /**
+   * Callback for entity movement
+   * @param  {Object&lt;Messages&gt;} data message data
+   * @return {Boolean}
+   */
+  movementCallback(data) {
+    log.debug(&apos;Game - movementCallback()&apos;, data);
+
+    const opcode = data.shift();
+    const info = data.shift();
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.MovementOpcode.Move:
+        const id = info.shift(); // eslint-disable-line
+        const x = info.shift(); // eslint-disable-line
+        const y = info.shift(); // eslint-disable-line
+        const forced = info.shift(); // eslint-disable-line
+        const teleport = info.shift(); // eslint-disable-line
+        const entity = this.entities.get(id); // eslint-disable-line
+
+        if (!entity) {
+          return false;
+        }
+
+        if (forced) {
+          entity.stop(true);
+        }
+
+        this.moveCharacter(entity, x, y);
+        break;
+      case Packets.MovementOpcode.Follow:
+        const follower = this.entities.get(info.shift()); // eslint-disable-line
+        const followee = this.entities.get(info.shift()); // eslint-disable-line
+
+        if (!followee || !follower) {
+          return false;
+        }
+
+        follower.follow(followee);
+        break;
+      case Packets.MovementOpcode.Freeze:
+      case Packets.MovementOpcode.Stunned:
+        const pEntity = this.entities.get(info.shift()); // eslint-disable-line
+        const state = info.shift(); // eslint-disable-line
+
+        if (!pEntity) {
+          return false;
+        }
+
+        if (state) {
+          pEntity.stop(false);
+        }
+
+        if (opcode === Packets.MovementOpcode.Stunned) {
+          pEntity.stunned = state;
+        } else if (opcode === Packets.MovementOpcode.Freeze) {
+          pEntity.frozen = state;
+        }
+        break;
+    }
+
+    return true;
+  }
+
+  /**
+   * Callback for player teleport
+   * @param  {Object&lt;Messages&gt;} data information about the teleport
+   * @return {Boolean}
+   */
+  teleportCallback(data) {
+    log.debug(&apos;Game - teleportCallback()&apos;, data);
+
+    const id = data.shift();
+    const x = data.shift();
+    const y = data.shift();
+    const withAnimation = data.shift();
+    const isPlayer = id === this.player.id;
+    const entity = this.entities.get(id);
+
+    if (!entity) {
+      return false;
+    }
+
+    entity.stop(true);
+    entity.frozen = true;
+
+    /**
+     * Teleporting an entity seems to cause a glitch with the
+     * hitbox. Make sure you keep an eye out for this.
+     * @return {Boolean}
+     */
+    const doTeleport = () =&gt; {
+      log.debug(&apos;Game - doTeleport()&apos;);
+
+      this.entities.unregisterPosition(entity);
+      entity.setGridPosition(x, y);
+
+      if (isPlayer) {
+        this.entities.clearPlayers(this.player);
+        this.player.clearHealthBar();
+        this.renderer.camera.centreOn(entity);
+        this.renderer.updateAnimatedTiles();
+      } else if (entity.type === &apos;player&apos;) {
+        delete this.entities.entities[entity.id];
+        return false;
+      }
+
+      this.socket.send(Packets.Request, [this.player.id]);
+      this.entities.registerPosition(entity);
+
+      entity.frozen = false;
+      return true;
+    };
+
+    if (withAnimation) {
+      const originalSprite = entity.sprite;
+      entity.teleporting = true;
+      entity.setSprite(this.getSprite(&apos;death&apos;));
+
+      entity.animate(&apos;death&apos;, 240, 1, () =&gt; {
+        doTeleport();
+        entity.currentAnimation = null;
+        entity.setSprite(originalSprite);
+        entity.idle();
+        entity.teleporting = false;
+      });
+    } else {
+      doTeleport();
+    }
+
+    return true;
+  }
+
+  /**
+   * Callback for removing a spawned entity
+   * @param  {Number} id the id of the entity that needs to be removed
+   * @return {Boolean}
+   */
+  despawnCallback(id) {
+    log.debug(&apos;Game - despawnCallback()&apos;, id);
+
+    const entity = this.entities.get(id);
+
+    if (!entity) {
+      return false;
+    }
+
+    entity.dead = true;
+    entity.stop();
+
+    switch (entity.type) {
+      default:
+        break;
+      case &apos;item&apos;:
+        this.entities.removeItem(entity);
+        return false;
+      case &apos;chest&apos;:
+        entity.setSprite(this.getSprite(&apos;death&apos;));
+
+        entity.setAnimation(&apos;death&apos;, 120, 1, () =&gt; {
+          this.entities.unregisterPosition(entity);
+          delete this.entities.entities[entity.id];
+        });
+        return false;
+    }
+
+    if (this.player.hasTarget() &amp;&amp; this.player.target.id === entity.id) {
+      this.player.removeTarget();
+    }
+
+    this.entities.grids.removeFromPathingGrid(entity.gridX, entity.gridY);
+
+    if (entity.id !== this.player.id &amp;&amp; this.player.getDistance(entity) &lt; 5) {
+      this.audio.play(
+        Modules.AudioTypes.SFX,
+        `kill${Math.floor(Math.random() * 2 + 1)}`,
+      );
+    }
+
+    entity.hitPoints = 0;
+    entity.setSprite(this.getSprite(&apos;death&apos;));
+
+    entity.animate(&apos;death&apos;, 120, 1, () =&gt; {
+      this.entities.unregisterPosition(entity);
+      delete this.entities.entities[entity.id];
+    });
+
+    return true;
+  }
+
+  combatCallback(data) {
+    log.debug(&apos;Game - combatCallback()&apos;, data);
+
+    const opcode = data.shift();
+    const attacker = this.entities.get(data.shift());
+    const target = this.entities.get(data.shift());
+
+    if (!target || !attacker) {
+      return;
+    }
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.CombatOpcode.Initiate:
+        attacker.setTarget(target);
+        target.addAttacker(attacker);
+
+        if (target.id === this.player.id || attacker.id === this.player.id) {
+          this.socket.send(Packets.Combat, [
+            Packets.CombatOpcode.Initiate,
+            attacker.id,
+            target.id,
+          ]);
+        }
+        break;
+      case Packets.CombatOpcode.Hit:
+        const hit = data.shift(); // eslint-disable-line
+        const isPlayer = target.id === this.player.id; // eslint-disable-line
+
+        if (!hit.isAoE) {
+          attacker.lookAt(target);
+          attacker.performAction(
+            attacker.orientation,
+            Modules.Actions.Attack,
+          );
+        } else if (hit.hasTerror) {
+          target.terror = true;
+        }
+
+        switch (hit.type) {
+          case Modules.Hits.Critical:
+            target.critical = true;
+            break;
+          default:
+            if (attacker.id === this.player.id &amp;&amp; hit.damage &gt; 0) {
+              this.audio.play(
+                Modules.AudioTypes.SFX,
+                `hit${Math.floor(Math.random() * 2 + 1)}`,
+              );
+            }
+            break;
+        }
+
+        this.info.create(
+          hit.type,
+          [hit.damage, isPlayer],
+          target.x,
+          target.y,
+        );
+
+        attacker.triggerHealthBar();
+        target.triggerHealthBar();
+
+        if (isPlayer &amp;&amp; hit.damage &gt; 0) {
+          this.audio.play(Modules.AudioTypes.SFX, &apos;hurt&apos;);
+        }
+        break;
+      case Packets.CombatOpcode.Finish:
+        if (target) {
+          target.removeTarget();
+          target.forget();
+        }
+
+        if (attacker) {
+          attacker.removeTarget();
+        }
+        break;
+    }
+  }
+
+  animationCallback(id, info) {
+    log.debug(&apos;Game - animationCallback()&apos;, id, info);
+
+    const entity = this.entities.get(id);
+    const animation = info.shift();
+    const speed = info.shift();
+    const count = info.shift();
+
+    if (!entity) {
+      return;
+    }
+
+    entity.animate(animation, speed, count);
+  }
+
+  projectileCallback(opcode, info) {
+    log.debug(&apos;Game - projectileCallback()&apos;, opcode, info);
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.ProjectileOpcode.Create:
+        this.entities.create(info);
+        break;
+    }
+  }
+
+  populationCallback(population) {
+    log.debug(&apos;Game - populationCallback()&apos;, population);
+
+    this.population = population;
+  }
+
+  pointsCallback(data) {
+    log.debug(&apos;Game - pointsCallback()&apos;, data);
+
+    const id = data.shift();
+    const hitPoints = data.shift();
+    const mana = data.shift();
+    const entity = this.entities.get(id);
+
+    if (!entity) {
+      return;
+    }
+
+    if (hitPoints) {
+      entity.setHitPoints(hitPoints);
+
+      if (
+        this.player.hasTarget()
+        &amp;&amp; this.player.target.id === entity.id
+        &amp;&amp; this.input.overlay.updateCallback
+      ) this.input.overlay.updateCallback(entity.id, hitPoints);
+    }
+
+    if (mana) {
+      entity.setMana(mana);
+    }
+  }
+
+  networkCallback() {
+    log.debug(&apos;Game - networkCallback()&apos;);
+
+    this.socket.send(Packets.Network, [Packets.NetworkOpcode.Pong]);
+  }
+
+  chatCallback(info) {
+    log.debug(&apos;Game - chatCallback()&apos;, info);
+
+    if (!info.duration) {
+      info.duration = 5000; // eslint-disable-line
+    }
+
+    if (info.withBubble) {
+      const entity = this.entities.get(info.id);
+
+      if (entity) {
+        this.bubble.create(info.id, info.text, this.time, info.duration);
+        this.bubble.setTo(entity);
+
+        this.audio.play(Modules.AudioTypes.SFX, &apos;npctalk&apos;);
+      }
+    }
+
+    if (info.isGlobal) {
+      info.name = `[Global] ${info.name}`; // eslint-disable-line
+    }
+
+    this.input.chatHandler.add(info.name, info.text, info.colour);
+  }
+
+  inventoryCallback(opcode, info) {
+    log.debug(&apos;Game - inventoryCallback()&apos;, opcode, info);
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.InventoryOpcode.Batch:
+        const inventorySize = info.shift(); // eslint-disable-line
+        const data = info.shift(); // eslint-disable-line
+
+        this.interface.loadInventory(inventorySize, data);
+        break;
+      case Packets.InventoryOpcode.Add:
+        if (!this.interface.inventory) {
+          return;
+        }
+
+        this.interface.inventory.add(info);
+
+        if (!this.interface.bank) {
+          return;
+        }
+
+        this.interface.bank.addInventory(info);
+        break;
+      case Packets.InventoryOpcode.Remove:
+        if (!this.interface.inventory) {
+          return;
+        }
+
+        this.interface.inventory.remove(info);
+
+        if (!this.interface.bank) {
+          return;
+        }
+
+        this.interface.bank.removeInventory(info);
+        break;
+    }
+  }
+
+  bankCallback(opcode, info) {
+    log.debug(&apos;Game - bankCallback()&apos;, opcode, info);
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.BankOpcode.Batch:
+        const bankSize = info.shift(); // eslint-disable-line
+        const data = info.shift(); // eslint-disable-line
+
+        this.interface.loadBank(bankSize, data);
+        break;
+
+      case Packets.BankOpcode.Add:
+        if (!this.interface.bank) {
+          return;
+        }
+
+        this.interface.bank.add(info);
+        break;
+
+      case Packets.BankOpcode.Remove:
+        this.interface.bank.remove(info);
+        break;
+    }
+  }
+
+  questCallback(opcode, info) {
+    log.debug(&apos;Game - questCallback()&apos;, opcode, info, this.interface.getQuestPage());
+
+    switch (opcode) {
+      default:
+        log.debug(&apos;Game - questCallback() - invalid opcode&apos;, opcode);
+        break;
+      case Packets.QuestOpcode.Batch:
+        log.debug(&apos;Game - questCallback() - batch&apos;, info.quests, info.achievements);
+        this.interface.getQuestPage().loadQuest(info.quests, info.achievements);
+        break;
+
+      case Packets.QuestOpcode.Progress:
+        log.debug(&apos;Game - questCallback() - progress&apos;, info);
+        this.interface.getQuestPage().progress(info);
+        break;
+
+      case Packets.QuestOpcode.Finish:
+        log.debug(&apos;Game - questCallback() - finish&apos;, info);
+        this.interface.getQuestPage().finish(info);
+        break;
+    }
+  }
+
+  notificationCallback(opcode, message) {
+    log.debug(&apos;Game - notificationCallback()&apos;, opcode, message);
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.NotificationOpcode.Ok:
+        this.interface.displayNotify(message);
+        break;
+
+      case Packets.NotificationOpcode.YesNo:
+        this.interface.displayConfirm(message);
+        break;
+
+      case Packets.NotificationOpcode.Text:
+        this.input.chatHandler.add(&apos;WORLD&apos;, message, &apos;red&apos;);
+        break;
+    }
+  }
+
+  blinkCallback(instance) {
+    log.debug(&apos;Game - blickCallback()&apos;, instance);
+
+    const item = this.entities.get(instance);
+
+    if (!item) {
+      return;
+    }
+
+    item.blink(150);
+  }
+
+  healCallback(info) {
+    log.debug(&apos;Game - healCallback()&apos;, info);
+
+    const entity = this.entities.get(info.id);
+
+    if (!entity) {
+      return;
+    }
+
+    switch (info.type) {
+      default:
+        break;
+      case &apos;health&apos;:
+        this.info.create(
+          Modules.Hits.Heal,
+          [info.amount],
+          entity.x,
+          entity.y,
+        );
+
+        break;
+
+      case &apos;mana&apos;:
+        this.info.create(
+          Modules.Hits.Mana,
+          [info.amount],
+          entity.x,
+          entity.y,
+        );
+
+        break;
+    }
+
+    if (entity.hitPoints + info.amount &gt; entity.maxHitPoints) {
+      entity.setHitPoints(entity.maxHitPoints);
+    } else {
+      entity.setHitPoints(entity.hitPoints + info.amount);
+    }
+
+    entity.triggerHealthBar();
+  }
+
+  experienceCallback(info) {
+    log.debug(&apos;Game - experienceCallback()&apos;, info);
+
+    const entity = this.entities.get(info.id);
+
+    if (!entity || entity.type !== &apos;player&apos;) {
+      return;
+    }
+
+    entity.experience = info.experience;
+
+    if (entity.level !== info.level) {
+      entity.level = info.level;
+      this.info.create(Modules.Hits.LevelUp, null, entity.x, entity.y);
+    } else if (entity.id === this.player.id) {
+      this.info.create(Modules.Hits.Experience, [info.amount], entity.x, entity.y);
+    }
+
+    this.interface.profile.update();
+  }
+
+  deathCallback(id) {
+    log.debug(&apos;Game - deathCallback()&apos;, id);
+
+    const entity = this.entities.get(id);
+
+    if (!entity || id !== this.player.id) {
+      return;
+    }
+
+    this.audio.play(Modules.AudioTypes.SFX, &apos;death&apos;);
+    this.player.dead = true;
+    this.player.removeTarget();
+    this.player.orientation = Modules.Orientation.Down;
+    this.client.body.addClass(&apos;death&apos;);
+  }
+
+  audioCallback(song) {
+    log.debug(&apos;Game - audioCallback()&apos;, song);
+
+    this.audio.songName = song;
+
+    if (Detect.isSafari() &amp;&amp; !this.audio.song) {
+      return;
+    }
+
+    this.audio.update();
+  }
+
+  npcCallback(opcode, info) {
+    log.debug(&apos;Game - npcCallback()&apos;, opcode, info);
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.NPCOpcode.Talk:
+        console.log(&apos;canvas NPC talk!!!&apos;, info);
+        let entity = this.entities.get(info.id); // eslint-disable-line
+        const messages = info.text; // eslint-disable-line
+        const isNPC = !info.nonNPC; // eslint-disable-line
+
+        if (!entity) {
+          console.log(&apos;canvas no entity by this ID&apos;);
+          return;
+        }
+
+        if (!messages) {
+          console.log(&apos;canvas no messages&apos;);
+          entity.talkIndex = 0;
+          return;
+        }
+
+        const message = isNPC
+          ? entity.talk(messages)
+          : messages; // eslint-disable-line
+
+        console.log(&apos;canvas messages are&apos;, message);
+
+        if (isNPC) {
+          console.log(&apos;canvas this is an NPC&apos;);
+          const bubble = this.bubble.create(info.id, message, this.time, 5000);
+          console.log(&apos;canvas bubble&apos;, bubble);
+
+          this.bubble.setTo(entity);
+
+          if (this.renderer.mobile &amp;&amp; this.renderer.autoCentre) {
+            this.renderer.camera.centreOn(this.player);
+          }
+
+          if (bubble) {
+            console.log(&apos;canvas clickable bubble&apos;);
+            bubble.setClickable();
+
+            bubble.element.on(&apos;click&apos;, () =&gt; {
+              const bubbleInstance = this.entities.get(bubble.id);
+
+              if (bubbleInstance) {
+                console.log(&apos;canvas bubble instance&apos;);
+                this.input.click({
+                  x: bubbleInstance.gridX,
+                  y: bubbleInstance.gridY,
+                });
+              }
+            });
+          }
+        } else {
+          console.log(&apos;canvas this is not an npc&apos;);
+          this.bubble.create(info.id, message, this.time, 5000);
+          this.bubble.setTo(entity);
+        }
+
+        let sound = &apos;npc&apos;; // eslint-disable-line
+
+        if (!message &amp;&amp; isNPC) {
+          sound = &apos;npc-end&apos;;
+          this.bubble.destroy(info.id);
+        }
+
+        this.audio.play(Modules.AudioTypes.SFX, sound);
+
+        break;
+
+      case Packets.NPCOpcode.Bank:
+        this.interface.bank.display();
+        break;
+
+      case Packets.NPCOpcode.Enchant:
+        this.interface.enchant.display();
+        break;
+
+      case Packets.NPCOpcode.Countdown:
+        const cEntity = this.entities.get(info.id); // eslint-disable-line
+        const countdown = info.countdown; // eslint-disable-line
+
+        if (cEntity) {
+          cEntity.setCountdown(countdown);
+        }
+
+        break;
+    }
+  }
+
+  respawnCallback(id, x, y) {
+    log.debug(&apos;Game - respawnCallback()&apos;, id, x, y);
+
+    if (id !== this.player.id) {
+      log.error(&apos;Player id mismatch.&apos;);
+      return;
+    }
+
+    this.player.setGridPosition(x, y);
+    this.entities.addEntity(this.player);
+    this.renderer.camera.centreOn(this.player);
+    this.player.currentAnimation = null;
+    this.player.setSprite(this.getSprite(this.player.getSpriteName()));
+    this.player.idle();
+    this.player.dead = false;
+  }
+
+  enchantCallback(opcode, info) {
+    log.debug(&apos;Game - enchantCallback()&apos;, opcode, info);
+
+    const {
+      type,
+      index,
+    } = info;
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.EnchantOpcode.Select:
+        this.interface.enchant.add(type, index);
+        break;
+      case Packets.EnchantOpcode.Remove:
+        this.interface.enchant.moveBack(type, index);
+        break;
+    }
+  }
+
+  guildCallback(opcode, info) {
+    log.debug(&apos;Game - guildCallback()&apos;, opcode, info);
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.GuildOpcode.Create:
+        break;
+      case Packets.GuildOpcode.Join:
+        break;
+    }
+
+    this.guild = info;
+  }
+
+  pointerCallback(opcode, info) {
+    log.debug(&apos;Game - pointerCallback()&apos;, opcode, info);
+
+    switch (opcode) {
+      default:
+        break;
+      case Packets.PointerOpcode.NPC:
+        const entity = this.entities.get(info.id); // eslint-disable-line
+
+        if (!entity) {
+          return;
+        }
+
+        this.pointer.create(entity.id, Modules.Pointers.Entity);
+        this.pointer.setToEntity(entity);
+        break;
+
+      case Packets.PointerOpcode.Location:
+        this.pointer.create(info.id, Modules.Pointers.Position);
+        this.pointer.setToPosition(info.id, info.x * 16, info.y * 16);
+        break;
+
+      case Packets.PointerOpcode.Relative:
+        this.pointer.create(info.id, Modules.Pointers.Relative);
+        this.pointer.setRelative(info.id, info.x, info.y);
+        break;
+
+      case Packets.PointerOpcode.Remove:
+        this.pointer.clean();
+        break;
+    }
+  }
+
+  pvpCallback(id, pvp) {
+    log.debug(&apos;Game - pvpCallback()&apos;, id, pvp);
+
+    if (this.player.id === id) {
+      this.pvp = pvp;
+    } else {
+      const entity = this.entities.get(id);
+
+      if (entity) {
+        entity.pvp = pvp;
+      }
+    }
+  }
+
+  shopCallback(opcode, info) {
+    log.debug(&apos;Game - spawnCallback()&apos;, opcode, info);
+
+    switch (opcode) {
+      case Packets.ShopOpcode.Open:
+        break;
+      case Packets.ShopOpcode.Buy:
+        break;
+      case Packets.ShopOpcode.Sell:
+        break;
+      case Packets.ShopOpcode.Refresh:
+        break;
+      default:
+        break;
+    }
+
+    this.shop = info;
+  }
+
+  /**
+   * Call this after the player has been welcomed
+   * by the server and the client received the connection.
+   */
+  postLoad() {
+    log.debug(&apos;Game - postLoad()&apos;);
+
+    // @TODO fix this line
+    this.renderer.loadStaticSprites();
+
+    this.getCamera().setPlayer(this.player);
+
+    this.renderer.renderedFrame[0] = -1;
+
+    this.entities.addEntity(this.player);
+
+    const defaultSprite = this.getSprite(this.player.getSpriteName());
+
+    this.player.setSprite(defaultSprite);
+    this.player.idle();
+
+    this.socket.send(Packets.Ready, [true]);
+
+    this.playerHandler = new PlayerHandler(this, this.player);
+
+    this.renderer.updateAnimatedTiles();
+
+    this.zoning = new Zoning(this);
+
+    this.updater.setSprites(this.entities.sprites);
+
+    this.renderer.verifyCentration();
+
+    if (this.storage.data.new) {
+      this.storage.data.new = false;
+      this.storage.save();
+    }
+
+    if (this.storage.data.welcome !== false) {
+      this.client.body.addClass(&apos;welcomeMessage&apos;);
+    }
+  }
+
+  implementStorage() {
+    log.debug(&apos;Game - implementStorage()&apos;);
+
+    const loginName = $(&apos;#wrapperNameInput&apos;);
+    const loginPassword = $(&apos;#wrapperPasswordInput&apos;);
+
+    loginName.prop(&apos;readonly&apos;, false);
+    loginPassword.prop(&apos;readonly&apos;, false);
+
+    if (!this.hasRemember()) {
+      return;
+    }
+
+    if (this.getStorageUsername() !== &apos;&apos;) {
+      loginName.val(this.getStorageUsername());
+    }
+
+    if (this.getStoragePassword() !== &apos;&apos;) {
+      loginPassword.val(this.getStoragePassword());
+    }
+
+    $(&apos;#rememberMe&apos;).addClass(&apos;active&apos;);
+  }
+
+  setPlayerMovement(direction) {
+    log.debug(&apos;Game - setPlayerMovement()&apos;, direction);
+
+    this.player.direction = direction;
+  }
+
+  movePlayer(x, y) {
+    log.debug(&apos;Game - movePlayer()&apos;, x, y);
+
+    this.moveCharacter(this.player, x, y);
+  }
+
+  moveCharacter(character, x, y) {
+    log.debug(&apos;Game - moveCharacter()&apos;, character, x, y);
+
+    if (!character) {
+      return;
+    }
+
+    character.go(x, y);
+  }
+
+  findPath(character, x, y, ignores) {
+    log.debug(&apos;Game - findPath()&apos;, x, y, ignores);
+
+    const grid = this.entities.grids.pathingGrid;
+    let path = [];
+
+    if (this.map.isColliding(x, y) || !this.pathfinder || !character) {
+      return path;
+    }
+
+    if (ignores) {
+      _.each(ignores, (entity) =&gt; {
+        this.pathfinder.ignoreEntity(entity);
+      });
+    }
+
+    path = this.pathfinder.find(grid, character, x, y, false);
+
+    if (ignores) {
+      this.pathfinder.clearIgnores();
+    }
+
+    return path;
+  }
+
+  onInput(inputType, data) {
+    log.debug(&apos;Game - onInput()&apos;, inputType, data);
+
+    this.input.handle(inputType, data);
+  }
+
+  /**
+   * This function is responsible for handling sudden
+   * disconnects of a player whilst in the game, not
+   * menu-based errors.
+   */
+  handleDisconnection(noError) {
+    log.debug(&apos;Game - handleDisconnection()&apos;, noError);
+
+    if (!this.started) {
+      return;
+    }
+
+    this.stop();
+    this.renderer.stop();
+
+    this.unload();
+
+    this.client.showMenu();
+
+    if (noError) {
+      this.client.sendError(null, &apos;You have been disconnected from the server&apos;);
+      this.client.statusMessage = null;
+    }
+
+    this.loadRenderer();
+    this.loadControllers();
+
+    this.client.toggleLogin(false);
+    this.client.updateLoader(&apos;&apos;);
+  }
+
+  respawn() {
+    log.debug(&apos;Game - respawn()&apos;);
+
+    this.audio.play(Modules.AudioTypes.SFX, &apos;revive&apos;);
+    this.client.body.removeClass(&apos;death&apos;);
+
+    this.socket.send(Packets.Respawn, [this.player.id]);
+  }
+
+  tradeWith(player) {
+    log.debug(&apos;Game - tradeWith()&apos;, player);
+
+    if (!player || player.id === this.player.id) {
+      return;
+    }
+
+    this.socket.send(Packets.Trade, [Packets.TradeOpcode.Request, player.id]);
+  }
+
+  resize() {
+    log.debug(&apos;Game - resize()&apos;);
+
+    this.renderer.resize();
+
+    if (this.pointer) {
+      this.pointer.resize();
+    }
+  }
+
+  createPlayer() {
+    log.debug(&apos;Game - createPlayer()&apos;);
+
+    this.player = new Player();
+  }
+
+  getScaleFactor() {
+    return this.client.getScaleFactor();
+  }
+
+  getStorage() {
+    log.debug(&apos;Game - getStorage()&apos;);
+
+    return this.storage;
+  }
+
+  getCamera() {
+    log.debug(&apos;Game - getCamera()&apos;);
+
+    return this.renderer.camera;
+  }
+
+  getSprite(spriteName) {
+    log.debug(&apos;Game - getSprite()&apos;, spriteName);
+
+    return this.entities.getSprite(spriteName);
+  }
+
+  getEntityAt(x, y, ignoreSelf) {
+    log.debug(&apos;Game - getEntityAt()&apos;, x, y, ignoreSelf);
+
+    console.log(&apos;getEntityAt&apos;, this.entities.grids.renderingGrid);
+    const entities = this.entities.grids.renderingGrid[y][x];
+
+    if (_.size(entities) &gt; 0) {
+      return entities[_.keys(entities)[ignoreSelf ? 1 : 0]];
+    }
+
+    const items = this.entities.grids.itemGrid[y][x];
+
+    if (_.size(items) &gt; 0) {
+      _.each(items, (item) =&gt; {
+        if (item.stackable) {
+          return item;
+        }
+        return null;
+      });
+
+      return items[_.keys(items)[0]];
+    }
+
+    return null;
+  }
+
+  getStorageUsername() {
+    log.debug(&apos;Game - getStorageUsername()&apos;, this.storage);
+
+    return this.storage.data.player.username;
+  }
+
+  getStoragePassword() {
+    log.debug(&apos;Game - getStoragePassword()&apos;, this.storage);
+
+    return this.storage.data.player.password;
+  }
+
+  hasRemember() {
+    log.debug(&apos;Game - hasRemember()&apos;);
+
+    return this.storage.data.player.rememberMe;
+  }
+
+  setRenderer(renderer) {
+    log.debug(&apos;Game - setRenderer()&apos;, renderer);
+
+    if (this.renderer === null) {
+      this.renderer = renderer;
+    }
+  }
+
+  setStorage(storage) {
+    log.debug(&apos;Game - setStorage()&apos;, storage);
+
+    if (!this.storage) {
+      this.storage = storage;
+    }
+  }
+
+  setSocket(socket) {
+    log.debug(&apos;Game - setSocket()&apos;, socket);
+
+    if (!this.socket) {
+      this.socket = socket;
+    }
+  }
+
+  setMessages(messages) {
+    log.debug(&apos;Game - setMessages()&apos;, messages);
+
+    if (!this.messages) {
+      this.messages = messages;
+    }
+  }
+
+  setUpdater(updater) {
+    log.debug(&apos;Game - setUpdater()&apos;, updater);
+
+    if (!this.updater) {
+      this.updater = updater;
+    }
+  }
+
+  setEntityController(entities) {
+    log.debug(&apos;Game - setEntityController()&apos;, entities, this.entities);
+
+    if (!this.entities) {
+      this.entities = entities;
+    }
+  }
+
+  setInput(input) {
+    log.debug(&apos;Game - setInput()&apos;, input);
+
+    if (!this.input) {
+      this.input = input;
+      this.renderer.setInput(this.input);
+    }
+  }
+
+  setPathfinder(pathfinder) {
+    log.debug(&apos;Game - setPathfinder()&apos;, pathfinder);
+
+    if (!this.pathfinder) {
+      this.pathfinder = pathfinder;
+    }
+  }
+
+  setInfo(info) {
+    log.debug(&apos;Game - setInfo()&apos;, info);
+
+    if (!this.info) {
+      this.info = info;
+    }
+  }
+
+  setBubble(bubble) {
+    log.debug(&apos;Game - setBubble()&apos;, bubble);
+
+    if (!this.bubble) {
+      this.bubble = bubble;
+    }
+  }
+
+  setPointer(pointer) {
+    log.debug(&apos;Game - setPointer()&apos;, pointer);
+
+    if (!this.pointer) {
+      this.pointer = pointer;
+    }
+  }
+
+  setInterface(intrface) {
+    log.debug(&apos;Game - setInterface()&apos;, intrface);
+
+    if (!this.interface) {
+      this.interface = intrface;
+    }
+  }
+
+  setAudio(audio) {
+    log.debug(&apos;Game - setAudio()&apos;, audio);
+
+    if (!this.audio) {
+      this.audio = audio;
+    }
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
