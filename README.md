@@ -50,21 +50,6 @@ WTF?! Adventure is completely open-source, allowing its community to collaborate
 
 - **Doors:** enhanced to make going in and out of doors easier with mouse click functionality
 
-
-## Todo List
-
-- Better tutorial
-- Advertisements
-- Private Messages
-- Passive Companions
-- Active Companions
-- Add Guilds and Parties
-- Implement trading amongst player
-- Abilities
-- Finalize all bosses
-- More quests and achievements
-
-
 ## Running WTF?! Adventure
 
 Running the server is fairly straightforward, for the most part. If you already have everything installed and configured you can skip directly to step 3.
