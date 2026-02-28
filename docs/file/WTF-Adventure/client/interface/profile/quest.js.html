@@ -174,20 +174,56 @@
 import _ from &apos;underscore&apos;;
 import GamePage from &apos;./gamePage&apos;;
 
+/**
+ * Manages the quest and achievement tracking profile page
+ * @class
+ */
 export default class Quest extends GamePage {
+  /**
+   * Default constructor
+   */
   constructor() {
     super(&apos;#questPage&apos;);
 
+    /**
+     * The achievements list container element
+     * @type {jQuery}
+     */
     this.achievements = $(&apos;#achievementList&apos;);
+    /**
+     * The quests list container element
+     * @type {jQuery}
+     */
     this.quests = $(&apos;#questList&apos;);
 
+    /**
+     * The achievements completion count display element
+     * @type {jQuery}
+     */
     this.achievementsCount = $(&apos;#achievementCount&apos;);
+    /**
+     * The quests completion count display element
+     * @type {jQuery}
+     */
     this.questCount = $(&apos;#questCount&apos;);
 
+    /**
+     * The unordered list element within the achievements container
+     * @type {jQuery}
+     */
     this.achievementsList = this.achievements.find(&apos;ul&apos;);
+    /**
+     * The unordered list element within the quests container
+     * @type {jQuery}
+     */
     this.questList = this.quests.find(&apos;ul&apos;);
   }
 
+  /**
+   * Populates the quest and achievement lists from server data
+   * @param {Array} quests array of quest data objects
+   * @param {Array} achievements array of achievement data objects
+   */
   loadQuest(quests, achievements) {
     let finishedAchievements = 0;
     let finishedQuests = 0;
@@ -261,6 +297,10 @@ export default class Quest extends GamePage {
     this.questCount.html(`${finishedQuests}/${quests.length}`);
   }
 
+  /**
+   * Updates the progress display for a quest or achievement
+   * @param {Object} info progress info object with isQuest, id, name, count, and progress fields
+   */
   progress(info) {
     const item = info.isQuest
       ? this.getQuest(info.id)
@@ -279,6 +319,10 @@ export default class Quest extends GamePage {
     name.css(&apos;background&apos;, &apos;rgba(255, 255, 10, 0.4)&apos;);
   }
 
+  /**
+   * Updates the display when a quest or achievement is completed
+   * @param {Object} info finish info object with isQuest, id, and name fields
+   */
   finish(info) {
     const item = info.isQuest
       ? this.getQuest(info.id)
@@ -297,10 +341,20 @@ export default class Quest extends GamePage {
     name.css(&apos;background&apos;, &apos;rgba(10, 255, 10, 0.3)&apos;);
   }
 
+  /**
+   * Returns the quest list item element for the given quest id
+   * @param {Number} id the quest identifier
+   * @return {jQuery}
+   */
   getQuest(id) {
     return $(this.questList.find(&apos;li&apos;)[id]).find(`#quest${id}`);
   }
 
+  /**
+   * Returns the achievement list item element for the given achievement id
+   * @param {Number} id the achievement identifier
+   * @return {jQuery}
+   */
   getAchievement(id) {
     return $(this.achievementsList.find(&apos;li&apos;)[id]).find(`#achievement${id}`);
   }
@@ -310,12 +364,24 @@ export default class Quest extends GamePage {
    * on their type of item and id (index).
    */
 
+  /**
+   * Creates and returns a new quest or achievement container element
+   * @param {Boolean} isQuest true for a quest item, false for an achievement item
+   * @param {Number} id the quest or achievement identifier
+   * @return {jQuery}
+   */
   getItem(isQuest, id) {
     return $(
       `&lt;div id=&quot;${isQuest ? &apos;quest&apos; : &apos;achievement&apos;}${id}&quot; class=&quot;questItem&quot;&gt;&lt;/div&gt;`,
     );
   }
 
+  /**
+   * Creates and returns a new quest or achievement name label element
+   * @param {Boolean} isQuest true for a quest name, false for an achievement name
+   * @param {Number} id the quest or achievement identifier
+   * @return {jQuery}
+   */
   getName(isQuest, id) {
     return $(
       `&lt;div id=&quot;${isQuest ? &apos;quest&apos; : &apos;achievement&apos;}${id}name&quot; class=&quot;questName&quot;&gt;&lt;/div&gt;`,

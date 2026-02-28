@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Updater from &apos;<span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber4">WTF-Adventure/WTF-Adventure/client/renderer/updater.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Updater from &apos;<span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber8">WTF-Adventure/WTF-Adventure/client/renderer/updater.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber4">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber8">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Drives per-frame game logic updates including entity movement, animations and UI state</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(game: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-camera">camera</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-camera">camera</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/renderer/camera.js~Camera.html">Camera</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Reference to the game camera</p>
+</div>
       </div>
     </td>
     <td>
@@ -291,13 +294,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-game">game</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-game">game</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Reference to the main game instance</p>
+</div>
       </div>
     </td>
     <td>
@@ -319,13 +323,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-input">input</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-input">input</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/controllers/input.js~Input.html">Input</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Reference to the input handler</p>
+</div>
       </div>
     </td>
     <td>
@@ -347,13 +352,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-lastUpdate">lastUpdate</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-lastUpdate">lastUpdate</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Timestamp of the last completed update cycle</p>
+</div>
       </div>
     </td>
     <td>
@@ -375,13 +381,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-renderer">renderer</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-renderer">renderer</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/renderer/renderer.js~Renderer.html">Renderer</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Reference to the renderer</p>
+</div>
       </div>
     </td>
     <td>
@@ -403,13 +410,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-sprites">sprites</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-sprites">sprites</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The sprite store used for animation updates</p>
+</div>
       </div>
     </td>
     <td>
@@ -431,7 +439,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-timeDifferential">timeDifferential</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-member-timeDifferential">timeDifferential</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
@@ -472,7 +480,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Advances animated tile frames and marks dirty tiles for re-rendering</p>
+</div>
       </div>
     </td>
     <td>
@@ -494,13 +503,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-method-setSprites">setSprites</a></span></span><span class="code" data-ice="signature">(sprites: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-method-setSprites">setSprites</a></span></span><span class="code" data-ice="signature">(sprites: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Sets the sprite store used for animation updates</p>
+</div>
       </div>
     </td>
     <td>
@@ -528,7 +538,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Runs all per-frame update logic and records the update timestamp</p>
+</div>
       </div>
     </td>
     <td>
@@ -556,7 +567,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Advances the target cell and item sparks animations each frame</p>
+</div>
       </div>
     </td>
     <td>
@@ -584,7 +596,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Updates speech bubble timers and pointer positions</p>
+</div>
       </div>
     </td>
     <td>
@@ -612,7 +625,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Updates all entity animations, movement interpolation and projectile trajectories</p>
+</div>
       </div>
     </td>
     <td>
@@ -634,13 +648,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-method-updateFading">updateFading</a></span></span><span class="code" data-ice="signature">(entity: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/renderer/updater.js~Updater.html#instance-method-updateFading">updateFading</a></span></span><span class="code" data-ice="signature">(entity: <span><a href="class/WTF-Adventure/client/entity/entity.js~Entity.html">Entity</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Updates the fading alpha for an entity that is currently fading in</p>
+</div>
       </div>
     </td>
     <td>
@@ -668,7 +683,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Advances floating info/damage text timers</p>
+</div>
       </div>
     </td>
     <td>
@@ -696,7 +712,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Processes keyboard movement input and forwards movement requests to the input handler</p>
+</div>
       </div>
     </td>
     <td>
@@ -724,7 +741,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Checks whether the tileset scale matches the current drawing scale and updates it if needed</p>
+</div>
       </div>
     </td>
     <td>
@@ -750,22 +768,40 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(game: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber13">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">game</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>an instance of the game</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -796,18 +832,19 @@
     
     
     
-    <span class="code" data-ice="name">camera</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">camera</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/renderer/camera.js~Camera.html">Camera</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber7">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber23">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the game camera</p>
+</div>
 
   
 
@@ -839,18 +876,19 @@
     
     
     
-    <span class="code" data-ice="name">game</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">game</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber6">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber18">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the main game instance</p>
+</div>
 
   
 
@@ -882,18 +920,19 @@
     
     
     
-    <span class="code" data-ice="name">input</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">input</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/controllers/input.js~Input.html">Input</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber33">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the input handler</p>
+</div>
 
   
 
@@ -925,18 +964,19 @@
     
     
     
-    <span class="code" data-ice="name">lastUpdate</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">lastUpdate</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber61">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Timestamp of the last completed update cycle</p>
+</div>
 
   
 
@@ -968,18 +1008,19 @@
     
     
     
-    <span class="code" data-ice="name">renderer</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">renderer</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/renderer/renderer.js~Renderer.html">Renderer</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber28">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the renderer</p>
+</div>
 
   
 
@@ -1011,18 +1052,19 @@
     
     
     
-    <span class="code" data-ice="name">sprites</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">sprites</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber10">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber38">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The sprite store used for animation updates</p>
+</div>
 
   
 
@@ -1054,11 +1096,11 @@
     
     
     
-    <span class="code" data-ice="name">timeDifferential</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">timeDifferential</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber46">source</a></span></span>
     </span>
   </h3>
 
@@ -1104,14 +1146,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber28">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber67">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Advances animated tile frames and marks dirty tiles for re-rendering</p>
+</div>
 
   
 
@@ -1143,18 +1186,19 @@
     
     
     
-    <span class="code" data-ice="name">setSprites</span><span class="code" data-ice="signature">(sprites: <span>*</span>)</span>
+    <span class="code" data-ice="name">setSprites</span><span class="code" data-ice="signature">(sprites: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber265">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber330">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Sets the sprite store used for animation updates</p>
+</div>
 
   
 
@@ -1168,9 +1212,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">sprites</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the sprites object containing animation data</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1206,14 +1251,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber44">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Runs all per-frame update logic and records the update timestamp</p>
+</div>
 
   
 
@@ -1249,14 +1295,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber222">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber274">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Advances the target cell and item sparks animations each frame</p>
+</div>
 
   
 
@@ -1292,14 +1339,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber255">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber316">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Updates speech bubble timers and pointer positions</p>
+</div>
 
   
 
@@ -1335,14 +1383,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber41">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber83">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Updates all entity animations, movement interpolation and projectile trajectories</p>
+</div>
 
   
 
@@ -1374,18 +1423,19 @@
     
     
     
-    <span class="code" data-ice="name">updateFading</span><span class="code" data-ice="signature">(entity: <span>*</span>)</span>
+    <span class="code" data-ice="name">updateFading</span><span class="code" data-ice="signature">(entity: <span><a href="class/WTF-Adventure/client/entity/entity.js~Entity.html">Entity</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber174">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber220">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Updates the fading alpha for an entity that is currently fading in</p>
+</div>
 
   
 
@@ -1399,9 +1449,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">entity</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/entity.js~Entity.html">Entity</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the entity to update fading for</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1437,14 +1488,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber249">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber307">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Advances floating info/damage text timers</p>
+</div>
 
   
 
@@ -1480,14 +1532,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber193">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber242">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Processes keyboard movement input and forwards movement requests to the input handler</p>
+</div>
 
   
 
@@ -1523,14 +1576,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber241">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/renderer/updater.js.html#lineNumber296">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Checks whether the tileset scale matches the current drawing scale and updates it if needed</p>
+</div>
 
   
 

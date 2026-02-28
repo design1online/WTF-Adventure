@@ -10,13 +10,37 @@ import Utils from '../../../../../util/utils.js';
  * Tier 4 - Damage boost (1-20% & 20% for special ability or special ability level up)
  * Tier 5 - Damage boost (1-40% & 25% for special ability or special ability level up)
  */
+/**
+ * Handles the item enchanting system for a player
+ * @class
+ */
 export default class Enchant {
+  /**
+   * Default constructor
+   * @param {Player} player the player performing enchantments
+   */
   constructor(player) {
+    /**
+     * The player performing enchantments
+     * @type {Player}
+     */
     this.player = player;
+    /**
+     * The currently selected item to enchant
+     * @type {Object}
+     */
     this.selectedItem = null;
+    /**
+     * The currently selected shards to use for enchanting
+     * @type {Object}
+     */
     this.selectedShards = null;
   }
 
+  /**
+   * Converts 10 shards of the given tier into 1 shard of the next tier
+   * @param {Object} shard the shard item to convert
+   */
   convert(shard) {
     if (!Items.isShard(shard.id) || !this.player.inventory.hasSpace()) {
       return;
@@ -40,6 +64,9 @@ export default class Enchant {
     }
   }
 
+  /**
+   * Performs the enchantment on the selected item using the selected shards
+   */
   enchant() {
     if (!this.selectedItem) {
       this.player.notify('You have not selected an item to enchant.');
@@ -87,6 +114,9 @@ export default class Enchant {
     this.player.sync();
   }
 
+  /**
+   * Randomly generates an ability for the selected item based on its type
+   */
   generateAbility() {
     const
       type = Items.getType(this.selectedItem.id);
@@ -123,6 +153,10 @@ export default class Enchant {
     }
   }
 
+  /**
+   * Checks whether the selected item and shards are valid for enchanting
+   * @return {Boolean}
+   */
   verify() {
     return (
       Items.isEnchantable(this.selectedItem.id)
@@ -130,6 +164,11 @@ export default class Enchant {
     );
   }
 
+  /**
+   * Selects an item or shards for the enchanting process
+   * @param {String} type the slot type ('item' or 'shards')
+   * @param {Object} item the item to select
+   */
   add(type, item) {
     const isItem = item === 'item';
 
@@ -159,6 +198,10 @@ export default class Enchant {
     );
   }
 
+  /**
+   * Deselects an item or shards from the enchanting process
+   * @param {String} type the slot type to deselect ('item' or 'shards')
+   */
   remove(type) {
     let index;
 
@@ -180,6 +223,11 @@ export default class Enchant {
     );
   }
 
+  /**
+   * Checks whether the given item has an ability assigned
+   * @param {Object} item the item to check
+   * @return {Boolean}
+   */
   hasAbility(item) {
     return item.ability !== -1;
   }

@@ -176,25 +176,52 @@
 import log from &apos;../lib/log&apos;;
 import $ from &quot;jquery&quot;;
 
+/**
+ * Manages persistent client-side storage using localStorage
+ * @class
+ */
 export default class Storage {
+  /**
+   * Default constructor
+   * @param {Object} client an instance of the game client
+   */
   constructor(client) {
     log.debug(&apos;Storage - constructor()&apos;, window.localStorage);
-    
+
+    /**
+     * The parsed storage data object
+     * @type {Object}
+     */
     this.data = null;
 
+    /**
+     * The underlying storage backend (localStorage or in-memory fallback)
+     * @type {Object}
+     */
     this.storage = typeof window !== &quot;undefined&quot;
       ? window.localStorage
-      : { 
+      : {
         data: this.data,
         setItem: (key, value) =&gt; this.data[key] = value,
         getItem: (key) =&gt; this.data[key]
       };
 
+    /**
+     * The key used to identify stored data in the storage backend
+     * @type {String}
+     */
     this.name = &apos;data&apos;;
+    /**
+     * Reference to the game client instance
+     * @type {Object}
+     */
     this.client = client;
     this.loadStorage();
   }
 
+  /**
+   * Loads data from storage, or creates a fresh data object if none exists or version has changed
+   */
   loadStorage() {
     log.debug(&apos;Storage - loadStorage()&apos;, this.storage);
 
@@ -210,6 +237,10 @@ export default class Storage {
     }
   }
 
+  /**
+   * Creates and returns a fresh default data object
+   * @return {Object}
+   */
   create() {
     log.debug(&apos;Storage - create()&apos;);
 
@@ -239,6 +270,9 @@ export default class Storage {
     };
   }
 
+  /**
+   * Persists the current data object to the storage backend
+   */
   save() {
     log.debug(&apos;Storage - save()&apos;);
 
@@ -247,6 +281,9 @@ export default class Storage {
     }
   }
 
+  /**
+   * Removes stored data from the backend and resets to defaults
+   */
   clear() {
     log.debug(&apos;Storage - clear()&apos;);
 
@@ -254,6 +291,10 @@ export default class Storage {
     this.data = this.create();
   }
 
+  /**
+   * Sets or clears the remember-me flag for the stored player
+   * @param {Boolean} toggle whether to enable or disable the remember-me setting
+   */
   toggleRemember(toggle) {
     log.debug(&apos;Storage - toggleRemember()&apos;, toggle);
 
@@ -261,6 +302,11 @@ export default class Storage {
     this.save();
   }
 
+  /**
+   * Updates a single player data field by key and saves
+   * @param {String} option the player data field to update
+   * @param {*} value the value to set
+   */
   setPlayer(option, value) {
     log.debug(&apos;Storage - setPlayer()&apos;, option, value);
 
@@ -273,6 +319,11 @@ export default class Storage {
     this.save();
   }
 
+  /**
+   * Updates a single settings field by key and saves
+   * @param {String} option the settings field to update
+   * @param {*} value the value to set
+   */
   setSettings(option, value) {
     log.debug(&apos;Storage - setSettings()&apos;, option, value);
 
@@ -285,11 +336,19 @@ export default class Storage {
     this.save();
   }
 
+  /**
+   * Returns the stored player data object
+   * @return {Object}
+   */
   getPlayer() {
     log.debug(&apos;Storage - getPlayer()&apos;);
     return this.data.player;
   }
 
+  /**
+   * Returns the stored settings object, or null if no data is loaded
+   * @return {Object}
+   */
   getSettings() {
     log.debug(&apos;Storage - getSettings()&apos;);
     return this.data ? this.data.settings : null;

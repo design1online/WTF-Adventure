@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Timer from &apos;<span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber1">WTF-Adventure/WTF-Adventure/client/utils/timer.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Timer from &apos;<span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber5">WTF-Adventure/WTF-Adventure/client/utils/timer.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber1">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber5">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Tracks elapsed time to determine when a duration has passed</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(start: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, duration: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html#instance-member-duration">duration</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html#instance-member-duration">duration</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The duration in milliseconds the timer runs for</p>
+</div>
       </div>
     </td>
     <td>
@@ -291,13 +294,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html#instance-member-time">time</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html#instance-member-time">time</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The timestamp of the last timer reset or start</p>
+</div>
       </div>
     </td>
     <td>
@@ -326,13 +330,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html#instance-method-isOver">isOver</a></span></span><span class="code" data-ice="signature">(time: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/timer.js~Timer.html#instance-method-isOver">isOver</a></span></span><span class="code" data-ice="signature">(time: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Checks whether the timer&apos;s duration has elapsed since the last reset</p>
+</div>
       </div>
     </td>
     <td>
@@ -358,22 +363,47 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(start: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, duration: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber2">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber11">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">start</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the initial timestamp</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">duration</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the duration in milliseconds before the timer is considered over</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -404,18 +434,19 @@
     
     
     
-    <span class="code" data-ice="name">duration</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">duration</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber21">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The duration in milliseconds the timer runs for</p>
+</div>
 
   
 
@@ -447,18 +478,19 @@
     
     
     
-    <span class="code" data-ice="name">time</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">time</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber3">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The timestamp of the last timer reset or start</p>
+</div>
 
   
 
@@ -493,18 +525,19 @@
     
     
     
-    <span class="code" data-ice="name">isOver</span><span class="code" data-ice="signature">(time: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">isOver</span><span class="code" data-ice="signature">(time: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber7">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/timer.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Checks whether the timer&apos;s duration has elapsed since the last reset</p>
+</div>
 
   
 
@@ -518,9 +551,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">time</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the current timestamp to compare against</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -532,7 +566,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>

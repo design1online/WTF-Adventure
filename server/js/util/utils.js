@@ -2,7 +2,18 @@ import Packets from '../network/packets.js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
+/**
+ * Returns a random integer between min and max inclusive
+ * @param {Number} min the minimum value
+ * @param {Number} max the maximum value
+ * @return {Number}
+ */
 const randomInt = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+/**
+ * Returns a random integer between 0 and range exclusive
+ * @param {Number} range the upper bound (exclusive)
+ * @return {Number}
+ */
 const random = range => Math.floor(Math.random() * range);
 
 export default {

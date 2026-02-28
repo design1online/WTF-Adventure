@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 535,
+  "end": 1528,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 36,
+      "line": 74,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 535,
+    "end": 1528,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 36,
+        "line": 74,
         "column": 0
       }
     },
@@ -95,64 +95,83 @@
             "raw": "'./points.js'"
           },
           "value": "./points.js"
-        }
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Manages the mana points for a player\n * @class\n ",
+            "start": 35,
+            "end": 92,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 35,
-        "end": 534,
+        "start": 93,
+        "end": 1527,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 7,
             "column": 0
           },
           "end": {
-            "line": 35,
+            "line": 73,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 50,
-          "end": 534,
+          "start": 108,
+          "end": 1527,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 7,
               "column": 15
             },
             "end": {
-              "line": 35,
+              "line": 73,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 56,
-            "end": 60,
+            "start": 114,
+            "end": 118,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 7,
                 "column": 21
               },
               "end": {
-                "line": 3,
+                "line": 7,
                 "column": 25
               },
               "identifierName": "Mana"
             },
-            "name": "Mana"
+            "name": "Mana",
+            "leadingComments": null
           },
           "superClass": {
             "type": "Identifier",
-            "start": 69,
-            "end": 75,
+            "start": 127,
+            "end": 133,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 7,
                 "column": 34
               },
               "end": {
-                "line": 3,
+                "line": 7,
                 "column": 40
               },
               "identifierName": "Points"
@@ -161,30 +180,30 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 76,
-            "end": 534,
+            "start": 134,
+            "end": 1527,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 7,
                 "column": 41
               },
               "end": {
-                "line": 35,
+                "line": 73,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 80,
-                "end": 119,
+                "start": 208,
+                "end": 247,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 12,
                     "column": 2
                   },
                   "end": {
-                    "line": 6,
+                    "line": 14,
                     "column": 3
                   }
                 },
@@ -192,20 +211,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 80,
-                  "end": 87,
+                  "start": 208,
+                  "end": 215,
                   "loc": {
                     "start": {
-                      "line": 4,
+                      "line": 12,
                       "column": 2
                     },
                     "end": {
-                      "line": 4,
+                      "line": 12,
                       "column": 9
                     },
                     "identifierName": "getMana"
                   },
-                  "name": "getMana"
+                  "name": "getMana",
+                  "leadingComments": null
                 },
                 "kind": "method",
                 "id": null,
@@ -215,73 +235,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 90,
-                  "end": 119,
+                  "start": 218,
+                  "end": 247,
                   "loc": {
                     "start": {
-                      "line": 4,
+                      "line": 12,
                       "column": 12
                     },
                     "end": {
-                      "line": 6,
+                      "line": 14,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 96,
-                      "end": 115,
+                      "start": 224,
+                      "end": 243,
                       "loc": {
                         "start": {
-                          "line": 5,
+                          "line": 13,
                           "column": 4
                         },
                         "end": {
-                          "line": 5,
+                          "line": 13,
                           "column": 23
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 103,
-                        "end": 114,
+                        "start": 231,
+                        "end": 242,
                         "loc": {
                           "start": {
-                            "line": 5,
+                            "line": 13,
                             "column": 11
                           },
                           "end": {
-                            "line": 5,
+                            "line": 13,
                             "column": 22
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 103,
-                          "end": 107,
+                          "start": 231,
+                          "end": 235,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 13,
                               "column": 11
                             },
                             "end": {
-                              "line": 5,
+                              "line": 13,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 108,
-                          "end": 114,
+                          "start": 236,
+                          "end": 242,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 13,
                               "column": 16
                             },
                             "end": {
-                              "line": 5,
+                              "line": 13,
                               "column": 22
                             },
                             "identifierName": "points"
@@ -292,20 +312,57 @@
                       }
                     }
                   ],
-                  "directives": []
-                }
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Returns the current mana value\n   * @return {Number}\n   ",
+                    "start": 138,
+                    "end": 205,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Returns the maximum mana value\n   * @return {Number}\n   ",
+                    "start": 251,
+                    "end": 318,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               },
               {
                 "type": "ClassMethod",
-                "start": 123,
-                "end": 168,
+                "start": 321,
+                "end": 366,
                 "loc": {
                   "start": {
-                    "line": 8,
+                    "line": 20,
                     "column": 2
                   },
                   "end": {
-                    "line": 10,
+                    "line": 22,
                     "column": 3
                   }
                 },
@@ -313,20 +370,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 123,
-                  "end": 133,
+                  "start": 321,
+                  "end": 331,
                   "loc": {
                     "start": {
-                      "line": 8,
+                      "line": 20,
                       "column": 2
                     },
                     "end": {
-                      "line": 8,
+                      "line": 20,
                       "column": 12
                     },
                     "identifierName": "getMaxMana"
                   },
-                  "name": "getMaxMana"
+                  "name": "getMaxMana",
+                  "leadingComments": null
                 },
                 "kind": "method",
                 "id": null,
@@ -336,73 +394,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 136,
-                  "end": 168,
+                  "start": 334,
+                  "end": 366,
                   "loc": {
                     "start": {
-                      "line": 8,
+                      "line": 20,
                       "column": 15
                     },
                     "end": {
-                      "line": 10,
+                      "line": 22,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 142,
-                      "end": 164,
+                      "start": 340,
+                      "end": 362,
                       "loc": {
                         "start": {
-                          "line": 9,
+                          "line": 21,
                           "column": 4
                         },
                         "end": {
-                          "line": 9,
+                          "line": 21,
                           "column": 26
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 149,
-                        "end": 163,
+                        "start": 347,
+                        "end": 361,
                         "loc": {
                           "start": {
-                            "line": 9,
+                            "line": 21,
                             "column": 11
                           },
                           "end": {
-                            "line": 9,
+                            "line": 21,
                             "column": 25
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 149,
-                          "end": 153,
+                          "start": 347,
+                          "end": 351,
                           "loc": {
                             "start": {
-                              "line": 9,
+                              "line": 21,
                               "column": 11
                             },
                             "end": {
-                              "line": 9,
+                              "line": 21,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 154,
-                          "end": 163,
+                          "start": 352,
+                          "end": 361,
                           "loc": {
                             "start": {
-                              "line": 9,
+                              "line": 21,
                               "column": 16
                             },
                             "end": {
-                              "line": 9,
+                              "line": 21,
                               "column": 25
                             },
                             "identifierName": "maxPoints"
@@ -413,20 +471,57 @@
                       }
                     }
                   ],
-                  "directives": []
-                }
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Returns the maximum mana value\n   * @return {Number}\n   ",
+                    "start": 251,
+                    "end": 318,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Sets the current mana value and triggers the callback if registered\n   * @param {Number} mana the new mana value to set\n   ",
+                    "start": 370,
+                    "end": 504,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               },
               {
                 "type": "ClassMethod",
-                "start": 172,
-                "end": 278,
+                "start": 507,
+                "end": 639,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 28,
                     "column": 2
                   },
                   "end": {
-                    "line": 18,
+                    "line": 35,
                     "column": 3
                   }
                 },
@@ -434,20 +529,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 172,
-                  "end": 179,
+                  "start": 507,
+                  "end": 514,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 28,
                       "column": 2
                     },
                     "end": {
-                      "line": 12,
+                      "line": 28,
                       "column": 9
                     },
                     "identifierName": "setMana"
                   },
-                  "name": "setMana"
+                  "name": "setMana",
+                  "leadingComments": null
                 },
                 "kind": "method",
                 "id": null,
@@ -457,15 +553,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 180,
-                    "end": 184,
+                    "start": 515,
+                    "end": 519,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 28,
                         "column": 10
                       },
                       "end": {
-                        "line": 12,
+                        "line": 28,
                         "column": 14
                       },
                       "identifierName": "mana"
@@ -475,169 +571,190 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 186,
-                  "end": 278,
+                  "start": 521,
+                  "end": 639,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 28,
                       "column": 16
                     },
                     "end": {
-                      "line": 18,
+                      "line": 35,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 192,
-                      "end": 211,
+                      "start": 553,
+                      "end": 572,
                       "loc": {
                         "start": {
-                          "line": 13,
+                          "line": 30,
                           "column": 4
                         },
                         "end": {
-                          "line": 13,
+                          "line": 30,
                           "column": 23
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 192,
-                        "end": 210,
+                        "start": 553,
+                        "end": 571,
                         "loc": {
                           "start": {
-                            "line": 13,
+                            "line": 30,
                             "column": 4
                           },
                           "end": {
-                            "line": 13,
+                            "line": 30,
                             "column": 22
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 192,
-                          "end": 203,
+                          "start": 553,
+                          "end": 564,
                           "loc": {
                             "start": {
-                              "line": 13,
+                              "line": 30,
                               "column": 4
                             },
                             "end": {
-                              "line": 13,
+                              "line": 30,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 192,
-                            "end": 196,
+                            "start": 553,
+                            "end": 557,
                             "loc": {
                               "start": {
-                                "line": 13,
+                                "line": 30,
                                 "column": 4
                               },
                               "end": {
-                                "line": 13,
+                                "line": 30,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 197,
-                            "end": 203,
+                            "start": 558,
+                            "end": 564,
                             "loc": {
                               "start": {
-                                "line": 13,
+                                "line": 30,
                                 "column": 9
                               },
                               "end": {
-                                "line": 13,
+                                "line": 30,
                                 "column": 15
                               },
                               "identifierName": "points"
                             },
                             "name": "points"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 206,
-                          "end": 210,
+                          "start": 567,
+                          "end": 571,
                           "loc": {
                             "start": {
-                              "line": 13,
+                              "line": 30,
                               "column": 18
                             },
                             "end": {
-                              "line": 13,
+                              "line": 30,
                               "column": 22
                             },
                             "identifierName": "mana"
                           },
                           "name": "mana"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "* @type {Number} ",
+                          "start": 527,
+                          "end": 548,
+                          "loc": {
+                            "start": {
+                              "line": 29,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 29,
+                              "column": 25
+                            }
+                          }
                         }
-                      }
+                      ]
                     },
                     {
                       "type": "IfStatement",
-                      "start": 217,
-                      "end": 274,
+                      "start": 578,
+                      "end": 635,
                       "loc": {
                         "start": {
-                          "line": 15,
+                          "line": 32,
                           "column": 4
                         },
                         "end": {
-                          "line": 17,
+                          "line": 34,
                           "column": 5
                         }
                       },
                       "test": {
                         "type": "MemberExpression",
-                        "start": 221,
-                        "end": 238,
+                        "start": 582,
+                        "end": 599,
                         "loc": {
                           "start": {
-                            "line": 15,
+                            "line": 32,
                             "column": 8
                           },
                           "end": {
-                            "line": 15,
+                            "line": 32,
                             "column": 25
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 221,
-                          "end": 225,
+                          "start": 582,
+                          "end": 586,
                           "loc": {
                             "start": {
-                              "line": 15,
+                              "line": 32,
                               "column": 8
                             },
                             "end": {
-                              "line": 15,
+                              "line": 32,
                               "column": 12
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 226,
-                          "end": 238,
+                          "start": 587,
+                          "end": 599,
                           "loc": {
                             "start": {
-                              "line": 15,
+                              "line": 32,
                               "column": 13
                             },
                             "end": {
-                              "line": 15,
+                              "line": 32,
                               "column": 25
                             },
                             "identifierName": "manaCallback"
@@ -648,87 +765,87 @@
                       },
                       "consequent": {
                         "type": "BlockStatement",
-                        "start": 240,
-                        "end": 274,
+                        "start": 601,
+                        "end": 635,
                         "loc": {
                           "start": {
-                            "line": 15,
+                            "line": 32,
                             "column": 27
                           },
                           "end": {
-                            "line": 17,
+                            "line": 34,
                             "column": 5
                           }
                         },
                         "body": [
                           {
                             "type": "ExpressionStatement",
-                            "start": 248,
-                            "end": 268,
+                            "start": 609,
+                            "end": 629,
                             "loc": {
                               "start": {
-                                "line": 16,
+                                "line": 33,
                                 "column": 6
                               },
                               "end": {
-                                "line": 16,
+                                "line": 33,
                                 "column": 26
                               }
                             },
                             "expression": {
                               "type": "CallExpression",
-                              "start": 248,
-                              "end": 267,
+                              "start": 609,
+                              "end": 628,
                               "loc": {
                                 "start": {
-                                  "line": 16,
+                                  "line": 33,
                                   "column": 6
                                 },
                                 "end": {
-                                  "line": 16,
+                                  "line": 33,
                                   "column": 25
                                 }
                               },
                               "callee": {
                                 "type": "MemberExpression",
-                                "start": 248,
-                                "end": 265,
+                                "start": 609,
+                                "end": 626,
                                 "loc": {
                                   "start": {
-                                    "line": 16,
+                                    "line": 33,
                                     "column": 6
                                   },
                                   "end": {
-                                    "line": 16,
+                                    "line": 33,
                                     "column": 23
                                   }
                                 },
                                 "object": {
                                   "type": "ThisExpression",
-                                  "start": 248,
-                                  "end": 252,
+                                  "start": 609,
+                                  "end": 613,
                                   "loc": {
                                     "start": {
-                                      "line": 16,
+                                      "line": 33,
                                       "column": 6
                                     },
                                     "end": {
-                                      "line": 16,
+                                      "line": 33,
                                       "column": 10
                                     }
                                   }
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "start": 253,
-                                  "end": 265,
+                                  "start": 614,
+                                  "end": 626,
                                   "loc": {
                                     "start": {
-                                      "line": 16,
+                                      "line": 33,
                                       "column": 11
                                     },
                                     "end": {
-                                      "line": 16,
+                                      "line": 33,
                                       "column": 23
                                     },
                                     "identifierName": "manaCallback"
@@ -746,20 +863,57 @@
                       "alternate": null
                     }
                   ],
-                  "directives": []
-                }
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Sets the current mana value and triggers the callback if registered\n   * @param {Number} mana the new mana value to set\n   ",
+                    "start": 370,
+                    "end": 504,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 27,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Sets the maximum mana value and triggers the callback if registered\n   * @param {Number} maxMana the new maximum mana value to set\n   ",
+                    "start": 643,
+                    "end": 788,
+                    "loc": {
+                      "start": {
+                        "line": 37,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 40,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               },
               {
                 "type": "ClassMethod",
-                "start": 282,
-                "end": 406,
+                "start": 791,
+                "end": 941,
                 "loc": {
                   "start": {
-                    "line": 20,
+                    "line": 41,
                     "column": 2
                   },
                   "end": {
-                    "line": 26,
+                    "line": 48,
                     "column": 3
                   }
                 },
@@ -767,20 +921,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 282,
-                  "end": 292,
+                  "start": 791,
+                  "end": 801,
                   "loc": {
                     "start": {
-                      "line": 20,
+                      "line": 41,
                       "column": 2
                     },
                     "end": {
-                      "line": 20,
+                      "line": 41,
                       "column": 12
                     },
                     "identifierName": "setMaxMana"
                   },
-                  "name": "setMaxMana"
+                  "name": "setMaxMana",
+                  "leadingComments": null
                 },
                 "kind": "method",
                 "id": null,
@@ -790,15 +945,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 293,
-                    "end": 300,
+                    "start": 802,
+                    "end": 809,
                     "loc": {
                       "start": {
-                        "line": 20,
+                        "line": 41,
                         "column": 13
                       },
                       "end": {
-                        "line": 20,
+                        "line": 41,
                         "column": 20
                       },
                       "identifierName": "maxMana"
@@ -808,169 +963,190 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 302,
-                  "end": 406,
+                  "start": 811,
+                  "end": 941,
                   "loc": {
                     "start": {
-                      "line": 20,
+                      "line": 41,
                       "column": 22
                     },
                     "end": {
-                      "line": 26,
+                      "line": 48,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 308,
-                      "end": 333,
+                      "start": 843,
+                      "end": 868,
                       "loc": {
                         "start": {
-                          "line": 21,
+                          "line": 43,
                           "column": 4
                         },
                         "end": {
-                          "line": 21,
+                          "line": 43,
                           "column": 29
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 308,
-                        "end": 332,
+                        "start": 843,
+                        "end": 867,
                         "loc": {
                           "start": {
-                            "line": 21,
+                            "line": 43,
                             "column": 4
                           },
                           "end": {
-                            "line": 21,
+                            "line": 43,
                             "column": 28
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 308,
-                          "end": 322,
+                          "start": 843,
+                          "end": 857,
                           "loc": {
                             "start": {
-                              "line": 21,
+                              "line": 43,
                               "column": 4
                             },
                             "end": {
-                              "line": 21,
+                              "line": 43,
                               "column": 18
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 308,
-                            "end": 312,
+                            "start": 843,
+                            "end": 847,
                             "loc": {
                               "start": {
-                                "line": 21,
+                                "line": 43,
                                 "column": 4
                               },
                               "end": {
-                                "line": 21,
+                                "line": 43,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 313,
-                            "end": 322,
+                            "start": 848,
+                            "end": 857,
                             "loc": {
                               "start": {
-                                "line": 21,
+                                "line": 43,
                                 "column": 9
                               },
                               "end": {
-                                "line": 21,
+                                "line": 43,
                                 "column": 18
                               },
                               "identifierName": "maxPoints"
                             },
                             "name": "maxPoints"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 325,
-                          "end": 332,
+                          "start": 860,
+                          "end": 867,
                           "loc": {
                             "start": {
-                              "line": 21,
+                              "line": 43,
                               "column": 21
                             },
                             "end": {
-                              "line": 21,
+                              "line": 43,
                               "column": 28
                             },
                             "identifierName": "maxMana"
                           },
                           "name": "maxMana"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "* @type {Number} ",
+                          "start": 817,
+                          "end": 838,
+                          "loc": {
+                            "start": {
+                              "line": 42,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 42,
+                              "column": 25
+                            }
+                          }
                         }
-                      }
+                      ]
                     },
                     {
                       "type": "IfStatement",
-                      "start": 339,
-                      "end": 402,
+                      "start": 874,
+                      "end": 937,
                       "loc": {
                         "start": {
-                          "line": 23,
+                          "line": 45,
                           "column": 4
                         },
                         "end": {
-                          "line": 25,
+                          "line": 47,
                           "column": 5
                         }
                       },
                       "test": {
                         "type": "MemberExpression",
-                        "start": 343,
-                        "end": 363,
+                        "start": 878,
+                        "end": 898,
                         "loc": {
                           "start": {
-                            "line": 23,
+                            "line": 45,
                             "column": 8
                           },
                           "end": {
-                            "line": 23,
+                            "line": 45,
                             "column": 28
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 343,
-                          "end": 347,
+                          "start": 878,
+                          "end": 882,
                           "loc": {
                             "start": {
-                              "line": 23,
+                              "line": 45,
                               "column": 8
                             },
                             "end": {
-                              "line": 23,
+                              "line": 45,
                               "column": 12
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 348,
-                          "end": 363,
+                          "start": 883,
+                          "end": 898,
                           "loc": {
                             "start": {
-                              "line": 23,
+                              "line": 45,
                               "column": 13
                             },
                             "end": {
-                              "line": 23,
+                              "line": 45,
                               "column": 28
                             },
                             "identifierName": "maxManaCallback"
@@ -981,87 +1157,87 @@
                       },
                       "consequent": {
                         "type": "BlockStatement",
-                        "start": 365,
-                        "end": 402,
+                        "start": 900,
+                        "end": 937,
                         "loc": {
                           "start": {
-                            "line": 23,
+                            "line": 45,
                             "column": 30
                           },
                           "end": {
-                            "line": 25,
+                            "line": 47,
                             "column": 5
                           }
                         },
                         "body": [
                           {
                             "type": "ExpressionStatement",
-                            "start": 373,
-                            "end": 396,
+                            "start": 908,
+                            "end": 931,
                             "loc": {
                               "start": {
-                                "line": 24,
+                                "line": 46,
                                 "column": 6
                               },
                               "end": {
-                                "line": 24,
+                                "line": 46,
                                 "column": 29
                               }
                             },
                             "expression": {
                               "type": "CallExpression",
-                              "start": 373,
-                              "end": 395,
+                              "start": 908,
+                              "end": 930,
                               "loc": {
                                 "start": {
-                                  "line": 24,
+                                  "line": 46,
                                   "column": 6
                                 },
                                 "end": {
-                                  "line": 24,
+                                  "line": 46,
                                   "column": 28
                                 }
                               },
                               "callee": {
                                 "type": "MemberExpression",
-                                "start": 373,
-                                "end": 393,
+                                "start": 908,
+                                "end": 928,
                                 "loc": {
                                   "start": {
-                                    "line": 24,
+                                    "line": 46,
                                     "column": 6
                                   },
                                   "end": {
-                                    "line": 24,
+                                    "line": 46,
                                     "column": 26
                                   }
                                 },
                                 "object": {
                                   "type": "ThisExpression",
-                                  "start": 373,
-                                  "end": 377,
+                                  "start": 908,
+                                  "end": 912,
                                   "loc": {
                                     "start": {
-                                      "line": 24,
+                                      "line": 46,
                                       "column": 6
                                     },
                                     "end": {
-                                      "line": 24,
+                                      "line": 46,
                                       "column": 10
                                     }
                                   }
                                 },
                                 "property": {
                                   "type": "Identifier",
-                                  "start": 378,
-                                  "end": 393,
+                                  "start": 913,
+                                  "end": 928,
                                   "loc": {
                                     "start": {
-                                      "line": 24,
+                                      "line": 46,
                                       "column": 11
                                     },
                                     "end": {
-                                      "line": 24,
+                                      "line": 46,
                                       "column": 26
                                     },
                                     "identifierName": "maxManaCallback"
@@ -1079,20 +1255,57 @@
                       "alternate": null
                     }
                   ],
-                  "directives": []
-                }
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Sets the maximum mana value and triggers the callback if registered\n   * @param {Number} maxMana the new maximum mana value to set\n   ",
+                    "start": 643,
+                    "end": 788,
+                    "loc": {
+                      "start": {
+                        "line": 37,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 40,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Registers a callback to invoke when mana changes\n   * @param {Function} callback the function to call when mana changes\n   ",
+                    "start": 945,
+                    "end": 1079,
+                    "loc": {
+                      "start": {
+                        "line": 50,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               },
               {
                 "type": "ClassMethod",
-                "start": 410,
-                "end": 466,
+                "start": 1082,
+                "end": 1220,
                 "loc": {
                   "start": {
-                    "line": 28,
+                    "line": 54,
                     "column": 2
                   },
                   "end": {
-                    "line": 30,
+                    "line": 60,
                     "column": 3
                   }
                 },
@@ -1100,20 +1313,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 410,
-                  "end": 416,
+                  "start": 1082,
+                  "end": 1088,
                   "loc": {
                     "start": {
-                      "line": 28,
+                      "line": 54,
                       "column": 2
                     },
                     "end": {
-                      "line": 28,
+                      "line": 54,
                       "column": 8
                     },
                     "identifierName": "onMana"
                   },
-                  "name": "onMana"
+                  "name": "onMana",
+                  "leadingComments": null
                 },
                 "kind": "method",
                 "id": null,
@@ -1123,15 +1337,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 417,
-                    "end": 425,
+                    "start": 1089,
+                    "end": 1097,
                     "loc": {
                       "start": {
-                        "line": 28,
+                        "line": 54,
                         "column": 9
                       },
                       "end": {
-                        "line": 28,
+                        "line": 54,
                         "column": 17
                       },
                       "identifierName": "callback"
@@ -1141,130 +1355,188 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 427,
-                  "end": 466,
+                  "start": 1099,
+                  "end": 1220,
                   "loc": {
                     "start": {
-                      "line": 28,
+                      "line": 54,
                       "column": 19
                     },
                     "end": {
-                      "line": 30,
+                      "line": 60,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 433,
-                      "end": 462,
+                      "start": 1187,
+                      "end": 1216,
                       "loc": {
                         "start": {
-                          "line": 29,
+                          "line": 59,
                           "column": 4
                         },
                         "end": {
-                          "line": 29,
+                          "line": 59,
                           "column": 33
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 433,
-                        "end": 461,
+                        "start": 1187,
+                        "end": 1215,
                         "loc": {
                           "start": {
-                            "line": 29,
+                            "line": 59,
                             "column": 4
                           },
                           "end": {
-                            "line": 29,
+                            "line": 59,
                             "column": 32
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 433,
-                          "end": 450,
+                          "start": 1187,
+                          "end": 1204,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 59,
                               "column": 4
                             },
                             "end": {
-                              "line": 29,
+                              "line": 59,
                               "column": 21
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 433,
-                            "end": 437,
+                            "start": 1187,
+                            "end": 1191,
                             "loc": {
                               "start": {
-                                "line": 29,
+                                "line": 59,
                                 "column": 4
                               },
                               "end": {
-                                "line": 29,
+                                "line": 59,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 438,
-                            "end": 450,
+                            "start": 1192,
+                            "end": 1204,
                             "loc": {
                               "start": {
-                                "line": 29,
+                                "line": 59,
                                 "column": 9
                               },
                               "end": {
-                                "line": 29,
+                                "line": 59,
                                 "column": 21
                               },
                               "identifierName": "manaCallback"
                             },
                             "name": "manaCallback"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 453,
-                          "end": 461,
+                          "start": 1207,
+                          "end": 1215,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 59,
                               "column": 24
                             },
                             "end": {
-                              "line": 29,
+                              "line": 59,
                               "column": 32
                             },
                             "identifierName": "callback"
                           },
                           "name": "callback"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * Callback invoked when mana changes\n     * @type {Function}\n     ",
+                          "start": 1105,
+                          "end": 1182,
+                          "loc": {
+                            "start": {
+                              "line": 55,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 58,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ]
                     }
                   ],
-                  "directives": []
-                }
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Registers a callback to invoke when mana changes\n   * @param {Function} callback the function to call when mana changes\n   ",
+                    "start": 945,
+                    "end": 1079,
+                    "loc": {
+                      "start": {
+                        "line": 50,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 53,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Registers a callback to invoke when maximum mana changes\n   * @param {Function} callback the function to call when max mana changes\n   ",
+                    "start": 1224,
+                    "end": 1370,
+                    "loc": {
+                      "start": {
+                        "line": 62,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               },
               {
                 "type": "ClassMethod",
-                "start": 470,
-                "end": 532,
+                "start": 1373,
+                "end": 1525,
                 "loc": {
                   "start": {
-                    "line": 32,
+                    "line": 66,
                     "column": 2
                   },
                   "end": {
-                    "line": 34,
+                    "line": 72,
                     "column": 3
                   }
                 },
@@ -1272,20 +1544,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 470,
-                  "end": 479,
+                  "start": 1373,
+                  "end": 1382,
                   "loc": {
                     "start": {
-                      "line": 32,
+                      "line": 66,
                       "column": 2
                     },
                     "end": {
-                      "line": 32,
+                      "line": 66,
                       "column": 11
                     },
                     "identifierName": "onMaxMana"
                   },
-                  "name": "onMaxMana"
+                  "name": "onMaxMana",
+                  "leadingComments": null
                 },
                 "kind": "method",
                 "id": null,
@@ -1295,15 +1568,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 480,
-                    "end": 488,
+                    "start": 1383,
+                    "end": 1391,
                     "loc": {
                       "start": {
-                        "line": 32,
+                        "line": 66,
                         "column": 12
                       },
                       "end": {
-                        "line": 32,
+                        "line": 66,
                         "column": 20
                       },
                       "identifierName": "callback"
@@ -1313,129 +1586,380 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 490,
-                  "end": 532,
+                  "start": 1393,
+                  "end": 1525,
                   "loc": {
                     "start": {
-                      "line": 32,
+                      "line": 66,
                       "column": 22
                     },
                     "end": {
-                      "line": 34,
+                      "line": 72,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 496,
-                      "end": 528,
+                      "start": 1489,
+                      "end": 1521,
                       "loc": {
                         "start": {
-                          "line": 33,
+                          "line": 71,
                           "column": 4
                         },
                         "end": {
-                          "line": 33,
+                          "line": 71,
                           "column": 36
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 496,
-                        "end": 527,
+                        "start": 1489,
+                        "end": 1520,
                         "loc": {
                           "start": {
-                            "line": 33,
+                            "line": 71,
                             "column": 4
                           },
                           "end": {
-                            "line": 33,
+                            "line": 71,
                             "column": 35
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 496,
-                          "end": 516,
+                          "start": 1489,
+                          "end": 1509,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 71,
                               "column": 4
                             },
                             "end": {
-                              "line": 33,
+                              "line": 71,
                               "column": 24
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 496,
-                            "end": 500,
+                            "start": 1489,
+                            "end": 1493,
                             "loc": {
                               "start": {
-                                "line": 33,
+                                "line": 71,
                                 "column": 4
                               },
                               "end": {
-                                "line": 33,
+                                "line": 71,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 501,
-                            "end": 516,
+                            "start": 1494,
+                            "end": 1509,
                             "loc": {
                               "start": {
-                                "line": 33,
+                                "line": 71,
                                 "column": 9
                               },
                               "end": {
-                                "line": 33,
+                                "line": 71,
                                 "column": 24
                               },
                               "identifierName": "maxManaCallback"
                             },
                             "name": "maxManaCallback"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 519,
-                          "end": 527,
+                          "start": 1512,
+                          "end": 1520,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 71,
                               "column": 27
                             },
                             "end": {
-                              "line": 33,
+                              "line": 71,
                               "column": 35
                             },
                             "identifierName": "callback"
                           },
                           "name": "callback"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * Callback invoked when maximum mana changes\n     * @type {Function}\n     ",
+                          "start": 1399,
+                          "end": 1484,
+                          "loc": {
+                            "start": {
+                              "line": 67,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 70,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ]
                     }
                   ],
                   "directives": []
-                }
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Registers a callback to invoke when maximum mana changes\n   * @param {Function} callback the function to call when max mana changes\n   ",
+                    "start": 1224,
+                    "end": 1370,
+                    "loc": {
+                      "start": {
+                        "line": 62,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Manages the mana points for a player\n * @class\n ",
+              "start": 35,
+              "end": 92,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 6,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Manages the mana points for a player\n * @class\n ",
+            "start": 35,
+            "end": 92,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Manages the mana points for a player\n * @class\n ",
+      "start": 35,
+      "end": 92,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Returns the current mana value\n   * @return {Number}\n   ",
+      "start": 138,
+      "end": 205,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 11,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Returns the maximum mana value\n   * @return {Number}\n   ",
+      "start": 251,
+      "end": 318,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Sets the current mana value and triggers the callback if registered\n   * @param {Number} mana the new mana value to set\n   ",
+      "start": 370,
+      "end": 504,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 27,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "* @type {Number} ",
+      "start": 527,
+      "end": 548,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 4
+        },
+        "end": {
+          "line": 29,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Sets the maximum mana value and triggers the callback if registered\n   * @param {Number} maxMana the new maximum mana value to set\n   ",
+      "start": 643,
+      "end": 788,
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 2
+        },
+        "end": {
+          "line": 40,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "* @type {Number} ",
+      "start": 817,
+      "end": 838,
+      "loc": {
+        "start": {
+          "line": 42,
+          "column": 4
+        },
+        "end": {
+          "line": 42,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Registers a callback to invoke when mana changes\n   * @param {Function} callback the function to call when mana changes\n   ",
+      "start": 945,
+      "end": 1079,
+      "loc": {
+        "start": {
+          "line": 50,
+          "column": 2
+        },
+        "end": {
+          "line": 53,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * Callback invoked when mana changes\n     * @type {Function}\n     ",
+      "start": 1105,
+      "end": 1182,
+      "loc": {
+        "start": {
+          "line": 55,
+          "column": 4
+        },
+        "end": {
+          "line": 58,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Registers a callback to invoke when maximum mana changes\n   * @param {Function} callback the function to call when max mana changes\n   ",
+      "start": 1224,
+      "end": 1370,
+      "loc": {
+        "start": {
+          "line": 62,
+          "column": 2
+        },
+        "end": {
+          "line": 65,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * Callback invoked when maximum mana changes\n     * @type {Function}\n     ",
+      "start": 1399,
+      "end": 1484,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 4
+        },
+        "end": {
+          "line": 70,
+          "column": 7
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -1571,6 +2095,22 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n * Manages the mana points for a player\n * @class\n ",
+      "start": 35,
+      "end": 92,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
       "type": {
         "label": "export",
         "keyword": "export",
@@ -1585,15 +2125,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 35,
-      "end": 41,
+      "start": 93,
+      "end": 99,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 6
         }
       }
@@ -1613,15 +2153,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 42,
-      "end": 49,
+      "start": 100,
+      "end": 107,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 7
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 14
         }
       }
@@ -1641,15 +2181,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 50,
-      "end": 55,
+      "start": 108,
+      "end": 113,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 15
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 20
         }
       }
@@ -1667,15 +2207,15 @@
         "binop": null
       },
       "value": "Mana",
-      "start": 56,
-      "end": 60,
+      "start": 114,
+      "end": 118,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 21
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 25
         }
       }
@@ -1695,15 +2235,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 61,
-      "end": 68,
+      "start": 119,
+      "end": 126,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 26
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 33
         }
       }
@@ -1721,15 +2261,15 @@
         "binop": null
       },
       "value": "Points",
-      "start": 69,
-      "end": 75,
+      "start": 127,
+      "end": 133,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 34
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 40
         }
       }
@@ -1746,16 +2286,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 76,
-      "end": 77,
+      "start": 134,
+      "end": 135,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 41
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 42
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Returns the current mana value\n   * @return {Number}\n   ",
+      "start": 138,
+      "end": 205,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 11,
+          "column": 5
         }
       }
     },
@@ -1772,15 +2328,15 @@
         "binop": null
       },
       "value": "getMana",
-      "start": 80,
-      "end": 87,
+      "start": 208,
+      "end": 215,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 2
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 9
         }
       }
@@ -1797,15 +2353,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 87,
-      "end": 88,
+      "start": 215,
+      "end": 216,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 9
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 10
         }
       }
@@ -1822,15 +2378,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 88,
-      "end": 89,
+      "start": 216,
+      "end": 217,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 10
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 11
         }
       }
@@ -1847,15 +2403,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 90,
-      "end": 91,
+      "start": 218,
+      "end": 219,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 12
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 13
         }
       }
@@ -1875,15 +2431,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 96,
-      "end": 102,
+      "start": 224,
+      "end": 230,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 4
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 10
         }
       }
@@ -1903,15 +2459,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 103,
-      "end": 107,
+      "start": 231,
+      "end": 235,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 11
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 15
         }
       }
@@ -1929,15 +2485,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 107,
-      "end": 108,
+      "start": 235,
+      "end": 236,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 16
         }
       }
@@ -1955,15 +2511,15 @@
         "binop": null
       },
       "value": "points",
-      "start": 108,
-      "end": 114,
+      "start": 236,
+      "end": 242,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 16
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 22
         }
       }
@@ -1981,15 +2537,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 114,
-      "end": 115,
+      "start": 242,
+      "end": 243,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 22
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 23
         }
       }
@@ -2006,16 +2562,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 118,
-      "end": 119,
+      "start": 246,
+      "end": 247,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 14,
           "column": 2
         },
         "end": {
-          "line": 6,
+          "line": 14,
           "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Returns the maximum mana value\n   * @return {Number}\n   ",
+      "start": 251,
+      "end": 318,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
+          "column": 5
         }
       }
     },
@@ -2032,15 +2604,15 @@
         "binop": null
       },
       "value": "getMaxMana",
-      "start": 123,
-      "end": 133,
+      "start": 321,
+      "end": 331,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 8,
+          "line": 20,
           "column": 12
         }
       }
@@ -2057,15 +2629,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 133,
-      "end": 134,
+      "start": 331,
+      "end": 332,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 20,
           "column": 12
         },
         "end": {
-          "line": 8,
+          "line": 20,
           "column": 13
         }
       }
@@ -2082,15 +2654,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 134,
-      "end": 135,
+      "start": 332,
+      "end": 333,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 20,
           "column": 13
         },
         "end": {
-          "line": 8,
+          "line": 20,
           "column": 14
         }
       }
@@ -2107,15 +2679,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 136,
-      "end": 137,
+      "start": 334,
+      "end": 335,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 20,
           "column": 15
         },
         "end": {
-          "line": 8,
+          "line": 20,
           "column": 16
         }
       }
@@ -2135,15 +2707,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 142,
-      "end": 148,
+      "start": 340,
+      "end": 346,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 9,
+          "line": 21,
           "column": 10
         }
       }
@@ -2163,15 +2735,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 149,
-      "end": 153,
+      "start": 347,
+      "end": 351,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 21,
           "column": 11
         },
         "end": {
-          "line": 9,
+          "line": 21,
           "column": 15
         }
       }
@@ -2189,15 +2761,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 153,
-      "end": 154,
+      "start": 351,
+      "end": 352,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 21,
           "column": 15
         },
         "end": {
-          "line": 9,
+          "line": 21,
           "column": 16
         }
       }
@@ -2215,15 +2787,15 @@
         "binop": null
       },
       "value": "maxPoints",
-      "start": 154,
-      "end": 163,
+      "start": 352,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 21,
           "column": 16
         },
         "end": {
-          "line": 9,
+          "line": 21,
           "column": 25
         }
       }
@@ -2241,15 +2813,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 163,
-      "end": 164,
+      "start": 361,
+      "end": 362,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 21,
           "column": 25
         },
         "end": {
-          "line": 9,
+          "line": 21,
           "column": 26
         }
       }
@@ -2266,16 +2838,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 167,
-      "end": 168,
+      "start": 365,
+      "end": 366,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 22,
           "column": 2
         },
         "end": {
-          "line": 10,
+          "line": 22,
           "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Sets the current mana value and triggers the callback if registered\n   * @param {Number} mana the new mana value to set\n   ",
+      "start": 370,
+      "end": 504,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 27,
+          "column": 5
         }
       }
     },
@@ -2292,15 +2880,15 @@
         "binop": null
       },
       "value": "setMana",
-      "start": 172,
-      "end": 179,
+      "start": 507,
+      "end": 514,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 28,
           "column": 2
         },
         "end": {
-          "line": 12,
+          "line": 28,
           "column": 9
         }
       }
@@ -2317,15 +2905,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 179,
-      "end": 180,
+      "start": 514,
+      "end": 515,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 28,
           "column": 9
         },
         "end": {
-          "line": 12,
+          "line": 28,
           "column": 10
         }
       }
@@ -2343,15 +2931,15 @@
         "binop": null
       },
       "value": "mana",
-      "start": 180,
-      "end": 184,
+      "start": 515,
+      "end": 519,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 28,
           "column": 10
         },
         "end": {
-          "line": 12,
+          "line": 28,
           "column": 14
         }
       }
@@ -2368,15 +2956,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 184,
-      "end": 185,
+      "start": 519,
+      "end": 520,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 28,
           "column": 14
         },
         "end": {
-          "line": 12,
+          "line": 28,
           "column": 15
         }
       }
@@ -2393,16 +2981,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 186,
-      "end": 187,
+      "start": 521,
+      "end": 522,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 28,
           "column": 16
         },
         "end": {
-          "line": 12,
+          "line": 28,
           "column": 17
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "* @type {Number} ",
+      "start": 527,
+      "end": 548,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 4
+        },
+        "end": {
+          "line": 29,
+          "column": 25
         }
       }
     },
@@ -2421,15 +3025,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 192,
-      "end": 196,
+      "start": 553,
+      "end": 557,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 30,
           "column": 4
         },
         "end": {
-          "line": 13,
+          "line": 30,
           "column": 8
         }
       }
@@ -2447,15 +3051,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 196,
-      "end": 197,
+      "start": 557,
+      "end": 558,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 30,
           "column": 8
         },
         "end": {
-          "line": 13,
+          "line": 30,
           "column": 9
         }
       }
@@ -2473,15 +3077,15 @@
         "binop": null
       },
       "value": "points",
-      "start": 197,
-      "end": 203,
+      "start": 558,
+      "end": 564,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 30,
           "column": 9
         },
         "end": {
-          "line": 13,
+          "line": 30,
           "column": 15
         }
       }
@@ -2500,15 +3104,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 204,
-      "end": 205,
+      "start": 565,
+      "end": 566,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 30,
           "column": 16
         },
         "end": {
-          "line": 13,
+          "line": 30,
           "column": 17
         }
       }
@@ -2526,15 +3130,15 @@
         "binop": null
       },
       "value": "mana",
-      "start": 206,
-      "end": 210,
+      "start": 567,
+      "end": 571,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 30,
           "column": 18
         },
         "end": {
-          "line": 13,
+          "line": 30,
           "column": 22
         }
       }
@@ -2552,15 +3156,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 210,
-      "end": 211,
+      "start": 571,
+      "end": 572,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 30,
           "column": 22
         },
         "end": {
-          "line": 13,
+          "line": 30,
           "column": 23
         }
       }
@@ -2580,15 +3184,15 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 217,
-      "end": 219,
+      "start": 578,
+      "end": 580,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 32,
           "column": 4
         },
         "end": {
-          "line": 15,
+          "line": 32,
           "column": 6
         }
       }
@@ -2605,15 +3209,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 220,
-      "end": 221,
+      "start": 581,
+      "end": 582,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 32,
           "column": 7
         },
         "end": {
-          "line": 15,
+          "line": 32,
           "column": 8
         }
       }
@@ -2633,15 +3237,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 221,
-      "end": 225,
+      "start": 582,
+      "end": 586,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 32,
           "column": 8
         },
         "end": {
-          "line": 15,
+          "line": 32,
           "column": 12
         }
       }
@@ -2659,15 +3263,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 225,
-      "end": 226,
+      "start": 586,
+      "end": 587,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 32,
           "column": 12
         },
         "end": {
-          "line": 15,
+          "line": 32,
           "column": 13
         }
       }
@@ -2685,15 +3289,15 @@
         "binop": null
       },
       "value": "manaCallback",
-      "start": 226,
-      "end": 238,
+      "start": 587,
+      "end": 599,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 32,
           "column": 13
         },
         "end": {
-          "line": 15,
+          "line": 32,
           "column": 25
         }
       }
@@ -2710,15 +3314,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 238,
-      "end": 239,
+      "start": 599,
+      "end": 600,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 32,
           "column": 25
         },
         "end": {
-          "line": 15,
+          "line": 32,
           "column": 26
         }
       }
@@ -2735,15 +3339,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 240,
-      "end": 241,
+      "start": 601,
+      "end": 602,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 32,
           "column": 27
         },
         "end": {
-          "line": 15,
+          "line": 32,
           "column": 28
         }
       }
@@ -2763,15 +3367,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 248,
-      "end": 252,
+      "start": 609,
+      "end": 613,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 33,
           "column": 6
         },
         "end": {
-          "line": 16,
+          "line": 33,
           "column": 10
         }
       }
@@ -2789,15 +3393,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 252,
-      "end": 253,
+      "start": 613,
+      "end": 614,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 33,
           "column": 10
         },
         "end": {
-          "line": 16,
+          "line": 33,
           "column": 11
         }
       }
@@ -2815,15 +3419,15 @@
         "binop": null
       },
       "value": "manaCallback",
-      "start": 253,
-      "end": 265,
+      "start": 614,
+      "end": 626,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 33,
           "column": 11
         },
         "end": {
-          "line": 16,
+          "line": 33,
           "column": 23
         }
       }
@@ -2840,15 +3444,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 265,
-      "end": 266,
+      "start": 626,
+      "end": 627,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 33,
           "column": 23
         },
         "end": {
-          "line": 16,
+          "line": 33,
           "column": 24
         }
       }
@@ -2865,15 +3469,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 266,
-      "end": 267,
+      "start": 627,
+      "end": 628,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 33,
           "column": 24
         },
         "end": {
-          "line": 16,
+          "line": 33,
           "column": 25
         }
       }
@@ -2891,15 +3495,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 267,
-      "end": 268,
+      "start": 628,
+      "end": 629,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 33,
           "column": 25
         },
         "end": {
-          "line": 16,
+          "line": 33,
           "column": 26
         }
       }
@@ -2916,15 +3520,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 273,
-      "end": 274,
+      "start": 634,
+      "end": 635,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 17,
+          "line": 34,
           "column": 5
         }
       }
@@ -2941,16 +3545,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 277,
-      "end": 278,
+      "start": 638,
+      "end": 639,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 35,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 35,
           "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Sets the maximum mana value and triggers the callback if registered\n   * @param {Number} maxMana the new maximum mana value to set\n   ",
+      "start": 643,
+      "end": 788,
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 2
+        },
+        "end": {
+          "line": 40,
+          "column": 5
         }
       }
     },
@@ -2967,15 +3587,15 @@
         "binop": null
       },
       "value": "setMaxMana",
-      "start": 282,
-      "end": 292,
+      "start": 791,
+      "end": 801,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 41,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 41,
           "column": 12
         }
       }
@@ -2992,15 +3612,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 292,
-      "end": 293,
+      "start": 801,
+      "end": 802,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 41,
           "column": 12
         },
         "end": {
-          "line": 20,
+          "line": 41,
           "column": 13
         }
       }
@@ -3018,15 +3638,15 @@
         "binop": null
       },
       "value": "maxMana",
-      "start": 293,
-      "end": 300,
+      "start": 802,
+      "end": 809,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 41,
           "column": 13
         },
         "end": {
-          "line": 20,
+          "line": 41,
           "column": 20
         }
       }
@@ -3043,15 +3663,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 300,
-      "end": 301,
+      "start": 809,
+      "end": 810,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 41,
           "column": 20
         },
         "end": {
-          "line": 20,
+          "line": 41,
           "column": 21
         }
       }
@@ -3068,16 +3688,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 302,
-      "end": 303,
+      "start": 811,
+      "end": 812,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 41,
           "column": 22
         },
         "end": {
-          "line": 20,
+          "line": 41,
           "column": 23
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "* @type {Number} ",
+      "start": 817,
+      "end": 838,
+      "loc": {
+        "start": {
+          "line": 42,
+          "column": 4
+        },
+        "end": {
+          "line": 42,
+          "column": 25
         }
       }
     },
@@ -3096,15 +3732,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 308,
-      "end": 312,
+      "start": 843,
+      "end": 847,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 43,
           "column": 4
         },
         "end": {
-          "line": 21,
+          "line": 43,
           "column": 8
         }
       }
@@ -3122,15 +3758,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 312,
-      "end": 313,
+      "start": 847,
+      "end": 848,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 43,
           "column": 8
         },
         "end": {
-          "line": 21,
+          "line": 43,
           "column": 9
         }
       }
@@ -3148,15 +3784,15 @@
         "binop": null
       },
       "value": "maxPoints",
-      "start": 313,
-      "end": 322,
+      "start": 848,
+      "end": 857,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 43,
           "column": 9
         },
         "end": {
-          "line": 21,
+          "line": 43,
           "column": 18
         }
       }
@@ -3175,15 +3811,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 323,
-      "end": 324,
+      "start": 858,
+      "end": 859,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 43,
           "column": 19
         },
         "end": {
-          "line": 21,
+          "line": 43,
           "column": 20
         }
       }
@@ -3201,15 +3837,15 @@
         "binop": null
       },
       "value": "maxMana",
-      "start": 325,
-      "end": 332,
+      "start": 860,
+      "end": 867,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 43,
           "column": 21
         },
         "end": {
-          "line": 21,
+          "line": 43,
           "column": 28
         }
       }
@@ -3227,15 +3863,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 332,
-      "end": 333,
+      "start": 867,
+      "end": 868,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 43,
           "column": 28
         },
         "end": {
-          "line": 21,
+          "line": 43,
           "column": 29
         }
       }
@@ -3255,15 +3891,15 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 339,
-      "end": 341,
+      "start": 874,
+      "end": 876,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 45,
           "column": 4
         },
         "end": {
-          "line": 23,
+          "line": 45,
           "column": 6
         }
       }
@@ -3280,15 +3916,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 342,
-      "end": 343,
+      "start": 877,
+      "end": 878,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 45,
           "column": 7
         },
         "end": {
-          "line": 23,
+          "line": 45,
           "column": 8
         }
       }
@@ -3308,15 +3944,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 343,
-      "end": 347,
+      "start": 878,
+      "end": 882,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 45,
           "column": 8
         },
         "end": {
-          "line": 23,
+          "line": 45,
           "column": 12
         }
       }
@@ -3334,15 +3970,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 347,
-      "end": 348,
+      "start": 882,
+      "end": 883,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 45,
           "column": 12
         },
         "end": {
-          "line": 23,
+          "line": 45,
           "column": 13
         }
       }
@@ -3360,15 +3996,15 @@
         "binop": null
       },
       "value": "maxManaCallback",
-      "start": 348,
-      "end": 363,
+      "start": 883,
+      "end": 898,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 45,
           "column": 13
         },
         "end": {
-          "line": 23,
+          "line": 45,
           "column": 28
         }
       }
@@ -3385,15 +4021,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 363,
-      "end": 364,
+      "start": 898,
+      "end": 899,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 45,
           "column": 28
         },
         "end": {
-          "line": 23,
+          "line": 45,
           "column": 29
         }
       }
@@ -3410,15 +4046,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 365,
-      "end": 366,
+      "start": 900,
+      "end": 901,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 45,
           "column": 30
         },
         "end": {
-          "line": 23,
+          "line": 45,
           "column": 31
         }
       }
@@ -3438,15 +4074,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 373,
-      "end": 377,
+      "start": 908,
+      "end": 912,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 46,
           "column": 6
         },
         "end": {
-          "line": 24,
+          "line": 46,
           "column": 10
         }
       }
@@ -3464,15 +4100,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 377,
-      "end": 378,
+      "start": 912,
+      "end": 913,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 46,
           "column": 10
         },
         "end": {
-          "line": 24,
+          "line": 46,
           "column": 11
         }
       }
@@ -3490,15 +4126,15 @@
         "binop": null
       },
       "value": "maxManaCallback",
-      "start": 378,
-      "end": 393,
+      "start": 913,
+      "end": 928,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 46,
           "column": 11
         },
         "end": {
-          "line": 24,
+          "line": 46,
           "column": 26
         }
       }
@@ -3515,15 +4151,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 393,
-      "end": 394,
+      "start": 928,
+      "end": 929,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 46,
           "column": 26
         },
         "end": {
-          "line": 24,
+          "line": 46,
           "column": 27
         }
       }
@@ -3540,15 +4176,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 394,
-      "end": 395,
+      "start": 929,
+      "end": 930,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 46,
           "column": 27
         },
         "end": {
-          "line": 24,
+          "line": 46,
           "column": 28
         }
       }
@@ -3566,15 +4202,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 395,
-      "end": 396,
+      "start": 930,
+      "end": 931,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 46,
           "column": 28
         },
         "end": {
-          "line": 24,
+          "line": 46,
           "column": 29
         }
       }
@@ -3591,15 +4227,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 401,
-      "end": 402,
+      "start": 936,
+      "end": 937,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 47,
           "column": 4
         },
         "end": {
-          "line": 25,
+          "line": 47,
           "column": 5
         }
       }
@@ -3616,16 +4252,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 405,
-      "end": 406,
+      "start": 940,
+      "end": 941,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 48,
           "column": 2
         },
         "end": {
-          "line": 26,
+          "line": 48,
           "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Registers a callback to invoke when mana changes\n   * @param {Function} callback the function to call when mana changes\n   ",
+      "start": 945,
+      "end": 1079,
+      "loc": {
+        "start": {
+          "line": 50,
+          "column": 2
+        },
+        "end": {
+          "line": 53,
+          "column": 5
         }
       }
     },
@@ -3642,15 +4294,15 @@
         "binop": null
       },
       "value": "onMana",
-      "start": 410,
-      "end": 416,
+      "start": 1082,
+      "end": 1088,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 54,
           "column": 2
         },
         "end": {
-          "line": 28,
+          "line": 54,
           "column": 8
         }
       }
@@ -3667,15 +4319,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 416,
-      "end": 417,
+      "start": 1088,
+      "end": 1089,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 54,
           "column": 8
         },
         "end": {
-          "line": 28,
+          "line": 54,
           "column": 9
         }
       }
@@ -3693,15 +4345,15 @@
         "binop": null
       },
       "value": "callback",
-      "start": 417,
-      "end": 425,
+      "start": 1089,
+      "end": 1097,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 54,
           "column": 9
         },
         "end": {
-          "line": 28,
+          "line": 54,
           "column": 17
         }
       }
@@ -3718,15 +4370,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 425,
-      "end": 426,
+      "start": 1097,
+      "end": 1098,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 54,
           "column": 17
         },
         "end": {
-          "line": 28,
+          "line": 54,
           "column": 18
         }
       }
@@ -3743,16 +4395,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 427,
-      "end": 428,
+      "start": 1099,
+      "end": 1100,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 54,
           "column": 19
         },
         "end": {
-          "line": 28,
+          "line": 54,
           "column": 20
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * Callback invoked when mana changes\n     * @type {Function}\n     ",
+      "start": 1105,
+      "end": 1182,
+      "loc": {
+        "start": {
+          "line": 55,
+          "column": 4
+        },
+        "end": {
+          "line": 58,
+          "column": 7
         }
       }
     },
@@ -3771,15 +4439,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 433,
-      "end": 437,
+      "start": 1187,
+      "end": 1191,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 59,
           "column": 4
         },
         "end": {
-          "line": 29,
+          "line": 59,
           "column": 8
         }
       }
@@ -3797,15 +4465,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 437,
-      "end": 438,
+      "start": 1191,
+      "end": 1192,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 59,
           "column": 8
         },
         "end": {
-          "line": 29,
+          "line": 59,
           "column": 9
         }
       }
@@ -3823,15 +4491,15 @@
         "binop": null
       },
       "value": "manaCallback",
-      "start": 438,
-      "end": 450,
+      "start": 1192,
+      "end": 1204,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 59,
           "column": 9
         },
         "end": {
-          "line": 29,
+          "line": 59,
           "column": 21
         }
       }
@@ -3850,15 +4518,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 451,
-      "end": 452,
+      "start": 1205,
+      "end": 1206,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 59,
           "column": 22
         },
         "end": {
-          "line": 29,
+          "line": 59,
           "column": 23
         }
       }
@@ -3876,15 +4544,15 @@
         "binop": null
       },
       "value": "callback",
-      "start": 453,
-      "end": 461,
+      "start": 1207,
+      "end": 1215,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 59,
           "column": 24
         },
         "end": {
-          "line": 29,
+          "line": 59,
           "column": 32
         }
       }
@@ -3902,15 +4570,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 461,
-      "end": 462,
+      "start": 1215,
+      "end": 1216,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 59,
           "column": 32
         },
         "end": {
-          "line": 29,
+          "line": 59,
           "column": 33
         }
       }
@@ -3927,16 +4595,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 465,
-      "end": 466,
+      "start": 1219,
+      "end": 1220,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 60,
           "column": 2
         },
         "end": {
-          "line": 30,
+          "line": 60,
           "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Registers a callback to invoke when maximum mana changes\n   * @param {Function} callback the function to call when max mana changes\n   ",
+      "start": 1224,
+      "end": 1370,
+      "loc": {
+        "start": {
+          "line": 62,
+          "column": 2
+        },
+        "end": {
+          "line": 65,
+          "column": 5
         }
       }
     },
@@ -3953,15 +4637,15 @@
         "binop": null
       },
       "value": "onMaxMana",
-      "start": 470,
-      "end": 479,
+      "start": 1373,
+      "end": 1382,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 66,
           "column": 2
         },
         "end": {
-          "line": 32,
+          "line": 66,
           "column": 11
         }
       }
@@ -3978,15 +4662,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 479,
-      "end": 480,
+      "start": 1382,
+      "end": 1383,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 66,
           "column": 11
         },
         "end": {
-          "line": 32,
+          "line": 66,
           "column": 12
         }
       }
@@ -4004,15 +4688,15 @@
         "binop": null
       },
       "value": "callback",
-      "start": 480,
-      "end": 488,
+      "start": 1383,
+      "end": 1391,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 66,
           "column": 12
         },
         "end": {
-          "line": 32,
+          "line": 66,
           "column": 20
         }
       }
@@ -4029,15 +4713,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 488,
-      "end": 489,
+      "start": 1391,
+      "end": 1392,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 66,
           "column": 20
         },
         "end": {
-          "line": 32,
+          "line": 66,
           "column": 21
         }
       }
@@ -4054,16 +4738,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 490,
-      "end": 491,
+      "start": 1393,
+      "end": 1394,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 66,
           "column": 22
         },
         "end": {
-          "line": 32,
+          "line": 66,
           "column": 23
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * Callback invoked when maximum mana changes\n     * @type {Function}\n     ",
+      "start": 1399,
+      "end": 1484,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 4
+        },
+        "end": {
+          "line": 70,
+          "column": 7
         }
       }
     },
@@ -4082,15 +4782,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 496,
-      "end": 500,
+      "start": 1489,
+      "end": 1493,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 71,
           "column": 4
         },
         "end": {
-          "line": 33,
+          "line": 71,
           "column": 8
         }
       }
@@ -4108,15 +4808,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 500,
-      "end": 501,
+      "start": 1493,
+      "end": 1494,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 71,
           "column": 8
         },
         "end": {
-          "line": 33,
+          "line": 71,
           "column": 9
         }
       }
@@ -4134,15 +4834,15 @@
         "binop": null
       },
       "value": "maxManaCallback",
-      "start": 501,
-      "end": 516,
+      "start": 1494,
+      "end": 1509,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 71,
           "column": 9
         },
         "end": {
-          "line": 33,
+          "line": 71,
           "column": 24
         }
       }
@@ -4161,15 +4861,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 517,
-      "end": 518,
+      "start": 1510,
+      "end": 1511,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 71,
           "column": 25
         },
         "end": {
-          "line": 33,
+          "line": 71,
           "column": 26
         }
       }
@@ -4187,15 +4887,15 @@
         "binop": null
       },
       "value": "callback",
-      "start": 519,
-      "end": 527,
+      "start": 1512,
+      "end": 1520,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 71,
           "column": 27
         },
         "end": {
-          "line": 33,
+          "line": 71,
           "column": 35
         }
       }
@@ -4213,15 +4913,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 527,
-      "end": 528,
+      "start": 1520,
+      "end": 1521,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 71,
           "column": 35
         },
         "end": {
-          "line": 33,
+          "line": 71,
           "column": 36
         }
       }
@@ -4238,15 +4938,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 531,
-      "end": 532,
+      "start": 1524,
+      "end": 1525,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 72,
           "column": 2
         },
         "end": {
-          "line": 34,
+          "line": 72,
           "column": 3
         }
       }
@@ -4263,15 +4963,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 533,
-      "end": 534,
+      "start": 1526,
+      "end": 1527,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 73,
           "column": 0
         },
         "end": {
-          "line": 35,
+          "line": 73,
           "column": 1
         }
       }
@@ -4289,15 +4989,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 535,
-      "end": 535,
+      "start": 1528,
+      "end": 1528,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 74,
           "column": 0
         },
         "end": {
-          "line": 36,
+          "line": 74,
           "column": 0
         }
       }

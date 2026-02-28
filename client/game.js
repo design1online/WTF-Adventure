@@ -420,6 +420,9 @@ export default class Game {
     return true;
   }
 
+  /**
+   * Invoked once all sprites have been loaded
+   */
   loadedSpritesCallback() {
     log.debug('loaded sprites callback');
   }
@@ -886,6 +889,10 @@ export default class Game {
     return true;
   }
 
+  /**
+   * Handles incoming combat packet data from the server
+   * @param {Array} data the combat packet data array
+   */
   combatCallback(data) {
     log.debug('Game - combatCallback()', data);
 
@@ -967,6 +974,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles incoming animation packet data from the server
+   * @param {String} id the entity instance ID to animate
+   * @param {Array} info the animation data array containing name, speed, and count
+   */
   animationCallback(id, info) {
     log.debug('Game - animationCallback()', id, info);
 
@@ -982,6 +994,11 @@ export default class Game {
     entity.animate(animation, speed, count);
   }
 
+  /**
+   * Handles incoming projectile packet data from the server
+   * @param {Number} opcode the projectile operation code
+   * @param {Object} info the projectile data
+   */
   projectileCallback(opcode, info) {
     log.debug('Game - projectileCallback()', opcode, info);
 
@@ -994,12 +1011,20 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles the server population count update
+   * @param {Number} population the current number of players online
+   */
   populationCallback(population) {
     log.debug('Game - populationCallback()', population);
 
     this.population = population;
   }
 
+  /**
+   * Handles incoming hit points and mana updates for an entity
+   * @param {Array} data the points packet data array containing id, hitPoints, and mana
+   */
   pointsCallback(data) {
     log.debug('Game - pointsCallback()', data);
 
@@ -1027,12 +1052,19 @@ export default class Game {
     }
   }
 
+  /**
+   * Responds to a network ping from the server with a pong
+   */
   networkCallback() {
     log.debug('Game - networkCallback()');
 
     this.socket.send(Packets.Network, [Packets.NetworkOpcode.Pong]);
   }
 
+  /**
+   * Handles an incoming chat message from the server
+   * @param {Object} info the chat message object containing id, text, name, and display options
+   */
   chatCallback(info) {
     log.debug('Game - chatCallback()', info);
 
@@ -1058,6 +1090,11 @@ export default class Game {
     this.input.chatHandler.add(info.name, info.text, info.colour);
   }
 
+  /**
+   * Handles incoming inventory packet data from the server
+   * @param {Number} opcode the inventory operation code
+   * @param {Array} info the inventory packet data
+   */
   inventoryCallback(opcode, info) {
     log.debug('Game - inventoryCallback()', opcode, info);
 
@@ -1099,6 +1136,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles incoming bank packet data from the server
+   * @param {Number} opcode the bank operation code
+   * @param {Array} info the bank packet data
+   */
   bankCallback(opcode, info) {
     log.debug('Game - bankCallback()', opcode, info);
 
@@ -1126,6 +1168,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles incoming quest progress and completion data from the server
+   * @param {Number} opcode the quest operation code
+   * @param {Object} info the quest packet data
+   */
   questCallback(opcode, info) {
     log.debug('Game - questCallback()', opcode, info, this.interface.getQuestPage());
 
@@ -1150,6 +1197,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles incoming notification messages from the server
+   * @param {Number} opcode the notification operation code
+   * @param {String} message the notification message text
+   */
   notificationCallback(opcode, message) {
     log.debug('Game - notificationCallback()', opcode, message);
 
@@ -1170,6 +1222,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Triggers an item blink effect for the given entity instance
+   * @param {String} instance the entity instance ID to blink
+   */
   blinkCallback(instance) {
     log.debug('Game - blickCallback()', instance);
 
@@ -1182,6 +1238,10 @@ export default class Game {
     item.blink(150);
   }
 
+  /**
+   * Handles incoming heal packet data and updates entity hit points
+   * @param {Object} info the heal data containing id, type, and amount
+   */
   healCallback(info) {
     log.debug('Game - healCallback()', info);
 
@@ -1224,6 +1284,10 @@ export default class Game {
     entity.triggerHealthBar();
   }
 
+  /**
+   * Handles incoming experience gain data and updates the player's level display
+   * @param {Object} info the experience data containing id, experience, level, and amount
+   */
   experienceCallback(info) {
     log.debug('Game - experienceCallback()', info);
 
@@ -1245,6 +1309,10 @@ export default class Game {
     this.interface.profile.update();
   }
 
+  /**
+   * Handles the player death event from the server
+   * @param {String} id the entity instance ID of the dead entity
+   */
   deathCallback(id) {
     log.debug('Game - deathCallback()', id);
 
@@ -1261,6 +1329,10 @@ export default class Game {
     this.client.body.addClass('death');
   }
 
+  /**
+   * Handles an audio track change notification from the server
+   * @param {String} song the name of the song to play
+   */
   audioCallback(song) {
     log.debug('Game - audioCallback()', song);
 
@@ -1273,6 +1345,11 @@ export default class Game {
     this.audio.update();
   }
 
+  /**
+   * Handles incoming NPC interaction packet data from the server
+   * @param {Number} opcode the NPC operation code
+   * @param {Object} info the NPC packet data
+   */
   npcCallback(opcode, info) {
     log.debug('Game - npcCallback()', opcode, info);
 
@@ -1366,6 +1443,12 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles the player respawn event, repositioning them and resetting their state
+   * @param {String} id the player entity instance ID
+   * @param {Number} x the respawn grid X position
+   * @param {Number} y the respawn grid Y position
+   */
   respawnCallback(id, x, y) {
     log.debug('Game - respawnCallback()', id, x, y);
 
@@ -1383,6 +1466,11 @@ export default class Game {
     this.player.dead = false;
   }
 
+  /**
+   * Handles incoming enchantment operation data from the server
+   * @param {Number} opcode the enchant operation code
+   * @param {Object} info the enchant data containing type and index
+   */
   enchantCallback(opcode, info) {
     log.debug('Game - enchantCallback()', opcode, info);
 
@@ -1403,6 +1491,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles incoming guild operation data from the server
+   * @param {Number} opcode the guild operation code
+   * @param {Object} info the guild data
+   */
   guildCallback(opcode, info) {
     log.debug('Game - guildCallback()', opcode, info);
 
@@ -1418,6 +1511,11 @@ export default class Game {
     this.guild = info;
   }
 
+  /**
+   * Handles incoming pointer/waypoint indicator data from the server
+   * @param {Number} opcode the pointer operation code
+   * @param {Object} info the pointer data containing id and position
+   */
   pointerCallback(opcode, info) {
     log.debug('Game - pointerCallback()', opcode, info);
 
@@ -1451,6 +1549,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles a PVP flag update for an entity
+   * @param {String} id the entity instance ID
+   * @param {Boolean} pvp whether the entity has PVP enabled
+   */
   pvpCallback(id, pvp) {
     log.debug('Game - pvpCallback()', id, pvp);
 
@@ -1465,6 +1568,11 @@ export default class Game {
     }
   }
 
+  /**
+   * Handles incoming shop operation data from the server
+   * @param {Number} opcode the shop operation code
+   * @param {Object} info the shop data
+   */
   shopCallback(opcode, info) {
     log.debug('Game - spawnCallback()', opcode, info);
 
@@ -1481,6 +1589,7 @@ export default class Game {
         break;
     }
 
+    /** @type {Object} */
     this.shop = info;
   }
 
@@ -1527,6 +1636,9 @@ export default class Game {
     }
   }
 
+  /**
+   * Pre-populates the login form fields with saved username and password from storage
+   */
   implementStorage() {
     log.debug('Game - implementStorage()');
 
@@ -1551,18 +1663,33 @@ export default class Game {
     $('#rememberMe').addClass('active');
   }
 
+  /**
+   * Sets the current movement direction of the player
+   * @param {Number} direction the movement direction constant
+   */
   setPlayerMovement(direction) {
     log.debug('Game - setPlayerMovement()', direction);
 
     this.player.direction = direction;
   }
 
+  /**
+   * Moves the local player to the specified grid position
+   * @param {Number} x the target grid X position
+   * @param {Number} y the target grid Y position
+   */
   movePlayer(x, y) {
     log.debug('Game - movePlayer()', x, y);
 
     this.moveCharacter(this.player, x, y);
   }
 
+  /**
+   * Moves a character entity to the specified grid position
+   * @param {Character} character the character entity to move
+   * @param {Number} x the target grid X position
+   * @param {Number} y the target grid Y position
+   */
   moveCharacter(character, x, y) {
     log.debug('Game - moveCharacter()', character, x, y);
 
@@ -1573,6 +1700,14 @@ export default class Game {
     character.go(x, y);
   }
 
+  /**
+   * Finds a path for a character to a target grid position, optionally ignoring entities
+   * @param {Character} character the character to find a path for
+   * @param {Number} x the target grid X position
+   * @param {Number} y the target grid Y position
+   * @param {Array} ignores list of entities to ignore during pathfinding
+   * @return {Array} the calculated path as an array of grid coordinates
+   */
   findPath(character, x, y, ignores) {
     log.debug('Game - findPath()', x, y, ignores);
 
@@ -1598,6 +1733,11 @@ export default class Game {
     return path;
   }
 
+  /**
+   * Routes an input event to the input handler
+   * @param {Number} inputType the type of input event
+   * @param {Object} data the input event data
+   */
   onInput(inputType, data) {
     log.debug('Game - onInput()', inputType, data);
 
@@ -1635,6 +1775,9 @@ export default class Game {
     this.client.updateLoader('');
   }
 
+  /**
+   * Sends a respawn request to the server and plays the revive sound effect
+   */
   respawn() {
     log.debug('Game - respawn()');
 
@@ -1644,6 +1787,10 @@ export default class Game {
     this.socket.send(Packets.Respawn, [this.player.id]);
   }
 
+  /**
+   * Sends a trade request to the specified player
+   * @param {Player} player the player entity to trade with
+   */
   tradeWith(player) {
     log.debug('Game - tradeWith()', player);
 
@@ -1654,6 +1801,9 @@ export default class Game {
     this.socket.send(Packets.Trade, [Packets.TradeOpcode.Request, player.id]);
   }
 
+  /**
+   * Handles a window resize event by updating the renderer and pointer positions
+   */
   resize() {
     log.debug('Game - resize()');
 
@@ -1664,34 +1814,61 @@ export default class Game {
     }
   }
 
+  /**
+   * Instantiates the local player entity
+   */
   createPlayer() {
     log.debug('Game - createPlayer()');
 
     this.player = new Player();
   }
 
+  /**
+   * Returns the current UI scale factor from the client
+   * @return {Number} the scale factor
+   */
   getScaleFactor() {
     return this.client.getScaleFactor();
   }
 
+  /**
+   * Returns the local storage controller instance
+   * @return {Storage} the storage controller
+   */
   getStorage() {
     log.debug('Game - getStorage()');
 
     return this.storage;
   }
 
+  /**
+   * Returns the camera instance from the renderer
+   * @return {Camera} the camera instance
+   */
   getCamera() {
     log.debug('Game - getCamera()');
 
     return this.renderer.camera;
   }
 
+  /**
+   * Returns a Sprite instance by name from the entity controller
+   * @param {String} spriteName the name of the sprite to retrieve
+   * @return {Sprite} the sprite instance
+   */
   getSprite(spriteName) {
     log.debug('Game - getSprite()', spriteName);
 
     return this.entities.getSprite(spriteName);
   }
 
+  /**
+   * Returns the entity at the given grid position, optionally ignoring the local player
+   * @param {Number} x the grid X position
+   * @param {Number} y the grid Y position
+   * @param {Boolean} ignoreSelf whether to skip the local player entity
+   * @return {Entity|null} the entity at the position or null if none
+   */
   getEntityAt(x, y, ignoreSelf) {
     log.debug('Game - getEntityAt()', x, y, ignoreSelf);
 
@@ -1717,24 +1894,40 @@ export default class Game {
     return null;
   }
 
+  /**
+   * Returns the saved username from local storage
+   * @return {String} the stored username
+   */
   getStorageUsername() {
     log.debug('Game - getStorageUsername()', this.storage);
 
     return this.storage.data.player.username;
   }
 
+  /**
+   * Returns the saved password from local storage
+   * @return {String} the stored password
+   */
   getStoragePassword() {
     log.debug('Game - getStoragePassword()', this.storage);
 
     return this.storage.data.player.password;
   }
 
+  /**
+   * Returns whether the player has opted to save their login credentials
+   * @return {Boolean} true if remember-me is enabled
+   */
   hasRemember() {
     log.debug('Game - hasRemember()');
 
     return this.storage.data.player.rememberMe;
   }
 
+  /**
+   * Sets the renderer instance if one has not already been assigned
+   * @param {Renderer} renderer the renderer instance to set
+   */
   setRenderer(renderer) {
     log.debug('Game - setRenderer()', renderer);
 
@@ -1743,6 +1936,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the storage controller instance if one has not already been assigned
+   * @param {Storage} storage the storage controller to set
+   */
   setStorage(storage) {
     log.debug('Game - setStorage()', storage);
 
@@ -1751,6 +1948,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the socket instance if one has not already been assigned
+   * @param {Socket} socket the socket instance to set
+   */
   setSocket(socket) {
     log.debug('Game - setSocket()', socket);
 
@@ -1759,6 +1960,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the messages handler instance if one has not already been assigned
+   * @param {Messages} messages the messages handler to set
+   */
   setMessages(messages) {
     log.debug('Game - setMessages()', messages);
 
@@ -1767,6 +1972,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the updater instance if one has not already been assigned
+   * @param {Updater} updater the updater instance to set
+   */
   setUpdater(updater) {
     log.debug('Game - setUpdater()', updater);
 
@@ -1775,6 +1984,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the entity controller instance if one has not already been assigned
+   * @param {Entities} entities the entity controller to set
+   */
   setEntityController(entities) {
     log.debug('Game - setEntityController()', entities, this.entities);
 
@@ -1783,6 +1996,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the input handler instance if one has not already been assigned
+   * @param {Input} input the input handler to set
+   */
   setInput(input) {
     log.debug('Game - setInput()', input);
 
@@ -1792,6 +2009,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the pathfinder instance if one has not already been assigned
+   * @param {Pathfinder} pathfinder the pathfinder instance to set
+   */
   setPathfinder(pathfinder) {
     log.debug('Game - setPathfinder()', pathfinder);
 
@@ -1800,6 +2021,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the info display controller if one has not already been assigned
+   * @param {Info} info the info controller to set
+   */
   setInfo(info) {
     log.debug('Game - setInfo()', info);
 
@@ -1808,6 +2033,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the bubble chat controller if one has not already been assigned
+   * @param {Bubble} bubble the bubble controller to set
+   */
   setBubble(bubble) {
     log.debug('Game - setBubble()', bubble);
 
@@ -1816,6 +2045,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the pointer/waypoint indicator controller if one has not already been assigned
+   * @param {Pointer} pointer the pointer controller to set
+   */
   setPointer(pointer) {
     log.debug('Game - setPointer()', pointer);
 
@@ -1824,6 +2057,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the UI interface controller if one has not already been assigned
+   * @param {Interface} intrface the interface controller to set
+   */
   setInterface(intrface) {
     log.debug('Game - setInterface()', intrface);
 
@@ -1832,6 +2069,10 @@ export default class Game {
     }
   }
 
+  /**
+   * Sets the audio controller if one has not already been assigned
+   * @param {Audio} audio the audio controller to set
+   */
   setAudio(audio) {
     log.debug('Game - setAudio()', audio);
 

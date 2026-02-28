@@ -1,6 +1,9 @@
 import log from './log.js';
 import PluginLoader from './plugins.js';
 
+/**
+ * Dictionary providing lookup and utility methods for ability definitions
+ */
 const AbilityDictionary = {
   data: {},
   properties: {},

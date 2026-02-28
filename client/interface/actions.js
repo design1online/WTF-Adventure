@@ -1,24 +1,71 @@
 import $ from 'jquery';
 
+/**
+ * Manages the context action menu interface for inventory and player interactions
+ * @class
+ */
 export default class Actions {
+  /**
+   * Default constructor
+   * @param {Interface} intrfce an instance of the game interface
+   */
   constructor(intrfce) {
+    /**
+     * The game interface instance
+     * @type {Interface}
+     */
     this.interface = intrfce;
 
+    /**
+     * The main action container element
+     * @type {jQuery}
+     */
     this.body = $('#actionContainer');
+    /**
+     * The drop dialog element
+     * @type {jQuery}
+     */
     this.drop = $('#dropDialog');
+    /**
+     * The drop count input element
+     * @type {jQuery}
+     */
     this.dropInput = $('#dropCount');
 
+    /**
+     * The player actions container element
+     * @type {jQuery}
+     */
     this.pBody = $('#pActions');
+    /**
+     * The follow action button element
+     * @type {jQuery}
+     */
     this.follow = $('#follow');
+    /**
+     * The trade action button element
+     * @type {jQuery}
+     */
     this.trade = $('#tradeAction');
 
+    /**
+     * The currently active CSS class name
+     * @type {String}
+     */
     this.activeClass = null;
 
+    /**
+     * The currently active miscellaneous button
+     * @type {jQuery}
+     */
     this.miscButton = null;
 
     this.loadActions();
   }
 
+  /**
+   * Loads click handlers for drop accept and cancel buttons
+   */
   loadActions() {
     const dropAccept = $('#dropAccept');
     const dropCancel = $('#dropcancel');
@@ -36,6 +83,10 @@ export default class Actions {
     });
   }
 
+  /**
+   * Loads the default action buttons for the given active class
+   * @param {String} activeClass the name of the currently active interface class
+   */
   loadDefaults(activeClass) {
     this.activeClass = activeClass;
 
@@ -52,6 +103,11 @@ export default class Actions {
     }
   }
 
+  /**
+   * Adds a button to the action list and binds its click handler
+   * @param {jQuery} button the button element to add
+   * @param {Boolean} misc whether this is a miscellaneous button
+   */
   add(button, misc) {
     this.body.find('ul').prepend($('<li></li>').append(button));
 
@@ -66,11 +122,17 @@ export default class Actions {
     }
   }
 
+  /**
+   * Removes the miscellaneous button from the action list
+   */
   removeMisc() {
     this.miscButton.remove();
     this.miscButton = null;
   }
 
+  /**
+   * Removes all action buttons from the list
+   */
   reset() {
     const buttons = this.getButtons();
 
@@ -79,10 +141,19 @@ export default class Actions {
     }
   }
 
+  /**
+   * Shows the action container with a fast fade-in
+   */
   show() {
     this.body.fadeIn('fast');
   }
 
+  /**
+   * Displays player-specific action buttons near the given coordinates
+   * @param {Object} player the player entity to act on
+   * @param {Number} mouseX the x coordinate of the mouse pointer
+   * @param {Number} mouseY the y coordinate of the mouse pointer
+   */
   showPlayerActions(player, mouseX, mouseY) {
     if (!player) return;
 
@@ -105,14 +176,24 @@ export default class Actions {
     });
   }
 
+  /**
+   * Hides the action container with a slow fade-out
+   */
   hide() {
     this.body.fadeOut('slow');
   }
 
+  /**
+   * Hides the player actions panel with a fast fade-out
+   */
   hidePlayerActions() {
     this.pBody.fadeOut('fast');
   }
 
+  /**
+   * Displays the drop dialog and focuses the count input
+   * @param {String} activeClass the name of the currently active interface class
+   */
   displayDrop(activeClass) {
     this.activeClass = activeClass;
     this.drop.fadeIn('fast');
@@ -120,24 +201,43 @@ export default class Actions {
     this.dropInput.select();
   }
 
+  /**
+   * Hides the drop dialog and clears the count input
+   */
   hideDrop() {
     this.drop.fadeOut('slow');
     this.dropInput.blur();
     this.dropInput.val('');
   }
 
+  /**
+   * Returns all button list items in the action container
+   * @return {jQuery}
+   */
   getButtons() {
     return this.body.find('ul').find('li');
   }
 
+  /**
+   * Returns the game instance from the interface
+   * @return {Game}
+   */
   getGame() {
     return this.interface.game;
   }
 
+  /**
+   * Returns the local player from the game instance
+   * @return {Player}
+   */
   getPlayer() {
     return this.interface.game.player;
   }
 
+  /**
+   * Returns whether the action container is currently visible
+   * @return {Boolean}
+   */
   isVisible() {
     return this.body.css('display') === 'block';
   }

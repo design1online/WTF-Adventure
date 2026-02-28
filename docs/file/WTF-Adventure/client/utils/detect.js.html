@@ -171,8 +171,16 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/utils/detect.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* global navigator, window */
+/**
+ * Checks whether the user agent string contains the given substring
+ * @param {String} string the substring to search for in the user agent
+ * @return {Boolean}
+ */
 const userAgentContains = string =&gt; navigator.userAgent.indexOf(string) !== -1;
 
+/**
+ * Utility object for detecting the user&apos;s browser and device environment
+ */
 const Detect = {
   isIpad: () =&gt; /ipad/i.test(navigator.userAgent.toLowerCase()),
   isAndroid: () =&gt; /Android/i.test(navigator.userAgent),

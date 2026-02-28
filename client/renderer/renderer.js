@@ -9,6 +9,12 @@ import Item from '../entity/objects/item';
 import Detect from '../utils/detect';
 import { isIntersecting } from '../utils/util';
 
+/**
+ * Returns the x-coordinate within a grid row given a flat index and row width
+ * @param {Number} index the flat tile index
+ * @param {Number} width the width of the grid in tiles
+ * @return {Number}
+ */
 const getX = (index, width) => {
   if (index === 0) {
     return 0;
@@ -19,18 +25,71 @@ const getX = (index, width) => {
     : (index % width) - 1;
 };
 
+/**
+ * Handles all canvas-based rendering for the game world
+ * @class
+ */
 export default class Renderer {
+  /**
+   * Default constructor
+   * @param {HTMLCanvasElement} backgroundCanvas the canvas for background tiles
+   * @param {HTMLCanvasElement} entitiesCanvas the canvas for entities
+   * @param {HTMLCanvasElement} foregroundCanvas the canvas for foreground tiles
+   * @param {HTMLCanvasElement} textCanvas the canvas for text and UI labels
+   * @param {HTMLCanvasElement} cursorCanvas the canvas for the cursor
+   * @param {Game} game an instance of the game
+   */
   constructor(backgroundCanvas, entitiesCanvas, foregroundCanvas, textCanvas, cursorCanvas, game) {
+    /**
+     * The background tile canvas element
+     * @type {HTMLCanvasElement}
+     */
     this.backgroundCanvas = backgroundCanvas;
+    /**
+     * The entities canvas element
+     * @type {HTMLCanvasElement}
+     */
     this.entitiesCanvas = entitiesCanvas;
+    /**
+     * The foreground tile canvas element
+     * @type {HTMLCanvasElement}
+     */
     this.foregroundCanvas = foregroundCanvas;
+    /**
+     * The text canvas element
+     * @type {HTMLCanvasElement}
+     */
     this.textCanvas = textCanvas;
+    /**
+     * The cursor canvas element
+     * @type {HTMLCanvasElement}
+     */
     this.cursorCanvas = cursorCanvas;
 
+    /**
+     * The 2D rendering context for entities
+     * @type {CanvasRenderingContext2D}
+     */
     this.context = entitiesCanvas.getContext('2d');
+    /**
+     * The 2D rendering context for the background
+     * @type {CanvasRenderingContext2D}
+     */
     this.backContext = backgroundCanvas.getContext('2d');
+    /**
+     * The 2D rendering context for the foreground
+     * @type {CanvasRenderingContext2D}
+     */
     this.foreContext = foregroundCanvas.getContext('2d');
+    /**
+     * The 2D rendering context for text
+     * @type {CanvasRenderingContext2D}
+     */
     this.textContext = textCanvas.getContext('2d');
+    /**
+     * The 2D rendering context for the cursor
+     * @type {CanvasRenderingContext2D}
+     */
     this.cursorContext = cursorCanvas.getContext('2d');
 
     this.context.imageSmoothingEnabled = false;
@@ -39,7 +98,15 @@ export default class Renderer {
     this.textContext.imageSmoothingEnabled = true;
     this.cursorContext.imageSmoothingEnabled = false;
 
+    /**
+     * Array of all drawing contexts used for tile and entity rendering
+     * @type {CanvasRenderingContext2D[]}
+     */
     this.contexts = [this.backContext, this.foreContext, this.context];
+    /**
+     * Array of all canvas elements managed by the renderer
+     * @type {HTMLCanvasElement[]}
+     */
     this.canvases = [
       this.backgroundCanvas,
       this.entitiesCanvas,
@@ -48,47 +115,154 @@ export default class Renderer {
       this.cursorCanvas,
     ];
 
+    /**
+     * Reference to the main game instance
+     * @type {Game}
+     */
     this.game = game;
+    /**
+     * The camera used to determine visible area
+     * @type {Camera}
+     */
     this.camera = null;
+    /**
+     * The entities controller
+     * @type {Entities}
+     */
     this.entities = null;
+    /**
+     * The input handler
+     * @type {Input}
+     */
     this.input = null;
 
     this.checkDevice();
 
+    /**
+     * The current rendering scale factor
+     * @type {Number}
+     */
     this.scale = 1;
+    /**
+     * The size of a single tile in pixels
+     * @type {Number}
+     */
     this.tileSize = 16;
+    /**
+     * The base font size for rendered text
+     * @type {Number}
+     */
     this.fontSize = 10;
 
+    /**
+     * The screen width in pixels
+     * @type {Number}
+     */
     this.screenWidth = 0;
+    /**
+     * The screen height in pixels
+     * @type {Number}
+     */
     this.screenHeight = 0;
 
+    /**
+     * Timestamp used for FPS calculation
+     * @type {Date}
+     */
     this.time = new Date();
 
+    /**
+     * The current frames per second value
+     * @type {Number}
+     */
     this.fps = 0;
+    /**
+     * Number of frames rendered in the current second
+     * @type {Number}
+     */
     this.frameCount = 0;
+    /**
+     * The last rendered camera position [x, y]
+     * @type {Number[]}
+     */
     this.renderedFrame = [0, 0];
+    /**
+     * The last target cell position [x, y]
+     * @type {Number[]}
+     */
     this.lastTarget = [0, 0];
 
+    /**
+     * List of tiles that are currently animated
+     * @type {Tile[]}
+     */
     this.animatedTiles = [];
 
+    /**
+     * Timeout handle used to debounce resize events
+     * @type {?number}
+     */
     this.resizeTimeout = null;
+    /**
+     * Whether to automatically centre the camera on the player
+     * @type {Boolean}
+     */
     this.autoCentre = false;
 
+    /**
+     * Whether to draw the target cell indicator
+     * @type {Boolean}
+     */
     this.drawTarget = false;
+    /**
+     * Whether the selected cell highlight is currently visible
+     * @type {Boolean}
+     */
     this.selectedCellVisible = false;
 
+    /**
+     * When true the render loop is paused
+     * @type {Boolean}
+     */
     this.stopRendering = false;
+    /**
+     * Whether tile animations are enabled
+     * @type {Boolean}
+     */
     this.animateTiles = true;
+    /**
+     * Whether to render debug information
+     * @type {Boolean}
+     */
     this.debugging = false;
+    /**
+     * The current brightness level (0-100)
+     * @type {Number}
+     */
     this.brightness = 100;
+    /**
+     * Whether to draw entity names above characters
+     * @type {Boolean}
+     */
     this.drawNames = true;
+    /**
+     * Whether to draw entity levels above characters
+     * @type {Boolean}
+     */
     this.drawLevels = false;
+    /**
+     * When true the next frame will be rendered even if the camera has not moved
+     * @type {Boolean}
+     */
     this.forceRendering = false;
     this.textCanvas = $('#textCanvas');
 
     this.loadRenderer();
   }
 
+  /**
+   * Stops all rendering and fills each canvas with the background colour
+   */
   stop() {
     log.debug('Renderer - stop()');
 
@@ -102,10 +276,14 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Initialises scale and drawing scale values and disables image smoothing on all contexts
+   */
   loadRenderer() {
     log.debug('Renderer - loadRenderer()');
 
     this.scale = this.getScale();
+    /** @type {Number} */
     this.drawingScale = this.getDrawingScale();
 
     this.forEachContext((context) => {
@@ -117,6 +295,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Recalculates screen dimensions based on the camera grid size and resizes all canvases
+   */
   loadSizes() {
     // log.debug('Renderer - loadSizes()');
 
@@ -136,6 +317,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Creates a new Camera and adjusts centring settings based on device capabilities
+   */
   loadCamera() {
     // log.debug('Renderer - loadCamera()');
 
@@ -158,6 +342,9 @@ export default class Renderer {
     }
   }
 
+  /**
+   * Handles window resize events by debouncing a full renderer refresh
+   */
   resize() {
     // log.debug('Renderer - resize()');
 
@@ -202,6 +389,9 @@ export default class Renderer {
     }
   }
 
+  /**
+   * Main render function called each frame to draw the full game scene
+   */
   render() {
     // log.debug('Renderer - render()');
 
@@ -234,6 +424,9 @@ export default class Renderer {
    * Context Drawing
    */
 
+  /**
+   * Draws all static (non-animated) visible tiles onto the background and foreground contexts
+   */
   draw() {
     // log.debug('Renderer - draw()');
 
@@ -264,6 +457,9 @@ export default class Renderer {
     this.saveFrame();
   }
 
+  /**
+   * Draws all animated tiles onto the entities context each frame
+   */
   drawAnimatedTiles() {
     // log.debug('Renderer - drawAnimatedTiles()');
 
@@ -286,6 +482,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Draws floating damage and status info text above entities
+   */
   drawInfos() {
     // log.debug('Renderer - drawInfos()');
 
@@ -312,6 +511,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Draws debug overlays such as FPS, player position and the pathing grid
+   */
   drawDebugging() {
     // log.debug('Renderer - drawDebugging()');
 
@@ -327,6 +529,9 @@ export default class Renderer {
     }
   }
 
+  /**
+   * Iterates over all visible entities and draws each one that has a loaded sprite
+   */
   drawEntities() {
     // log.debug('Renderer - drawEntities()');
 
@@ -338,6 +543,10 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Renders a single entity including its shadow, weapon overlay, item sparks and status effects
+   * @param {Entity} entity the entity to draw
+   */
   drawEntity(entity) {
     // log.debug('Renderer - drawEntity()', entity);
 
@@ -505,6 +714,10 @@ export default class Renderer {
     // @TODO
   }
 
+  /**
+   * Draws active status-effect sprite overlays on top of the entity after it has been rendered
+   * @param {Entity} entity the entity to draw effects for
+   */
   drawEntityFore(entity) {
     // log.debug('Renderer - drawEntityFore()');
 
@@ -550,6 +763,10 @@ export default class Renderer {
     }
   }
 
+  /**
+   * Draws a health bar above an entity when its health bar is visible
+   * @param {Entity} entity the entity whose health bar should be drawn
+   */
   drawHealth(entity) {
     // log.debug('Renderer - entity()');
 
@@ -583,6 +800,10 @@ export default class Renderer {
     this.context.restore();
   }
 
+  /**
+   * Draws the username and/or level label above an entity
+   * @param {Entity} entity the entity whose name should be drawn
+   */
   drawName(entity) {
     // log.debug('Renderer - drawName()');
 
@@ -662,6 +883,9 @@ export default class Renderer {
     this.textContext.restore();
   }
 
+  /**
+   * Draws the custom mouse cursor sprite on the cursor canvas
+   */
   drawCursor() {
     // log.debug('Renderer - drawCursor()');
 
@@ -697,6 +921,9 @@ export default class Renderer {
     this.cursorContext.restore();
   }
 
+  /**
+   * Calculates and draws the current frames-per-second counter on screen
+   */
   drawFPS() {
     // log.debug('Renderer - drawFPS()');
 
@@ -704,6 +931,7 @@ export default class Renderer {
     const timeDiff = currentTime - this.time;
 
     if (timeDiff >= 1000) {
+      /** @type {Number} */
       this.realFPS = this.frameCount;
       this.frameCount = 0;
       this.time = currentTime;
@@ -715,6 +943,9 @@ export default class Renderer {
     this.drawText(`FPS: ${this.realFPS}`, 10, 11, false, 'white');
   }
 
+  /**
+   * Draws the player's current grid position to the screen for debugging
+   */
   drawPosition() {
     // log.debug('Renderer - drawPosition()');
 
@@ -729,6 +960,9 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Highlights all non-zero cells in the pathing grid for debugging
+   */
   drawPathing() {
     // log.debug('Renderer - drawPathing()');
 
@@ -749,6 +983,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Draws a highlight over the cell the player has selected when it is not adjacent
+   */
   drawSelectedCell() {
     // log.debug('Renderer - drawSelectedCell()');
 
@@ -770,6 +1007,15 @@ export default class Renderer {
    * Primitive drawing functions
    */
 
+  /**
+   * Draws a single tile from the tileset onto the given context at the correct grid position
+   * @param {CanvasRenderingContext2D} context the context to draw onto
+   * @param {Number} tileId the tile identifier
+   * @param {HTMLImageElement} tileset the tileset image
+   * @param {Number} setWidth the number of tiles per row in the tileset
+   * @param {Number} gridWidth the width of the map in tiles
+   * @param {Number} cellId the flat index of the cell in the map grid
+   */
   drawTile(context, tileId, tileset, setWidth, gridWidth, cellId) {
     // log.debug('Renderer - draw()', context, tileId, tileset, setWidth, gridWidth, cellId);
 
@@ -789,6 +1035,12 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Clears the pixel area occupied by a single tile cell on the given context
+   * @param {CanvasRenderingContext2D} context the context to clear on
+   * @param {Number} gridWidth the width of the map in tiles
+   * @param {Number} cellId the flat index of the cell to clear
+   */
   clearTile(context, gridWidth, cellId) {
     // log.debug('Renderer - clearTile()', context, gridWidth, cellId);
 
@@ -799,6 +1051,15 @@ export default class Renderer {
     context.clearRect(x, y, w, w);
   }
 
+  /**
+   * Draws a string of text at the specified canvas coordinates
+   * @param {String} text the text to render
+   * @param {Number} x the x position in tile units
+   * @param {Number} y the y position in tile units
+   * @param {Boolean} centered whether to centre-align the text
+   * @param {String} colour the fill colour
+   * @param {String} strokeColour the stroke/outline colour
+   */
   drawText(text, x, y, centered, colour, strokeColour) {
     // log.debug('Renderer - drawText()', text, x, y, centered, colour, strokeColour);
 
@@ -826,6 +1087,17 @@ export default class Renderer {
     }
   }
 
+  /**
+   * Draws a portion of an image scaled to the current drawing scale factor
+   * @param {CanvasRenderingContext2D} context the context to draw onto
+   * @param {HTMLImageElement} image the source image
+   * @param {Number} x the source x offset in unscaled pixels
+   * @param {Number} y the source y offset in unscaled pixels
+   * @param {Number} width the width of the source region in unscaled pixels
+   * @param {Number} height the height of the source region in unscaled pixels
+   * @param {Number} dx the destination x position in unscaled pixels
+   * @param {Number} dy the destination y position in unscaled pixels
+   */
   drawScaledImage(context, image, x, y, width, height, dx, dy) {
     // log.debug('Renderer - drawScaledImage()', context, image, x, y, width, height, dx, dy);
 
@@ -846,6 +1118,9 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Rebuilds the list of animated tiles that are currently within the visible camera area
+   */
   updateAnimatedTiles() {
     // log.debug('Renderer - updateAnimatedTiles()');
 
@@ -893,6 +1168,13 @@ export default class Renderer {
     this.animatedTiles = newTiles;
   }
 
+  /**
+   * Checks whether a bounding rectangle overlaps with nearby entities or tiles and marks them dirty
+   * @param {Object} rectOne the bounding rectangle to test against
+   * @param {Object} source the source entity or tile that caused the check
+   * @param {Number} x the grid x-coordinate around which to search
+   * @param {Number} y the grid y-coordinate around which to search
+   */
   checkDirty(rectOne, source, x, y) {
     // log.debug('Renderer - checkDirty()', rectOne, source, x, y);
 
@@ -917,11 +1199,18 @@ export default class Renderer {
 
       if (isIntersecting(rectOne, targetRect)) {
         this.drawTarget = true;
+        /** @type {Object} */
         this.targetRect = targetRect;
       }
     }
   }
 
+  /**
+   * Draws a hollow coloured rectangle outline around a single grid cell
+   * @param {Number} x the pixel x position of the cell
+   * @param {Number} y the pixel y position of the cell
+   * @param {String} colour the CSS colour to use for the stroke
+   */
   drawCellRect(x, y, colour) {
     // log.debug('Renderer - drawCellRect()', x, y, colour);
 
@@ -935,6 +1224,12 @@ export default class Renderer {
     this.context.restore();
   }
 
+  /**
+   * Draws a coloured highlight rectangle over a grid cell at the given grid coordinates
+   * @param {Number} x the grid x-coordinate of the cell
+   * @param {Number} y the grid y-coordinate of the cell
+   * @param {String} colour the CSS colour to use for the highlight
+   */
   drawCellHighlight(x, y, colour) {
     // log.debug('Renderer - drawCellHighlight()', x, y, colour);
 
@@ -945,6 +1240,9 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Draws a highlight over the cell currently under the mouse cursor
+   */
   drawTargetCell() {
     // log.debug('Renderer - drawTargetCell()');
 
@@ -974,6 +1272,11 @@ export default class Renderer {
    * Primordial Rendering functions
    */
 
+  /**
+   * Iterates over every map index currently visible to the camera and invokes a callback
+   * @param {Function} callback called with each visible map index
+   * @param {Number} offset optional tile offset to expand the visible area
+   */
   forEachVisibleIndex(callback, offset) {
     // log.debug('Renderer - forEachVisibleIndex()', callback, offset);
 
@@ -982,6 +1285,11 @@ export default class Renderer {
     }, offset);
   }
 
+  /**
+   * Iterates over all tile IDs in the visible area and invokes a callback for each
+   * @param {Function} callback called with (tileId, mapIndex) for each visible tile
+   * @param {Number} offset optional tile offset to expand the visible area
+   */
   forEachVisibleTile(callback, offset) {
     // log.debug('Renderer - forEachVisibleTile()', callback, offset);
 
@@ -1000,6 +1308,10 @@ export default class Renderer {
     }, offset);
   }
 
+  /**
+   * Iterates over all currently tracked animated tiles and invokes a callback for each
+   * @param {Function} callback called with each animated Tile instance
+   */
   forEachAnimatedTile(callback) {
     // log.debug('Renderer - forEachAnimatedTile()', callback);
 
@@ -1008,6 +1320,10 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Iterates over all entities occupying visible grid cells and invokes a callback for each
+   * @param {Function} callback called with each visible Entity instance
+   */
   forEachVisibleEntity(callback) {
     // log.debug('Renderer - forEachVisibleEntity()', callback);
 
@@ -1026,6 +1342,12 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Returns true when the given grid position falls within the camera viewport
+   * @param {Number} x the grid x-coordinate to test
+   * @param {Number} y the grid y-coordinate to test
+   * @return {Boolean}
+   */
   isVisiblePosition(x, y) {
     // log.debug('Renderer - isVisiblePosition()', x, y);
 
@@ -1037,12 +1359,20 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Returns the current rendering scale factor from the game
+   * @return {Number}
+   */
   getScale() {
     // log.debug('Renderer - getScale()');
 
     return this.game.getScaleFactor();
   }
 
+  /**
+   * Returns the drawing scale factor, clamped to 2 on mobile devices
+   * @return {Number}
+   */
   getDrawingScale() {
     // log.debug('Renderer - getDrawingScale()');
 
@@ -1055,6 +1385,10 @@ export default class Renderer {
     return scale;
   }
 
+  /**
+   * Returns the upscale factor capped at a maximum of 2
+   * @return {Number}
+   */
   getUpscale() {
     // log.debug('Renderer - getUpscale()');
 
@@ -1067,6 +1401,9 @@ export default class Renderer {
     return scale;
   }
 
+  /**
+   * Clears the entities canvas context
+   */
   clearContext() {
     // log.debug('Renderer - clearContext()');
 
@@ -1078,6 +1415,9 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Clears the entire text canvas context
+   */
   clearText() {
     // log.debug('Renderer - clearText()');
 
@@ -1089,6 +1429,9 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Calls restore on every tracked rendering context
+   */
   restore() {
     // log.debug('Renderer - restore()');
 
@@ -1097,6 +1440,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Clears every tracked rendering context
+   */
   clearAll() {
     // log.debug('Renderer - clearAll()');
 
@@ -1105,6 +1451,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Clears only the background and foreground drawing contexts
+   */
   clearDrawing() {
     // log.debug('Renderer - clearDrawing()');
 
@@ -1113,6 +1462,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Saves the state of every tracked rendering context
+   */
   saveAll() {
     // log.debug('Renderer - saveAll()');
 
@@ -1121,6 +1473,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Restores the state of every tracked rendering context
+   */
   restoreAll() {
     // log.debug('Renderer - restoreAll()');
 
@@ -1129,6 +1484,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Focuses every tracked rendering context
+   */
   focus() {
     // log.debug('Renderer - focus()');
 
@@ -1141,6 +1499,9 @@ export default class Renderer {
    * Rendering Functions
    */
 
+  /**
+   * Applies the camera translation to every tracked rendering context
+   */
   updateView() {
     // log.debug('Renderer - updateView()');
 
@@ -1149,6 +1510,9 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Applies the camera translation to all drawing (non-entity) contexts
+   */
   updateDrawingView() {
     // log.debug('Renderer - updateDrawingView()');
 
@@ -1157,6 +1521,10 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Translates a context so that the camera position maps to the top-left of the canvas
+   * @param {CanvasRenderingContext2D} context the context to apply the camera translation to
+   */
   setCameraView(context) {
     // log.debug('Renderer - setCameraView()');
 
@@ -1170,6 +1538,10 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Clears the full area of the given context
+   * @param {CanvasRenderingContext2D} context the context to clear
+   */
   clearScreen(context) {
     // log.debug('Renderer - clearScreen()', context);
 
@@ -1181,6 +1553,10 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Returns true if the current camera position matches the last rendered frame position
+   * @return {Boolean}
+   */
   hasRenderedFrame() {
     // log.debug('Renderer - hasRenderedFrame()');
 
@@ -1198,6 +1574,9 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Stores the current camera position as the last rendered frame
+   */
   saveFrame() {
     // log.debug('Renderer - saveFrame()');
 
@@ -1207,6 +1586,10 @@ export default class Renderer {
     }
   }
 
+  /**
+   * Adjusts the canvas overlay opacity to achieve the desired brightness level
+   * @param {Number} level the brightness level between 0 and 100
+   */
   adjustBrightness(level) {
     // log.debug('Renderer - adjustBrightness()', level);
 
@@ -1220,15 +1603,20 @@ export default class Renderer {
     );
   }
 
+  /**
+   * Loads the shadow and sparks static sprites from the entity sprite store
+   */
   loadStaticSprites() {
     log.debug('Renderer - loadStaticSprites()');
 
+    /** @type {Sprite} */
     this.shadowSprite = this.entities.getSprite('shadow16');
 
     // if (!this.shadowSprite.loaded) {
     //   this.shadowSprite.loadSprite();
     // }
 
+    /** @type {Sprite} */
     this.sparksSprite = this.entities.getSprite('sparks');
 
     // if (!this.sparksSprite.loaded) {
@@ -1240,6 +1628,10 @@ export default class Renderer {
    * Miscellaneous functions
    */
 
+  /**
+   * Iterates over every tracked rendering context and invokes a callback for each
+   * @param {Function} callback called with each CanvasRenderingContext2D
+   */
   forEachContext(callback) {
     // log.debug('Renderer - forEachContext()', callback);
 
@@ -1248,6 +1640,10 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Iterates over drawing contexts (background and foreground) skipping the entities context
+   * @param {Function} callback called with each drawing CanvasRenderingContext2D
+   */
   forEachDrawingContext(callback) {
     // log.debug('Renderer - forEachDrawingContext()', callback);
 
@@ -1258,6 +1654,10 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Iterates over every tracked canvas element and invokes a callback for each
+   * @param {Function} callback called with each HTMLCanvasElement
+   */
   forEachCanvas(callback) {
     // log.debug('Renderer - forEachCanvas()', callback);
 
@@ -1266,20 +1666,42 @@ export default class Renderer {
     });
   }
 
+  /**
+   * Detects whether the current device is mobile, tablet or Firefox and caches the result
+   */
   checkDevice() {
     // log.debug('Renderer - checkDevice()');
 
+    /**
+     * Whether the client is running on a mobile device
+     * @type {Boolean}
+     */
     this.mobile = this.game.client.isMobile();
+    /**
+     * Whether the client is running on a tablet device
+     * @type {Boolean}
+     */
     this.tablet = this.game.client.isTablet();
+    /**
+     * Whether the client is running in Firefox
+     * @type {Boolean}
+     */
     this.firefox = Detect.isFirefox();
   }
 
+  /**
+   * Updates forceRendering based on whether the device is portable and the camera is centred
+   */
   verifyCentration() {
     // log.debug('Renderer - verifyCentration()');
 
     this.forceRendering = (this.mobile || this.tablet) && this.camera.centered;
   }
 
+  /**
+   * Returns true if the current device is a mobile or tablet
+   * @return {Boolean}
+   */
   isPortableDevice() {
     // log.debug('Renderer - isPortableDevice()');
 
@@ -1290,24 +1712,42 @@ export default class Renderer {
    * Setters
    */
 
+  /**
+   * Sets the tileset image used for tile rendering
+   * @param {HTMLImageElement} tileset the tileset to use
+   */
   setTileset(tileset) {
     log.debug('Renderer - setTileset()', tileset);
 
+    /** @type {Object} */
     this.tileset = tileset;
   }
 
+  /**
+   * Sets the map instance used during rendering
+   * @param {Map} map the map to use
+   */
   setMap(map) {
     // log.debug('Renderer - setMap()', map);
 
+    /** @type {Map} */
     this.map = map;
   }
 
+  /**
+   * Sets the entities controller used during rendering
+   * @param {Entities} entities the entities controller to use
+   */
   setEntities(entities) {
     // log.debug('Renderer - entities()', entities);
 
     this.entities = entities;
   }
 
+  /**
+   * Sets the input handler used during rendering
+   * @param {Input} input the input handler to use
+   */
   setInput(input) {
     // log.debug('Renderer - setInput()', input);
 
@@ -1318,6 +1758,11 @@ export default class Renderer {
    * Getters
    */
 
+  /**
+   * Calculates and returns the bounding rectangle for an animated tile in screen space
+   * @param {Tile} tile the tile to compute bounds for
+   * @return {Object}
+   */
   getTileBounds(tile) {
     // log.debug('Renderer - getTileBounds()', tile);
 
@@ -1339,6 +1784,11 @@ export default class Renderer {
     return bounds;
   }
 
+  /**
+   * Calculates and returns the bounding rectangle for an entity in screen space
+   * @param {Entity} entity the entity to compute bounds for
+   * @return {Object}
+   */
   getEntityBounds(entity) {
     // log.debug('Renderer - getEntityBounds()', entity);
 
@@ -1363,6 +1813,12 @@ export default class Renderer {
     return bounds;
   }
 
+  /**
+   * Calculates and returns the bounding rectangle for the current target cell in screen space
+   * @param {Number} x optional grid x-coordinate override
+   * @param {Number} y optional grid y-coordinate override
+   * @return {Object}
+   */
   getTargetBounds(x, y) {
     // log.debug('Renderer - getTargetBounds()', x, y);
 
@@ -1382,6 +1838,10 @@ export default class Renderer {
     return bounds;
   }
 
+  /**
+   * Returns the currently active tileset image
+   * @return {HTMLImageElement}
+   */
   getTileset() {
     // log.debug('Renderer - getTileset()');
 

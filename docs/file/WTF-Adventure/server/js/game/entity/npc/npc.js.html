@@ -172,12 +172,31 @@
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/server/js/game/entity/npc/npc.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Entity from &apos;../entity.js&apos;;
 
+/**
+ * Represents a non-player character in the game world
+ * @class
+ */
 export default class NPC extends Entity {
+  /**
+   * Default constructor
+   * @param {String} id the NPC type identifier
+   * @param {String} instance the unique instance identifier
+   * @param {Number} x the x-coordinate of the NPC
+   * @param {Number} y the y-coordinate of the NPC
+   */
   constructor(id, instance, x, y) {
     super(id, &apos;npc&apos;, instance, x, y);
+    /**
+     * The current index into the NPC&apos;s dialogue messages array
+     * @type {Number}
+     */
     this.talkIndex = 0;
   }
 
+  /**
+   * Advances the talk index for the NPC&apos;s dialogue
+   * @param {Array} messages the array of dialogue messages
+   */
   talk(messages) {
     if (this.talkIndex &gt; messages.length) {
       this.talkIndex = 0;

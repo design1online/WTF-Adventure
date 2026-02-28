@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 209,
+  "end": 604,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 13,
+      "line": 33,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 209,
+    "end": 604,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 13,
+        "line": 33,
         "column": 0
       }
     },
@@ -95,80 +95,99 @@
             "raw": "'jquery'"
           },
           "value": "jquery"
-        }
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Manages the abilities shortcut bar interface\n * @class\n ",
+            "start": 25,
+            "end": 90,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 25,
-        "end": 208,
+        "start": 91,
+        "end": 603,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 7,
             "column": 0
           },
           "end": {
-            "line": 12,
+            "line": 32,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 40,
-          "end": 208,
+          "start": 106,
+          "end": 603,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 7,
               "column": 15
             },
             "end": {
-              "line": 12,
+              "line": 32,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 46,
-            "end": 55,
+            "start": 112,
+            "end": 121,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 7,
                 "column": 21
               },
               "end": {
-                "line": 3,
+                "line": 7,
                 "column": 30
               },
               "identifierName": "Abilities"
             },
-            "name": "Abilities"
+            "name": "Abilities",
+            "leadingComments": null
           },
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 56,
-            "end": 208,
+            "start": 122,
+            "end": 603,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 7,
                 "column": 31
               },
               "end": {
-                "line": 12,
+                "line": 32,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 60,
-                "end": 149,
+                "start": 211,
+                "end": 449,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 12,
                     "column": 2
                   },
                   "end": {
-                    "line": 7,
+                    "line": 23,
                     "column": 3
                   }
                 },
@@ -176,20 +195,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 60,
-                  "end": 71,
+                  "start": 211,
+                  "end": 222,
                   "loc": {
                     "start": {
-                      "line": 4,
+                      "line": 12,
                       "column": 2
                     },
                     "end": {
-                      "line": 4,
+                      "line": 12,
                       "column": 13
                     },
                     "identifierName": "constructor"
                   },
-                  "name": "constructor"
+                  "name": "constructor",
+                  "leadingComments": null
                 },
                 "kind": "constructor",
                 "id": null,
@@ -199,15 +219,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 72,
-                    "end": 76,
+                    "start": 223,
+                    "end": 227,
                     "loc": {
                       "start": {
-                        "line": 4,
+                        "line": 12,
                         "column": 14
                       },
                       "end": {
-                        "line": 4,
+                        "line": 12,
                         "column": 18
                       },
                       "identifierName": "game"
@@ -217,217 +237,258 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 78,
-                  "end": 149,
+                  "start": 229,
+                  "end": 449,
                   "loc": {
                     "start": {
-                      "line": 4,
+                      "line": 12,
                       "column": 20
                     },
                     "end": {
-                      "line": 7,
+                      "line": 23,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 84,
-                      "end": 101,
+                      "start": 296,
+                      "end": 313,
                       "loc": {
                         "start": {
-                          "line": 5,
+                          "line": 17,
                           "column": 4
                         },
                         "end": {
-                          "line": 5,
+                          "line": 17,
                           "column": 21
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 84,
-                        "end": 100,
+                        "start": 296,
+                        "end": 312,
                         "loc": {
                           "start": {
-                            "line": 5,
+                            "line": 17,
                             "column": 4
                           },
                           "end": {
-                            "line": 5,
+                            "line": 17,
                             "column": 20
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 84,
-                          "end": 93,
+                          "start": 296,
+                          "end": 305,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 17,
                               "column": 4
                             },
                             "end": {
-                              "line": 5,
+                              "line": 17,
                               "column": 13
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 84,
-                            "end": 88,
+                            "start": 296,
+                            "end": 300,
                             "loc": {
                               "start": {
-                                "line": 5,
+                                "line": 17,
                                 "column": 4
                               },
                               "end": {
-                                "line": 5,
+                                "line": 17,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 89,
-                            "end": 93,
+                            "start": 301,
+                            "end": 305,
                             "loc": {
                               "start": {
-                                "line": 5,
+                                "line": 17,
                                 "column": 9
                               },
                               "end": {
-                                "line": 5,
+                                "line": 17,
                                 "column": 13
                               },
                               "identifierName": "game"
                             },
                             "name": "game"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 96,
-                          "end": 100,
+                          "start": 308,
+                          "end": 312,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 17,
                               "column": 16
                             },
                             "end": {
-                              "line": 5,
+                              "line": 17,
                               "column": 20
                             },
                             "identifierName": "game"
                           },
                           "name": "game"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The game instance\n     * @type {Game}\n     ",
+                          "start": 235,
+                          "end": 291,
+                          "loc": {
+                            "start": {
+                              "line": 13,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The ability shortcut bar container element\n     * @type {jQuery}\n     ",
+                          "start": 318,
+                          "end": 401,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 106,
-                      "end": 145,
+                      "start": 406,
+                      "end": 445,
                       "loc": {
                         "start": {
-                          "line": 6,
+                          "line": 22,
                           "column": 4
                         },
                         "end": {
-                          "line": 6,
+                          "line": 22,
                           "column": 43
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 106,
-                        "end": 144,
+                        "start": 406,
+                        "end": 444,
                         "loc": {
                           "start": {
-                            "line": 6,
+                            "line": 22,
                             "column": 4
                           },
                           "end": {
-                            "line": 6,
+                            "line": 22,
                             "column": 42
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 106,
-                          "end": 120,
+                          "start": 406,
+                          "end": 420,
                           "loc": {
                             "start": {
-                              "line": 6,
+                              "line": 22,
                               "column": 4
                             },
                             "end": {
-                              "line": 6,
+                              "line": 22,
                               "column": 18
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 106,
-                            "end": 110,
+                            "start": 406,
+                            "end": 410,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 22,
                                 "column": 4
                               },
                               "end": {
-                                "line": 6,
+                                "line": 22,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 111,
-                            "end": 120,
+                            "start": 411,
+                            "end": 420,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 22,
                                 "column": 9
                               },
                               "end": {
-                                "line": 6,
+                                "line": 22,
                                 "column": 18
                               },
                               "identifierName": "shortcuts"
                             },
                             "name": "shortcuts"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "CallExpression",
-                          "start": 123,
-                          "end": 144,
+                          "start": 423,
+                          "end": 444,
                           "loc": {
                             "start": {
-                              "line": 6,
+                              "line": 22,
                               "column": 21
                             },
                             "end": {
-                              "line": 6,
+                              "line": 22,
                               "column": 42
                             }
                           },
                           "callee": {
                             "type": "Identifier",
-                            "start": 123,
-                            "end": 124,
+                            "start": 423,
+                            "end": 424,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 22,
                                 "column": 21
                               },
                               "end": {
-                                "line": 6,
+                                "line": 22,
                                 "column": 22
                               },
                               "identifierName": "$"
@@ -437,15 +498,15 @@
                           "arguments": [
                             {
                               "type": "StringLiteral",
-                              "start": 125,
-                              "end": 143,
+                              "start": 425,
+                              "end": 443,
                               "loc": {
                                 "start": {
-                                  "line": 6,
+                                  "line": 22,
                                   "column": 23
                                 },
                                 "end": {
-                                  "line": 6,
+                                  "line": 22,
                                   "column": 41
                                 }
                               },
@@ -456,24 +517,80 @@
                               "value": "#abilityShortcut"
                             }
                           ]
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The ability shortcut bar container element\n     * @type {jQuery}\n     ",
+                          "start": 318,
+                          "end": 401,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ]
                     }
                   ],
-                  "directives": []
-                }
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Default constructor\n   * @param {Game} game an instance of the game\n   ",
+                    "start": 126,
+                    "end": 208,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Returns the list element within the shortcuts container\n   * @return {jQuery}\n   ",
+                    "start": 453,
+                    "end": 545,
+                    "loc": {
+                      "start": {
+                        "line": 25,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               },
               {
                 "type": "ClassMethod",
-                "start": 153,
-                "end": 206,
+                "start": 548,
+                "end": 601,
                 "loc": {
                   "start": {
-                    "line": 9,
+                    "line": 29,
                     "column": 2
                   },
                   "end": {
-                    "line": 11,
+                    "line": 31,
                     "column": 3
                   }
                 },
@@ -481,20 +598,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 153,
-                  "end": 160,
+                  "start": 548,
+                  "end": 555,
                   "loc": {
                     "start": {
-                      "line": 9,
+                      "line": 29,
                       "column": 2
                     },
                     "end": {
-                      "line": 9,
+                      "line": 29,
                       "column": 9
                     },
                     "identifierName": "getList"
                   },
-                  "name": "getList"
+                  "name": "getList",
+                  "leadingComments": null
                 },
                 "kind": "method",
                 "id": null,
@@ -504,101 +622,101 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 163,
-                  "end": 206,
+                  "start": 558,
+                  "end": 601,
                   "loc": {
                     "start": {
-                      "line": 9,
+                      "line": 29,
                       "column": 12
                     },
                     "end": {
-                      "line": 11,
+                      "line": 31,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 169,
-                      "end": 202,
+                      "start": 564,
+                      "end": 597,
                       "loc": {
                         "start": {
-                          "line": 10,
+                          "line": 30,
                           "column": 4
                         },
                         "end": {
-                          "line": 10,
+                          "line": 30,
                           "column": 37
                         }
                       },
                       "argument": {
                         "type": "CallExpression",
-                        "start": 176,
-                        "end": 201,
+                        "start": 571,
+                        "end": 596,
                         "loc": {
                           "start": {
-                            "line": 10,
+                            "line": 30,
                             "column": 11
                           },
                           "end": {
-                            "line": 10,
+                            "line": 30,
                             "column": 36
                           }
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 176,
-                          "end": 195,
+                          "start": 571,
+                          "end": 590,
                           "loc": {
                             "start": {
-                              "line": 10,
+                              "line": 30,
                               "column": 11
                             },
                             "end": {
-                              "line": 10,
+                              "line": 30,
                               "column": 30
                             }
                           },
                           "object": {
                             "type": "MemberExpression",
-                            "start": 176,
-                            "end": 190,
+                            "start": 571,
+                            "end": 585,
                             "loc": {
                               "start": {
-                                "line": 10,
+                                "line": 30,
                                 "column": 11
                               },
                               "end": {
-                                "line": 10,
+                                "line": 30,
                                 "column": 25
                               }
                             },
                             "object": {
                               "type": "ThisExpression",
-                              "start": 176,
-                              "end": 180,
+                              "start": 571,
+                              "end": 575,
                               "loc": {
                                 "start": {
-                                  "line": 10,
+                                  "line": 30,
                                   "column": 11
                                 },
                                 "end": {
-                                  "line": 10,
+                                  "line": 30,
                                   "column": 15
                                 }
                               }
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 181,
-                              "end": 190,
+                              "start": 576,
+                              "end": 585,
                               "loc": {
                                 "start": {
-                                  "line": 10,
+                                  "line": 30,
                                   "column": 16
                                 },
                                 "end": {
-                                  "line": 10,
+                                  "line": 30,
                                   "column": 25
                                 },
                                 "identifierName": "shortcuts"
@@ -609,15 +727,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 191,
-                            "end": 195,
+                            "start": 586,
+                            "end": 590,
                             "loc": {
                               "start": {
-                                "line": 10,
+                                "line": 30,
                                 "column": 26
                               },
                               "end": {
-                                "line": 10,
+                                "line": 30,
                                 "column": 30
                               },
                               "identifierName": "find"
@@ -629,15 +747,15 @@
                         "arguments": [
                           {
                             "type": "StringLiteral",
-                            "start": 196,
-                            "end": 200,
+                            "start": 591,
+                            "end": 595,
                             "loc": {
                               "start": {
-                                "line": 10,
+                                "line": 30,
                                 "column": 31
                               },
                               "end": {
-                                "line": 10,
+                                "line": 30,
                                 "column": 35
                               }
                             },
@@ -652,18 +770,152 @@
                     }
                   ],
                   "directives": []
-                }
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Returns the list element within the shortcuts container\n   * @return {jQuery}\n   ",
+                    "start": 453,
+                    "end": 545,
+                    "loc": {
+                      "start": {
+                        "line": 25,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Manages the abilities shortcut bar interface\n * @class\n ",
+              "start": 25,
+              "end": 90,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 6,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Manages the abilities shortcut bar interface\n * @class\n ",
+            "start": 25,
+            "end": 90,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Manages the abilities shortcut bar interface\n * @class\n ",
+      "start": 25,
+      "end": 90,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Default constructor\n   * @param {Game} game an instance of the game\n   ",
+      "start": 126,
+      "end": 208,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 11,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The game instance\n     * @type {Game}\n     ",
+      "start": 235,
+      "end": 291,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 4
+        },
+        "end": {
+          "line": 16,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The ability shortcut bar container element\n     * @type {jQuery}\n     ",
+      "start": 318,
+      "end": 401,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 4
+        },
+        "end": {
+          "line": 21,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Returns the list element within the shortcuts container\n   * @return {jQuery}\n   ",
+      "start": 453,
+      "end": 545,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 2
+        },
+        "end": {
+          "line": 28,
+          "column": 5
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -799,6 +1051,22 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n * Manages the abilities shortcut bar interface\n * @class\n ",
+      "start": 25,
+      "end": 90,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
       "type": {
         "label": "export",
         "keyword": "export",
@@ -813,15 +1081,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 25,
-      "end": 31,
+      "start": 91,
+      "end": 97,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 6
         }
       }
@@ -841,15 +1109,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 32,
-      "end": 39,
+      "start": 98,
+      "end": 105,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 7
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 14
         }
       }
@@ -869,15 +1137,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 40,
-      "end": 45,
+      "start": 106,
+      "end": 111,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 15
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 20
         }
       }
@@ -895,15 +1163,15 @@
         "binop": null
       },
       "value": "Abilities",
-      "start": 46,
-      "end": 55,
+      "start": 112,
+      "end": 121,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 21
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 30
         }
       }
@@ -920,16 +1188,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 56,
-      "end": 57,
+      "start": 122,
+      "end": 123,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 31
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 32
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Default constructor\n   * @param {Game} game an instance of the game\n   ",
+      "start": 126,
+      "end": 208,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 11,
+          "column": 5
         }
       }
     },
@@ -946,15 +1230,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 60,
-      "end": 71,
+      "start": 211,
+      "end": 222,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 2
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 13
         }
       }
@@ -971,15 +1255,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 71,
-      "end": 72,
+      "start": 222,
+      "end": 223,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 13
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 14
         }
       }
@@ -997,15 +1281,15 @@
         "binop": null
       },
       "value": "game",
-      "start": 72,
-      "end": 76,
+      "start": 223,
+      "end": 227,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 14
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 18
         }
       }
@@ -1022,15 +1306,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 76,
-      "end": 77,
+      "start": 227,
+      "end": 228,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 18
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 19
         }
       }
@@ -1047,16 +1331,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 78,
-      "end": 79,
+      "start": 229,
+      "end": 230,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 20
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 21
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The game instance\n     * @type {Game}\n     ",
+      "start": 235,
+      "end": 291,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 4
+        },
+        "end": {
+          "line": 16,
+          "column": 7
         }
       }
     },
@@ -1075,15 +1375,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 84,
-      "end": 88,
+      "start": 296,
+      "end": 300,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 17,
           "column": 4
         },
         "end": {
-          "line": 5,
+          "line": 17,
           "column": 8
         }
       }
@@ -1101,15 +1401,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 88,
-      "end": 89,
+      "start": 300,
+      "end": 301,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 17,
           "column": 8
         },
         "end": {
-          "line": 5,
+          "line": 17,
           "column": 9
         }
       }
@@ -1127,15 +1427,15 @@
         "binop": null
       },
       "value": "game",
-      "start": 89,
-      "end": 93,
+      "start": 301,
+      "end": 305,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 17,
           "column": 9
         },
         "end": {
-          "line": 5,
+          "line": 17,
           "column": 13
         }
       }
@@ -1154,15 +1454,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 94,
-      "end": 95,
+      "start": 306,
+      "end": 307,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 17,
           "column": 14
         },
         "end": {
-          "line": 5,
+          "line": 17,
           "column": 15
         }
       }
@@ -1180,15 +1480,15 @@
         "binop": null
       },
       "value": "game",
-      "start": 96,
-      "end": 100,
+      "start": 308,
+      "end": 312,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 17,
           "column": 16
         },
         "end": {
-          "line": 5,
+          "line": 17,
           "column": 20
         }
       }
@@ -1206,16 +1506,32 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 100,
-      "end": 101,
+      "start": 312,
+      "end": 313,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 17,
           "column": 20
         },
         "end": {
-          "line": 5,
+          "line": 17,
           "column": 21
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The ability shortcut bar container element\n     * @type {jQuery}\n     ",
+      "start": 318,
+      "end": 401,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 4
+        },
+        "end": {
+          "line": 21,
+          "column": 7
         }
       }
     },
@@ -1234,15 +1550,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 106,
-      "end": 110,
+      "start": 406,
+      "end": 410,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 4
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 8
         }
       }
@@ -1260,15 +1576,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 110,
-      "end": 111,
+      "start": 410,
+      "end": 411,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 8
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 9
         }
       }
@@ -1286,15 +1602,15 @@
         "binop": null
       },
       "value": "shortcuts",
-      "start": 111,
-      "end": 120,
+      "start": 411,
+      "end": 420,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 9
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 18
         }
       }
@@ -1313,15 +1629,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 121,
-      "end": 122,
+      "start": 421,
+      "end": 422,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 19
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 20
         }
       }
@@ -1339,15 +1655,15 @@
         "binop": null
       },
       "value": "$",
-      "start": 123,
-      "end": 124,
+      "start": 423,
+      "end": 424,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 21
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 22
         }
       }
@@ -1364,15 +1680,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 124,
-      "end": 125,
+      "start": 424,
+      "end": 425,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 22
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 23
         }
       }
@@ -1391,15 +1707,15 @@
         "updateContext": null
       },
       "value": "#abilityShortcut",
-      "start": 125,
-      "end": 143,
+      "start": 425,
+      "end": 443,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 23
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 41
         }
       }
@@ -1416,15 +1732,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 143,
-      "end": 144,
+      "start": 443,
+      "end": 444,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 41
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 42
         }
       }
@@ -1442,15 +1758,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 144,
-      "end": 145,
+      "start": 444,
+      "end": 445,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 22,
           "column": 42
         },
         "end": {
-          "line": 6,
+          "line": 22,
           "column": 43
         }
       }
@@ -1467,16 +1783,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 148,
-      "end": 149,
+      "start": 448,
+      "end": 449,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 23,
           "column": 2
         },
         "end": {
-          "line": 7,
+          "line": 23,
           "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Returns the list element within the shortcuts container\n   * @return {jQuery}\n   ",
+      "start": 453,
+      "end": 545,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 2
+        },
+        "end": {
+          "line": 28,
+          "column": 5
         }
       }
     },
@@ -1493,15 +1825,15 @@
         "binop": null
       },
       "value": "getList",
-      "start": 153,
-      "end": 160,
+      "start": 548,
+      "end": 555,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 29,
           "column": 2
         },
         "end": {
-          "line": 9,
+          "line": 29,
           "column": 9
         }
       }
@@ -1518,15 +1850,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 160,
-      "end": 161,
+      "start": 555,
+      "end": 556,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 29,
           "column": 9
         },
         "end": {
-          "line": 9,
+          "line": 29,
           "column": 10
         }
       }
@@ -1543,15 +1875,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 161,
-      "end": 162,
+      "start": 556,
+      "end": 557,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 29,
           "column": 10
         },
         "end": {
-          "line": 9,
+          "line": 29,
           "column": 11
         }
       }
@@ -1568,15 +1900,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 163,
-      "end": 164,
+      "start": 558,
+      "end": 559,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 29,
           "column": 12
         },
         "end": {
-          "line": 9,
+          "line": 29,
           "column": 13
         }
       }
@@ -1596,15 +1928,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 169,
-      "end": 175,
+      "start": 564,
+      "end": 570,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 4
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 10
         }
       }
@@ -1624,15 +1956,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 176,
-      "end": 180,
+      "start": 571,
+      "end": 575,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 11
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 15
         }
       }
@@ -1650,15 +1982,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 180,
-      "end": 181,
+      "start": 575,
+      "end": 576,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 15
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 16
         }
       }
@@ -1676,15 +2008,15 @@
         "binop": null
       },
       "value": "shortcuts",
-      "start": 181,
-      "end": 190,
+      "start": 576,
+      "end": 585,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 16
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 25
         }
       }
@@ -1702,15 +2034,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 190,
-      "end": 191,
+      "start": 585,
+      "end": 586,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 25
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 26
         }
       }
@@ -1728,15 +2060,15 @@
         "binop": null
       },
       "value": "find",
-      "start": 191,
-      "end": 195,
+      "start": 586,
+      "end": 590,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 26
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 30
         }
       }
@@ -1753,15 +2085,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 195,
-      "end": 196,
+      "start": 590,
+      "end": 591,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 30
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 31
         }
       }
@@ -1780,15 +2112,15 @@
         "updateContext": null
       },
       "value": "ul",
-      "start": 196,
-      "end": 200,
+      "start": 591,
+      "end": 595,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 31
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 35
         }
       }
@@ -1805,15 +2137,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 200,
-      "end": 201,
+      "start": 595,
+      "end": 596,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 35
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 36
         }
       }
@@ -1831,15 +2163,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 201,
-      "end": 202,
+      "start": 596,
+      "end": 597,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 30,
           "column": 36
         },
         "end": {
-          "line": 10,
+          "line": 30,
           "column": 37
         }
       }
@@ -1856,15 +2188,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 205,
-      "end": 206,
+      "start": 600,
+      "end": 601,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 31,
           "column": 2
         },
         "end": {
-          "line": 11,
+          "line": 31,
           "column": 3
         }
       }
@@ -1881,15 +2213,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 207,
-      "end": 208,
+      "start": 602,
+      "end": 603,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 32,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 32,
           "column": 1
         }
       }
@@ -1907,15 +2239,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 209,
-      "end": 209,
+      "start": 604,
+      "end": 604,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 33,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 33,
           "column": 0
         }
       }

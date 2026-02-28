@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Equipment from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber7">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Equipment from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber11">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber7">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber11">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,8 +196,7 @@
 
   
   
-  <div class="description" data-ice="description"><p>Count represents the enchantment level of
-the equipment child</p>
+  <div class="description" data-ice="description"><p>Base class representing a piece of equipment worn by the player</p>
 </div>
   
 
@@ -230,13 +229,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, ability: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, abilityLevel: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -265,13 +265,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-ability">ability</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-ability">ability</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The ability ID associated with this equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -293,13 +294,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-abilityLevel">abilityLevel</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-abilityLevel">abilityLevel</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The level of the ability associated with this equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -321,13 +323,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-count">count</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-count">count</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The enchantment level of the equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -349,13 +352,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-id">id</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-id">id</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The item ID of the equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -377,13 +381,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-itemsDictionary">itemsDictionary</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-itemsDictionary">itemsDictionary</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Reference to the items dictionary for stat lookups</p>
+</div>
       </div>
     </td>
     <td>
@@ -405,13 +410,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-name">name</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-member-name">name</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The display name of the equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -440,13 +446,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getAbility">getAbility</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getAbility">getAbility</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the ability ID associated with this equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -468,13 +475,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getAbilityLevel">getAbilityLevel</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getAbilityLevel">getAbilityLevel</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the ability level of this equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -496,13 +504,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getBaseAmplifier">getBaseAmplifier</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getBaseAmplifier">getBaseAmplifier</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the base stat amplifier provided by this equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -524,13 +533,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getCount">getCount</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getCount">getCount</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the enchantment level (count) of this equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -552,13 +562,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getData">getData</a></span></span><span class="code" data-ice="signature">(): <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span><span>[]</span></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getData">getData</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns an array of equipment data for serialization</p>
+</div>
       </div>
     </td>
     <td>
@@ -580,13 +591,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getId">getId</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getId">getId</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the item ID of this equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -608,13 +620,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getItem">getItem</a></span></span><span class="code" data-ice="signature">(): {&quot;name&quot;: <span>*</span>, &quot;string&quot;: <span>*</span>, &quot;id&quot;: <span>*</span>, &quot;count&quot;: <span>*</span>, &quot;ability&quot;: <span>*</span>, &quot;abilityLevel&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getItem">getItem</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns a plain object describing this equipment item</p>
+</div>
       </div>
     </td>
     <td>
@@ -636,13 +649,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getName">getName</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getName">getName</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the display name of this equipment</p>
+</div>
       </div>
     </td>
     <td>
@@ -664,13 +678,14 @@ the equipment child</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getName">getName</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js~Equipment.html#instance-method-getName">getName</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the string identifier of this equipment from the items dictionary</p>
+</div>
       </div>
     </td>
     <td>
@@ -696,22 +711,68 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, ability: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, abilityLevel: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber20">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">name</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the name of the equipment</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">id</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the item ID of the equipment</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">count</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the enchantment level of the equipment</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">ability</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the ability ID associated with this equipment</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">abilityLevel</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the level of the equipment&apos;s ability</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -742,18 +803,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">ability</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">ability</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber40">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The ability ID associated with this equipment</p>
+</div>
 
   
 
@@ -785,18 +847,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">abilityLevel</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">abilityLevel</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber45">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The level of the ability associated with this equipment</p>
+</div>
 
   
 
@@ -828,18 +891,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">count</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">count</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber35">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The enchantment level of the equipment</p>
+</div>
 
   
 
@@ -871,18 +935,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">id</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">id</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber10">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber30">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The item ID of the equipment</p>
+</div>
 
   
 
@@ -914,18 +979,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">itemsDictionary</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">itemsDictionary</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber50">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the items dictionary for stat lookups</p>
+</div>
 
   
 
@@ -957,18 +1023,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">name</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">name</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber25">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The display name of the equipment</p>
+</div>
 
   
 
@@ -1003,18 +1070,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getAbility</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getAbility</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber29">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber81">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the ability ID associated with this equipment</p>
+</div>
 
   
 
@@ -1026,7 +1094,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
           
         </tr>
       </tbody>
@@ -1058,18 +1126,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getAbilityLevel</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getAbilityLevel</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber33">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber89">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the ability level of this equipment</p>
+</div>
 
   
 
@@ -1081,7 +1150,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
           
         </tr>
       </tbody>
@@ -1113,18 +1182,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getBaseAmplifier</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="code" data-ice="name">getBaseAmplifier</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber37">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber97">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the base stat amplifier provided by this equipment</p>
+</div>
 
   
 
@@ -1136,7 +1206,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
           
         </tr>
       </tbody>
@@ -1168,18 +1238,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getCount</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getCount</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber73">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the enchantment level (count) of this equipment</p>
+</div>
 
   
 
@@ -1191,7 +1262,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
           
         </tr>
       </tbody>
@@ -1223,18 +1294,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getData</span><span class="code" data-ice="signature">(): <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span><span>[]</span></span></span>
+    <span class="code" data-ice="name">getData</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber41">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber105">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns an array of equipment data for serialization</p>
+</div>
 
   
 
@@ -1246,7 +1318,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span><span>[]</span></span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></td>
           
         </tr>
       </tbody>
@@ -1278,18 +1350,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getId</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getId</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber65">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the item ID of this equipment</p>
+</div>
 
   
 
@@ -1301,7 +1374,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
           
         </tr>
       </tbody>
@@ -1333,18 +1406,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getItem</span><span class="code" data-ice="signature">(): {&quot;name&quot;: <span>*</span>, &quot;string&quot;: <span>*</span>, &quot;id&quot;: <span>*</span>, &quot;count&quot;: <span>*</span>, &quot;ability&quot;: <span>*</span>, &quot;abilityLevel&quot;: <span>*</span>}</span>
+    <span class="code" data-ice="name">getItem</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber55">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber127">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns a plain object describing this equipment item</p>
+</div>
 
   
 
@@ -1356,7 +1430,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType">{&quot;name&quot;: <span>*</span>, &quot;string&quot;: <span>*</span>, &quot;id&quot;: <span>*</span>, &quot;count&quot;: <span>*</span>, &quot;ability&quot;: <span>*</span>, &quot;abilityLevel&quot;: <span>*</span>}</td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
           
         </tr>
       </tbody>
@@ -1388,18 +1462,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getName</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getName</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber17">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber57">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the display name of this equipment</p>
+</div>
 
   
 
@@ -1411,7 +1486,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
           
         </tr>
       </tbody>
@@ -1443,18 +1518,19 @@ the equipment child</p>
     
     
     
-    <span class="code" data-ice="name">getName</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getName</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber51">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/equipment/equipment.js.html#lineNumber119">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the string identifier of this equipment from the items dictionary</p>
+</div>
 
   
 
@@ -1466,7 +1542,7 @@ the equipment child</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
           
         </tr>
       </tbody>

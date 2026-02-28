@@ -1,6 +1,14 @@
 /* global navigator, window */
+/**
+ * Checks whether the user agent string contains the given substring
+ * @param {String} string the substring to search for in the user agent
+ * @return {Boolean}
+ */
 const userAgentContains = string => navigator.userAgent.indexOf(string) !== -1;
 
+/**
+ * Utility object for detecting the user's browser and device environment
+ */
 const Detect = {
   isIpad: () => /ipad/i.test(navigator.userAgent.toLowerCase()),
   isAndroid: () => /Android/i.test(navigator.userAgent),

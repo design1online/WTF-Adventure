@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Minigame from &apos;<span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber1">WTF-Adventure/WTF-Adventure/server/js/minigames/minigame.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Minigame from &apos;<span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber5">WTF-Adventure/WTF-Adventure/server/js/minigames/minigame.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber1">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber5">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Abstract base class representing a minigame</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-member-id">id</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-member-id">id</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The unique identifier for this minigame</p>
+</div>
       </div>
     </td>
     <td>
@@ -291,13 +294,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-member-name">name</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-member-name">name</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The display name of this minigame</p>
+</div>
       </div>
     </td>
     <td>
@@ -326,13 +330,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-method-getId">getId</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-method-getId">getId</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the unique identifier of this minigame</p>
+</div>
       </div>
     </td>
     <td>
@@ -354,13 +359,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-method-getName">getName</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/minigames/minigame.js~Minigame.html#instance-method-getName">getName</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the display name of this minigame</p>
+</div>
       </div>
     </td>
     <td>
@@ -386,22 +392,47 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, name: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber2">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber11">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">id</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the unique identifier for this minigame</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">name</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the display name of this minigame</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -432,18 +463,19 @@
     
     
     
-    <span class="code" data-ice="name">id</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">id</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber3">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The unique identifier for this minigame</p>
+</div>
 
   
 
@@ -475,18 +507,19 @@
     
     
     
-    <span class="code" data-ice="name">name</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">name</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber21">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The display name of this minigame</p>
+</div>
 
   
 
@@ -521,18 +554,19 @@
     
     
     
-    <span class="code" data-ice="name">getId</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getId</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber7">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber28">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the unique identifier of this minigame</p>
+</div>
 
   
 
@@ -544,7 +578,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
           
         </tr>
       </tbody>
@@ -576,18 +610,19 @@
     
     
     
-    <span class="code" data-ice="name">getName</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getName</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/minigames/minigame.js.html#lineNumber36">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the display name of this minigame</p>
+</div>
 
   
 
@@ -599,7 +634,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
           
         </tr>
       </tbody>

@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 228,
+  "end": 785,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 12,
+      "line": 37,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 228,
+    "end": 785,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 12,
+        "line": 37,
         "column": 0
       }
     },
@@ -95,80 +95,99 @@
             "raw": "'../../../../../../util/abilities'"
           },
           "value": "../../../../../../util/abilities"
-        }
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Base class representing a single player ability\n * @class\n ",
+            "start": 59,
+            "end": 127,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 59,
-        "end": 227,
+        "start": 128,
+        "end": 784,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 7,
             "column": 0
           },
           "end": {
-            "line": 11,
+            "line": 36,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 74,
-          "end": 227,
+          "start": 143,
+          "end": 784,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 7,
               "column": 15
             },
             "end": {
-              "line": 11,
+              "line": 36,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 80,
-            "end": 87,
+            "start": 149,
+            "end": 156,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 7,
                 "column": 21
               },
               "end": {
-                "line": 3,
+                "line": 7,
                 "column": 28
               },
               "identifierName": "Ability"
             },
-            "name": "Ability"
+            "name": "Ability",
+            "leadingComments": null
           },
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 88,
-            "end": 227,
+            "start": 157,
+            "end": 784,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 7,
                 "column": 29
               },
               "end": {
-                "line": 11,
+                "line": 36,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 92,
-                "end": 225,
+                "start": 318,
+                "end": 782,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 13,
                     "column": 2
                   },
                   "end": {
-                    "line": 10,
+                    "line": 35,
                     "column": 3
                   }
                 },
@@ -176,20 +195,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 92,
-                  "end": 103,
+                  "start": 318,
+                  "end": 329,
                   "loc": {
                     "start": {
-                      "line": 4,
+                      "line": 13,
                       "column": 2
                     },
                     "end": {
-                      "line": 4,
+                      "line": 13,
                       "column": 13
                     },
                     "identifierName": "constructor"
                   },
-                  "name": "constructor"
+                  "name": "constructor",
+                  "leadingComments": null
                 },
                 "kind": "constructor",
                 "id": null,
@@ -199,15 +219,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 104,
-                    "end": 108,
+                    "start": 330,
+                    "end": 334,
                     "loc": {
                       "start": {
-                        "line": 4,
+                        "line": 13,
                         "column": 14
                       },
                       "end": {
-                        "line": 4,
+                        "line": 13,
                         "column": 18
                       },
                       "identifierName": "name"
@@ -216,15 +236,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 110,
-                    "end": 114,
+                    "start": 336,
+                    "end": 340,
                     "loc": {
                       "start": {
-                        "line": 4,
+                        "line": 13,
                         "column": 20
                       },
                       "end": {
-                        "line": 4,
+                        "line": 13,
                         "column": 24
                       },
                       "identifierName": "type"
@@ -234,299 +254,379 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 116,
-                  "end": 225,
+                  "start": 342,
+                  "end": 782,
                   "loc": {
                     "start": {
-                      "line": 4,
+                      "line": 13,
                       "column": 26
                     },
                     "end": {
-                      "line": 10,
+                      "line": 35,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 122,
-                      "end": 139,
+                      "start": 428,
+                      "end": 445,
                       "loc": {
                         "start": {
-                          "line": 5,
+                          "line": 18,
                           "column": 4
                         },
                         "end": {
-                          "line": 5,
+                          "line": 18,
                           "column": 21
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 122,
-                        "end": 138,
+                        "start": 428,
+                        "end": 444,
                         "loc": {
                           "start": {
-                            "line": 5,
+                            "line": 18,
                             "column": 4
                           },
                           "end": {
-                            "line": 5,
+                            "line": 18,
                             "column": 20
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 122,
-                          "end": 131,
+                          "start": 428,
+                          "end": 437,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 18,
                               "column": 4
                             },
                             "end": {
-                              "line": 5,
+                              "line": 18,
                               "column": 13
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 122,
-                            "end": 126,
+                            "start": 428,
+                            "end": 432,
                             "loc": {
                               "start": {
-                                "line": 5,
+                                "line": 18,
                                 "column": 4
                               },
                               "end": {
-                                "line": 5,
+                                "line": 18,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 127,
-                            "end": 131,
+                            "start": 433,
+                            "end": 437,
                             "loc": {
                               "start": {
-                                "line": 5,
+                                "line": 18,
                                 "column": 9
                               },
                               "end": {
-                                "line": 5,
+                                "line": 18,
                                 "column": 13
                               },
                               "identifierName": "name"
                             },
                             "name": "name"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 134,
-                          "end": 138,
+                          "start": 440,
+                          "end": 444,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 18,
                               "column": 16
                             },
                             "end": {
-                              "line": 5,
+                              "line": 18,
                               "column": 20
                             },
                             "identifierName": "name"
                           },
                           "name": "name"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The name identifier of the ability\n     * @type {String}\n     ",
+                          "start": 348,
+                          "end": 423,
+                          "loc": {
+                            "start": {
+                              "line": 14,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 17,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The type category of the ability\n     * @type {String}\n     ",
+                          "start": 450,
+                          "end": 523,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 144,
-                      "end": 161,
+                      "start": 528,
+                      "end": 545,
                       "loc": {
                         "start": {
-                          "line": 6,
+                          "line": 23,
                           "column": 4
                         },
                         "end": {
-                          "line": 6,
+                          "line": 23,
                           "column": 21
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 144,
-                        "end": 160,
+                        "start": 528,
+                        "end": 544,
                         "loc": {
                           "start": {
-                            "line": 6,
+                            "line": 23,
                             "column": 4
                           },
                           "end": {
-                            "line": 6,
+                            "line": 23,
                             "column": 20
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 144,
-                          "end": 153,
+                          "start": 528,
+                          "end": 537,
                           "loc": {
                             "start": {
-                              "line": 6,
+                              "line": 23,
                               "column": 4
                             },
                             "end": {
-                              "line": 6,
+                              "line": 23,
                               "column": 13
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 144,
-                            "end": 148,
+                            "start": 528,
+                            "end": 532,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 23,
                                 "column": 4
                               },
                               "end": {
-                                "line": 6,
+                                "line": 23,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 149,
-                            "end": 153,
+                            "start": 533,
+                            "end": 537,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 23,
                                 "column": 9
                               },
                               "end": {
-                                "line": 6,
+                                "line": 23,
                                 "column": 13
                               },
                               "identifierName": "type"
                             },
                             "name": "type"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 156,
-                          "end": 160,
+                          "start": 540,
+                          "end": 544,
                           "loc": {
                             "start": {
-                              "line": 6,
+                              "line": 23,
                               "column": 16
                             },
                             "end": {
-                              "line": 6,
+                              "line": 23,
                               "column": 20
                             },
                             "identifierName": "type"
                           },
                           "name": "type"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The type category of the ability\n     * @type {String}\n     ",
+                          "start": 450,
+                          "end": 523,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The current level of the ability\n     * @type {Number}\n     ",
+                          "start": 550,
+                          "end": 623,
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 27,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 166,
-                      "end": 182,
+                      "start": 628,
+                      "end": 644,
                       "loc": {
                         "start": {
-                          "line": 7,
+                          "line": 28,
                           "column": 4
                         },
                         "end": {
-                          "line": 7,
+                          "line": 28,
                           "column": 20
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 166,
-                        "end": 181,
+                        "start": 628,
+                        "end": 643,
                         "loc": {
                           "start": {
-                            "line": 7,
+                            "line": 28,
                             "column": 4
                           },
                           "end": {
-                            "line": 7,
+                            "line": 28,
                             "column": 19
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 166,
-                          "end": 176,
+                          "start": 628,
+                          "end": 638,
                           "loc": {
                             "start": {
-                              "line": 7,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 7,
+                              "line": 28,
                               "column": 14
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 166,
-                            "end": 170,
+                            "start": 628,
+                            "end": 632,
                             "loc": {
                               "start": {
-                                "line": 7,
+                                "line": 28,
                                 "column": 4
                               },
                               "end": {
-                                "line": 7,
+                                "line": 28,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 171,
-                            "end": 176,
+                            "start": 633,
+                            "end": 638,
                             "loc": {
                               "start": {
-                                "line": 7,
+                                "line": 28,
                                 "column": 9
                               },
                               "end": {
-                                "line": 7,
+                                "line": 28,
                                 "column": 14
                               },
                               "identifierName": "level"
                             },
                             "name": "level"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "UnaryExpression",
-                          "start": 179,
-                          "end": 181,
+                          "start": 641,
+                          "end": 643,
                           "loc": {
                             "start": {
-                              "line": 7,
+                              "line": 28,
                               "column": 17
                             },
                             "end": {
-                              "line": 7,
+                              "line": 28,
                               "column": 19
                             }
                           },
@@ -534,15 +634,15 @@
                           "prefix": true,
                           "argument": {
                             "type": "NumericLiteral",
-                            "start": 180,
-                            "end": 181,
+                            "start": 642,
+                            "end": 643,
                             "loc": {
                               "start": {
-                                "line": 7,
+                                "line": 28,
                                 "column": 18
                               },
                               "end": {
-                                "line": 7,
+                                "line": 28,
                                 "column": 19
                               }
                             },
@@ -555,125 +655,164 @@
                           "extra": {
                             "parenthesizedArgument": false
                           }
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The current level of the ability\n     * @type {Number}\n     ",
+                          "start": 550,
+                          "end": 623,
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 27,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * Static ability data from the abilities dictionary\n     * @type {Object}\n     ",
+                          "start": 650,
+                          "end": 740,
+                          "loc": {
+                            "start": {
+                              "line": 30,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 188,
-                      "end": 221,
+                      "start": 745,
+                      "end": 778,
                       "loc": {
                         "start": {
-                          "line": 9,
+                          "line": 34,
                           "column": 4
                         },
                         "end": {
-                          "line": 9,
+                          "line": 34,
                           "column": 37
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 188,
-                        "end": 220,
+                        "start": 745,
+                        "end": 777,
                         "loc": {
                           "start": {
-                            "line": 9,
+                            "line": 34,
                             "column": 4
                           },
                           "end": {
-                            "line": 9,
+                            "line": 34,
                             "column": 36
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 188,
-                          "end": 197,
+                          "start": 745,
+                          "end": 754,
                           "loc": {
                             "start": {
-                              "line": 9,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 9,
+                              "line": 34,
                               "column": 13
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 188,
-                            "end": 192,
+                            "start": 745,
+                            "end": 749,
                             "loc": {
                               "start": {
-                                "line": 9,
+                                "line": 34,
                                 "column": 4
                               },
                               "end": {
-                                "line": 9,
+                                "line": 34,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 193,
-                            "end": 197,
+                            "start": 750,
+                            "end": 754,
                             "loc": {
                               "start": {
-                                "line": 9,
+                                "line": 34,
                                 "column": 9
                               },
                               "end": {
-                                "line": 9,
+                                "line": 34,
                                 "column": 13
                               },
                               "identifierName": "data"
                             },
                             "name": "data"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "MemberExpression",
-                          "start": 200,
-                          "end": 220,
+                          "start": 757,
+                          "end": 777,
                           "loc": {
                             "start": {
-                              "line": 9,
+                              "line": 34,
                               "column": 16
                             },
                             "end": {
-                              "line": 9,
+                              "line": 34,
                               "column": 36
                             }
                           },
                           "object": {
                             "type": "MemberExpression",
-                            "start": 200,
-                            "end": 214,
+                            "start": 757,
+                            "end": 771,
                             "loc": {
                               "start": {
-                                "line": 9,
+                                "line": 34,
                                 "column": 16
                               },
                               "end": {
-                                "line": 9,
+                                "line": 34,
                                 "column": 30
                               }
                             },
                             "object": {
                               "type": "Identifier",
-                              "start": 200,
-                              "end": 209,
+                              "start": 757,
+                              "end": 766,
                               "loc": {
                                 "start": {
-                                  "line": 9,
+                                  "line": 34,
                                   "column": 16
                                 },
                                 "end": {
-                                  "line": 9,
+                                  "line": 34,
                                   "column": 25
                                 },
                                 "identifierName": "Abilities"
@@ -682,15 +821,15 @@
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 210,
-                              "end": 214,
+                              "start": 767,
+                              "end": 771,
                               "loc": {
                                 "start": {
-                                  "line": 9,
+                                  "line": 34,
                                   "column": 26
                                 },
                                 "end": {
-                                  "line": 9,
+                                  "line": 34,
                                   "column": 30
                                 },
                                 "identifierName": "data"
@@ -701,15 +840,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 215,
-                            "end": 219,
+                            "start": 772,
+                            "end": 776,
                             "loc": {
                               "start": {
-                                "line": 9,
+                                "line": 34,
                                 "column": 31
                               },
                               "end": {
-                                "line": 9,
+                                "line": 34,
                                 "column": 35
                               },
                               "identifierName": "name"
@@ -717,23 +856,192 @@
                             "name": "name"
                           },
                           "computed": true
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * Static ability data from the abilities dictionary\n     * @type {Object}\n     ",
+                          "start": 650,
+                          "end": 740,
+                          "loc": {
+                            "start": {
+                              "line": 30,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ]
                     }
                   ],
                   "directives": []
-                }
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Default constructor\n   * @param {String} name the name identifier of the ability\n   * @param {String} type the type category of the ability\n   ",
+                    "start": 161,
+                    "end": 315,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Base class representing a single player ability\n * @class\n ",
+              "start": 59,
+              "end": 127,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 6,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Base class representing a single player ability\n * @class\n ",
+            "start": 59,
+            "end": 127,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Base class representing a single player ability\n * @class\n ",
+      "start": 59,
+      "end": 127,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Default constructor\n   * @param {String} name the name identifier of the ability\n   * @param {String} type the type category of the ability\n   ",
+      "start": 161,
+      "end": 315,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 12,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The name identifier of the ability\n     * @type {String}\n     ",
+      "start": 348,
+      "end": 423,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 17,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The type category of the ability\n     * @type {String}\n     ",
+      "start": 450,
+      "end": 523,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 4
+        },
+        "end": {
+          "line": 22,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The current level of the ability\n     * @type {Number}\n     ",
+      "start": 550,
+      "end": 623,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 27,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * Static ability data from the abilities dictionary\n     * @type {Object}\n     ",
+      "start": 650,
+      "end": 740,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 4
+        },
+        "end": {
+          "line": 33,
+          "column": 7
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -869,6 +1177,22 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n * Base class representing a single player ability\n * @class\n ",
+      "start": 59,
+      "end": 127,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3
+        }
+      }
+    },
+    {
       "type": {
         "label": "export",
         "keyword": "export",
@@ -883,15 +1207,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 59,
-      "end": 65,
+      "start": 128,
+      "end": 134,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 6
         }
       }
@@ -911,15 +1235,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 66,
-      "end": 73,
+      "start": 135,
+      "end": 142,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 7
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 14
         }
       }
@@ -939,15 +1263,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 74,
-      "end": 79,
+      "start": 143,
+      "end": 148,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 15
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 20
         }
       }
@@ -965,15 +1289,15 @@
         "binop": null
       },
       "value": "Ability",
-      "start": 80,
-      "end": 87,
+      "start": 149,
+      "end": 156,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 21
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 28
         }
       }
@@ -990,16 +1314,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 88,
-      "end": 89,
+      "start": 157,
+      "end": 158,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 7,
           "column": 29
         },
         "end": {
-          "line": 3,
+          "line": 7,
           "column": 30
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Default constructor\n   * @param {String} name the name identifier of the ability\n   * @param {String} type the type category of the ability\n   ",
+      "start": 161,
+      "end": 315,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 2
+        },
+        "end": {
+          "line": 12,
+          "column": 5
         }
       }
     },
@@ -1016,15 +1356,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 92,
-      "end": 103,
+      "start": 318,
+      "end": 329,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 4,
+          "line": 13,
           "column": 13
         }
       }
@@ -1041,15 +1381,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 103,
-      "end": 104,
+      "start": 329,
+      "end": 330,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 13,
           "column": 13
         },
         "end": {
-          "line": 4,
+          "line": 13,
           "column": 14
         }
       }
@@ -1067,15 +1407,15 @@
         "binop": null
       },
       "value": "name",
-      "start": 104,
-      "end": 108,
+      "start": 330,
+      "end": 334,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 13,
           "column": 14
         },
         "end": {
-          "line": 4,
+          "line": 13,
           "column": 18
         }
       }
@@ -1093,15 +1433,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 108,
-      "end": 109,
+      "start": 334,
+      "end": 335,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 13,
           "column": 18
         },
         "end": {
-          "line": 4,
+          "line": 13,
           "column": 19
         }
       }
@@ -1119,15 +1459,15 @@
         "binop": null
       },
       "value": "type",
-      "start": 110,
-      "end": 114,
+      "start": 336,
+      "end": 340,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 13,
           "column": 20
         },
         "end": {
-          "line": 4,
+          "line": 13,
           "column": 24
         }
       }
@@ -1144,15 +1484,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 114,
-      "end": 115,
+      "start": 340,
+      "end": 341,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 13,
           "column": 24
         },
         "end": {
-          "line": 4,
+          "line": 13,
           "column": 25
         }
       }
@@ -1169,20 +1509,36 @@
         "postfix": false,
         "binop": null
       },
-      "start": 116,
-      "end": 117,
+      "start": 342,
+      "end": 343,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 13,
           "column": 26
         },
         "end": {
-          "line": 4,
+          "line": 13,
           "column": 27
         }
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n     * The name identifier of the ability\n     * @type {String}\n     ",
+      "start": 348,
+      "end": 423,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 17,
+          "column": 7
+        }
+      }
+    },
+    {
       "type": {
         "label": "this",
         "keyword": "this",
@@ -1197,15 +1553,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 122,
-      "end": 126,
+      "start": 428,
+      "end": 432,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 18,
           "column": 4
         },
         "end": {
-          "line": 5,
+          "line": 18,
           "column": 8
         }
       }
@@ -1223,15 +1579,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 126,
-      "end": 127,
+      "start": 432,
+      "end": 433,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 18,
           "column": 8
         },
         "end": {
-          "line": 5,
+          "line": 18,
           "column": 9
         }
       }
@@ -1249,15 +1605,15 @@
         "binop": null
       },
       "value": "name",
-      "start": 127,
-      "end": 131,
+      "start": 433,
+      "end": 437,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 18,
           "column": 9
         },
         "end": {
-          "line": 5,
+          "line": 18,
           "column": 13
         }
       }
@@ -1276,15 +1632,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 132,
-      "end": 133,
+      "start": 438,
+      "end": 439,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 18,
           "column": 14
         },
         "end": {
-          "line": 5,
+          "line": 18,
           "column": 15
         }
       }
@@ -1302,15 +1658,15 @@
         "binop": null
       },
       "value": "name",
-      "start": 134,
-      "end": 138,
+      "start": 440,
+      "end": 444,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 18,
           "column": 16
         },
         "end": {
-          "line": 5,
+          "line": 18,
           "column": 20
         }
       }
@@ -1328,16 +1684,32 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 138,
-      "end": 139,
+      "start": 444,
+      "end": 445,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 18,
           "column": 20
         },
         "end": {
-          "line": 5,
+          "line": 18,
           "column": 21
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The type category of the ability\n     * @type {String}\n     ",
+      "start": 450,
+      "end": 523,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 4
+        },
+        "end": {
+          "line": 22,
+          "column": 7
         }
       }
     },
@@ -1356,15 +1728,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 144,
-      "end": 148,
+      "start": 528,
+      "end": 532,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 23,
           "column": 4
         },
         "end": {
-          "line": 6,
+          "line": 23,
           "column": 8
         }
       }
@@ -1382,15 +1754,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 148,
-      "end": 149,
+      "start": 532,
+      "end": 533,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 23,
           "column": 8
         },
         "end": {
-          "line": 6,
+          "line": 23,
           "column": 9
         }
       }
@@ -1408,15 +1780,15 @@
         "binop": null
       },
       "value": "type",
-      "start": 149,
-      "end": 153,
+      "start": 533,
+      "end": 537,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 23,
           "column": 9
         },
         "end": {
-          "line": 6,
+          "line": 23,
           "column": 13
         }
       }
@@ -1435,15 +1807,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 154,
-      "end": 155,
+      "start": 538,
+      "end": 539,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 23,
           "column": 14
         },
         "end": {
-          "line": 6,
+          "line": 23,
           "column": 15
         }
       }
@@ -1461,15 +1833,15 @@
         "binop": null
       },
       "value": "type",
-      "start": 156,
-      "end": 160,
+      "start": 540,
+      "end": 544,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 23,
           "column": 16
         },
         "end": {
-          "line": 6,
+          "line": 23,
           "column": 20
         }
       }
@@ -1487,16 +1859,32 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 160,
-      "end": 161,
+      "start": 544,
+      "end": 545,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 23,
           "column": 20
         },
         "end": {
-          "line": 6,
+          "line": 23,
           "column": 21
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The current level of the ability\n     * @type {Number}\n     ",
+      "start": 550,
+      "end": 623,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 27,
+          "column": 7
         }
       }
     },
@@ -1515,15 +1903,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 166,
-      "end": 170,
+      "start": 628,
+      "end": 632,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 7,
+          "line": 28,
           "column": 8
         }
       }
@@ -1541,15 +1929,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 170,
-      "end": 171,
+      "start": 632,
+      "end": 633,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 28,
           "column": 8
         },
         "end": {
-          "line": 7,
+          "line": 28,
           "column": 9
         }
       }
@@ -1567,15 +1955,15 @@
         "binop": null
       },
       "value": "level",
-      "start": 171,
-      "end": 176,
+      "start": 633,
+      "end": 638,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 28,
           "column": 9
         },
         "end": {
-          "line": 7,
+          "line": 28,
           "column": 14
         }
       }
@@ -1594,15 +1982,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 177,
-      "end": 178,
+      "start": 639,
+      "end": 640,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 28,
           "column": 15
         },
         "end": {
-          "line": 7,
+          "line": 28,
           "column": 16
         }
       }
@@ -1621,15 +2009,15 @@
         "updateContext": null
       },
       "value": "-",
-      "start": 179,
-      "end": 180,
+      "start": 641,
+      "end": 642,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 28,
           "column": 17
         },
         "end": {
-          "line": 7,
+          "line": 28,
           "column": 18
         }
       }
@@ -1648,15 +2036,15 @@
         "updateContext": null
       },
       "value": 1,
-      "start": 180,
-      "end": 181,
+      "start": 642,
+      "end": 643,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 28,
           "column": 18
         },
         "end": {
-          "line": 7,
+          "line": 28,
           "column": 19
         }
       }
@@ -1674,16 +2062,32 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 181,
-      "end": 182,
+      "start": 643,
+      "end": 644,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 28,
           "column": 19
         },
         "end": {
-          "line": 7,
+          "line": 28,
           "column": 20
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * Static ability data from the abilities dictionary\n     * @type {Object}\n     ",
+      "start": 650,
+      "end": 740,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 4
+        },
+        "end": {
+          "line": 33,
+          "column": 7
         }
       }
     },
@@ -1702,15 +2106,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 188,
-      "end": 192,
+      "start": 745,
+      "end": 749,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 8
         }
       }
@@ -1728,15 +2132,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 192,
-      "end": 193,
+      "start": 749,
+      "end": 750,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 8
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 9
         }
       }
@@ -1754,15 +2158,15 @@
         "binop": null
       },
       "value": "data",
-      "start": 193,
-      "end": 197,
+      "start": 750,
+      "end": 754,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 9
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 13
         }
       }
@@ -1781,15 +2185,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 198,
-      "end": 199,
+      "start": 755,
+      "end": 756,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 14
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 15
         }
       }
@@ -1807,15 +2211,15 @@
         "binop": null
       },
       "value": "Abilities",
-      "start": 200,
-      "end": 209,
+      "start": 757,
+      "end": 766,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 16
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 25
         }
       }
@@ -1833,15 +2237,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 209,
-      "end": 210,
+      "start": 766,
+      "end": 767,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 25
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 26
         }
       }
@@ -1859,15 +2263,15 @@
         "binop": null
       },
       "value": "data",
-      "start": 210,
-      "end": 214,
+      "start": 767,
+      "end": 771,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 26
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 30
         }
       }
@@ -1885,15 +2289,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 214,
-      "end": 215,
+      "start": 771,
+      "end": 772,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 30
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 31
         }
       }
@@ -1911,15 +2315,15 @@
         "binop": null
       },
       "value": "name",
-      "start": 215,
-      "end": 219,
+      "start": 772,
+      "end": 776,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 31
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 35
         }
       }
@@ -1937,15 +2341,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 219,
-      "end": 220,
+      "start": 776,
+      "end": 777,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 35
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 36
         }
       }
@@ -1963,15 +2367,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 220,
-      "end": 221,
+      "start": 777,
+      "end": 778,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 36
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 37
         }
       }
@@ -1988,15 +2392,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 224,
-      "end": 225,
+      "start": 781,
+      "end": 782,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 35,
           "column": 2
         },
         "end": {
-          "line": 10,
+          "line": 35,
           "column": 3
         }
       }
@@ -2013,15 +2417,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 226,
-      "end": 227,
+      "start": 783,
+      "end": 784,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 36,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 36,
           "column": 1
         }
       }
@@ -2039,15 +2443,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 228,
-      "end": 228,
+      "start": 785,
+      "end": 785,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 37,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 37,
           "column": 0
         }
       }

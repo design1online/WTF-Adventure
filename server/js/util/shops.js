@@ -2,6 +2,9 @@ import _ from 'underscore';
 import log from './log.js';
 import PluginLoader from './plugins.js';
 
+/**
+ * Dictionary providing lookup and utility methods for shop definitions
+ */
 const ShopsDictionary = {
   data: [],
   properties: {},

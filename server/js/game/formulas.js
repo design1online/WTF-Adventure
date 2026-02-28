@@ -1,7 +1,17 @@
 import Utils from '../util/utils.js';
 
+/**
+ * Lookup table mapping experience totals to character levels
+ * @type {Array}
+ */
 const LevelExp = [];
 
+/**
+ * Calculates the maximum possible damage an attacker can deal to a target
+ * @param {Character} attacker the attacking character
+ * @param {Character} target the target character
+ * @return {Number}
+ */
 const getMaxDamage = (attacker, target) => {
   if (!attacker || !target) {
     return 0;
@@ -103,6 +113,13 @@ const getMaxDamage = (attacker, target) => {
   return damage;
 };
 
+/**
+ * Calculates randomized damage dealt from an attacker to a target
+ * @param {Character} attacker the attacking character
+ * @param {Character} target the target character
+ * @param {Object} special optional special hit modifiers
+ * @return {Number}
+ */
 const getDamage = (attacker, target, special) => {
   const maxDamage = getMaxDamage(attacker, target, special);
   const accuracy = Utils.randomInt(0, attacker.level);
@@ -111,6 +128,12 @@ const getDamage = (attacker, target, special) => {
 
 /**
  * The critical is the player's max hit plus *= critical multiplier of the weapon
+ */
+/**
+ * Calculates critical hit damage using the weapon's ability level as a multiplier
+ * @param {Character} attacker the attacking character
+ * @param {Character} target the target character
+ * @return {Number}
  */
 const getCritical = (attacker, target) => {
   if (!attacker || !target) {
@@ -124,6 +147,12 @@ const getCritical = (attacker, target) => {
   return damage;
 };
 
+/**
+ * Calculates whether the attacker's weapon breaks based on the target's armour level
+ * @param {Character} attacker the attacking character
+ * @param {Character} target the target character
+ * @return {Boolean}
+ */
 const getWeaponBreak = (attacker, target) => {
   if (!attacker || !target) {
     return false;
@@ -146,8 +175,19 @@ const getWeaponBreak = (attacker, target) => {
  * Preliminary setup until this function is expanded
  * and fits in the necessary algorithms.
  */
+/**
+ * Calculates area-of-effect damage from an attacker to a target
+ * @param {Character} attacker the attacking character
+ * @param {Character} target the target character
+ * @return {Number}
+ */
 const getAoEDamage = (attacker, target) => getDamage(attacker, target);
 
+/**
+ * Converts an experience value to a character level
+ * @param {Number} experience the experience amount
+ * @return {Number}
+ */
 const expToLevel = (experience) => {
   if (experience < 0) {
     return -1;
@@ -162,8 +202,18 @@ const expToLevel = (experience) => {
   return -1;
 };
 
+/**
+ * Returns the maximum hit points for a given level
+ * @param {Number} level the character level
+ * @return {Number}
+ */
 const getMaxHitPoints = level => 100 + level * 30;
 
+/**
+ * Returns the maximum mana for a given level
+ * @param {Number} level the character level
+ * @return {Number}
+ */
 const getMaxMana = level => 10 + level * 8;
 
 export default {

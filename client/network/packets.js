@@ -1,3 +1,6 @@
+/**
+ * Enumeration of all network packet types and their opcodes used for client-server communication
+ */
 const Packets = {
   Handshake: 0,
   Intro: 1,

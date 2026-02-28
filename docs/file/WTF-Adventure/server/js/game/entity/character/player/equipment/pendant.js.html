@@ -173,13 +173,37 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Equipment from &apos;./equipment.js&apos;;
 import ItemsDictionary from &apos;../../../../../util/items.js&apos;;
 
+/**
+ * Represents a pendant equipment item worn by the player
+ * @class
+ */
 export default class Pendant extends Equipment {
+  /**
+   * Default constructor
+   * @param {String} name the name of the pendant
+   * @param {Number} id the item ID of the pendant
+   * @param {Number} count the enchantment level of the pendant
+   * @param {Number} ability the ability ID associated with this pendant
+   * @param {Number} abilityLevel the level of the pendant&apos;s ability
+   */
   constructor(name, id, count, ability, abilityLevel) {
     super(name, id, count, ability, abilityLevel);
+    /**
+     * Reference to the items dictionary for stat lookups
+     * @type {Object}
+     */
     this.itemsDictionary = ItemsDictionary;
+    /**
+     * The pendant level used to calculate the amplifier
+     * @type {Number}
+     */
     this.pendantLevel = this.itemsDictionary.getPendantLevel(name);
   }
 
+  /**
+   * Returns the base stat amplifier provided by this pendant
+   * @return {Number}
+   */
   getBaseAmplifier() {
     return 1.0 + this.pendantLevel / 100;
   }

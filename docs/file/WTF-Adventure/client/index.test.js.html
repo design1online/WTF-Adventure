@@ -180,78 +180,146 @@ jest.mock(&apos;./utils/detect&apos;);
  * @test {Client}
  */
 describe(&apos;Client&apos;, () =&gt; {
-  const instance = new Client();
+
+  let instance;
+
+  beforeEach(() =&gt; {
+    instance = new Client();
+  });
 
   /**
    * @test {Client#constructor}
    */
-  it(&apos;.constructor()&apos;, () =&gt; {
-    expect(Client).toBeDefined();
+  test(&apos;.constructor()&apos;, () =&gt; {
+    expect(instance).toBeDefined();
   });
 
-//   /**
-//    * @test {WTF#load}
-//    */
-//   it(&apos;.load()&apos;, () =&gt; {
-//     expect(instance.app).toEqual(null);
-//     instance.load();
-//     expect(instance.app).toBeDefined();
-//     expect(instance.body).toBeDefined();
-//     expect(instance.chatInput).toBeDefined();
-//   });
+  /**
+   * @test {Client#loadClient}
+   */
+  test(&apos;.loadClient()&apos;, () =&gt; {
+    const spy = jest.spyOn(instance, &quot;loadCharacter&quot;);
+    expect(spy.mock.calls.length).toEqual(0);
 
-//   /**
-//    * @test {WTF#documentReady}
-//    */
-//   it(&apos;.documentReady()&apos;, () =&gt; {
-//     expect(instance.app).toEqual(null);
-//     instance.documentReady();
-//     expect(instance.app).toBeDefined();
-//     expect(instance.body).toBeDefined();
-//     expect(instance.chatInput).toBeDefined();
-//   });
+    instance.loadClient();
 
-//   /**
-//    * @test {WTF#addClasses}
-//    */
-//   it(&apos;.addClasses()&apos;, () =&gt; {
-//     instance.documentReady();
-//     instance.addClasses();
-//     expect(instance.chatInput).toBeDefined();
-//     expect(instance.body[0].className).toEqual(&apos;windows opera&apos;);
-//   });
+    expect(instance.keydownEventListener).toBeDefined();
+    expect(spy.mock.calls.length).toEqual(1);
+  });
 
-//   /**
-//    * @test {WTF#addResizeListeners}
-//    */
-//   it(&apos;.addResizeListeners()&apos;, () =&gt; {
-//     instance.documentReady();
-//     const map = {};
-//     document.addEventListener = jest.fn((event, callback) =&gt; {
-//       map[event] = callback;
-//     });
+  /**
+   * @test {Client#welcomeContinue}
+   */
+  describe(&apos;.welcomeContinue()&apos;, () =&gt; {
 
-//     instance.addResizeListeners();
-//     expect(map.touchstart).toBeDefined();
-//     expect(map.touchmove).toBeDefined();
-//     expect(map.touchmove(new Event(&apos;test&apos;))).toEqual(false);
+    it(&apos;returns false if no game&apos;, () =&gt; {
+      // returns false if no game
+      expect(instance.game).toEqual(null);
+      expect(instance.welcomeContinue()).toBe(false);
+    });
+    
+    it(&apos;dismisses the welcome screen&apos;, () =&gt; {
+      // mock the body
+      instance.body = {
+        removeClass: jest.fn()
+      }
 
-//     // check window orientation changes
-//     const updateOrientationMock = jest.spyOn(instance.app, &apos;updateOrientation&apos;);
-//     window.dispatchEvent(new Event(&apos;orientationchange&apos;));
-//     expect(updateOrientationMock).toHaveBeenCalled();
-//   });
+      // mock the game
+      instance.game = {
+        storage: {
+          data: {
+            welcome: true
+          },
+          save: jest.fn()
+        }
+      };
 
-//   /**
-//    * @test {WTF#initGame}
-//    */
-//   it(&apos;.initGame()&apos;, () =&gt; {
-//     const wtf = new WTF();
-//     expect(wtf.app).toEqual(null);
-//     wtf.documentReady();
-//     wtf.initGame();
-//     expect(wtf.app.readyCallback).toBeDefined();
-//   });
+      expect(instance.game.storage.data.welcome).toEqual(true);
+      const welcomeScreenDismissed = instance.welcomeContinue();
+      expect(instance.game.storage.data.welcome).toEqual(false);
+      expect(instance.game.storage.save).toHaveBeenCalled();
+      expect(instance.body.removeClass).toHaveBeenCalledWith(&apos;welcomeMessage&apos;);
+      expect(welcomeScreenDismissed).toEqual(true);
+    });
+  });
+
+  describe(&apos;.login()&apos;, () =&gt; {
+    it(&apos;returns false if currently logging in&apos;, () =&gt; {
+      instance.loggingIn = true;
+      expect(instance.login()).toEqual(false);
+    });
+
+    it(&apos;returns false if no game&apos;, () =&gt; {
+      instance.game = null;
+      expect(instance.login()).toEqual(false);
+    });
+
+    it(&apos;returns false if game is not loaded&apos;, () =&gt; {
+      instance.game = { loaded: false };
+      expect(instance.login()).toEqual(false);
+    });
+
+    it(&apos;returns false if there is a statusMessage&apos;, () =&gt; {
+      instance.game = { loaded: true };
+      instance.statusMessage = &apos;something&apos;;
+      expect(instance.login()).toEqual(false);
+    });
+
+    it(&apos;returns false if cannot verify login form&apos;, () =&gt; {
+      instance.game = { loaded: true };
+      instance.statusMessage = &apos;something&apos;;
+      instance.verifyForm = () =&gt; { return false; }
+      expect(instance.login()).toEqual(false);
+    });
+
+    it(&apos;returns true and connects to the game&apos;, () =&gt; {
+      instance.loggingIn = false;
+      instance.game = { loaded: true, connect: jest.fn() };
+      instance.statusMessage = null;
+      instance.verifyForm = () =&gt; { return true; }
+      expect(instance.login()).toEqual(true);
+      expect(instance.game.connect).toHaveBeenCalled();
+    });
+  });
+
+  describe(&apos;.loginAsGuest()&apos;, () =&gt; {
+    it (&apos;returns false if no game&apos;, () =&gt; {
+      expect(instance.loginAsGuest()).toEqual(false);
+    });
+
+    it (&apos;returns true if game exists&apos;, () =&gt; {
+      instance.login = jest.fn();
+      instance.game = {};
+      expect(instance.guestLogin).toEqual(false);
+      expect(instance.loginAsGuest()).toEqual(true);
+      expect(instance.guestLogin).toEqual(true);
+      expect(instance.login).toHaveBeenCalled();
+    });
+  });
+
+  test(&apos;.loadCharacter()&apos;, () =&gt; {
+    const validClasses = [&apos;about&apos;, &apos;git&apos;, &apos;credits&apos;];
+    const invalidClasses = [&apos;blah&apos;, &apos;wrong&apos;, &apos;&apos;];
+
+    instance.game = { started: true };
+
+    instance.wrapper = {
+      hasClass: (className) =&gt; instance.wrapper.className.indexOf(className) !== -1,
+      attr: jest.fn().mockReturnValue(instance.wrapper.className),
+      removeClass: jest.fn().mockReturnValue(instance.wrapper),
+      addClass: jest.fn()
+    }
+
+    validClasses.forEach(className =&gt; {
+      instance.wrapper.className = className;
+      expect(instance.loadCharacter()).toEqual(true);
+    });
+
+    invalidClasses.forEach(className =&gt; {
+      instance.wrapper.className = className;
+      expect(instance.loadCharacter()).toEqual(false);
+    });
+  });
 });</code></pre>
 
 </div>

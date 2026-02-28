@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 34,
+  "end": 104,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 2,
+      "line": 6,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 34,
+    "end": 104,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 2,
+        "line": 6,
         "column": 0
       }
     },
@@ -30,75 +30,144 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 0,
-        "end": 33,
+        "start": 70,
+        "end": 103,
         "loc": {
           "start": {
-            "line": 1,
+            "line": 5,
             "column": 0
           },
           "end": {
-            "line": 1,
+            "line": 5,
             "column": 33
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 15,
-          "end": 33,
+          "start": 85,
+          "end": 103,
           "loc": {
             "start": {
-              "line": 1,
+              "line": 5,
               "column": 15
             },
             "end": {
-              "line": 1,
+              "line": 5,
               "column": 33
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 21,
-            "end": 30,
+            "start": 91,
+            "end": 100,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 5,
                 "column": 21
               },
               "end": {
-                "line": 1,
+                "line": 5,
                 "column": 30
               },
               "identifierName": "Foresting"
             },
-            "name": "Foresting"
+            "name": "Foresting",
+            "leadingComments": null
           },
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 31,
-            "end": 33,
+            "start": 101,
+            "end": 103,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 5,
                 "column": 31
               },
               "end": {
-                "line": 1,
+                "line": 5,
                 "column": 33
               }
             },
             "body": []
           },
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Represents the foresting profession for a player\n * @class\n ",
+              "start": 0,
+              "end": 69,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 0
+                },
+                "end": {
+                  "line": 4,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Represents the foresting profession for a player\n * @class\n ",
+            "start": 0,
+            "end": 69,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Represents the foresting profession for a player\n * @class\n ",
+      "start": 0,
+      "end": 69,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Represents the foresting profession for a player\n * @class\n ",
+      "start": 0,
+      "end": 69,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
     {
       "type": {
         "label": "export",
@@ -114,15 +183,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 0,
-      "end": 6,
+      "start": 70,
+      "end": 76,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 6
         }
       }
@@ -142,15 +211,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 7,
-      "end": 14,
+      "start": 77,
+      "end": 84,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 7
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 14
         }
       }
@@ -170,15 +239,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 15,
-      "end": 20,
+      "start": 85,
+      "end": 90,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 15
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 20
         }
       }
@@ -196,15 +265,15 @@
         "binop": null
       },
       "value": "Foresting",
-      "start": 21,
-      "end": 30,
+      "start": 91,
+      "end": 100,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 21
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 30
         }
       }
@@ -221,15 +290,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 31,
-      "end": 32,
+      "start": 101,
+      "end": 102,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 31
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 32
         }
       }
@@ -246,15 +315,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 32,
-      "end": 33,
+      "start": 102,
+      "end": 103,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 32
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 33
         }
       }
@@ -272,15 +341,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 34,
-      "end": 34,
+      "start": 104,
+      "end": 104,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 2,
+          "line": 6,
           "column": 0
         }
       }

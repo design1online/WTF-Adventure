@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Commands from &apos;<span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber6">WTF-Adventure/WTF-Adventure/server/js/controllers/commands.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Commands from &apos;<span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber10">WTF-Adventure/WTF-Adventure/server/js/controllers/commands.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber6">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber10">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Handles parsing and dispatching of in-game chat commands</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-member-player">player</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-member-player">player</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The player issuing commands</p>
+</div>
       </div>
     </td>
     <td>
@@ -291,13 +294,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>World</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The world instance the player belongs to</p>
+</div>
       </div>
     </td>
     <td>
@@ -326,13 +330,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-method-handleAdminCommands">handleAdminCommands</a></span></span><span class="code" data-ice="signature">(command: <span>*</span>, blocks: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-method-handleAdminCommands">handleAdminCommands</a></span></span><span class="code" data-ice="signature">(command: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, blocks: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Handles commands available only to administrators</p>
+</div>
       </div>
     </td>
     <td>
@@ -354,13 +359,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-method-handleModeratorCommands">handleModeratorCommands</a></span></span><span class="code" data-ice="signature">(command: <span>*</span>, blocks: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-method-handleModeratorCommands">handleModeratorCommands</a></span></span><span class="code" data-ice="signature">(command: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, blocks: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Handles commands available to moderators and above</p>
+</div>
       </div>
     </td>
     <td>
@@ -382,13 +388,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-method-handlePlayerCommands">handlePlayerCommands</a></span></span><span class="code" data-ice="signature">(command: <span>*</span>, blocks: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-method-handlePlayerCommands">handlePlayerCommands</a></span></span><span class="code" data-ice="signature">(command: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, blocks: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Handles commands available to all players</p>
+</div>
       </div>
     </td>
     <td>
@@ -410,13 +417,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-method-parse">parse</a></span></span><span class="code" data-ice="signature">(rawText: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/commands.js~Commands.html#instance-method-parse">parse</a></span></span><span class="code" data-ice="signature">(rawText: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Parses a raw command string and dispatches it to the appropriate handler</p>
+</div>
       </div>
     </td>
     <td>
@@ -442,22 +450,40 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber7">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber15">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">player</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the player issuing commands</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -488,18 +514,19 @@
     
     
     
-    <span class="code" data-ice="name">player</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">player</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber25">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The player issuing commands</p>
+</div>
 
   
 
@@ -531,18 +558,19 @@
     
     
     
-    <span class="code" data-ice="name">world</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">world</span><span class="code" data-ice="signature">: <span>World</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber20">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The world instance the player belongs to</p>
+</div>
 
   
 
@@ -577,18 +605,19 @@
     
     
     
-    <span class="code" data-ice="name">handleAdminCommands</span><span class="code" data-ice="signature">(command: <span>*</span>, blocks: <span>*</span>)</span>
+    <span class="code" data-ice="name">handleAdminCommands</span><span class="code" data-ice="signature">(command: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, blocks: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber133">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber168">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Handles commands available only to administrators</p>
+</div>
 
   
 
@@ -602,15 +631,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">command</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the command name</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">blocks</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;</td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>remaining command arguments</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -642,18 +673,19 @@
     
     
     
-    <span class="code" data-ice="name">handleModeratorCommands</span><span class="code" data-ice="signature">(command: <span>*</span>, blocks: <span>*</span>)</span>
+    <span class="code" data-ice="name">handleModeratorCommands</span><span class="code" data-ice="signature">(command: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, blocks: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber88">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber118">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Handles commands available to moderators and above</p>
+</div>
 
   
 
@@ -667,15 +699,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">command</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the command name</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">blocks</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;</td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>remaining command arguments</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -707,18 +741,19 @@
     
     
     
-    <span class="code" data-ice="name">handlePlayerCommands</span><span class="code" data-ice="signature">(command: <span>*</span>, blocks: <span>*</span>)</span>
+    <span class="code" data-ice="name">handlePlayerCommands</span><span class="code" data-ice="signature">(command: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, blocks: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber32">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber57">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Handles commands available to all players</p>
+</div>
 
   
 
@@ -732,15 +767,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">command</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the command name</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">blocks</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>&gt;</td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>remaining command arguments</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -772,18 +809,19 @@
     
     
     
-    <span class="code" data-ice="name">parse</span><span class="code" data-ice="signature">(rawText: <span>*</span>)</span>
+    <span class="code" data-ice="name">parse</span><span class="code" data-ice="signature">(rawText: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/commands.js.html#lineNumber32">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Parses a raw command string and dispatches it to the appropriate handler</p>
+</div>
 
   
 
@@ -797,9 +835,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">rawText</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the raw text of the command including the leading character</p>
+</td>
     </tr>
 </tbody>
   </table>

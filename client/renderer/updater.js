@@ -1,16 +1,48 @@
 import Modules from '../utils/modules';
 import Character from '../entity/character/character';
 
+/**
+ * Drives per-frame game logic updates including entity movement, animations and UI state
+ * @class
+ */
 export default class Updater {
+  /**
+   * Default constructor
+   * @param {Game} game an instance of the game
+   */
   constructor(game) {
+    /**
+     * Reference to the main game instance
+     * @type {Game}
+     */
     this.game = game;
+    /**
+     * Reference to the game camera
+     * @type {Camera}
+     */
     this.camera = game.getCamera();
+    /**
+     * Reference to the renderer
+     * @type {Renderer}
+     */
     this.renderer = game.renderer;
+    /**
+     * Reference to the input handler
+     * @type {Input}
+     */
     this.input = game.input;
+    /**
+     * The sprite store used for animation updates
+     * @type {?Object}
+     */
     this.sprites = null;
   }
 
+  /**
+   * Runs all per-frame update logic and records the update timestamp
+   */
   update() {
+    /** @type {Number} */
     this.timeDifferential = (new Date() - this.lastUpdate) / 1000;
 
     this.animateTiles();
@@ -22,9 +54,16 @@ export default class Updater {
     this.updateInfos();
     this.updateBubbles();
 
+    /**
+     * Timestamp of the last completed update cycle
+     * @type {Date}
+     */
     this.lastUpdate = new Date();
   }
 
+  /**
+   * Advances animated tile frames and marks dirty tiles for re-rendering
+   */
   animateTiles() {
     const {
       time,
@@ -38,6 +77,9 @@ export default class Updater {
     });
   }
 
+  /**
+   * Updates all entity animations, movement interpolation and projectile trajectories
+   */
   updateEntities() {
     this.game.entities.forEachEntity((entity) => {
       if (entity.spriteLoaded) {
@@ -171,6 +213,10 @@ export default class Updater {
     });
   }
 
+  /**
+   * Updates the fading alpha for an entity that is currently fading in
+   * @param {Entity} entity the entity to update fading for
+   */
   updateFading(entity) {
     if (!entity || !entity.fading) {
       return;
@@ -190,6 +236,9 @@ export default class Updater {
     }
   }
 
+  /**
+   * Processes keyboard movement input and forwards movement requests to the input handler
+   */
   updateKeyboard() {
     const {
       player,
@@ -219,6 +268,9 @@ export default class Updater {
     }
   }
 
+  /**
+   * Advances the target cell and item sparks animations each frame
+   */
   updateAnimations() {
     const target = this.input.targetAnimation;
 
@@ -238,6 +290,9 @@ export default class Updater {
     }
   }
 
+  /**
+   * Checks whether the tileset scale matches the current drawing scale and updates it if needed
+   */
   verifyScale() {
     const scale = this.renderer.getDrawingScale();
 
@@ -246,12 +301,18 @@ export default class Updater {
     }
   }
 
+  /**
+   * Advances floating info/damage text timers
+   */
   updateInfos() {
     if (this.game.info) {
       this.game.info.update(this.game.time);
     }
   }
 
+  /**
+   * Updates speech bubble timers and pointer positions
+   */
   updateBubbles() {
     if (this.game.bubble) {
       this.game.bubble.update(this.game.time);
@@ -262,6 +323,10 @@ export default class Updater {
     }
   }
 
+  /**
+   * Sets the sprite store used for animation updates
+   * @param {Object} sprites the sprites object containing animation data
+   */
   setSprites(sprites) {
     this.sprites = sprites;
   }
