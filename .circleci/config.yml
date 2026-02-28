@@ -6,6 +6,9 @@ jobs:
       - image: cimg/node:18.15.0-browsers
     working_directory: ~/repo
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:kNz95O0fWiqhz9L3lQ07buA9x8Eoy/+EkXiafnC6UJU"
       - checkout
       - restore_cache:
           keys:
