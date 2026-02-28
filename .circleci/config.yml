@@ -8,7 +8,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "SHA256:kNz95O0fWiqhz9L3lQ07buA9x8Eoy/+EkXiafnC6UJU"
+            - "SHA256:sozpItnqI5ZkRo8W0TPOtZArr6z7akFW5in/5nANqHY"
       - checkout
       - restore_cache:
           keys:
