@@ -22,9 +22,12 @@ jobs:
       run: npm test
       env:
         CI: true
+    - uses: actions/checkout@main
     - name: Upload coverage to codecov
-      uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v5
       with:
+        fail_ci_if_error: true # optional (default = false)
         directory: ./coverage
-        fail_ci_if_error: true
         verbose: true
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
