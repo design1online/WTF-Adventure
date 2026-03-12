@@ -68,39 +68,6 @@
     "node": ">=16.0"
   },
   "engineStrict": true,
-  "jest": {
-    "transform": {
-      "\\.[jt]sx?$": [
-        "babel-jest",
-        {
-          "presets": [
-            "next/babel",
-            "@babel/preset-typescript",
-            "@babel/preset-env"
-          ]
-        }
-      ]
-    },
-    "testEnvironment": "jsdom",
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json-summary",
-      "text",
-      "lcov"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "ts",
-      "tsx"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/setupTests.js"
-    ]
-  },
   "dependencies": {
     "jquery": "^3.7.1",
     "next": "13.5.4",
@@ -115,6 +82,8 @@
     "@babel/plugin-syntax-import-assertions": "^7.22.5",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/jquery": "^3.5.22",
     "@types/node": "20.8.2",
     "@types/react": "^18",
