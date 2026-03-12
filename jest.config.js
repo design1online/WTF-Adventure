@@ -28,6 +28,7 @@ module.exports = {
     '\\.(png|gif|svg|jpg|jpeg)$': '<rootDir>/__mocks__/fileMock.js',
     '\\.(css|scss|sass)$': '<rootDir>/__mocks__/fileMock.js',
     '^next/image$': '<rootDir>/__mocks__/nextImageMock.js',
+    '^next/font/(.*)$': '<rootDir>/__mocks__/nextFontMock.js',
   },
   collectCoverageFrom: [
     'client/**/*.{js,ts,tsx}',
