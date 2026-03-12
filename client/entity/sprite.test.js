@@ -17,24 +17,16 @@ class MockImage {
 }
 global.Image = MockImage;
 
-// Mock document.createElement for canvas
-global.document = {
-  ...global.document,
-  createElement: jest.fn((tag) => {
-    if (tag === 'canvas') {
-      return {
-        getContext: jest.fn(() => ({
-          drawImage: jest.fn(),
-          getImageData: jest.fn(() => ({ data: new Uint8ClampedArray(64) })),
-          putImageData: jest.fn(),
-        })),
-        width: 0,
-        height: 0,
-      };
-    }
-    return {};
-  }),
+// Mock HTMLCanvasElement.prototype.getContext so jsdom doesn't throw
+const mockContext = {
+  drawImage: jest.fn(),
+  getImageData: jest.fn(() => ({ data: new Uint8ClampedArray(256) })),
+  putImageData: jest.fn(),
 };
+Object.defineProperty(HTMLCanvasElement.prototype, 'getContext', {
+  value: jest.fn(() => mockContext),
+  configurable: true,
+});
 
 function makeSpriteData() {
   return {
