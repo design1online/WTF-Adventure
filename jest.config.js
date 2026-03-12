@@ -38,4 +38,5 @@ module.exports = {
     'app/**/*.{ts,tsx}',
   ],
   setupFilesAfterEnv: ['<rootDir>/setupTests.js', '@testing-library/jest-dom'],
+  maxWorkers: 2,
 };
