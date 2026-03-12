@@ -1,3 +1,6 @@
+/**
+ * Shared game constants and enumerations used across the client
+ */
 export const Modules = {
   Orientation: {
     Up: 0,

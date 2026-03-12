@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Storage from &apos;<span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber7">WTF-Adventure/WTF-Adventure/client/utils/storage.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Storage from &apos;<span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber11">WTF-Adventure/WTF-Adventure/client/utils/storage.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber7">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber11">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Manages persistent client-side storage using localStorage</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(client: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-member-client">client</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-member-client">client</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Reference to the game client instance</p>
+</div>
       </div>
     </td>
     <td>
@@ -291,13 +294,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-member-data">data</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-member-data">data</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The parsed storage data object</p>
+</div>
       </div>
     </td>
     <td>
@@ -319,13 +323,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-member-name">name</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-member-name">name</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The key used to identify stored data in the storage backend</p>
+</div>
       </div>
     </td>
     <td>
@@ -347,13 +352,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-member-storage">storage</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-member-storage">storage</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The underlying storage backend (localStorage or in-memory fallback)</p>
+</div>
       </div>
     </td>
     <td>
@@ -388,7 +394,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes stored data from the backend and resets to defaults</p>
+</div>
       </div>
     </td>
     <td>
@@ -410,13 +417,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-create">create</a></span></span><span class="code" data-ice="signature">(): {&quot;new&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, &quot;welcome&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, &quot;clientVersion&quot;: <span>*</span>, &quot;intensity&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, &quot;player&quot;: <span>*</span>, &quot;settings&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-create">create</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates and returns a fresh default data object</p>
+</div>
       </div>
     </td>
     <td>
@@ -438,13 +446,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-getPlayer">getPlayer</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-getPlayer">getPlayer</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the stored player data object</p>
+</div>
       </div>
     </td>
     <td>
@@ -466,13 +475,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-getSettings">getSettings</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-getSettings">getSettings</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the stored settings object, or null if no data is loaded</p>
+</div>
       </div>
     </td>
     <td>
@@ -500,7 +510,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Loads data from storage, or creates a fresh data object if none exists or version has changed</p>
+</div>
       </div>
     </td>
     <td>
@@ -528,7 +539,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Persists the current data object to the storage backend</p>
+</div>
       </div>
     </td>
     <td>
@@ -550,13 +562,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-setPlayer">setPlayer</a></span></span><span class="code" data-ice="signature">(option: <span>*</span>, value: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-setPlayer">setPlayer</a></span></span><span class="code" data-ice="signature">(option: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, value: <span>*</span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Updates a single player data field by key and saves</p>
+</div>
       </div>
     </td>
     <td>
@@ -578,13 +591,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-setSettings">setSettings</a></span></span><span class="code" data-ice="signature">(option: <span>*</span>, value: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-setSettings">setSettings</a></span></span><span class="code" data-ice="signature">(option: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, value: <span>*</span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Updates a single settings field by key and saves</p>
+</div>
       </div>
     </td>
     <td>
@@ -606,13 +620,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-toggleRemember">toggleRemember</a></span></span><span class="code" data-ice="signature">(toggle: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/utils/storage.js~Storage.html#instance-method-toggleRemember">toggleRemember</a></span></span><span class="code" data-ice="signature">(toggle: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Sets or clears the remember-me flag for the stored player</p>
+</div>
       </div>
     </td>
     <td>
@@ -638,22 +653,40 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(client: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">client</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>an instance of the game client</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -684,18 +717,19 @@
     
     
     
-    <span class="code" data-ice="name">client</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">client</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber22">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber46">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the game client instance</p>
+</div>
 
   
 
@@ -727,18 +761,19 @@
     
     
     
-    <span class="code" data-ice="name">data</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">data</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber23">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The parsed storage data object</p>
+</div>
 
   
 
@@ -770,18 +805,19 @@
     
     
     
-    <span class="code" data-ice="name">name</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="code" data-ice="name">name</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber41">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The key used to identify stored data in the storage backend</p>
+</div>
 
   
 
@@ -813,18 +849,19 @@
     
     
     
-    <span class="code" data-ice="name">storage</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">storage</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The underlying storage backend (localStorage or in-memory fallback)</p>
+</div>
 
   
 
@@ -863,14 +900,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber78">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber115">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Removes stored data from the backend and resets to defaults</p>
+</div>
 
   
 
@@ -902,18 +940,19 @@
     
     
     
-    <span class="code" data-ice="name">create</span><span class="code" data-ice="signature">(): {&quot;new&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, &quot;welcome&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, &quot;clientVersion&quot;: <span>*</span>, &quot;intensity&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, &quot;player&quot;: <span>*</span>, &quot;settings&quot;: <span>*</span>}</span>
+    <span class="code" data-ice="name">create</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber41">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber72">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Creates and returns a fresh default data object</p>
+</div>
 
   
 
@@ -925,7 +964,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType">{&quot;new&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, &quot;welcome&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, &quot;clientVersion&quot;: <span>*</span>, &quot;intensity&quot;: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, &quot;player&quot;: <span>*</span>, &quot;settings&quot;: <span>*</span>}</td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
           
         </tr>
       </tbody>
@@ -957,18 +996,19 @@
     
     
     
-    <span class="code" data-ice="name">getPlayer</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getPlayer</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber116">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber171">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the stored player data object</p>
+</div>
 
   
 
@@ -980,7 +1020,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
           
         </tr>
       </tbody>
@@ -1012,18 +1052,19 @@
     
     
     
-    <span class="code" data-ice="name">getSettings</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getSettings</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber121">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber180">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the stored settings object, or null if no data is loaded</p>
+</div>
 
   
 
@@ -1035,7 +1076,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
           
         </tr>
       </tbody>
@@ -1071,14 +1112,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber26">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber53">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Loads data from storage, or creates a fresh data object if none exists or version has changed</p>
+</div>
 
   
 
@@ -1114,14 +1156,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber70">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber104">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Persists the current data object to the storage backend</p>
+</div>
 
   
 
@@ -1153,18 +1196,19 @@
     
     
     
-    <span class="code" data-ice="name">setPlayer</span><span class="code" data-ice="signature">(option: <span>*</span>, value: <span>*</span>)</span>
+    <span class="code" data-ice="name">setPlayer</span><span class="code" data-ice="signature">(option: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, value: <span>*</span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber92">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber138">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Updates a single player data field by key and saves</p>
+</div>
 
   
 
@@ -1178,15 +1222,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">option</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the player data field to update</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">value</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the value to set</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1218,18 +1264,19 @@
     
     
     
-    <span class="code" data-ice="name">setSettings</span><span class="code" data-ice="signature">(option: <span>*</span>, value: <span>*</span>)</span>
+    <span class="code" data-ice="name">setSettings</span><span class="code" data-ice="signature">(option: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, value: <span>*</span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber104">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber155">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Updates a single settings field by key and saves</p>
+</div>
 
   
 
@@ -1243,15 +1290,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">option</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the settings field to update</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">value</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the value to set</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1283,18 +1332,19 @@
     
     
     
-    <span class="code" data-ice="name">toggleRemember</span><span class="code" data-ice="signature">(toggle: <span>*</span>)</span>
+    <span class="code" data-ice="name">toggleRemember</span><span class="code" data-ice="signature">(toggle: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber85">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/utils/storage.js.html#lineNumber126">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Sets or clears the remember-me flag for the stored player</p>
+</div>
 
   
 
@@ -1308,9 +1358,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">toggle</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>whether to enable or disable the remember-me setting</p>
+</td>
     </tr>
 </tbody>
   </table>

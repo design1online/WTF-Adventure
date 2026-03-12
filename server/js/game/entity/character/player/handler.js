@@ -3,13 +3,32 @@ import Messages from '../../../../network/messages.js';
 import Packets from '../../../../network/packets.js';
 import Npcs from '../../../../util/npcs.js';
 
+/**
+ * Handles event callbacks and world interactions for a player
+ * @class
+ */
 export default class PlayerHandler {
+  /**
+   * Default constructor
+   * @param {Player} player the player whose events this handler manages
+   */
   constructor(player) {
+    /**
+     * The player whose events this handler manages
+     * @type {Player}
+     */
     this.player = player;
+    /**
+     * The world instance the player belongs to
+     * @type {World}
+     */
     this.world = player.world;
     this.loadPlayerHandler();
   }
 
+  /**
+   * Registers all event listeners for the player
+   */
   loadPlayerHandler() {
     this.player.onMovement((x, y) => {
       this.player.checkGroups();
@@ -98,6 +117,9 @@ export default class PlayerHandler {
     });
   }
 
+  /**
+   * Checks all entities in the player's group for aggro towards the player
+   */
   detectAggro() {
     const group = this.world.groups[this.player.group];
 
@@ -116,6 +138,11 @@ export default class PlayerHandler {
     });
   }
 
+  /**
+   * Updates the player's current music based on their position
+   * @param {Number} x the player's current x coordinate
+   * @param {Number} y the player's current y coordinate
+   */
   detectMusic(x, y) {
     const musicArea = _.find(this.world.getMusicAreas(), area => area.contains(x, y));
     if (musicArea && this.player.currentSong !== musicArea.id) {
@@ -123,6 +150,11 @@ export default class PlayerHandler {
     }
   }
 
+  /**
+   * Updates the player's PVP state based on their position
+   * @param {Number} x the player's current x coordinate
+   * @param {Number} y the player's current y coordinate
+   */
   detectPVP(x, y) {
     const pvpArea = _.find(this.world.getPVPAreas(), area => area.contains(x, y));
 

@@ -4,25 +4,70 @@
 import Animation from './animation';
 import log from '../lib/log';
 
+/**
+ * Represents a sprite image used to render an entity on the canvas
+ * @class
+ */
 export default class Sprite {
+  /**
+   * Default constructor
+   * @param {Object} sprite the sprite data object containing image and animation metadata
+   * @param {Number} scale the display scale factor for the sprite
+   */
   constructor(sprite, scale) {
     // log.debug('Sprite - constructor()', sprite, scale);
 
+    /**
+     * The raw sprite data object
+     * @type {Object}
+     */
     this.sprite = sprite;
+    /**
+     * The display scale factor
+     * @type {Number}
+     */
     this.scale = scale;
+    /**
+     * The unique identifier of the sprite
+     * @type {String}
+     */
     this.id = sprite.id;
+    /**
+     * Whether the sprite image has finished loading
+     * @type {Boolean}
+     */
     this.loaded = false;
+    /**
+     * Horizontal draw offset in pixels
+     * @type {Number}
+     */
     this.offsetX = 0;
+    /**
+     * Vertical draw offset in pixels
+     * @type {Number}
+     */
     this.offsetY = 0;
+    /**
+     * Rotational offset angle in degrees
+     * @type {Number}
+     */
     this.offsetAngle = 0;
+    /**
+     * The hurt (white/red tint) version of this sprite
+     * @type {Object}
+     */
     this.whiteSprite = { loaded: false };
 
     this.loadSpriteImgData();
   }
 
+  /**
+   * Loads the sprite image from the filesystem path
+   */
   loadSprite() {
     // log.debug('Sprite - loadSprite()', this.filepath);
 
+    /** @type {Image} */
     this.image = new Image();
     this.image.crossOrigin = 'Anonymous';
     this.image.src = this.filepath;
@@ -38,23 +83,47 @@ export default class Sprite {
     };
   }
 
+  /**
+   * Loads the sprite image data from the sprite object and triggers image loading
+   */
   loadSpriteImgData() {
     log.debug('Sprite - loadSpriteImgData()', this.sprite);
 
     const { sprite } = this;
 
+    /**
+     * The file path to the sprite image
+     * @type {String}
+     */
     this.filepath = `/img/${this.scale}/${this.id}.png`;
+    /**
+     * The animation definitions for this sprite
+     * @type {Object}
+     */
     this.animationData = sprite.animations;
 
+    /**
+     * The width of a single sprite frame in pixels
+     * @type {Number}
+     */
     this.width = sprite.width;
+    /**
+     * The height of a single sprite frame in pixels
+     * @type {Number}
+     */
     this.height = sprite.height;
 
     this.offsetX = sprite.offsetX !== undefined ? sprite.offsetX : -16;
     this.offsetY = sprite.offsetY !== undefined ? sprite.offsetY : -16;
+    /** @type {Number} */
     this.offfsetAngle = sprite.offsetAngle !== undefined ? sprite.offsetAngle : 0;
     this.loadSprite();
   }
 
+  /**
+   * Updates the sprite scale and reloads sprite image data
+   * @param {Number} newScale the new scale factor to apply
+   */
   update(newScale) {
     log.debug('Sprite - update()');
     this.scale = newScale;
@@ -62,6 +131,10 @@ export default class Sprite {
     this.loadSpriteImgData();
   }
 
+  /**
+   * Creates Animation instances from the animation data for this sprite
+   * @return {Object} a map of animation name to Animation instance
+   */
   createAnimations() {
     log.debug('Sprite - createAnimations()');
 
@@ -141,6 +214,10 @@ export default class Sprite {
     }
   }
 
+  /**
+   * Returns the hurt sprite, creating it if it has not been created yet
+   * @return {Object} the white/hurt sprite object or null if unavailable
+   */
   getHurtSprite() {
     log.debug('Sprite - getHurtSprite()');
 
@@ -158,8 +235,13 @@ export default class Sprite {
     }
   }
 
+  /**
+   * Registers a callback to be invoked when the sprite image has finished loading
+   * @param {Function} callback the function to call when the image loads
+   */
   onLoad(callback) {
     log.debug('Sprite - onLoad()', callback);
+    /** @type {Function} */
     this.onLoadCallback = callback;
   }
 }

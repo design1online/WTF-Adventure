@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Combat from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber10">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/combat/combat.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Combat from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber14">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/combat/combat.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber10">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber14">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Handles combat logic for a character including attacking, following, and taking damage</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,7 +265,239 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attackLoop">attackLoop</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attackLoop">attackLoop</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The interval handle for the attack loop</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attackers">attackers</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>A map of attackers currently targeting this character</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attacking">attacking</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Whether this character is currently attacking</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-character">character</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The character this combat instance controls</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-checkLoop">checkLoop</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The interval handle for the inactivity check loop</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-cleanTimeout">cleanTimeout</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The timeout handle used to clean up combat state</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-first">first</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Whether this is the first action in combat</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-followLoop">followLoop</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The interval handle for the follow loop</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-forgetCallback">forgetCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -291,13 +525,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attackers">attackers</a></span></span><span class="code" data-ice="signature">: {}</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastAction">lastAction</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The timestamp of the last combat action</p>
+</div>
       </div>
     </td>
     <td>
@@ -319,13 +554,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attacking">attacking</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastActionThreshold">lastActionThreshold</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The time in milliseconds before combat is considered inactive</p>
+</div>
       </div>
     </td>
     <td>
@@ -347,13 +583,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-character">character</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastHit">lastHit</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The timestamp of the last hit</p>
+</div>
       </div>
     </td>
     <td>
@@ -375,13 +612,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-checkLoop">checkLoop</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-queue">queue</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combatqueue.js~CombatQueue.html">CombatQueue</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The queue of pending hit actions</p>
+</div>
       </div>
     </td>
     <td>
@@ -403,13 +641,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-cleanTimeout">cleanTimeout</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-retaliate">retaliate</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Whether this character will retaliate when attacked</p>
+</div>
       </div>
     </td>
     <td>
@@ -431,13 +670,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-first">first</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-started">started</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Whether combat has been started</p>
+</div>
       </div>
     </td>
     <td>
@@ -459,237 +699,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-followLoop">followLoop</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>World</span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-forgetCallback">forgetCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastAction">lastAction</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastActionThreshold">lastActionThreshold</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastHit">lastHit</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-queue">queue</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-retaliate">retaliate</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-started">started</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>The game world instance</p>
+</div>
       </div>
     </td>
     <td>
@@ -718,13 +735,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-addAttacker">addAttacker</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-addAttacker">addAttacker</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Adds a character to the attackers map</p>
+</div>
       </div>
     </td>
     <td>
@@ -746,13 +764,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-attack">attack</a></span></span><span class="code" data-ice="signature">(target: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-attack">attack</a></span></span><span class="code" data-ice="signature">(target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates and queues a hit action against the target</p>
+</div>
       </div>
     </td>
     <td>
@@ -774,13 +793,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-attackCount">attackCount</a></span></span><span class="code" data-ice="signature">(count: <span>*</span>, target: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-attackCount">attackCount</a></span></span><span class="code" data-ice="signature">(count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Queues a given number of attacks against a target</p>
+</div>
       </div>
     </td>
     <td>
@@ -802,13 +822,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-begin">begin</a></span></span><span class="code" data-ice="signature">(attacker: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-begin">begin</a></span></span><span class="code" data-ice="signature">(attacker: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Begins combat by setting up the target and starting the attack loop</p>
+</div>
       </div>
     </td>
     <td>
@@ -830,13 +851,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-canAttackAoE">canAttackAoE</a></span></span><span class="code" data-ice="signature">(target: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-canAttackAoE">canAttackAoE</a></span></span><span class="code" data-ice="signature">(target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether AoE attacks can be used against the given target</p>
+</div>
       </div>
     </td>
     <td>
@@ -858,13 +880,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-colliding">colliding</a></span></span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-colliding">colliding</a></span></span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the given tile coordinates are colliding</p>
+</div>
       </div>
     </td>
     <td>
@@ -886,13 +909,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-dealAoE">dealAoE</a></span></span><span class="code" data-ice="signature">(radius: <span>*</span>, hasTerror: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-dealAoE">dealAoE</a></span></span><span class="code" data-ice="signature">(radius: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, hasTerror: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Deals area-of-effect damage to all surrounding entities within the given radius</p>
+</div>
       </div>
     </td>
     <td>
@@ -920,7 +944,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Broadcasts a combat finish message for this character</p>
+</div>
       </div>
     </td>
     <td>
@@ -942,13 +967,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-follow">follow</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>, target: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-follow">follow</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Broadcasts a follow movement message from character to target</p>
+</div>
       </div>
     </td>
     <td>
@@ -970,13 +996,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-forEachAttacker">forEachAttacker</a></span></span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-forEachAttacker">forEachAttacker</a></span></span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Iterates over each attacker and invokes the callback</p>
+</div>
       </div>
     </td>
     <td>
@@ -1004,7 +1031,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Forces an immediate attack sequence against the current target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1032,7 +1060,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Clears all attackers and removes this character&apos;s target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1054,13 +1083,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getClosestAttacker">getClosestAttacker</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getClosestAttacker">getClosestAttacker</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the closest attacker to this character</p>
+</div>
       </div>
     </td>
     <td>
@@ -1082,13 +1112,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getNewPosition">getNewPosition</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getNewPosition">getNewPosition</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns a new position adjacent to the current position, chosen at random</p>
+</div>
       </div>
     </td>
     <td>
@@ -1110,13 +1141,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getTime">getTime</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getTime">getTime</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the current timestamp in milliseconds</p>
+</div>
       </div>
     </td>
     <td>
@@ -1138,13 +1170,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hasAttacker">hasAttacker</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hasAttacker">hasAttacker</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether a given character is in the attackers map</p>
+</div>
       </div>
     </td>
     <td>
@@ -1166,13 +1199,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hit">hit</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>, target: <span>*</span>, hitInfo: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hit">hit</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, hitInfo: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Executes a hit from character to target, handling ranged and melee combat</p>
+</div>
       </div>
     </td>
     <td>
@@ -1194,13 +1228,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-inProximity">inProximity</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-inProximity">inProximity</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether this character is within attack range of its target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1222,13 +1257,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isAttacked">isAttacked</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isAttacked">isAttacked</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether this character is currently being attacked by any attackers</p>
+</div>
       </div>
     </td>
     <td>
@@ -1250,13 +1286,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isMob">isMob</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isMob">isMob</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the associated character is a mob</p>
+</div>
       </div>
     </td>
     <td>
@@ -1278,13 +1315,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isPlayer">isPlayer</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isPlayer">isPlayer</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the associated character is a player</p>
+</div>
       </div>
     </td>
     <td>
@@ -1306,13 +1344,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isRetaliating">isRetaliating</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isRetaliating">isRetaliating</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether this player character is currently retaliating against an attacker</p>
+</div>
       </div>
     </td>
     <td>
@@ -1334,13 +1373,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isTargetMob">isTargetMob</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isTargetMob">isTargetMob</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the current target is a mob</p>
+</div>
       </div>
     </td>
     <td>
@@ -1362,13 +1402,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-move">move</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>, x: <span>*</span>, y: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-move">move</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Moves a mob character to the given coordinates</p>
+</div>
       </div>
     </td>
     <td>
@@ -1390,13 +1431,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-onForget">onForget</a></span></span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-onForget">onForget</a></span></span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Registers a callback for when this character forgets its attackers</p>
+</div>
       </div>
     </td>
     <td>
@@ -1418,13 +1460,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-onSameTile">onSameTile</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-onSameTile">onSameTile</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether this mob is on the same tile as its target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1452,7 +1495,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Processes pending attacks from the hit queue when in proximity to target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1480,7 +1524,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Processes movement following logic for mobs pursuing their target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1502,13 +1547,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-removeAttacker">removeAttacker</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-removeAttacker">removeAttacker</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes a character from the attackers map and sends the mob to spawn if no longer attacked</p>
+</div>
       </div>
     </td>
     <td>
@@ -1536,7 +1582,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Sends a follow movement message to nearby players, excluding the combatants</p>
+</div>
       </div>
     </td>
     <td>
@@ -1564,7 +1611,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Sends this mob back to its spawn point and broadcasts the movement</p>
+</div>
       </div>
     </td>
     <td>
@@ -1586,13 +1634,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-setWorld">setWorld</a></span></span><span class="code" data-ice="signature">(world: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-setWorld">setWorld</a></span></span><span class="code" data-ice="signature">(world: <span>World</span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Sets the world instance for this combat object</p>
+</div>
       </div>
     </td>
     <td>
@@ -1620,7 +1669,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Starts the attack, follow, and check interval loops</p>
+</div>
       </div>
     </td>
     <td>
@@ -1648,7 +1698,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Stops all combat interval loops</p>
+</div>
       </div>
     </td>
     <td>
@@ -1670,13 +1721,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-targetOutOfBounds">targetOutOfBounds</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-targetOutOfBounds">targetOutOfBounds</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the current target is outside the mob&apos;s spawn bounds</p>
+</div>
       </div>
     </td>
     <td>
@@ -1702,22 +1754,40 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber19">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">character</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the character this combat instance belongs to</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -1748,18 +1818,19 @@
     
     
     
-    <span class="code" data-ice="name">attackLoop</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">attackLoop</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber23">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber59">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The interval handle for the attack loop</p>
+</div>
 
   
 
@@ -1791,18 +1862,19 @@
     
     
     
-    <span class="code" data-ice="name">attackers</span><span class="code" data-ice="signature">: {}</span>
+    <span class="code" data-ice="name">attackers</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber35">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>A map of attackers currently targeting this character</p>
+</div>
 
   
 
@@ -1834,18 +1906,19 @@
     
     
     
-    <span class="code" data-ice="name">attacking</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="code" data-ice="name">attacking</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber53">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Whether this character is currently attacking</p>
+</div>
 
   
 
@@ -1877,18 +1950,19 @@
     
     
     
-    <span class="code" data-ice="name">character</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">character</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber24">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The character this combat instance controls</p>
+</div>
 
   
 
@@ -1920,18 +1994,19 @@
     
     
     
-    <span class="code" data-ice="name">checkLoop</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">checkLoop</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber69">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The interval handle for the inactivity check loop</p>
+</div>
 
   
 
@@ -1963,18 +2038,19 @@
     
     
     
-    <span class="code" data-ice="name">cleanTimeout</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">cleanTimeout</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber34">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber102">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The timeout handle used to clean up combat state</p>
+</div>
 
   
 
@@ -2006,18 +2082,19 @@
     
     
     
-    <span class="code" data-ice="name">first</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="code" data-ice="name">first</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber27">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber75">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Whether this is the first action in combat</p>
+</div>
 
   
 
@@ -2049,18 +2126,19 @@
     
     
     
-    <span class="code" data-ice="name">followLoop</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">followLoop</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber24">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber64">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The interval handle for the follow loop</p>
+</div>
 
   
 
@@ -2092,11 +2170,11 @@
     
     
     
-    <span class="code" data-ice="name">forgetCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">forgetCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber418">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber598">source</a></span></span>
     </span>
   </h3>
 
@@ -2135,18 +2213,19 @@
     
     
     
-    <span class="code" data-ice="name">lastAction</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">lastAction</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber29">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber85">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The timestamp of the last combat action</p>
+</div>
 
   
 
@@ -2178,18 +2257,19 @@
     
     
     
-    <span class="code" data-ice="name">lastActionThreshold</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="code" data-ice="name">lastActionThreshold</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber32">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber96">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The time in milliseconds before combat is considered inactive</p>
+</div>
 
   
 
@@ -2221,18 +2301,19 @@
     
     
     
-    <span class="code" data-ice="name">lastHit</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">lastHit</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber30">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber90">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The timestamp of the last hit</p>
+</div>
 
   
 
@@ -2264,18 +2345,19 @@
     
     
     
-    <span class="code" data-ice="name">queue</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">queue</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combatqueue.js~CombatQueue.html">CombatQueue</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber19">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber47">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The queue of pending hit actions</p>
+</div>
 
   
 
@@ -2307,18 +2389,19 @@
     
     
     
-    <span class="code" data-ice="name">retaliate</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="code" data-ice="name">retaliate</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber17">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber41">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Whether this character will retaliate when attacked</p>
+</div>
 
   
 
@@ -2350,18 +2433,19 @@
     
     
     
-    <span class="code" data-ice="name">started</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="code" data-ice="name">started</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber28">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber80">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Whether combat has been started</p>
+</div>
 
   
 
@@ -2393,18 +2477,19 @@
     
     
     
-    <span class="code" data-ice="name">world</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">world</span><span class="code" data-ice="signature">: <span>World</span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The game world instance</p>
+</div>
 
   
 
@@ -2439,18 +2524,19 @@
     
     
     
-    <span class="code" data-ice="name">addAttacker</span><span class="code" data-ice="signature">(character: <span>*</span>)</span>
+    <span class="code" data-ice="name">addAttacker</span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber211">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber316">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Adds a character to the attackers map</p>
+</div>
 
   
 
@@ -2464,9 +2550,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">character</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the character to add as an attacker</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2498,18 +2585,19 @@
     
     
     
-    <span class="code" data-ice="name">attack</span><span class="code" data-ice="signature">(target: <span>*</span>)</span>
+    <span class="code" data-ice="name">attack</span><span class="code" data-ice="signature">(target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber156">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber244">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Creates and queues a hit action against the target</p>
+</div>
 
   
 
@@ -2523,9 +2611,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">target</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the character to attack</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2557,18 +2646,19 @@
     
     
     
-    <span class="code" data-ice="name">attackCount</span><span class="code" data-ice="signature">(count: <span>*</span>, target: <span>*</span>)</span>
+    <span class="code" data-ice="name">attackCount</span><span class="code" data-ice="signature">(count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber207">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber308">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Queues a given number of attacks against a target</p>
+</div>
 
   
 
@@ -2582,15 +2672,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">count</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the number of attacks to queue</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">target</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the character to attack</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2622,18 +2714,19 @@
     
     
     
-    <span class="code" data-ice="name">begin</span><span class="code" data-ice="signature">(attacker: <span>*</span>)</span>
+    <span class="code" data-ice="name">begin</span><span class="code" data-ice="signature">(attacker: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber59">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber131">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Begins combat by setting up the target and starting the attack loop</p>
+</div>
 
   
 
@@ -2647,9 +2740,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">attacker</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the character initiating combat</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2681,18 +2775,19 @@
     
     
     
-    <span class="code" data-ice="name">canAttackAoE</span><span class="code" data-ice="signature">(target: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">canAttackAoE</span><span class="code" data-ice="signature">(target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber457">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber668">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether AoE attacks can be used against the given target</p>
+</div>
 
   
 
@@ -2706,9 +2801,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">target</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the potential AoE target</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2720,7 +2816,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -2752,18 +2848,19 @@
     
     
     
-    <span class="code" data-ice="name">colliding</span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">colliding</span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber441">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber635">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether the given tile coordinates are colliding</p>
+</div>
 
   
 
@@ -2777,15 +2874,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">x</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the x-coordinate to check</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">y</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the y-coordinate to check</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2797,7 +2896,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -2829,18 +2928,19 @@
     
     
     
-    <span class="code" data-ice="name">dealAoE</span><span class="code" data-ice="signature">(radius: <span>*</span>, hasTerror: <span>*</span>)</span>
+    <span class="code" data-ice="name">dealAoE</span><span class="code" data-ice="signature">(radius: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, hasTerror: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber173">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber266">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Deals area-of-effect damage to all surrounding entities within the given radius</p>
+</div>
 
   
 
@@ -2854,15 +2954,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">radius</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the radius of the AoE effect in tiles</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">hasTerror</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>whether the AoE inflicts terror</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2898,14 +3000,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber387">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber555">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Broadcasts a combat finish message for this character</p>
+</div>
 
   
 
@@ -2937,18 +3040,19 @@
     
     
     
-    <span class="code" data-ice="name">follow</span><span class="code" data-ice="signature">(character: <span>*</span>, target: <span>*</span>)</span>
+    <span class="code" data-ice="name">follow</span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber376">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber541">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Broadcasts a follow movement message from character to target</p>
+</div>
 
   
 
@@ -2962,15 +3066,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">character</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the following character</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">target</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the character being followed</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3002,18 +3108,19 @@
     
     
     
-    <span class="code" data-ice="name">forEachAttacker</span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+    <span class="code" data-ice="name">forEachAttacker</span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber411">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber586">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Iterates over each attacker and invokes the callback</p>
+</div>
 
   
 
@@ -3027,9 +3134,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">callback</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the callback to invoke for each attacker</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3065,14 +3173,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber197">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber293">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Forces an immediate attack sequence against the current target</p>
+</div>
 
   
 
@@ -3108,14 +3217,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber323">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber471">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Clears all attackers and removes this character&apos;s target</p>
+</div>
 
   
 
@@ -3147,18 +3257,19 @@
     
     
     
-    <span class="code" data-ice="name">getClosestAttacker</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getClosestAttacker</span><span class="code" data-ice="signature">(): <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber304">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber445">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the closest attacker to this character</p>
+</div>
 
   
 
@@ -3170,7 +3281,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></td>
           
         </tr>
       </tbody>
@@ -3202,18 +3313,19 @@
     
     
     
-    <span class="code" data-ice="name">getNewPosition</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getNewPosition</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber262">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber391">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns a new position adjacent to the current position, chosen at random</p>
+</div>
 
   
 
@@ -3225,7 +3337,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
           
         </tr>
       </tbody>
@@ -3257,18 +3369,19 @@
     
     
     
-    <span class="code" data-ice="name">getTime</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getTime</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber437">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber625">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the current timestamp in milliseconds</p>
+</div>
 
   
 
@@ -3280,7 +3393,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
           
         </tr>
       </tbody>
@@ -3312,18 +3425,19 @@
     
     
     
-    <span class="code" data-ice="name">hasAttacker</span><span class="code" data-ice="signature">(character: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">hasAttacker</span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber239">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber356">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether a given character is in the attackers map</p>
+</div>
 
   
 
@@ -3337,9 +3451,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">character</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the character to check</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3351,7 +3466,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></td>
           
         </tr>
       </tbody>
@@ -3383,18 +3498,19 @@
     
     
     
-    <span class="code" data-ice="name">hit</span><span class="code" data-ice="signature">(character: <span>*</span>, target: <span>*</span>, hitInfo: <span>*</span>)</span>
+    <span class="code" data-ice="name">hit</span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, hitInfo: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber340">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber500">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Executes a hit from character to target, handling ranged and melee combat</p>
+</div>
 
   
 
@@ -3408,21 +3524,24 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">character</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the attacking character</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">target</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the target character</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">hitInfo</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the hit data object</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3454,18 +3573,19 @@
     
     
     
-    <span class="code" data-ice="name">inProximity</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">inProximity</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber289">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber426">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether this character is within attack range of its target</p>
+</div>
 
   
 
@@ -3477,7 +3597,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3509,18 +3629,19 @@
     
     
     
-    <span class="code" data-ice="name">isAttacked</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">isAttacked</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber258">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber383">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether this character is currently being attacked by any attackers</p>
+</div>
 
   
 
@@ -3532,7 +3653,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3564,18 +3685,19 @@
     
     
     
-    <span class="code" data-ice="name">isMob</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">isMob</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber449">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber651">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether the associated character is a mob</p>
+</div>
 
   
 
@@ -3587,7 +3709,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3619,18 +3741,19 @@
     
     
     
-    <span class="code" data-ice="name">isPlayer</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">isPlayer</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber445">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber643">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether the associated character is a player</p>
+</div>
 
   
 
@@ -3642,7 +3765,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3674,18 +3797,19 @@
     
     
     
-    <span class="code" data-ice="name">isRetaliating</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">isRetaliating</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber279">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber412">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether this player character is currently retaliating against an attacker</p>
+</div>
 
   
 
@@ -3697,7 +3821,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3729,18 +3853,19 @@
     
     
     
-    <span class="code" data-ice="name">isTargetMob</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">isTargetMob</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber453">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber659">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether the current target is a mob</p>
+</div>
 
   
 
@@ -3752,7 +3877,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3784,18 +3909,19 @@
     
     
     
-    <span class="code" data-ice="name">move</span><span class="code" data-ice="signature">(character: <span>*</span>, x: <span>*</span>, y: <span>*</span>)</span>
+    <span class="code" data-ice="name">move</span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber330">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber484">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Moves a mob character to the given coordinates</p>
+</div>
 
   
 
@@ -3809,21 +3935,24 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">character</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the mob character to move</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">x</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the target x-coordinate</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">y</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the target y-coordinate</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3855,18 +3984,19 @@
     
     
     
-    <span class="code" data-ice="name">onForget</span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+    <span class="code" data-ice="name">onForget</span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber417">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber596">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Registers a callback for when this character forgets its attackers</p>
+</div>
 
   
 
@@ -3880,9 +4010,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">callback</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the callback to invoke</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3914,18 +4045,19 @@
     
     
     
-    <span class="code" data-ice="name">onSameTile</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">onSameTile</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber247">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber368">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether this mob is on the same tile as its target</p>
+</div>
 
   
 
@@ -3937,7 +4069,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3973,14 +4105,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber108">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber189">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Processes pending attacks from the hit queue when in proximity to target</p>
+</div>
 
   
 
@@ -4016,14 +4149,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber126">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber210">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Processes movement following logic for mobs pursuing their target</p>
+</div>
 
   
 
@@ -4055,18 +4189,19 @@
     
     
     
-    <span class="code" data-ice="name">removeAttacker</span><span class="code" data-ice="signature">(character: <span>*</span>)</span>
+    <span class="code" data-ice="name">removeAttacker</span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber217">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber326">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Removes a character from the attackers map and sends the mob to spawn if no longer attacked</p>
+</div>
 
   
 
@@ -4080,9 +4215,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">character</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the character to remove</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -4118,14 +4254,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber397">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber568">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Sends a follow movement message to nearby players, excluding the combatants</p>
+</div>
 
   
 
@@ -4161,14 +4298,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber223">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber335">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Sends this mob back to its spawn point and broadcasts the movement</p>
+</div>
 
   
 
@@ -4200,18 +4338,19 @@
     
     
     
-    <span class="code" data-ice="name">setWorld</span><span class="code" data-ice="signature">(world: <span>*</span>)</span>
+    <span class="code" data-ice="name">setWorld</span><span class="code" data-ice="signature">(world: <span>World</span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber319">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber464">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Sets the world instance for this combat object</p>
+</div>
 
   
 
@@ -4225,9 +4364,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">world</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>World</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the game world instance</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -4263,14 +4403,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber70">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber145">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Starts the attack, follow, and check interval loops</p>
+</div>
 
   
 
@@ -4306,14 +4447,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber94">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber172">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Stops all combat interval loops</p>
+</div>
 
   
 
@@ -4345,18 +4487,19 @@
     
     
     
-    <span class="code" data-ice="name">targetOutOfBounds</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">targetOutOfBounds</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber421">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/combat/combat.js.html#lineNumber605">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether the current target is outside the mob&apos;s spawn bounds</p>
+</div>
 
   
 
@@ -4368,7 +4511,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>

@@ -5,21 +5,49 @@ import Packets from '../../js/network/packets';
 import Modules from '../../js/util/modules';
 import Utils from '../../js/util/utils';
 
+/**
+ * Combat logic for the Ogre Lord boss
+ * @class
+ */
 export default class OgreLord extends Combat {
+  /**
+   * Default constructor
+   * @param {Character} character the character instance for this boss
+   */
   constructor(character) {
     super(character);
+    /**
+     * The character instance for this boss
+     * @type {Character}
+     */
     this.character = character;
 
+    /**
+     * List of dialogue strings the boss says during combat
+     * @type {Array.<String>}
+     */
     this.dialogues = [
       'Get outta my swamp',
       'No, not the onion.',
       'My minions give me strength! You stand no chance!',
     ];
 
+    /**
+     * Array of currently active minion characters
+     * @type {Array.<Character>}
+     */
     this.minions = [];
 
+    /**
+     * Timestamp of the last minion spawn
+     * @type {Number}
+     */
     this.lastSpawn = 0;
 
+    /**
+     * Whether the boss intervals have been loaded
+     * @type {Boolean}
+     */
     this.loaded = false;
 
     character.projectile = Modules.Projectiles.Boulder; // eslint-disable-line
@@ -30,13 +58,18 @@ export default class OgreLord extends Combat {
     });
   }
 
+  /**
+   * Loads the periodic talking and armour update intervals
+   */
   load() {
+    /** @type {Object} */
     this.talkingInterval = setInterval(() => {
       if (this.character.hasTarget()) {
         this.forceTalk(this.getMessage());
       }
     }, 9000);
 
+    /** @type {Object} */
     this.updateInterval = setInterval(() => {
       this.character.armourLevel = 50 + this.minions.length * 15;
     }, 2000);
@@ -44,6 +77,12 @@ export default class OgreLord extends Combat {
     this.loaded = true;
   }
 
+  /**
+   * Handles a hit, triggering minion attacks, ranged logic, and spawning
+   * @param {Character} character the attacking character
+   * @param {Character} target the target being hit
+   * @param {Object} hitInfo hit information object
+   */
   hit(character, target, hitInfo) {
     if (this.isAttacked()) {
       this.beginMinionAttack();
@@ -65,6 +104,10 @@ export default class OgreLord extends Combat {
     super.hit(character, target, hitInfo);
   }
 
+  /**
+   * Broadcasts a message to adjacent groups as this character speaking
+   * @param {String} message the message to broadcast
+   */
   forceTalk(message) {
     if (!this.world) {
       return;
@@ -80,10 +123,17 @@ export default class OgreLord extends Combat {
     );
   }
 
+  /**
+   * Returns a random dialogue string
+   * @return {String}
+   */
   getMessage() {
     return this.dialogues[Utils.randomInt(0, this.dialogues.length - 1)];
   }
 
+  /**
+   * Spawns minions at predefined positions around the boss
+   */
   spawnMinions() {
     const
       xs = [414, 430, 415, 420, 429];
@@ -116,6 +166,9 @@ export default class OgreLord extends Combat {
     }
   }
 
+  /**
+   * Orders each minion to attack a random target
+   */
   beginMinionAttack() {
     if (!this.hasMinions()) {
       return;
@@ -130,6 +183,9 @@ export default class OgreLord extends Combat {
     });
   }
 
+  /**
+   * Resets boss state and kills all active minions
+   */
   reset() {
     this.lastSpawn = 0;
 
@@ -148,6 +204,10 @@ export default class OgreLord extends Combat {
     this.loaded = false;
   }
 
+  /**
+   * Returns a random attacker or the current target
+   * @return {Character|null}
+   */
   getRandomTarget() {
     if (this.isAttacked()) {
       const keys = Object.keys(this.attackers);
@@ -165,14 +225,26 @@ export default class OgreLord extends Combat {
     return null;
   }
 
+  /**
+   * Returns whether any minions are currently alive
+   * @return {Boolean}
+   */
   hasMinions() {
     return this.minions.length > 0;
   }
 
+  /**
+   * Returns whether only one minion remains
+   * @return {Boolean}
+   */
   isLast() {
     return this.minions.length === 1;
   }
 
+  /**
+   * Returns whether minions can be spawned
+   * @return {Boolean}
+   */
   canSpawn() {
     return (
       new Date().getTime() - this.lastSpawn > 50000

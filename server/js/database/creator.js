@@ -1,10 +1,27 @@
 import log from '../util/log.js';
 
+/**
+ * Handles database table creation and player data persistence
+ * @class
+ */
 export default class Creator {
+  /**
+   * Default constructor
+   * @param {Object} mysql the MySQL connection wrapper
+   */
   constructor(mysql) {
+    /**
+     * The MySQL connection wrapper
+     * @type {Object}
+     */
     this.mysql = mysql;
   }
 
+  /**
+   * Executes a callback if the specified table does not yet exist
+   * @param {String} tableName the name of the database table to check
+   * @param {Function} ifNotExists callback invoked when the table is absent
+   */
   tableNotExists(tableName, ifNotExists) {
     let exists = 0;
 
@@ -26,6 +43,9 @@ export default class Creator {
     );
   }
 
+  /**
+   * Creates all required database tables if they do not already exist
+   */
   createTables() {
     function handleError(tableName) {
       return (error) => {
@@ -151,6 +171,10 @@ export default class Creator {
     });
   }
 
+  /**
+   * Saves all player data to the database
+   * @param {Player} player the player whose data should be saved
+   */
   save(player) {
     const queryKey = player.isNew ? 'INSERT INTO' : 'UPDATE IGNORE';
     const playerData = this.formatData(this.getPlayerData(player), 'data');
@@ -197,6 +221,12 @@ export default class Creator {
     );
   }
 
+  /**
+   * Formats raw player data into a structure suitable for a specific table
+   * @param {Object} data the raw player data object
+   * @param {String} type the table type to format for (e.g. 'data' or 'equipment')
+   * @return {Object}
+   */
   formatData(data, type) {
     let formattedData;
 
@@ -243,6 +273,11 @@ export default class Creator {
     return formattedData;
   }
 
+  /**
+   * Extracts and returns a normalized data object from the player
+   * @param {Player} player the player to extract data from
+   * @return {Object}
+   */
   getPlayerData(player) {
     return {
       username: player.username,

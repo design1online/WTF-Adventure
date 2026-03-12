@@ -172,25 +172,72 @@
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/interface/actions.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import $ from &apos;jquery&apos;;
 
+/**
+ * Manages the context action menu interface for inventory and player interactions
+ * @class
+ */
 export default class Actions {
+  /**
+   * Default constructor
+   * @param {Interface} intrfce an instance of the game interface
+   */
   constructor(intrfce) {
+    /**
+     * The game interface instance
+     * @type {Interface}
+     */
     this.interface = intrfce;
 
+    /**
+     * The main action container element
+     * @type {jQuery}
+     */
     this.body = $(&apos;#actionContainer&apos;);
+    /**
+     * The drop dialog element
+     * @type {jQuery}
+     */
     this.drop = $(&apos;#dropDialog&apos;);
+    /**
+     * The drop count input element
+     * @type {jQuery}
+     */
     this.dropInput = $(&apos;#dropCount&apos;);
 
+    /**
+     * The player actions container element
+     * @type {jQuery}
+     */
     this.pBody = $(&apos;#pActions&apos;);
+    /**
+     * The follow action button element
+     * @type {jQuery}
+     */
     this.follow = $(&apos;#follow&apos;);
+    /**
+     * The trade action button element
+     * @type {jQuery}
+     */
     this.trade = $(&apos;#tradeAction&apos;);
 
+    /**
+     * The currently active CSS class name
+     * @type {String}
+     */
     this.activeClass = null;
 
+    /**
+     * The currently active miscellaneous button
+     * @type {jQuery}
+     */
     this.miscButton = null;
 
     this.loadActions();
   }
 
+  /**
+   * Loads click handlers for drop accept and cancel buttons
+   */
   loadActions() {
     const dropAccept = $(&apos;#dropAccept&apos;);
     const dropCancel = $(&apos;#dropcancel&apos;);
@@ -208,6 +255,10 @@ export default class Actions {
     });
   }
 
+  /**
+   * Loads the default action buttons for the given active class
+   * @param {String} activeClass the name of the currently active interface class
+   */
   loadDefaults(activeClass) {
     this.activeClass = activeClass;
 
@@ -224,6 +275,11 @@ export default class Actions {
     }
   }
 
+  /**
+   * Adds a button to the action list and binds its click handler
+   * @param {jQuery} button the button element to add
+   * @param {Boolean} misc whether this is a miscellaneous button
+   */
   add(button, misc) {
     this.body.find(&apos;ul&apos;).prepend($(&apos;&lt;li&gt;&lt;/li&gt;&apos;).append(button));
 
@@ -238,11 +294,17 @@ export default class Actions {
     }
   }
 
+  /**
+   * Removes the miscellaneous button from the action list
+   */
   removeMisc() {
     this.miscButton.remove();
     this.miscButton = null;
   }
 
+  /**
+   * Removes all action buttons from the list
+   */
   reset() {
     const buttons = this.getButtons();
 
@@ -251,10 +313,19 @@ export default class Actions {
     }
   }
 
+  /**
+   * Shows the action container with a fast fade-in
+   */
   show() {
     this.body.fadeIn(&apos;fast&apos;);
   }
 
+  /**
+   * Displays player-specific action buttons near the given coordinates
+   * @param {Object} player the player entity to act on
+   * @param {Number} mouseX the x coordinate of the mouse pointer
+   * @param {Number} mouseY the y coordinate of the mouse pointer
+   */
   showPlayerActions(player, mouseX, mouseY) {
     if (!player) return;
 
@@ -277,14 +348,24 @@ export default class Actions {
     });
   }
 
+  /**
+   * Hides the action container with a slow fade-out
+   */
   hide() {
     this.body.fadeOut(&apos;slow&apos;);
   }
 
+  /**
+   * Hides the player actions panel with a fast fade-out
+   */
   hidePlayerActions() {
     this.pBody.fadeOut(&apos;fast&apos;);
   }
 
+  /**
+   * Displays the drop dialog and focuses the count input
+   * @param {String} activeClass the name of the currently active interface class
+   */
   displayDrop(activeClass) {
     this.activeClass = activeClass;
     this.drop.fadeIn(&apos;fast&apos;);
@@ -292,24 +373,43 @@ export default class Actions {
     this.dropInput.select();
   }
 
+  /**
+   * Hides the drop dialog and clears the count input
+   */
   hideDrop() {
     this.drop.fadeOut(&apos;slow&apos;);
     this.dropInput.blur();
     this.dropInput.val(&apos;&apos;);
   }
 
+  /**
+   * Returns all button list items in the action container
+   * @return {jQuery}
+   */
   getButtons() {
     return this.body.find(&apos;ul&apos;).find(&apos;li&apos;);
   }
 
+  /**
+   * Returns the game instance from the interface
+   * @return {Game}
+   */
   getGame() {
     return this.interface.game;
   }
 
+  /**
+   * Returns the local player from the game instance
+   * @return {Player}
+   */
   getPlayer() {
     return this.interface.game.player;
   }
 
+  /**
+   * Returns whether the action container is currently visible
+   * @return {Boolean}
+   */
   isVisible() {
     return this.body.css(&apos;display&apos;) === &apos;block&apos;;
   }

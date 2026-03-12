@@ -1,14 +1,20 @@
 import _ from 'underscore';
 
-/**
- * Global Values
- */
+/** @type {Object} */
 const collisions = {};
+/** @type {Object} */
 const entities = {};
+/** @type {Number} */
 let mobsFirstGid = -1;
 let map;
 let mode;
 
+/**
+ * Parses a Tiled map JSON object and returns a processed map for client or server use
+ * @param {Object} json the raw Tiled map JSON data
+ * @param {Object} options the processing options including the mode ('client' or 'server')
+ * @return {Object}
+ */
 export default function parse(json, options) {
   this.json = json;
   this.options = options;
@@ -255,6 +261,11 @@ export default function parse(json, options) {
   return map;
 }
 
+/**
+ * Checks whether a value is a valid non-empty number
+ * @param {*} number the value to validate
+ * @return {Boolean}
+ */
 var isValid = function (number) {
   return (
     number
@@ -265,6 +276,10 @@ var isValid = function (number) {
   );
 };
 
+/**
+ * Processes a single map layer and populates the appropriate map data structures
+ * @param {Object} layer the Tiled layer object to process
+ */
 var parseLayer = function (layer) {
   const name = layer.name.toLowerCase();
   const type = layer.type;

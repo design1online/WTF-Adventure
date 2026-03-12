@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Map from &apos;<span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber9">WTF-Adventure/WTF-Adventure/client/map/map.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Map from &apos;<span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber13">WTF-Adventure/WTF-Adventure/client/map/map.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber9">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber13">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Manages the game world map data including tiles, collisions and tilesets</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(game: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,7 +265,268 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-animated">animated</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-animated">animated</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Map of animated tile definitions keyed by tile ID</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-blocking">blocking</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>List of tile indices that block movement</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-collisions">collisions</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>List of tile indices that cause collisions</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-data">data</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The flat tile data array for the map</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-game">game</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Reference to the main game instance</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-grid">grid</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The 2D collision grid for pathfinding</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-height">height</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The height of the map in tiles</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-high">high</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>List of tile IDs that are rendered above entities</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-mapLoaded">mapLoaded</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Whether the map data has finished loading</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-readyCallback">readyCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -291,13 +554,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-blocking">blocking</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-renderer">renderer</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/renderer/renderer.js~Renderer.html">Renderer</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Reference to the game renderer</p>
+</div>
       </div>
     </td>
     <td>
@@ -319,13 +583,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-collisions">collisions</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-supportsWorker">supportsWorker</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Whether the browser supports Web Workers for map parsing</p>
+</div>
       </div>
     </td>
     <td>
@@ -347,13 +612,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-data">data</a></span></span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-tileSize">tileSize</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The size of each tile in pixels</p>
+</div>
       </div>
     </td>
     <td>
@@ -375,13 +641,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-game">game</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-tilesets">tilesets</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The loaded tileset images indexed by scale</p>
+</div>
       </div>
     </td>
     <td>
@@ -403,13 +670,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-grid">grid</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-tilesetsLoaded">tilesetsLoaded</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Whether the tilesets have finished loading</p>
+</div>
       </div>
     </td>
     <td>
@@ -431,265 +699,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-height">height</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-width">width</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-high">high</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-mapLoaded">mapLoaded</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-readyCallback">readyCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-renderer">renderer</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-supportsWorker">supportsWorker</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-tileSize">tileSize</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-tilesets">tilesets</a></span></span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-tilesetsLoaded">tilesetsLoaded</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-member-width">width</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>The width of the map in tiles</p>
+</div>
       </div>
     </td>
     <td>
@@ -718,13 +735,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-getTileAnimationDelay">getTileAnimationDelay</a></span></span><span class="code" data-ice="signature">(id: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-getTileAnimationDelay">getTileAnimationDelay</a></span></span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the frame delay in milliseconds for an animated tile</p>
+</div>
       </div>
     </td>
     <td>
@@ -746,13 +764,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-getTileAnimationLength">getTileAnimationLength</a></span></span><span class="code" data-ice="signature">(id: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-getTileAnimationLength">getTileAnimationLength</a></span></span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the frame count of an animated tile&apos;s animation</p>
+</div>
       </div>
     </td>
     <td>
@@ -774,13 +793,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-getX">getX</a></span></span><span class="code" data-ice="signature">(index: <span>*</span>, width: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-getX">getX</a></span></span><span class="code" data-ice="signature">(index: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, width: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Computes the X coordinate from a flat tile index and map width</p>
+</div>
       </div>
     </td>
     <td>
@@ -802,13 +822,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-gridPositionToIndex">gridPositionToIndex</a></span></span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-gridPositionToIndex">gridPositionToIndex</a></span></span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Converts a 2D grid position to a flat tile index</p>
+</div>
       </div>
     </td>
     <td>
@@ -830,13 +851,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-indexToGridPosition">indexToGridPosition</a></span></span><span class="code" data-ice="signature">(index: <span>*</span>): {&quot;x&quot;: <span>*</span>, &quot;y&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-indexToGridPosition">indexToGridPosition</a></span></span><span class="code" data-ice="signature">(index: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): {x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>}</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Converts a flat tile index to a 2D grid position</p>
+</div>
       </div>
     </td>
     <td>
@@ -858,13 +880,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-isAnimatedTile">isAnimatedTile</a></span></span><span class="code" data-ice="signature">(id: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-isAnimatedTile">isAnimatedTile</a></span></span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether a tile ID has animation data</p>
+</div>
       </div>
     </td>
     <td>
@@ -886,13 +909,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-isColliding">isColliding</a></span></span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-isColliding">isColliding</a></span></span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether a grid position contains a collision</p>
+</div>
       </div>
     </td>
     <td>
@@ -914,13 +938,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-isHighTile">isHighTile</a></span></span><span class="code" data-ice="signature">(id: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-isHighTile">isHighTile</a></span></span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether a tile ID is rendered above entities</p>
+</div>
       </div>
     </td>
     <td>
@@ -942,13 +967,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-isOutOfBounds">isOutOfBounds</a></span></span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-isOutOfBounds">isOutOfBounds</a></span></span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether a grid position is outside the map bounds</p>
+</div>
       </div>
     </td>
     <td>
@@ -976,7 +1002,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Builds the 2D collision grid from the collision and blocking tile lists</p>
+</div>
       </div>
     </td>
     <td>
@@ -1004,7 +1031,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Loads the map data using a Web Worker if supported, otherwise falls back to Ajax</p>
+</div>
       </div>
     </td>
     <td>
@@ -1026,13 +1054,14 @@
           
           <span data-ice="async">async</span>
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-loadTileset">loadTileset</a></span></span><span class="code" data-ice="signature">(path: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-loadTileset">loadTileset</a></span></span><span class="code" data-ice="signature">(path: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>Image</span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Loads a single tileset image and resolves with the loaded Image element</p>
+</div>
       </div>
     </td>
     <td>
@@ -1084,13 +1113,14 @@ of its wrong proportions.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-onReady">onReady</a></span></span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-onReady">onReady</a></span></span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Registers a callback to be invoked when the map is fully loaded</p>
+</div>
       </div>
     </td>
     <td>
@@ -1112,13 +1142,14 @@ of its wrong proportions.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-parseMap">parseMap</a></span></span><span class="code" data-ice="signature">(map: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/map/map.js~Map.html#instance-method-parseMap">parseMap</a></span></span><span class="code" data-ice="signature">(map: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Parses the raw map data object and sets map properties</p>
+</div>
       </div>
     </td>
     <td>
@@ -1146,7 +1177,8 @@ of its wrong proportions.</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Polls until both the map and tilesets are loaded, then fires the ready callback</p>
+</div>
       </div>
     </td>
     <td>
@@ -1174,7 +1206,8 @@ of its wrong proportions.</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Updates the active tileset based on the current drawing scale</p>
+</div>
       </div>
     </td>
     <td>
@@ -1200,22 +1233,40 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(game: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber10">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber18">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">game</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>an instance of the game</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -1246,18 +1297,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">animated</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">animated</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber121">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber211">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Map of animated tile definitions keyed by tile ID</p>
+</div>
 
   
 
@@ -1289,18 +1341,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">blocking</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">blocking</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber118">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber196">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>List of tile indices that block movement</p>
+</div>
 
   
 
@@ -1332,18 +1385,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">collisions</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">collisions</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber119">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber201">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>List of tile indices that cause collisions</p>
+</div>
 
   
 
@@ -1375,18 +1429,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">data</span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+    <span class="code" data-ice="name">data</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber38">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The flat tile data array for the map</p>
+</div>
 
   
 
@@ -1418,18 +1473,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">game</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">game</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber23">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the main game instance</p>
+</div>
 
   
 
@@ -1461,18 +1517,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">grid</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">grid</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber48">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The 2D collision grid for pathfinding</p>
+</div>
 
   
 
@@ -1504,18 +1561,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">height</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">height</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber115">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber181">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The height of the map in tiles</p>
+</div>
 
   
 
@@ -1547,18 +1605,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">high</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">high</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber120">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber206">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>List of tile IDs that are rendered above entities</p>
+</div>
 
   
 
@@ -1590,18 +1649,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">mapLoaded</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="code" data-ice="name">mapLoaded</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber18">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber58">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Whether the map data has finished loading</p>
+</div>
 
   
 
@@ -1633,11 +1693,11 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">readyCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">readyCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber205">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber352">source</a></span></span>
     </span>
   </h3>
 
@@ -1676,18 +1736,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">renderer</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">renderer</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/renderer/renderer.js~Renderer.html">Renderer</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber28">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the game renderer</p>
+</div>
 
   
 
@@ -1719,18 +1780,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">supportsWorker</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">supportsWorker</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber33">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Whether the browser supports Web Workers for map parsing</p>
+</div>
 
   
 
@@ -1762,18 +1824,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">tileSize</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">tileSize</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber116">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber186">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The size of each tile in pixels</p>
+</div>
 
   
 
@@ -1805,18 +1868,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">tilesets</span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+    <span class="code" data-ice="name">tilesets</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber43">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The loaded tileset images indexed by scale</p>
+</div>
 
   
 
@@ -1848,18 +1912,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">tilesetsLoaded</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="code" data-ice="name">tilesetsLoaded</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber17">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber53">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Whether the tilesets have finished loading</p>
+</div>
 
   
 
@@ -1891,18 +1956,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">width</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">width</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber114">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber176">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The width of the map in tiles</p>
+</div>
 
   
 
@@ -1937,18 +2003,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">getTileAnimationDelay</span><span class="code" data-ice="signature">(id: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">getTileAnimationDelay</span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber199">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber341">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the frame delay in milliseconds for an animated tile</p>
+</div>
 
   
 
@@ -1962,9 +2029,10 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">id</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the tile ID</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1976,8 +2044,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>the animation delay in milliseconds</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2008,18 +2077,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">getTileAnimationLength</span><span class="code" data-ice="signature">(id: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">getTileAnimationLength</span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber195">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber332">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the frame count of an animated tile&apos;s animation</p>
+</div>
 
   
 
@@ -2033,9 +2103,10 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">id</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the tile ID</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2047,8 +2118,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>the animation length</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2079,18 +2151,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">getX</span><span class="code" data-ice="signature">(index: <span>*</span>, width: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">getX</span><span class="code" data-ice="signature">(index: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, width: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber187">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber319">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Computes the X coordinate from a flat tile index and map width</p>
+</div>
 
   
 
@@ -2104,15 +2177,17 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">index</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the flat tile index</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">width</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the map width in tiles</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2124,8 +2199,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>the X grid coordinate</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2156,18 +2232,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">gridPositionToIndex</span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">gridPositionToIndex</span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber160">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber264">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Converts a 2D grid position to a flat tile index</p>
+</div>
 
   
 
@@ -2181,15 +2258,17 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">x</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the grid column</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">y</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the grid row</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2201,8 +2280,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>the 1-based flat tile index</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2233,18 +2313,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">indexToGridPosition</span><span class="code" data-ice="signature">(index: <span>*</span>): {&quot;x&quot;: <span>*</span>, &quot;y&quot;: <span>*</span>}</span>
+    <span class="code" data-ice="name">indexToGridPosition</span><span class="code" data-ice="signature">(index: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): {x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>}</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber148">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber246">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Converts a flat tile index to a 2D grid position</p>
+</div>
 
   
 
@@ -2258,9 +2339,10 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">index</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the 1-based flat tile index</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2272,8 +2354,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType">{&quot;x&quot;: <span>*</span>, &quot;y&quot;: <span>*</span>}</td>
-          
+          <td class="return-type code" data-ice="returnType">{x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>}</td>
+          <td class="return-desc" data-ice="returnDescription"><p>the grid position</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2304,18 +2387,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">isAnimatedTile</span><span class="code" data-ice="signature">(id: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">isAnimatedTile</span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber175">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber295">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether a tile ID has animation data</p>
+</div>
 
   
 
@@ -2329,9 +2413,10 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">id</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the tile ID to check</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2343,8 +2428,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>true if the tile is animated</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2375,18 +2461,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">isColliding</span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">isColliding</span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber164">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber274">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether a grid position contains a collision</p>
+</div>
 
   
 
@@ -2400,15 +2487,17 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">x</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the grid column</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">y</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the grid row</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2420,8 +2509,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>true if the position is colliding</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2452,18 +2542,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">isHighTile</span><span class="code" data-ice="signature">(id: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">isHighTile</span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber171">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber286">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether a tile ID is rendered above entities</p>
+</div>
 
   
 
@@ -2477,9 +2568,10 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">id</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the tile ID to check</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2491,8 +2583,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>true if the tile is a high tile</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2523,18 +2616,19 @@ of its wrong proportions.</p>
     
     
     
-    <span class="code" data-ice="name">isOutOfBounds</span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">isOutOfBounds</span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber179">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber305">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether a grid position is outside the map bounds</p>
+</div>
 
   
 
@@ -2548,15 +2642,17 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">x</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the grid column</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">y</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the grid row</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2568,8 +2664,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>true if the position is out of bounds</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2604,14 +2701,15 @@ of its wrong proportions.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber124">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber217">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Builds the 2D collision grid from the collision and blocking tile lists</p>
+</div>
 
   
 
@@ -2647,14 +2745,15 @@ of its wrong proportions.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber41">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber87">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Loads the map data using a Web Worker if supported, otherwise falls back to Ajax</p>
+</div>
 
   
 
@@ -2686,18 +2785,19 @@ of its wrong proportions.</p>
     
     <span data-ice="async">async</span>
     
-    <span class="code" data-ice="name">loadTileset</span><span class="code" data-ice="signature">(path: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">loadTileset</span><span class="code" data-ice="signature">(path: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>Image</span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber96">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber150">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Loads a single tileset image and resolves with the loaded Image element</p>
+</div>
 
   
 
@@ -2711,9 +2811,10 @@ of its wrong proportions.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">path</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the URL path to the tileset image</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2725,8 +2826,9 @@ of its wrong proportions.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>Image</span>&gt;</td>
+          <td class="return-desc" data-ice="returnDescription"><p>resolves with the loaded tileset image</p>
+</td>
         </tr>
       </tbody>
     </table>
@@ -2761,7 +2863,7 @@ of its wrong proportions.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber75">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber121">source</a></span></span>
     </span>
   </h3>
 
@@ -2803,18 +2905,19 @@ that neither the entities would be necessary.</p>
     
     
     
-    <span class="code" data-ice="name">onReady</span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+    <span class="code" data-ice="name">onReady</span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber204">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber350">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Registers a callback to be invoked when the map is fully loaded</p>
+</div>
 
   
 
@@ -2828,9 +2931,10 @@ that neither the entities would be necessary.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">callback</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the function to call when the map is ready</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2862,18 +2966,19 @@ that neither the entities would be necessary.</p>
     
     
     
-    <span class="code" data-ice="name">parseMap</span><span class="code" data-ice="signature">(map: <span>*</span>)</span>
+    <span class="code" data-ice="name">parseMap</span><span class="code" data-ice="signature">(map: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber113">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber171">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Parses the raw map data object and sets map properties</p>
+</div>
 
   
 
@@ -2887,9 +2992,10 @@ that neither the entities would be necessary.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">map</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the raw map data object from the server or worker</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -2925,14 +3031,15 @@ that neither the entities would be necessary.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber68">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Polls until both the map and tilesets are loaded, then fires the ready callback</p>
+</div>
 
   
 
@@ -2968,14 +3075,15 @@ that neither the entities would be necessary.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber86">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/map/map.js.html#lineNumber135">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Updates the active tileset based on the current drawing scale</p>
+</div>
 
   
 

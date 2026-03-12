@@ -172,11 +172,28 @@
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/server/js/database/loader.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import log from &apos;../util/log.js&apos;;
 
+/**
+ * Loads player data from the database
+ * @class
+ */
 export default class Loader {
+  /**
+   * Default constructor
+   * @param {Object} mysql the MySQL connection wrapper
+   */
   constructor(mysql) {
+    /**
+     * The MySQL connection wrapper
+     * @type {Object}
+     */
     this.mysql = mysql;
   }
 
+  /**
+   * Retrieves a player&apos;s inventory data from the database
+   * @param {Player} player the player whose inventory to load
+   * @param {Function} callback called with ids, counts, abilities, and abilityLevels arrays
+   */
   getInventory(player, callback) {
     this.mysql.connection.query(
       &apos;SELECT * FROM `player_inventory` WHERE `player_inventory`.`username`=?&apos;,
@@ -200,6 +217,11 @@ export default class Loader {
     );
   }
 
+  /**
+   * Retrieves a player&apos;s bank data from the database
+   * @param {Player} player the player whose bank to load
+   * @param {Function} callback called with ids, counts, abilities, and abilityLevels arrays
+   */
   getBank(player, callback) {
     this.mysql.connection.query(
       &apos;SELECT * FROM `player_bank` WHERE `player_bank`.`username`=?&apos;,
@@ -223,6 +245,11 @@ export default class Loader {
     );
   }
 
+  /**
+   * Retrieves a player&apos;s quest progress data from the database
+   * @param {Player} player the player whose quests to load
+   * @param {Function} callback called with ids and stages arrays
+   */
   getQuests(player, callback) {
     this.mysql.connection.query(
       &apos;SELECT * FROM `player_quests` WHERE `player_quests`.`username`=?&apos;,
@@ -241,6 +268,11 @@ export default class Loader {
     );
   }
 
+  /**
+   * Retrieves a player&apos;s achievement progress data from the database
+   * @param {Player} player the player whose achievements to load
+   * @param {Function} callback called with ids and progress arrays
+   */
   getAchievements(player, callback) {
     this.mysql.connection.query(
       &apos;SELECT * FROM `player_achievements` WHERE `player_achievements`.`username`=?&apos;,

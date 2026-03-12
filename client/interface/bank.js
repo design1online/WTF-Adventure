@@ -2,15 +2,57 @@ import $ from 'jquery';
 import Container from './container/container';
 import Packets from '../network/packets';
 
+/**
+ * Manages the bank interface for storing and retrieving items
+ * @class
+ */
 export default class Bank {
+  /**
+   * Default constructor
+   * @param {Game} game an instance of the game
+   * @param {Container} inventoryContainer the player's inventory container
+   * @param {Number} size the number of slots in the bank
+   */
   constructor(game, inventoryContainer, size) {
+    /**
+     * The game instance
+     * @type {Game}
+     */
     this.game = game;
+    /**
+     * The player's inventory container
+     * @type {Container}
+     */
     this.inventoryContainer = inventoryContainer;
+    /**
+     * The local player entity
+     * @type {Player}
+     */
     this.player = game.player;
+    /**
+     * The bank dialog body element
+     * @type {jQuery}
+     */
     this.body = $('#bank');
+    /**
+     * The bank slots container element
+     * @type {jQuery}
+     */
     this.bankSlots = $('#bankSlots');
+    /**
+     * The bank inventory slots container element
+     * @type {jQuery}
+     */
     this.bankInventorySlots = $('#bankInventorySlots');
+    /**
+     * The container holding bank slot data
+     * @type {Container}
+     */
     this.container = new Container(size);
+    /**
+     * The close button element
+     * @type {jQuery}
+     */
     this.close = $('#closeBank');
     this.close.css('left', '97%');
     this.close.click(() => {
@@ -18,6 +60,10 @@ export default class Bank {
     });
   }
 
+  /**
+   * Populates the bank and inventory slot lists from server data
+   * @param {Array} data array of item data objects for each bank slot
+   */
   loadBank(data) {
     const bankList = this.bankSlots.find('ul');
     const inventoryList = this.bankInventorySlots.find('ul');
@@ -113,6 +159,9 @@ export default class Bank {
     }
   }
 
+  /**
+   * Recalculates and reapplies slot styles when the window is resized
+   */
   resize() {
     const bankList = this.getBankList();
     const inventoryList = this.getInventoryList();
@@ -164,6 +213,11 @@ export default class Bank {
     }
   }
 
+  /**
+   * Sends a bank slot selection packet when a slot is clicked
+   * @param {String} type the slot type, either 'bank' or 'inventory'
+   * @param {Event} event the click event from the slot element
+   */
   click(type, event) {
     const isBank = type === 'bank';
     const index = event.currentTarget.id.substring(isBank ? 8 : 17);
@@ -175,6 +229,10 @@ export default class Bank {
     ]);
   }
 
+  /**
+   * Adds or updates an item in the bank display at the given index
+   * @param {Object} info item info object containing index, name, count, ability, and abilityLevel
+   */
   add(info) {
     const item = $(this.getBankList()[info.index]);
     const slot = this.container.slots[info.index];
@@ -207,6 +265,10 @@ export default class Bank {
     }
   }
 
+  /**
+   * Removes or decrements an item from the bank display at the given index
+   * @param {Object} info item info object containing index and count
+   */
   remove(info) {
     const item = $(this.getBankList()[info.index]);
     const slot = this.container.slots[info.index];
@@ -227,6 +289,10 @@ export default class Bank {
     }
   }
 
+  /**
+   * Adds or updates an item in the inventory panel within the bank interface
+   * @param {Object} info item info object containing index, name, and count
+   */
   addInventory(info) {
     const item = $(this.getInventoryList()[info.index]);
 
@@ -251,6 +317,10 @@ export default class Bank {
     }
   }
 
+  /**
+   * Removes an item from the inventory panel within the bank interface
+   * @param {Object} info item info object containing index
+   */
   removeInventory(info) {
     const item = $(this.getInventoryList()[info.index]);
 
@@ -264,30 +334,56 @@ export default class Bank {
     slot.find(`#inventoryItemCount${info.index}`).text('');
   }
 
+  /**
+   * Shows the bank dialog with a slow fade-in
+   */
   display() {
     this.body.fadeIn('slow');
   }
 
+  /**
+   * Hides the bank dialog with a fast fade-out
+   */
   hide() {
     this.body.fadeOut('fast');
   }
 
+  /**
+   * Returns whether the bank dialog is currently visible
+   * @return {Boolean}
+   */
   isVisible() {
     return this.body.css('display') === 'block';
   }
 
+  /**
+   * Returns the drawing scale from the game renderer
+   * @return {Number}
+   */
   getDrawingScale() {
     return this.game.renderer.getDrawingScale();
   }
 
+  /**
+   * Returns the current scale factor from the game
+   * @return {Number}
+   */
   getScale() {
     return this.game.getScaleFactor();
   }
 
+  /**
+   * Returns all bank slot list items
+   * @return {jQuery}
+   */
   getBankList() {
     return this.bankSlots.find('ul').find('li');
   }
 
+  /**
+   * Returns all inventory slot list items within the bank interface
+   * @return {jQuery}
+   */
   getInventoryList() {
     return this.bankInventorySlots.find('ul').find('li');
   }

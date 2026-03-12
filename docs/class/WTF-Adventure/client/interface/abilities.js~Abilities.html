@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Abilities from &apos;<span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber3">WTF-Adventure/WTF-Adventure/client/interface/abilities.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Abilities from &apos;<span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber7">WTF-Adventure/WTF-Adventure/client/interface/abilities.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber3">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber7">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Manages the abilities shortcut bar interface</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(game: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html#instance-member-game">game</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html#instance-member-game">game</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The game instance</p>
+</div>
       </div>
     </td>
     <td>
@@ -291,13 +294,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html#instance-member-shortcuts">shortcuts</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html#instance-member-shortcuts">shortcuts</a></span></span><span class="code" data-ice="signature">: <span>jQuery</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The ability shortcut bar container element</p>
+</div>
       </div>
     </td>
     <td>
@@ -326,13 +330,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html#instance-method-getList">getList</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/interface/abilities.js~Abilities.html#instance-method-getList">getList</a></span></span><span class="code" data-ice="signature">(): <span>jQuery</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the list element within the shortcuts container</p>
+</div>
       </div>
     </td>
     <td>
@@ -358,22 +363,40 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(game: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">game</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>an instance of the game</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -404,18 +427,19 @@
     
     
     
-    <span class="code" data-ice="name">game</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">game</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/game.js~Game.html">Game</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The game instance</p>
+</div>
 
   
 
@@ -447,18 +471,19 @@
     
     
     
-    <span class="code" data-ice="name">shortcuts</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">shortcuts</span><span class="code" data-ice="signature">: <span>jQuery</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber6">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The ability shortcut bar container element</p>
+</div>
 
   
 
@@ -493,18 +518,19 @@
     
     
     
-    <span class="code" data-ice="name">getList</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getList</span><span class="code" data-ice="signature">(): <span>jQuery</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/interface/abilities.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the list element within the shortcuts container</p>
+</div>
 
   
 
@@ -516,7 +542,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span>jQuery</span></td>
           
         </tr>
       </tbody>

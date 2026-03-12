@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Minigames from &apos;<span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber3">WTF-Adventure/WTF-Adventure/server/js/controllers/minigames.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Minigames from &apos;<span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber7">WTF-Adventure/WTF-Adventure/server/js/controllers/minigames.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber3">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber7">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Controller that manages all active minigame instances</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(world: <span>World</span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html#instance-member-minigames">minigames</a></span></span><span class="code" data-ice="signature">: {}</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html#instance-member-minigames">minigames</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Map of active minigame instances keyed by name</p>
+</div>
       </div>
     </td>
     <td>
@@ -291,13 +294,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>World</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The world instance</p>
+</div>
       </div>
     </td>
     <td>
@@ -326,13 +330,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html#instance-method-getTeamWar">getTeamWar</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/controllers/minigames.js~Minigames.html#instance-method-getTeamWar">getTeamWar</a></span></span><span class="code" data-ice="signature">(): <span>TeamWar</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the TeamWar minigame instance</p>
+</div>
       </div>
     </td>
     <td>
@@ -360,7 +365,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Loads and instantiates all minigame implementations</p>
+</div>
       </div>
     </td>
     <td>
@@ -386,22 +392,40 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(world: <span>World</span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">world</td>
+      <td data-ice="type" class="code"><span>World</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the world instance</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -432,18 +456,19 @@
     
     
     
-    <span class="code" data-ice="name">minigames</span><span class="code" data-ice="signature">: {}</span>
+    <span class="code" data-ice="name">minigames</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber6">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Map of active minigame instances keyed by name</p>
+</div>
 
   
 
@@ -475,18 +500,19 @@
     
     
     
-    <span class="code" data-ice="name">world</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">world</span><span class="code" data-ice="signature">: <span>World</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The world instance</p>
+</div>
 
   
 
@@ -521,18 +547,19 @@
     
     
     
-    <span class="code" data-ice="name">getTeamWar</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getTeamWar</span><span class="code" data-ice="signature">(): <span>TeamWar</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber38">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the TeamWar minigame instance</p>
+</div>
 
   
 
@@ -544,7 +571,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span>TeamWar</span></td>
           
         </tr>
       </tbody>
@@ -580,14 +607,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/controllers/minigames.js.html#lineNumber30">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Loads and instantiates all minigame implementations</p>
+</div>
 
   
 

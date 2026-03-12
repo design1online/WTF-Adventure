@@ -2,14 +2,39 @@ import Quest from '../quest.js';
 import Messages from '../../../../../../network/messages.js';
 import Packets from '../../../../../../network/packets.js';
 
+/**
+ * Represents the introductory tutorial quest for new players
+ * @class
+ */
 export default class Introduction extends Quest {
+  /**
+   * Default constructor
+   * @param {Player} player the player undertaking this quest
+   * @param {Object} data the quest data object with stages and tasks
+   */
   constructor(player, data) {
     super(player, data);
+    /**
+     * The player undertaking this quest
+     * @type {Player}
+     */
     this.player = player;
+    /**
+     * The quest data object containing stages and task definitions
+     * @type {Object}
+     */
     this.data = data;
+    /**
+     * The last NPC the player interacted with in this quest
+     * @type {NPC}
+     */
     this.lastNPC = null;
   }
 
+  /**
+   * Loads the quest at the given stage and sets up event callbacks
+   * @param {Number} stage the stage to load the quest at
+   */
   load(stage) {
     if (!this.player.inTutorial()) {
       this.setStage(9999);
@@ -20,12 +45,16 @@ export default class Introduction extends Quest {
     if (!stage) {
       this.update();
     } else {
+      /** @type {Number} */
       this.stage = stage;
     }
 
     this.loadCallbacks();
   }
 
+  /**
+   * Registers player event callbacks for tutorial quest progression
+   */
   loadCallbacks() {
     if (this.stage >= 9999) return;
 
@@ -73,6 +102,10 @@ export default class Introduction extends Quest {
     });
   }
 
+  /**
+   * Advances the quest stage based on the given action type
+   * @param {String} type the type of action that triggered progress (e.g. 'talk', 'door', 'click')
+   */
   progress(type) {
     const
       task = this.data.task[this.stage];
@@ -116,24 +149,44 @@ export default class Introduction extends Quest {
     );
   }
 
+  /**
+   * Returns whether the tutorial quest is finished
+   * @return {Boolean}
+   */
   isFinished() {
     return super.isFinished() || !this.player.inTutorial();
   }
 
+  /**
+   * Toggles the player's ability to chat
+   */
   toggleChat() {
     this.player.canTalk = !this.player.canTalk;
   }
 
+  /**
+   * Sets the quest stage and clears any active pointers
+   * @param {Number} stage the stage value to set
+   */
   setStage(stage) {
     super.setStage(stage);
     this.clearPointers();
   }
 
+  /**
+   * Completes the tutorial quest and re-enables chat
+   */
   finish() {
     this.toggleChat();
     super.finish();
   }
 
+  /**
+   * Checks whether the given coordinates match the door destination for the current stage
+   * @param {Number} destX the x coordinate of the door destination
+   * @param {Number} destY the y coordinate of the door destination
+   * @return {Boolean}
+   */
   verifyDoor(destX, destY) {
     const doorData = this.data.doors[this.stage];
 
@@ -144,7 +197,15 @@ export default class Introduction extends Quest {
     return doorData[0] === destX && doorData[1] === destY;
   }
 
+  /**
+   * Registers a callback to invoke when the quest finishes loading
+   * @param {Function} callback the function to call when loading is complete
+   */
   onFinishedLoading(callback) {
+    /**
+     * Callback invoked when the quest finishes loading
+     * @type {Function}
+     */
     this.finishedCallback = callback;
   }
 }

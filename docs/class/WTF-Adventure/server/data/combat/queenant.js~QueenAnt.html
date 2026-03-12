@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import QueenAnt from &apos;<span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber13">WTF-Adventure/WTF-Adventure/server/data/combat/queenant.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import QueenAnt from &apos;<span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber17">WTF-Adventure/WTF-Adventure/server/data/combat/queenant.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber13">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber17">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,10 +196,7 @@
 
   
   
-  <div class="description" data-ice="description"><p>This is where bosses start to get a bit more complex.
-The queen ant will do an AoE attack after staggering for five seconds,
-indicating to the players. If players are caught up in this, the terror
-explosion sprite is drawn above them.</p>
+  <div class="description" data-ice="description"><p>Combat logic for the Queen Ant boss</p>
 </div>
   
 
@@ -232,13 +229,14 @@ explosion sprite is drawn above them.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -267,7 +265,210 @@ explosion sprite is drawn above them.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-aoeCountdown">aoeCountdown</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-aoeCountdown">aoeCountdown</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Countdown value in seconds displayed before the AoE attack</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-aoeRadius">aoeRadius</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Radius of the AoE attack</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-aoeTimeout">aoeTimeout</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Active timeout handle for the AoE attack delay</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-character">character</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The character instance with extended spawn configuration</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-frozen">frozen</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Whether the boss is currently frozen (AoE wind-up state)</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-lastActionThreshold">lastActionThreshold</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Threshold in ms for the last action before AoE is triggered</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-lastAoE">lastAoE</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Timestamp of the last AoE attack</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-lastHit">lastHit</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
@@ -295,13 +496,14 @@ explosion sprite is drawn above them.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-aoeRadius">aoeRadius</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-lastSpawn">lastSpawn</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Timestamp of the last minion spawn</p>
+</div>
       </div>
     </td>
     <td>
@@ -323,13 +525,14 @@ explosion sprite is drawn above them.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-aoeTimeout">aoeTimeout</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-minionCount">minionCount</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Number of minions to spawn per wave</p>
+</div>
       </div>
     </td>
     <td>
@@ -351,209 +554,14 @@ explosion sprite is drawn above them.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-character">character</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-minions">minions</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-frozen">frozen</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-lastActionThreshold">lastActionThreshold</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-lastAoE">lastAoE</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-lastHit">lastHit</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-lastSpawn">lastSpawn</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-minionCount">minionCount</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-member-minions">minions</a></span></span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>Array of currently active minion characters</p>
+</div>
       </div>
     </td>
     <td>
@@ -582,13 +590,14 @@ explosion sprite is drawn above them.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-begin">begin</a></span></span><span class="code" data-ice="signature">(attacker: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-begin">begin</a></span></span><span class="code" data-ice="signature">(attacker: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Begins combat with an attacker, resetting the AoE timer</p>
+</div>
       </div>
     </td>
     <td>
@@ -616,7 +625,8 @@ explosion sprite is drawn above them.</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Orders each minion to attack a random target</p>
+</div>
       </div>
     </td>
     <td>
@@ -638,13 +648,14 @@ explosion sprite is drawn above them.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-canCastAoE">canCastAoE</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-canCastAoE">canCastAoE</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the AoE attack can currently be cast</p>
+</div>
       </div>
     </td>
     <td>
@@ -666,13 +677,14 @@ explosion sprite is drawn above them.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-canSpawn">canSpawn</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-canSpawn">canSpawn</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether minions can be spawned</p>
+</div>
       </div>
     </td>
     <td>
@@ -700,9 +712,7 @@ explosion sprite is drawn above them.</p>
       <div>
         
         
-        <div data-ice="description"><p>The reason this function does not use its superclass
-representation is because of the setTimeout function
-which does not allow us to call super().</p>
+        <div data-ice="description"><p>Freezes the boss and schedules the AoE damage after a countdown</p>
 </div>
       </div>
     </td>
@@ -731,7 +741,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Retrieves grid data for minions from the world</p>
+</div>
       </div>
     </td>
     <td>
@@ -753,13 +764,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-getRandomTarget">getRandomTarget</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-getRandomTarget">getRandomTarget</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns a random attacker or the current target</p>
+</div>
       </div>
     </td>
     <td>
@@ -781,13 +793,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-hasMinions">hasMinions</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-hasMinions">hasMinions</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether any minions are currently alive</p>
+</div>
       </div>
     </td>
     <td>
@@ -809,13 +822,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-hit">hit</a></span></span><span class="code" data-ice="signature">(attacker: <span>*</span>, target: <span>*</span>, hitInfo: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-hit">hit</a></span></span><span class="code" data-ice="signature">(attacker: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, hitInfo: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Handles a hit, checking for AoE and minion spawn conditions</p>
+</div>
       </div>
     </td>
     <td>
@@ -837,13 +851,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-isLast">isLast</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-isLast">isLast</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether only one minion remains</p>
+</div>
       </div>
     </td>
     <td>
@@ -865,13 +880,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-pushCountdown">pushCountdown</a></span></span><span class="code" data-ice="signature">(count: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-pushCountdown">pushCountdown</a></span></span><span class="code" data-ice="signature">(count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Broadcasts a countdown message to adjacent groups</p>
+</div>
       </div>
     </td>
     <td>
@@ -893,13 +909,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-pushFreeze">pushFreeze</a></span></span><span class="code" data-ice="signature">(state: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/data/combat/queenant.js~QueenAnt.html#instance-method-pushFreeze">pushFreeze</a></span></span><span class="code" data-ice="signature">(state: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Applies or removes the frozen and stunned state on the character</p>
+</div>
       </div>
     </td>
     <td>
@@ -927,7 +944,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Resets the AoE timer to the current time</p>
+</div>
       </div>
     </td>
     <td>
@@ -955,7 +973,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Spawns a wave of minions at the boss&apos;s current position</p>
+</div>
       </div>
     </td>
     <td>
@@ -985,7 +1004,239 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attackLoop">attackLoop</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attackLoop">attackLoop</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The interval handle for the attack loop</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attackers">attackers</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>A map of attackers currently targeting this character</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attacking">attacking</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Whether this character is currently attacking</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-character">character</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The character this combat instance controls</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-checkLoop">checkLoop</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The interval handle for the inactivity check loop</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-cleanTimeout">cleanTimeout</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The timeout handle used to clean up combat state</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-first">first</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Whether this is the first action in combat</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-followLoop">followLoop</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The interval handle for the follow loop</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-forgetCallback">forgetCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -1013,13 +1264,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attackers">attackers</a></span></span><span class="code" data-ice="signature">: {}</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastAction">lastAction</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The timestamp of the last combat action</p>
+</div>
       </div>
     </td>
     <td>
@@ -1041,13 +1293,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-attacking">attacking</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastActionThreshold">lastActionThreshold</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The time in milliseconds before combat is considered inactive</p>
+</div>
       </div>
     </td>
     <td>
@@ -1069,13 +1322,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-character">character</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastHit">lastHit</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The timestamp of the last hit</p>
+</div>
       </div>
     </td>
     <td>
@@ -1097,13 +1351,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-checkLoop">checkLoop</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-queue">queue</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combatqueue.js~CombatQueue.html">CombatQueue</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The queue of pending hit actions</p>
+</div>
       </div>
     </td>
     <td>
@@ -1125,13 +1380,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-cleanTimeout">cleanTimeout</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-retaliate">retaliate</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Whether this character will retaliate when attacked</p>
+</div>
       </div>
     </td>
     <td>
@@ -1153,13 +1409,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-first">first</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-started">started</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Whether combat has been started</p>
+</div>
       </div>
     </td>
     <td>
@@ -1181,13 +1438,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-followLoop">followLoop</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>World</span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The game world instance</p>
+</div>
       </div>
     </td>
     <td>
@@ -1209,13 +1467,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-forgetCallback">forgetCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-addAttacker">addAttacker</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Adds a character to the attackers map</p>
+</div>
       </div>
     </td>
     <td>
@@ -1237,13 +1496,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastAction">lastAction</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-attack">attack</a></span></span><span class="code" data-ice="signature">(target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates and queues a hit action against the target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1265,13 +1525,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastActionThreshold">lastActionThreshold</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-attackCount">attackCount</a></span></span><span class="code" data-ice="signature">(count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Queues a given number of attacks against a target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1293,13 +1554,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastHit">lastHit</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-begin">begin</a></span></span><span class="code" data-ice="signature">(attacker: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Begins combat by setting up the target and starting the attack loop</p>
+</div>
       </div>
     </td>
     <td>
@@ -1321,13 +1583,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-queue">queue</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-canAttackAoE">canAttackAoE</a></span></span><span class="code" data-ice="signature">(target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether AoE attacks can be used against the given target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1349,13 +1612,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-retaliate">retaliate</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-colliding">colliding</a></span></span><span class="code" data-ice="signature">(x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the given tile coordinates are colliding</p>
+</div>
       </div>
     </td>
     <td>
@@ -1377,237 +1641,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-started">started</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-dealAoE">dealAoE</a></span></span><span class="code" data-ice="signature">(radius: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, hasTerror: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-addAttacker">addAttacker</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>)</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-attack">attack</a></span></span><span class="code" data-ice="signature">(target: <span>*</span>)</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-attackCount">attackCount</a></span></span><span class="code" data-ice="signature">(count: <span>*</span>, target: <span>*</span>)</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-begin">begin</a></span></span><span class="code" data-ice="signature">(attacker: <span>*</span>)</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-canAttackAoE">canAttackAoE</a></span></span><span class="code" data-ice="signature">(target: <span>*</span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-colliding">colliding</a></span></span><span class="code" data-ice="signature">(x: <span>*</span>, y: <span>*</span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-dealAoE">dealAoE</a></span></span><span class="code" data-ice="signature">(radius: <span>*</span>, hasTerror: <span>*</span>)</span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
+        <div data-ice="description"><p>Deals area-of-effect damage to all surrounding entities within the given radius</p>
+</div>
       </div>
     </td>
     <td>
@@ -1635,7 +1676,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Broadcasts a combat finish message for this character</p>
+</div>
       </div>
     </td>
     <td>
@@ -1657,13 +1699,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-follow">follow</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>, target: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-follow">follow</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Broadcasts a follow movement message from character to target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1685,13 +1728,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-forEachAttacker">forEachAttacker</a></span></span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-forEachAttacker">forEachAttacker</a></span></span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Iterates over each attacker and invokes the callback</p>
+</div>
       </div>
     </td>
     <td>
@@ -1719,7 +1763,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Forces an immediate attack sequence against the current target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1747,7 +1792,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Clears all attackers and removes this character&apos;s target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1769,13 +1815,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getClosestAttacker">getClosestAttacker</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getClosestAttacker">getClosestAttacker</a></span></span><span class="code" data-ice="signature">(): <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the closest attacker to this character</p>
+</div>
       </div>
     </td>
     <td>
@@ -1797,13 +1844,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getNewPosition">getNewPosition</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getNewPosition">getNewPosition</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns a new position adjacent to the current position, chosen at random</p>
+</div>
       </div>
     </td>
     <td>
@@ -1825,13 +1873,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getTime">getTime</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-getTime">getTime</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the current timestamp in milliseconds</p>
+</div>
       </div>
     </td>
     <td>
@@ -1853,13 +1902,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hasAttacker">hasAttacker</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hasAttacker">hasAttacker</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether a given character is in the attackers map</p>
+</div>
       </div>
     </td>
     <td>
@@ -1881,13 +1931,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hit">hit</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>, target: <span>*</span>, hitInfo: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hit">hit</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, hitInfo: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Executes a hit from character to target, handling ranged and melee combat</p>
+</div>
       </div>
     </td>
     <td>
@@ -1909,13 +1960,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-inProximity">inProximity</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-inProximity">inProximity</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether this character is within attack range of its target</p>
+</div>
       </div>
     </td>
     <td>
@@ -1937,13 +1989,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isAttacked">isAttacked</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isAttacked">isAttacked</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether this character is currently being attacked by any attackers</p>
+</div>
       </div>
     </td>
     <td>
@@ -1965,13 +2018,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isMob">isMob</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isMob">isMob</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the associated character is a mob</p>
+</div>
       </div>
     </td>
     <td>
@@ -1993,13 +2047,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isPlayer">isPlayer</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isPlayer">isPlayer</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the associated character is a player</p>
+</div>
       </div>
     </td>
     <td>
@@ -2021,13 +2076,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isRetaliating">isRetaliating</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isRetaliating">isRetaliating</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether this player character is currently retaliating against an attacker</p>
+</div>
       </div>
     </td>
     <td>
@@ -2049,13 +2105,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isTargetMob">isTargetMob</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-isTargetMob">isTargetMob</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the current target is a mob</p>
+</div>
       </div>
     </td>
     <td>
@@ -2077,13 +2134,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-move">move</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>, x: <span>*</span>, y: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-move">move</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, x: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>, y: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Moves a mob character to the given coordinates</p>
+</div>
       </div>
     </td>
     <td>
@@ -2105,13 +2163,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-onForget">onForget</a></span></span><span class="code" data-ice="signature">(callback: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-onForget">onForget</a></span></span><span class="code" data-ice="signature">(callback: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Registers a callback for when this character forgets its attackers</p>
+</div>
       </div>
     </td>
     <td>
@@ -2133,13 +2192,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-onSameTile">onSameTile</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-onSameTile">onSameTile</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether this mob is on the same tile as its target</p>
+</div>
       </div>
     </td>
     <td>
@@ -2167,7 +2227,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Processes pending attacks from the hit queue when in proximity to target</p>
+</div>
       </div>
     </td>
     <td>
@@ -2195,7 +2256,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Processes movement following logic for mobs pursuing their target</p>
+</div>
       </div>
     </td>
     <td>
@@ -2217,13 +2279,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-removeAttacker">removeAttacker</a></span></span><span class="code" data-ice="signature">(character: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-removeAttacker">removeAttacker</a></span></span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Removes a character from the attackers map and sends the mob to spawn if no longer attacked</p>
+</div>
       </div>
     </td>
     <td>
@@ -2251,7 +2314,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Sends a follow movement message to nearby players, excluding the combatants</p>
+</div>
       </div>
     </td>
     <td>
@@ -2279,7 +2343,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Sends this mob back to its spawn point and broadcasts the movement</p>
+</div>
       </div>
     </td>
     <td>
@@ -2301,13 +2366,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-setWorld">setWorld</a></span></span><span class="code" data-ice="signature">(world: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-setWorld">setWorld</a></span></span><span class="code" data-ice="signature">(world: <span>World</span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Sets the world instance for this combat object</p>
+</div>
       </div>
     </td>
     <td>
@@ -2335,7 +2401,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Starts the attack, follow, and check interval loops</p>
+</div>
       </div>
     </td>
     <td>
@@ -2363,7 +2430,8 @@ which does not allow us to call super().</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Stops all combat interval loops</p>
+</div>
       </div>
     </td>
     <td>
@@ -2385,13 +2453,14 @@ which does not allow us to call super().</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-targetOutOfBounds">targetOutOfBounds</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-targetOutOfBounds">targetOutOfBounds</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the current target is outside the mob&apos;s spawn bounds</p>
+</div>
       </div>
     </td>
     <td>
@@ -2415,22 +2484,40 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(character: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-constructor-constructor">Combat#constructor</a></span></div>
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">character</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the character instance for this boss</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -2461,18 +2548,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">aoeCountdown</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="code" data-ice="name">aoeCountdown</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber22">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber46">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Countdown value in seconds displayed before the AoE attack</p>
+</div>
 
   
 
@@ -2504,18 +2592,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">aoeRadius</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="code" data-ice="name">aoeRadius</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber23">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber51">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Radius of the AoE attack</p>
+</div>
 
   
 
@@ -2547,18 +2636,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">aoeTimeout</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">aoeTimeout</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber21">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber41">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Active timeout handle for the AoE attack delay</p>
+</div>
 
   
 
@@ -2590,18 +2680,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">character</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">character</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber18">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber34">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The character instance with extended spawn configuration</p>
+</div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-character">Combat#character</a></span></div>
 
@@ -2633,18 +2724,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">frozen</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="code" data-ice="name">frozen</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber28">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber76">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Whether the boss is currently frozen (AoE wind-up state)</p>
+</div>
 
   
 
@@ -2676,18 +2768,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">lastActionThreshold</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="code" data-ice="name">lastActionThreshold</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber17">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Threshold in ms for the last action before AoE is triggered</p>
+</div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastActionThreshold">Combat#lastActionThreshold</a></span></div>
 
@@ -2719,18 +2812,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">lastAoE</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="code" data-ice="name">lastAoE</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber24">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber56">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Timestamp of the last AoE attack</p>
+</div>
 
   
 
@@ -2762,18 +2856,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">lastHit</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">lastHit</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber88">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber150">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The timestamp of the last hit</p>
+</div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-member-lastHit">Combat#lastHit</a></span></div>
 
@@ -2805,18 +2900,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">lastSpawn</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="code" data-ice="name">lastSpawn</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber26">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber66">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Timestamp of the last minion spawn</p>
+</div>
 
   
 
@@ -2848,18 +2944,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">minionCount</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></span>
+    <span class="code" data-ice="name">minionCount</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber61">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Number of minions to spawn per wave</p>
+</div>
 
   
 
@@ -2891,18 +2988,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">minions</span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+    <span class="code" data-ice="name">minions</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber27">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber71">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Array of currently active minion characters</p>
+</div>
 
   
 
@@ -2937,18 +3035,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">begin</span><span class="code" data-ice="signature">(attacker: <span>*</span>)</span>
+    <span class="code" data-ice="name">begin</span><span class="code" data-ice="signature">(attacker: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber55">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber107">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Begins combat with an attacker, resetting the AoE timer</p>
+</div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-begin">Combat#begin</a></span></div>
 
@@ -2962,9 +3061,10 @@ which does not allow us to call super().</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">attacker</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the character initiating combat</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3000,14 +3100,15 @@ which does not allow us to call super().</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber125">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber193">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Orders each minion to attack a random target</p>
+</div>
 
   
 
@@ -3039,18 +3140,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">canCastAoE</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">canCastAoE</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber187">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber285">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether the AoE attack can currently be cast</p>
+</div>
 
   
 
@@ -3062,7 +3164,7 @@ which does not allow us to call super().</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3094,18 +3196,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">canSpawn</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">canSpawn</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber191">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber293">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether minions can be spawned</p>
+</div>
 
   
 
@@ -3117,7 +3220,7 @@ which does not allow us to call super().</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3153,16 +3256,14 @@ which does not allow us to call super().</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber86">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber147">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>The reason this function does not use its superclass
-representation is because of the setTimeout function
-which does not allow us to call super().</p>
+  <div data-ice="description"><p>Freezes the boss and schedules the AoE damage after a countdown</p>
 </div>
 
   
@@ -3199,14 +3300,15 @@ which does not allow us to call super().</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber175">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber261">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Retrieves grid data for minions from the world</p>
+</div>
 
   
 
@@ -3238,18 +3340,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">getRandomTarget</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getRandomTarget</span><span class="code" data-ice="signature">(): <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber143">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber218">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns a random attacker or the current target</p>
+</div>
 
   
 
@@ -3261,7 +3364,7 @@ which does not allow us to call super().</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></span></td>
           
         </tr>
       </tbody>
@@ -3293,18 +3396,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">hasMinions</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">hasMinions</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber183">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber277">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether any minions are currently alive</p>
+</div>
 
   
 
@@ -3316,7 +3420,7 @@ which does not allow us to call super().</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3348,18 +3452,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">hit</span><span class="code" data-ice="signature">(attacker: <span>*</span>, target: <span>*</span>, hitInfo: <span>*</span>)</span>
+    <span class="code" data-ice="name">hit</span><span class="code" data-ice="signature">(attacker: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, target: <span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span>, hitInfo: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber60">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber118">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Handles a hit, checking for AoE and minion spawn conditions</p>
+</div>
 
   <div data-ice="override"><h4>Override:</h4><span><a href="class/WTF-Adventure/server/js/game/entity/character/combat/combat.js~Combat.html#instance-method-hit">Combat#hit</a></span></div>
 
@@ -3373,21 +3478,24 @@ which does not allow us to call super().</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">attacker</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the attacking character</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">target</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/character.js~Character.html">Character</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the target being hit</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">hitInfo</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>hit information object</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3419,18 +3527,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">isLast</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">isLast</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber179">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber269">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether only one minion remains</p>
+</div>
 
   
 
@@ -3442,7 +3551,7 @@ which does not allow us to call super().</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -3474,18 +3583,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">pushCountdown</span><span class="code" data-ice="signature">(count: <span>*</span>)</span>
+    <span class="code" data-ice="name">pushCountdown</span><span class="code" data-ice="signature">(count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber165">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber248">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Broadcasts a countdown message to adjacent groups</p>
+</div>
 
   
 
@@ -3499,9 +3609,10 @@ which does not allow us to call super().</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">count</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the countdown value to display</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3533,18 +3644,19 @@ which does not allow us to call super().</p>
     
     
     
-    <span class="code" data-ice="name">pushFreeze</span><span class="code" data-ice="signature">(state: <span>*</span>)</span>
+    <span class="code" data-ice="name">pushFreeze</span><span class="code" data-ice="signature">(state: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber160">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber239">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Applies or removes the frozen and stunned state on the character</p>
+</div>
 
   
 
@@ -3558,9 +3670,10 @@ which does not allow us to call super().</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">state</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>whether to freeze or unfreeze</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -3596,14 +3709,15 @@ which does not allow us to call super().</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber139">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber210">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Resets the AoE timer to the current time</p>
+</div>
 
   
 
@@ -3639,14 +3753,15 @@ which does not allow us to call super().</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber98">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/data/combat/queenant.js.html#lineNumber163">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Spawns a wave of minions at the boss&apos;s current position</p>
+</div>
 
   
 

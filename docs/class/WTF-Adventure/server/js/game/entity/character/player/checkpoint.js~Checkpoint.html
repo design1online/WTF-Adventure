@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Checkpoint from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber1">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Checkpoint from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber5">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber1">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber5">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Represents a checkpoint associated with a player&apos;s position in the world</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-member-id">id</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-member-id">id</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The unique identifier of this checkpoint</p>
+</div>
       </div>
     </td>
     <td>
@@ -291,13 +294,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-member-map">map</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-member-map">map</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The map instance from the world</p>
+</div>
       </div>
     </td>
     <td>
@@ -319,13 +323,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-member-player">player</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-member-player">player</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The player associated with this checkpoint</p>
+</div>
       </div>
     </td>
     <td>
@@ -347,13 +352,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js~Checkpoint.html#instance-member-world">world</a></span></span><span class="code" data-ice="signature">: <span>World</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The world instance from the player</p>
+</div>
       </div>
     </td>
     <td>
@@ -380,22 +386,47 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(id: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber2">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber11">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">id</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the unique identifier of the checkpoint</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">player</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the player associated with this checkpoint</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -426,18 +457,19 @@
     
     
     
-    <span class="code" data-ice="name">id</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">id</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber3">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber16">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The unique identifier of this checkpoint</p>
+</div>
 
   
 
@@ -469,18 +501,19 @@
     
     
     
-    <span class="code" data-ice="name">map</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">map</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber6">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber31">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The map instance from the world</p>
+</div>
 
   
 
@@ -512,18 +545,19 @@
     
     
     
-    <span class="code" data-ice="name">player</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">player</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber21">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The player associated with this checkpoint</p>
+</div>
 
   
 
@@ -555,18 +589,19 @@
     
     
     
-    <span class="code" data-ice="name">world</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">world</span><span class="code" data-ice="signature">: <span>World</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/checkpoint.js.html#lineNumber26">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The world instance from the player</p>
+</div>
 
   
 

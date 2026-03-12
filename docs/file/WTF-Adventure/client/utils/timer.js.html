@@ -170,12 +170,34 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/utils/timer.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default class Timer {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Tracks elapsed time to determine when a duration has passed
+ * @class
+ */
+export default class Timer {
+  /**
+   * Default constructor
+   * @param {Number} start the initial timestamp
+   * @param {Number} duration the duration in milliseconds before the timer is considered over
+   */
   constructor(start, duration) {
+    /**
+     * The timestamp of the last timer reset or start
+     * @type {Number}
+     */
     this.time = start;
+    /**
+     * The duration in milliseconds the timer runs for
+     * @type {Number}
+     */
     this.duration = duration;
   }
 
+  /**
+   * Checks whether the timer&apos;s duration has elapsed since the last reset
+   * @param {Number} time the current timestamp to compare against
+   * @return {Boolean}
+   */
   isOver(time) {
     let over = false;
 

@@ -3,6 +3,7 @@ import Packets from './packets';
 import log from '../lib/log';
 
 /**
+ * Handles incoming server packets and dispatches them to registered callbacks.
  * Do not clutter up the Socket class with callbacks,
  * have this class here until a better method arises in my head.
  *
@@ -11,12 +12,25 @@ import log from '../lib/log';
  *
  * Please respect the order of the Packets Enum and arrange functions
  * accordingly.
+ * @class
  */
 export default class Messages {
+  /**
+   * Default constructor
+   * @param {Client} client an instance of the game client
+   */
   constructor(client) {
     log.debug('Messages - constructor()', client);
 
+    /**
+     * Reference to the game client instance
+     * @type {Client}
+     */
     this.client = client;
+    /**
+     * Array of message handler functions indexed by packet type
+     * @type {Array}
+     */
     this.messages = [];
     this.messages[Packets.Handshake] = this.receiveHandshake; // 0
     this.messages[Packets.Intro] = null; // 1
@@ -647,6 +661,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onHandshake(callback) {
+    /** @type {Function} */
     this.handshakeCallback = callback;
   }
 
@@ -655,6 +670,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onWelcome(callback) {
+    /** @type {Function} */
     this.welcomeCallback = callback;
   }
 
@@ -663,6 +679,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onSpawn(callback) {
+    /** @type {Function} */
     this.spawnCallback = callback;
   }
 
@@ -671,6 +688,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onEquipment(callback) {
+    /** @type {Function} */
     this.equipmentCallback = callback;
   }
 
@@ -679,6 +697,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onEntityList(callback) {
+    /** @type {Function} */
     this.entityListCallback = callback;
   }
 
@@ -687,6 +706,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onSync(callback) {
+    /** @type {Function} */
     this.syncCallback = callback;
   }
 
@@ -695,6 +715,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onMovement(callback) {
+    /** @type {Function} */
     this.movementCallback = callback;
   }
 
@@ -703,6 +724,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onTeleport(callback) {
+    /** @type {Function} */
     this.teleportCallback = callback;
   }
 
@@ -711,6 +733,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onDespawn(callback) {
+    /** @type {Function} */
     this.despawnCallback = callback;
   }
 
@@ -719,6 +742,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onCombat(callback) {
+    /** @type {Function} */
     this.combatCallback = callback;
   }
 
@@ -727,6 +751,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onAnimation(callback) {
+    /** @type {Function} */
     this.animationCallback = callback;
   }
 
@@ -735,6 +760,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onProjectile(callback) {
+    /** @type {Function} */
     this.projectileCallback = callback;
   }
 
@@ -743,6 +769,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onPopulation(callback) {
+    /** @type {Function} */
     this.populationCallback = callback;
   }
 
@@ -751,6 +778,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onPoints(callback) {
+    /** @type {Function} */
     this.pointsCallback = callback;
   }
 
@@ -759,6 +787,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onNetwork(callback) {
+    /** @type {Function} */
     this.networkCallback = callback;
   }
 
@@ -767,6 +796,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onChat(callback) {
+    /** @type {Function} */
     this.chatCallback = callback;
   }
 
@@ -775,6 +805,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onCommand(callback) {
+    /** @type {Function} */
     this.commandCallback = callback;
   }
 
@@ -783,6 +814,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onInventory(callback) {
+    /** @type {Function} */
     this.inventoryCallback = callback;
   }
 
@@ -791,6 +823,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onBank(callback) {
+    /** @type {Function} */
     this.bankCallback = callback;
   }
 
@@ -799,6 +832,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onAbility(callback) {
+    /** @type {Function} */
     this.abilityCallback = callback;
   }
 
@@ -807,6 +841,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onQuest(callback) {
+    /** @type {Function} */
     this.questCallback = callback;
   }
 
@@ -815,6 +850,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onNotification(callback) {
+    /** @type {Function} */
     this.notificationCallback = callback;
   }
 
@@ -823,6 +859,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onBlink(callback) {
+    /** @type {Function} */
     this.blinkCallback = callback;
   }
 
@@ -831,6 +868,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onHeal(callback) {
+    /** @type {Function} */
     this.healCallback = callback;
   }
 
@@ -839,6 +877,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onExperience(callback) {
+    /** @type {Function} */
     this.experienceCallback = callback;
   }
 
@@ -847,6 +886,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onDeath(callback) {
+    /** @type {Function} */
     this.deathCallback = callback;
   }
 
@@ -855,6 +895,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onAudio(callback) {
+    /** @type {Function} */
     this.audioCallback = callback;
   }
 
@@ -863,6 +904,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onNPC(callback) {
+    /** @type {Function} */
     this.npcCallback = callback;
   }
 
@@ -871,6 +913,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onRespawn(callback) {
+    /** @type {Function} */
     this.respawnCallback = callback;
   }
 
@@ -879,6 +922,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onEnchant(callback) {
+    /** @type {Function} */
     this.enchantCallback = callback;
   }
 
@@ -887,6 +931,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onGuild(callback) {
+    /** @type {Function} */
     this.guildCallback = callback;
   }
 
@@ -895,6 +940,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onPointer(callback) {
+    /** @type {Function} */
     this.pointerCallback = callback;
   }
 
@@ -903,6 +949,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onPVP(callback) {
+    /** @type {Function} */
     this.pvpCallback = callback;
   }
 
@@ -911,6 +958,7 @@ export default class Messages {
    * @param {Function} callback
    */
   onShop(callback) {
+    /** @type {Function} */
     this.shopCallback = callback;
   }
 }

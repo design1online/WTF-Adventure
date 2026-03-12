@@ -5,9 +5,22 @@ import fs from 'fs';
 import file from '../file';
 import processMap from './processmap';
 
+/**
+ * Logger instance used for debug and error output
+ * @type {Log}
+ */
 const log = new Log(Log.DEBUG);
+/**
+ * Path to the source map file, provided as the first command-line argument
+ * @type {String}
+ */
 const source = process.argv[2];
 
+/**
+ * Processes and writes the client version of the map to JSON and JS files
+ * @param {Object} data the raw map data to process
+ * @param {String} destination the output path without extension
+ */
 function parseClient(data, destination) {
   let map = JSON.stringify(
     processMap(data, {
@@ -31,6 +44,11 @@ function parseClient(data, destination) {
   });
 }
 
+/**
+ * Processes and writes the server version of the map to a JSON file
+ * @param {Object} data the raw map data to process
+ * @param {String} destination the output path without extension
+ */
 function parseServer(data, destination) {
   const map = JSON.stringify(
     processMap(data, {
@@ -47,11 +65,18 @@ function parseServer(data, destination) {
   });
 }
 
+/**
+ * Processes raw map data and writes both client and server map output files
+ * @param {Object} data the raw map data to process and export
+ */
 function onMap(data) {
   parseClient(data, '../../../data/maps/world_client');
   parseServer(data, '../../../data/map/world_server');
 }
 
+/**
+ * Reads the source map file and passes its contents to onMap for processing
+ */
 function getMap() {
   file.exists(source, (exists) => {
     if (!exists) {

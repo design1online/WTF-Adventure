@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Creator from &apos;<span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber3">WTF-Adventure/WTF-Adventure/server/js/database/creator.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Creator from &apos;<span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber7">WTF-Adventure/WTF-Adventure/server/js/database/creator.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber3">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber7">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  
+  <div class="description" data-ice="description"><p>Handles database table creation and player data persistence</p>
+</div>
   
 
   
@@ -228,13 +229,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(mysql: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -263,13 +265,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-member-mysql">mysql</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-member-mysql">mysql</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The MySQL connection wrapper</p>
+</div>
       </div>
     </td>
     <td>
@@ -304,7 +307,8 @@
       <div>
         
         
-        
+        <div data-ice="description"><p>Creates all required database tables if they do not already exist</p>
+</div>
       </div>
     </td>
     <td>
@@ -326,13 +330,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-method-formatData">formatData</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>, type: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-method-formatData">formatData</a></span></span><span class="code" data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Formats raw player data into a structure suitable for a specific table</p>
+</div>
       </div>
     </td>
     <td>
@@ -354,13 +359,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-method-getPlayerData">getPlayerData</a></span></span><span class="code" data-ice="signature">(player: <span>*</span>): {&quot;username&quot;: <span>*</span>, &quot;email&quot;: <span>*</span>, &quot;x&quot;: <span>*</span>, &quot;y&quot;: <span>*</span>, &quot;kind&quot;: <span>*</span>, &quot;rights&quot;: <span>*</span>, &quot;hitPoints&quot;: <span>*</span>, &quot;mana&quot;: <span>*</span>, &quot;poisoned&quot;: <span>*</span>, &quot;experience&quot;: <span>*</span>, &quot;ban&quot;: <span>*</span>, &quot;mute&quot;: <span>*</span>, &quot;rank&quot;: <span>*</span>, &quot;membership&quot;: <span>*</span>, &quot;lastLogin&quot;: <span>*</span>, &quot;guild&quot;: <span>*</span>, &quot;pvpKills&quot;: <span>*</span>, &quot;pvpDeaths&quot;: <span>*</span>, &quot;lastWarp&quot;: <span>*</span>, &quot;armour&quot;: <span>*</span>, &quot;weapon&quot;: <span>*</span>, &quot;pendant&quot;: <span>*</span>, &quot;ring&quot;: <span>*</span>, &quot;boots&quot;: <span>*</span>}</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-method-getPlayerData">getPlayerData</a></span></span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Extracts and returns a normalized data object from the player</p>
+</div>
       </div>
     </td>
     <td>
@@ -382,13 +388,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-method-save">save</a></span></span><span class="code" data-ice="signature">(player: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-method-save">save</a></span></span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Saves all player data to the database</p>
+</div>
       </div>
     </td>
     <td>
@@ -410,13 +417,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-method-tableNotExists">tableNotExists</a></span></span><span class="code" data-ice="signature">(tableName: <span>*</span>, ifNotExists: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/database/creator.js~Creator.html#instance-method-tableNotExists">tableNotExists</a></span></span><span class="code" data-ice="signature">(tableName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, ifNotExists: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Executes a callback if the specified table does not yet exist</p>
+</div>
       </div>
     </td>
     <td>
@@ -442,22 +450,40 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(mysql: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">mysql</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the MySQL connection wrapper</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -488,18 +514,19 @@
     
     
     
-    <span class="code" data-ice="name">mysql</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">mysql</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The MySQL connection wrapper</p>
+</div>
 
   
 
@@ -538,14 +565,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber29">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber49">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Creates all required database tables if they do not already exist</p>
+</div>
 
   
 
@@ -577,18 +605,19 @@
     
     
     
-    <span class="code" data-ice="name">formatData</span><span class="code" data-ice="signature">(data: <span>*</span>, type: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">formatData</span><span class="code" data-ice="signature">(data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber200">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber230">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Formats raw player data into a structure suitable for a specific table</p>
+</div>
 
   
 
@@ -602,15 +631,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the raw player data object</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">type</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the table type to format for (e.g. &apos;data&apos; or &apos;equipment&apos;)</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -622,7 +653,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
           
         </tr>
       </tbody>
@@ -654,18 +685,19 @@
     
     
     
-    <span class="code" data-ice="name">getPlayerData</span><span class="code" data-ice="signature">(player: <span>*</span>): {&quot;username&quot;: <span>*</span>, &quot;email&quot;: <span>*</span>, &quot;x&quot;: <span>*</span>, &quot;y&quot;: <span>*</span>, &quot;kind&quot;: <span>*</span>, &quot;rights&quot;: <span>*</span>, &quot;hitPoints&quot;: <span>*</span>, &quot;mana&quot;: <span>*</span>, &quot;poisoned&quot;: <span>*</span>, &quot;experience&quot;: <span>*</span>, &quot;ban&quot;: <span>*</span>, &quot;mute&quot;: <span>*</span>, &quot;rank&quot;: <span>*</span>, &quot;membership&quot;: <span>*</span>, &quot;lastLogin&quot;: <span>*</span>, &quot;guild&quot;: <span>*</span>, &quot;pvpKills&quot;: <span>*</span>, &quot;pvpDeaths&quot;: <span>*</span>, &quot;lastWarp&quot;: <span>*</span>, &quot;armour&quot;: <span>*</span>, &quot;weapon&quot;: <span>*</span>, &quot;pendant&quot;: <span>*</span>, &quot;ring&quot;: <span>*</span>, &quot;boots&quot;: <span>*</span>}</span>
+    <span class="code" data-ice="name">getPlayerData</span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber246">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber281">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Extracts and returns a normalized data object from the player</p>
+</div>
 
   
 
@@ -679,9 +711,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">player</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the player to extract data from</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -693,7 +726,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType">{&quot;username&quot;: <span>*</span>, &quot;email&quot;: <span>*</span>, &quot;x&quot;: <span>*</span>, &quot;y&quot;: <span>*</span>, &quot;kind&quot;: <span>*</span>, &quot;rights&quot;: <span>*</span>, &quot;hitPoints&quot;: <span>*</span>, &quot;mana&quot;: <span>*</span>, &quot;poisoned&quot;: <span>*</span>, &quot;experience&quot;: <span>*</span>, &quot;ban&quot;: <span>*</span>, &quot;mute&quot;: <span>*</span>, &quot;rank&quot;: <span>*</span>, &quot;membership&quot;: <span>*</span>, &quot;lastLogin&quot;: <span>*</span>, &quot;guild&quot;: <span>*</span>, &quot;pvpKills&quot;: <span>*</span>, &quot;pvpDeaths&quot;: <span>*</span>, &quot;lastWarp&quot;: <span>*</span>, &quot;armour&quot;: <span>*</span>, &quot;weapon&quot;: <span>*</span>, &quot;pendant&quot;: <span>*</span>, &quot;ring&quot;: <span>*</span>, &quot;boots&quot;: <span>*</span>}</td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
           
         </tr>
       </tbody>
@@ -725,18 +758,19 @@
     
     
     
-    <span class="code" data-ice="name">save</span><span class="code" data-ice="signature">(player: <span>*</span>)</span>
+    <span class="code" data-ice="name">save</span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber154">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber178">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Saves all player data to the database</p>
+</div>
 
   
 
@@ -750,9 +784,10 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">player</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the player whose data should be saved</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -784,18 +819,19 @@
     
     
     
-    <span class="code" data-ice="name">tableNotExists</span><span class="code" data-ice="signature">(tableName: <span>*</span>, ifNotExists: <span>*</span>)</span>
+    <span class="code" data-ice="name">tableNotExists</span><span class="code" data-ice="signature">(tableName: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, ifNotExists: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber8">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/database/creator.js.html#lineNumber25">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Executes a callback if the specified table does not yet exist</p>
+</div>
 
   
 
@@ -809,15 +845,17 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">tableName</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the name of the database table to check</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">ifNotExists</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>callback invoked when the table is absent</p>
+</td>
     </tr>
 </tbody>
   </table>

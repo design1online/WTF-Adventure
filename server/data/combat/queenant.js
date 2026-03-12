@@ -10,21 +10,69 @@ import Utils from '../../js/util/utils';
  * indicating to the players. If players are caught up in this, the terror
  * explosion sprite is drawn above them.
  */
+/**
+ * Combat logic for the Queen Ant boss
+ * @class
+ */
 export default class QueenAnt extends Combat {
+  /**
+   * Default constructor
+   * @param {Character} character the character instance for this boss
+   */
   constructor(character) {
     super(character);
 
+    /**
+     * Threshold in ms for the last action before AoE is triggered
+     * @type {Number}
+     */
     this.lastActionThreshold = 10000; // Due to the nature of the AoE attack
+    /**
+     * The character instance with extended spawn configuration
+     * @type {Character}
+     */
     this.character = Object.assign(character, {
       spawnDistance: 18,
     });
+    /**
+     * Active timeout handle for the AoE attack delay
+     * @type {Object|null}
+     */
     this.aoeTimeout = null;
+    /**
+     * Countdown value in seconds displayed before the AoE attack
+     * @type {Number}
+     */
     this.aoeCountdown = 5;
+    /**
+     * Radius of the AoE attack
+     * @type {Number}
+     */
     this.aoeRadius = 2;
+    /**
+     * Timestamp of the last AoE attack
+     * @type {Number}
+     */
     this.lastAoE = 0;
+    /**
+     * Number of minions to spawn per wave
+     * @type {Number}
+     */
     this.minionCount = 7;
+    /**
+     * Timestamp of the last minion spawn
+     * @type {Number}
+     */
     this.lastSpawn = 0;
+    /**
+     * Array of currently active minion characters
+     * @type {Array.<Character>}
+     */
     this.minions = [];
+    /**
+     * Whether the boss is currently frozen (AoE wind-up state)
+     * @type {Boolean}
+     */
     this.frozen = false;
 
     /**
@@ -52,11 +100,21 @@ export default class QueenAnt extends Combat {
     });
   }
 
+  /**
+   * Begins combat with an attacker, resetting the AoE timer
+   * @param {Character} attacker the character initiating combat
+   */
   begin(attacker) {
     this.resetAoE();
     super.begin(attacker);
   }
 
+  /**
+   * Handles a hit, checking for AoE and minion spawn conditions
+   * @param {Character} attacker the attacking character
+   * @param {Character} target the target being hit
+   * @param {Object} hitInfo hit information object
+   */
   hit(attacker, target, hitInfo) {
     if (this.frozen) {
       return;
@@ -83,8 +141,12 @@ export default class QueenAnt extends Combat {
    * representation is because of the setTimeout function
    * which does not allow us to call super().
    */
+  /**
+   * Freezes the boss and schedules the AoE damage after a countdown
+   */
   doAoE() {
     this.resetAoE();
+    /** @type {Number} */
     this.lastHit = this.getTime();
     this.pushFreeze(true);
     this.pushCountdown(this.aoeCountdown);
@@ -95,6 +157,9 @@ export default class QueenAnt extends Combat {
     }, 5000);
   }
 
+  /**
+   * Spawns a wave of minions at the boss's current position
+   */
   spawnMinions() {
     this.lastSpawn = new Date().getTime();
 
@@ -122,6 +187,9 @@ export default class QueenAnt extends Combat {
     });
   }
 
+  /**
+   * Orders each minion to attack a random target
+   */
   beginMinionAttack() {
     if (!this.hasMinions()) {
       return;
@@ -136,10 +204,17 @@ export default class QueenAnt extends Combat {
     });
   }
 
+  /**
+   * Resets the AoE timer to the current time
+   */
   resetAoE() {
     this.lastAoE = new Date().getTime();
   }
 
+  /**
+   * Returns a random attacker or the current target
+   * @return {Character|null}
+   */
   getRandomTarget() {
     if (this.isAttacked()) {
       const keys = Object.keys(this.attackers);
@@ -157,11 +232,19 @@ export default class QueenAnt extends Combat {
     return null;
   }
 
+  /**
+   * Applies or removes the frozen and stunned state on the character
+   * @param {Boolean} state whether to freeze or unfreeze
+   */
   pushFreeze(state) {
     this.character.frozen = state;
     this.character.stunned = state;
   }
 
+  /**
+   * Broadcasts a countdown message to adjacent groups
+   * @param {Number} count the countdown value to display
+   */
   pushCountdown(count) {
     this.world.pushToAdjacentGroups(
       this.character.group,
@@ -172,22 +255,41 @@ export default class QueenAnt extends Combat {
     );
   }
 
+  /**
+   * Retrieves grid data for minions from the world
+   */
   getMinions() {
     this.world.getGrids();
   }
 
+  /**
+   * Returns whether only one minion remains
+   * @return {Boolean}
+   */
   isLast() {
     return this.minions.length === 1;
   }
 
+  /**
+   * Returns whether any minions are currently alive
+   * @return {Boolean}
+   */
   hasMinions() {
     return this.minions.length > 0;
   }
 
+  /**
+   * Returns whether the AoE attack can currently be cast
+   * @return {Boolean}
+   */
   canCastAoE() {
     return new Date().getTime() - this.lastAoE > 30000;
   }
 
+  /**
+   * Returns whether minions can be spawned
+   * @return {Boolean}
+   */
   canSpawn() {
     return (
       new Date().getTime() - this.lastSpawn > 45000

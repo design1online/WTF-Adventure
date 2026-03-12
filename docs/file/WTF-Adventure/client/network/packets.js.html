@@ -170,7 +170,10 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/network/packets.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const Packets = {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Enumeration of all network packet types and their opcodes used for client-server communication
+ */
+const Packets = {
   Handshake: 0,
   Intro: 1,
   Welcome: 2,

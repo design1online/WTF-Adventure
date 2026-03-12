@@ -174,10 +174,18 @@
 import fs from &apos;fs&apos;;
 import path from &apos;path&apos;;
 
+/**
+ * Selects the appropriate module based on the Node.js version; uses fs for &gt;=0.7.1, otherwise path
+ * @type {Object}
+ */
 const module = semver.satisfies(process.version, &apos;&gt;=0.7.1&apos;)
   ? fs
   : path;
 
+/**
+ * File existence check functions extracted from the selected module
+ * @type {Object}
+ */
 const { exists, existsSync } = module.exists;
 
 if (!(typeof exports === &apos;undefined&apos;)) {

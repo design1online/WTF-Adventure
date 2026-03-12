@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Messages from &apos;<span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber15">WTF-Adventure/WTF-Adventure/client/network/messages.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Messages from &apos;<span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber17">WTF-Adventure/WTF-Adventure/client/network/messages.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber15">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber17">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,7 +196,8 @@
 
   
   
-  <div class="description" data-ice="description"><p>Do not clutter up the Socket class with callbacks,
+  <div class="description" data-ice="description"><p>Handles incoming server packets and dispatches them to registered callbacks.
+Do not clutter up the Socket class with callbacks,
 have this class here until a better method arises in my head.</p>
 <p>This class should not have any complex functionality, its main
 role is to provide organization for packets and increase readability</p>
@@ -234,13 +235,14 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(client: <span><a href="class/WTF-Adventure/client/index.js~Client.html">Client</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -269,7 +271,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-abilityCallback">abilityCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-abilityCallback">abilityCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -297,7 +299,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-animationCallback">animationCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-animationCallback">animationCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -325,7 +327,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-audioCallback">audioCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-audioCallback">audioCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -353,7 +355,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-bankCallback">bankCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-bankCallback">bankCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -381,7 +383,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-blinkCallback">blinkCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-blinkCallback">blinkCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -409,7 +411,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-chatCallback">chatCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-chatCallback">chatCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -437,7 +439,36 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-client">client</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-client">client</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/index.js~Client.html">Client</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Reference to the game client instance</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-combatCallback">combatCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -465,7 +496,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-combatCallback">combatCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-commandCallback">commandCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -493,7 +524,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-commandCallback">commandCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-deathCallback">deathCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -521,7 +552,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-deathCallback">deathCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-despawnCallback">despawnCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -549,7 +580,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-despawnCallback">despawnCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-enchantCallback">enchantCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -577,7 +608,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-enchantCallback">enchantCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-entityListCallback">entityListCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -605,7 +636,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-entityListCallback">entityListCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-equipmentCallback">equipmentCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -633,7 +664,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-equipmentCallback">equipmentCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-experienceCallback">experienceCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -661,7 +692,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-experienceCallback">experienceCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-guildCallback">guildCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -689,7 +720,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-guildCallback">guildCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-handshakeCallback">handshakeCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -717,7 +748,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-handshakeCallback">handshakeCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-healCallback">healCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -745,7 +776,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-healCallback">healCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-inventoryCallback">inventoryCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -773,7 +804,36 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-inventoryCallback">inventoryCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-messages">messages</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Array of message handler functions indexed by packet type</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-movementCallback">movementCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -801,7 +861,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-messages">messages</a></span></span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-networkCallback">networkCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -829,7 +889,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-movementCallback">movementCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-notificationCallback">notificationCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -857,7 +917,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-networkCallback">networkCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-npcCallback">npcCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -885,7 +945,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-notificationCallback">notificationCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-pointerCallback">pointerCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -913,7 +973,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-npcCallback">npcCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-pointsCallback">pointsCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -941,7 +1001,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-pointerCallback">pointerCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-populationCallback">populationCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -969,7 +1029,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-pointsCallback">pointsCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-projectileCallback">projectileCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -997,7 +1057,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-populationCallback">populationCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-pvpCallback">pvpCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -1025,7 +1085,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-projectileCallback">projectileCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-questCallback">questCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -1053,7 +1113,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-pvpCallback">pvpCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-respawnCallback">respawnCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -1081,7 +1141,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-questCallback">questCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-shopCallback">shopCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -1109,7 +1169,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-respawnCallback">respawnCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-spawnCallback">spawnCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -1137,7 +1197,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-shopCallback">shopCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-syncCallback">syncCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -1165,7 +1225,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-spawnCallback">spawnCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-teleportCallback">teleportCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -1193,63 +1253,7 @@ accordingly.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-syncCallback">syncCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-teleportCallback">teleportCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-welcomeCallback">welcomeCallback</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/client/network/messages.js~Messages.html#instance-member-welcomeCallback">welcomeCallback</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
@@ -3348,22 +3352,40 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(client: <span><a href="class/WTF-Adventure/client/index.js~Client.html">Client</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">client</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/index.js~Client.html">Client</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>an instance of the game client</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -3394,11 +3416,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">abilityCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">abilityCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber802">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber836">source</a></span></span>
     </span>
   </h3>
 
@@ -3437,11 +3459,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">animationCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">animationCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber730">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber755">source</a></span></span>
     </span>
   </h3>
 
@@ -3480,11 +3502,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">audioCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">audioCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber858">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber899">source</a></span></span>
     </span>
   </h3>
 
@@ -3523,11 +3545,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">bankCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">bankCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber794">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber827">source</a></span></span>
     </span>
   </h3>
 
@@ -3566,11 +3588,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">blinkCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">blinkCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber826">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber863">source</a></span></span>
     </span>
   </h3>
 
@@ -3609,11 +3631,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">chatCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">chatCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber770">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber800">source</a></span></span>
     </span>
   </h3>
 
@@ -3652,18 +3674,19 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">client</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">client</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/index.js~Client.html">Client</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber19">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber29">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Reference to the game client instance</p>
+</div>
 
   
 
@@ -3695,11 +3718,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">combatCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">combatCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber722">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber746">source</a></span></span>
     </span>
   </h3>
 
@@ -3738,11 +3761,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">commandCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">commandCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber778">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber809">source</a></span></span>
     </span>
   </h3>
 
@@ -3781,11 +3804,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">deathCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">deathCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber850">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber890">source</a></span></span>
     </span>
   </h3>
 
@@ -3824,11 +3847,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">despawnCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">despawnCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber714">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber737">source</a></span></span>
     </span>
   </h3>
 
@@ -3867,11 +3890,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">enchantCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">enchantCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber882">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber926">source</a></span></span>
     </span>
   </h3>
 
@@ -3910,11 +3933,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">entityListCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">entityListCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber682">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber701">source</a></span></span>
     </span>
   </h3>
 
@@ -3953,11 +3976,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">equipmentCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">equipmentCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber674">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber692">source</a></span></span>
     </span>
   </h3>
 
@@ -3996,11 +4019,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">experienceCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">experienceCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber842">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber881">source</a></span></span>
     </span>
   </h3>
 
@@ -4039,11 +4062,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">guildCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">guildCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber890">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber935">source</a></span></span>
     </span>
   </h3>
 
@@ -4082,11 +4105,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">handshakeCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">handshakeCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber650">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber665">source</a></span></span>
     </span>
   </h3>
 
@@ -4125,11 +4148,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">healCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">healCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber834">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber872">source</a></span></span>
     </span>
   </h3>
 
@@ -4168,11 +4191,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">inventoryCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">inventoryCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber786">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber818">source</a></span></span>
     </span>
   </h3>
 
@@ -4211,18 +4234,19 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">messages</span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+    <span class="code" data-ice="name">messages</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber20">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber34">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Array of message handler functions indexed by packet type</p>
+</div>
 
   
 
@@ -4254,11 +4278,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">movementCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">movementCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber698">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber719">source</a></span></span>
     </span>
   </h3>
 
@@ -4297,11 +4321,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">networkCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">networkCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber762">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber791">source</a></span></span>
     </span>
   </h3>
 
@@ -4340,11 +4364,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">notificationCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">notificationCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber818">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber854">source</a></span></span>
     </span>
   </h3>
 
@@ -4383,11 +4407,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">npcCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">npcCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber866">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber908">source</a></span></span>
     </span>
   </h3>
 
@@ -4426,11 +4450,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">pointerCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">pointerCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber898">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber944">source</a></span></span>
     </span>
   </h3>
 
@@ -4469,11 +4493,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">pointsCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">pointsCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber754">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber782">source</a></span></span>
     </span>
   </h3>
 
@@ -4512,11 +4536,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">populationCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">populationCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber746">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber773">source</a></span></span>
     </span>
   </h3>
 
@@ -4555,11 +4579,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">projectileCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">projectileCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber738">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber764">source</a></span></span>
     </span>
   </h3>
 
@@ -4598,11 +4622,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">pvpCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">pvpCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber906">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber953">source</a></span></span>
     </span>
   </h3>
 
@@ -4641,11 +4665,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">questCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">questCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber810">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber845">source</a></span></span>
     </span>
   </h3>
 
@@ -4684,11 +4708,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">respawnCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">respawnCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber874">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber917">source</a></span></span>
     </span>
   </h3>
 
@@ -4727,11 +4751,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">shopCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">shopCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber914">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber962">source</a></span></span>
     </span>
   </h3>
 
@@ -4770,11 +4794,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">spawnCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">spawnCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber666">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber683">source</a></span></span>
     </span>
   </h3>
 
@@ -4813,11 +4837,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">syncCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">syncCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber690">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber710">source</a></span></span>
     </span>
   </h3>
 
@@ -4856,11 +4880,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">teleportCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">teleportCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber706">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber728">source</a></span></span>
     </span>
   </h3>
 
@@ -4899,11 +4923,11 @@ Displays the error message on the client</p>
     
     
     
-    <span class="code" data-ice="name">welcomeCallback</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">welcomeCallback</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber658">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber674">source</a></span></span>
     </span>
   </h3>
 
@@ -4949,7 +4973,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber83">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber97">source</a></span></span>
     </span>
   </h3>
 
@@ -5010,7 +5034,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber69">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber83">source</a></span></span>
     </span>
   </h3>
 
@@ -5071,7 +5095,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber96">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber110">source</a></span></span>
     </span>
   </h3>
 
@@ -5133,7 +5157,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber801">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber834">source</a></span></span>
     </span>
   </h3>
 
@@ -5193,7 +5217,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber729">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber753">source</a></span></span>
     </span>
   </h3>
 
@@ -5253,7 +5277,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber857">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber897">source</a></span></span>
     </span>
   </h3>
 
@@ -5313,7 +5337,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber793">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber825">source</a></span></span>
     </span>
   </h3>
 
@@ -5373,7 +5397,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber825">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber861">source</a></span></span>
     </span>
   </h3>
 
@@ -5433,7 +5457,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber769">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber798">source</a></span></span>
     </span>
   </h3>
 
@@ -5493,7 +5517,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber721">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber744">source</a></span></span>
     </span>
   </h3>
 
@@ -5553,7 +5577,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber777">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber807">source</a></span></span>
     </span>
   </h3>
 
@@ -5613,7 +5637,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber849">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber888">source</a></span></span>
     </span>
   </h3>
 
@@ -5673,7 +5697,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber713">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber735">source</a></span></span>
     </span>
   </h3>
 
@@ -5733,7 +5757,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber881">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber924">source</a></span></span>
     </span>
   </h3>
 
@@ -5793,7 +5817,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber681">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber699">source</a></span></span>
     </span>
   </h3>
 
@@ -5853,7 +5877,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber673">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber690">source</a></span></span>
     </span>
   </h3>
 
@@ -5913,7 +5937,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber841">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber879">source</a></span></span>
     </span>
   </h3>
 
@@ -5973,7 +5997,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber889">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber933">source</a></span></span>
     </span>
   </h3>
 
@@ -6033,7 +6057,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber649">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber663">source</a></span></span>
     </span>
   </h3>
 
@@ -6093,7 +6117,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber833">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber870">source</a></span></span>
     </span>
   </h3>
 
@@ -6153,7 +6177,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber785">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber816">source</a></span></span>
     </span>
   </h3>
 
@@ -6213,7 +6237,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber697">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber717">source</a></span></span>
     </span>
   </h3>
 
@@ -6273,7 +6297,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber865">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber906">source</a></span></span>
     </span>
   </h3>
 
@@ -6333,7 +6357,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber761">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber789">source</a></span></span>
     </span>
   </h3>
 
@@ -6393,7 +6417,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber817">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber852">source</a></span></span>
     </span>
   </h3>
 
@@ -6453,7 +6477,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber905">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber951">source</a></span></span>
     </span>
   </h3>
 
@@ -6513,7 +6537,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber897">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber942">source</a></span></span>
     </span>
   </h3>
 
@@ -6573,7 +6597,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber753">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber780">source</a></span></span>
     </span>
   </h3>
 
@@ -6633,7 +6657,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber745">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber771">source</a></span></span>
     </span>
   </h3>
 
@@ -6693,7 +6717,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber737">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber762">source</a></span></span>
     </span>
   </h3>
 
@@ -6753,7 +6777,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber809">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber843">source</a></span></span>
     </span>
   </h3>
 
@@ -6813,7 +6837,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber873">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber915">source</a></span></span>
     </span>
   </h3>
 
@@ -6873,7 +6897,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber913">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber960">source</a></span></span>
     </span>
   </h3>
 
@@ -6933,7 +6957,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber665">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber681">source</a></span></span>
     </span>
   </h3>
 
@@ -6993,7 +7017,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber689">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber708">source</a></span></span>
     </span>
   </h3>
 
@@ -7053,7 +7077,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber705">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber726">source</a></span></span>
     </span>
   </h3>
 
@@ -7113,7 +7137,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber657">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber672">source</a></span></span>
     </span>
   </h3>
 
@@ -7173,7 +7197,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber452">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber466">source</a></span></span>
     </span>
   </h3>
 
@@ -7234,7 +7258,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber324">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber338">source</a></span></span>
     </span>
   </h3>
 
@@ -7295,7 +7319,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber547">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber561">source</a></span></span>
     </span>
   </h3>
 
@@ -7356,7 +7380,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber437">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber451">source</a></span></span>
     </span>
   </h3>
 
@@ -7417,7 +7441,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber497">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber511">source</a></span></span>
     </span>
   </h3>
 
@@ -7478,7 +7502,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber394">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber408">source</a></span></span>
     </span>
   </h3>
 
@@ -7539,7 +7563,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber310">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber324">source</a></span></span>
     </span>
   </h3>
 
@@ -7600,7 +7624,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber408">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber422">source</a></span></span>
     </span>
   </h3>
 
@@ -7661,7 +7685,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber535">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber549">source</a></span></span>
     </span>
   </h3>
 
@@ -7722,7 +7746,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber296">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber310">source</a></span></span>
     </span>
   </h3>
 
@@ -7783,7 +7807,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber584">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber598">source</a></span></span>
     </span>
   </h3>
 
@@ -7844,7 +7868,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber245">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber259">source</a></span></span>
     </span>
   </h3>
 
@@ -7905,7 +7929,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber230">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber244">source</a></span></span>
     </span>
   </h3>
 
@@ -7966,7 +7990,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber523">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber537">source</a></span></span>
     </span>
   </h3>
 
@@ -8027,7 +8051,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber597">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber611">source</a></span></span>
     </span>
   </h3>
 
@@ -8088,7 +8112,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber192">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber206">source</a></span></span>
     </span>
   </h3>
 
@@ -8149,7 +8173,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber511">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber525">source</a></span></span>
     </span>
   </h3>
 
@@ -8210,7 +8234,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber422">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber436">source</a></span></span>
     </span>
   </h3>
 
@@ -8271,7 +8295,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber269">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber283">source</a></span></span>
     </span>
   </h3>
 
@@ -8332,7 +8356,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber557">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber571">source</a></span></span>
     </span>
   </h3>
 
@@ -8393,7 +8417,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber380">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber394">source</a></span></span>
     </span>
   </h3>
 
@@ -8454,7 +8478,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber482">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber496">source</a></span></span>
     </span>
   </h3>
 
@@ -8515,7 +8539,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber623">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber637">source</a></span></span>
     </span>
   </h3>
 
@@ -8576,7 +8600,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber610">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber624">source</a></span></span>
     </span>
   </h3>
 
@@ -8637,7 +8661,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber366">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber380">source</a></span></span>
     </span>
   </h3>
 
@@ -8698,7 +8722,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber354">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber368">source</a></span></span>
     </span>
   </h3>
 
@@ -8759,7 +8783,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber339">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber353">source</a></span></span>
     </span>
   </h3>
 
@@ -8820,7 +8844,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber467">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber481">source</a></span></span>
     </span>
   </h3>
 
@@ -8881,7 +8905,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber570">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber584">source</a></span></span>
     </span>
   </h3>
 
@@ -8942,7 +8966,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber636">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber650">source</a></span></span>
     </span>
   </h3>
 
@@ -9003,7 +9027,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber218">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber232">source</a></span></span>
     </span>
   </h3>
 
@@ -9064,7 +9088,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber257">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber271">source</a></span></span>
     </span>
   </h3>
 
@@ -9125,7 +9149,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber282">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber296">source</a></span></span>
     </span>
   </h3>
 
@@ -9186,7 +9210,7 @@ Displays the error message on the client</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber204">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/client/network/messages.js.html#lineNumber218">source</a></span></span>
     </span>
   </h3>
 

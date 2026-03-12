@@ -2,24 +2,53 @@ import Quest from '../quest.js';
 import Messages from '../../../../../../network/messages.js';
 import Packets from '../../../../../../network/packets.js';
 
+/**
+ * Represents the "Bulky Situation" quest implementation
+ * @class
+ */
 export default class BulkySituation extends Quest {
+  /**
+   * Default constructor
+   * @param {Player} player the player undertaking this quest
+   * @param {Object} data the quest data object with stages and tasks
+   */
   constructor(player, data) {
     super(player, data);
+    /**
+     * The player undertaking this quest
+     * @type {Player}
+     */
     this.player = player;
+    /**
+     * The quest data object containing stages and task definitions
+     * @type {Object}
+     */
     this.data = data;
+    /**
+     * The last NPC the player interacted with in this quest
+     * @type {NPC}
+     */
     this.lastNPC = null;
   }
 
+  /**
+   * Loads the quest at the given stage and sets up event callbacks
+   * @param {Number} stage the stage to load the quest at
+   */
   load(stage) {
     if (!stage) {
       this.update();
     } else {
+      /** @type {Number} */
       this.stage = stage;
     }
 
     this.loadCallbacks();
   }
 
+  /**
+   * Registers NPC talk callbacks for quest progression
+   */
   loadCallbacks() {
     if (this.stage > 9999) {
       return;
@@ -50,6 +79,10 @@ export default class BulkySituation extends Quest {
     });
   }
 
+  /**
+   * Advances the quest stage based on the given action type
+   * @param {String} type the type of action that triggered progress (e.g. 'talk', 'item')
+   */
   progress(type) {
     const
       task = this.data.task[this.stage];
@@ -84,6 +117,10 @@ export default class BulkySituation extends Quest {
     );
   }
 
+  /**
+   * Checks whether the player has the required item for the current stage
+   * @return {Boolean}
+   */
   hasRequirement() {
     return (
       this.getTask() === 'item'

@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 174,
+  "end": 767,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 9,
+      "line": 34,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 174,
+    "end": 767,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 9,
+        "line": 34,
         "column": 0
       }
     },
@@ -30,76 +30,77 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 0,
-        "end": 173,
+        "start": 94,
+        "end": 766,
         "loc": {
           "start": {
-            "line": 1,
+            "line": 5,
             "column": 0
           },
           "end": {
-            "line": 8,
+            "line": 33,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 15,
-          "end": 173,
+          "start": 109,
+          "end": 766,
           "loc": {
             "start": {
-              "line": 1,
+              "line": 5,
               "column": 15
             },
             "end": {
-              "line": 8,
+              "line": 33,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 21,
-            "end": 31,
+            "start": 115,
+            "end": 125,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 5,
                 "column": 21
               },
               "end": {
-                "line": 1,
+                "line": 5,
                 "column": 31
               },
               "identifierName": "Checkpoint"
             },
-            "name": "Checkpoint"
+            "name": "Checkpoint",
+            "leadingComments": null
           },
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 32,
-            "end": 173,
+            "start": 126,
+            "end": 766,
             "loc": {
               "start": {
-                "line": 1,
+                "line": 5,
                 "column": 32
               },
               "end": {
-                "line": 8,
+                "line": 33,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 36,
-                "end": 171,
+                "start": 302,
+                "end": 764,
                 "loc": {
                   "start": {
-                    "line": 2,
+                    "line": 11,
                     "column": 2
                   },
                   "end": {
-                    "line": 7,
+                    "line": 32,
                     "column": 3
                   }
                 },
@@ -107,20 +108,21 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 36,
-                  "end": 47,
+                  "start": 302,
+                  "end": 313,
                   "loc": {
                     "start": {
-                      "line": 2,
+                      "line": 11,
                       "column": 2
                     },
                     "end": {
-                      "line": 2,
+                      "line": 11,
                       "column": 13
                     },
                     "identifierName": "constructor"
                   },
-                  "name": "constructor"
+                  "name": "constructor",
+                  "leadingComments": null
                 },
                 "kind": "constructor",
                 "id": null,
@@ -130,15 +132,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 48,
-                    "end": 50,
+                    "start": 314,
+                    "end": 316,
                     "loc": {
                       "start": {
-                        "line": 2,
+                        "line": 11,
                         "column": 14
                       },
                       "end": {
-                        "line": 2,
+                        "line": 11,
                         "column": 16
                       },
                       "identifierName": "id"
@@ -147,15 +149,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 52,
-                    "end": 58,
+                    "start": 318,
+                    "end": 324,
                     "loc": {
                       "start": {
-                        "line": 2,
+                        "line": 11,
                         "column": 18
                       },
                       "end": {
-                        "line": 2,
+                        "line": 11,
                         "column": 24
                       },
                       "identifierName": "player"
@@ -165,313 +167,393 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 60,
-                  "end": 171,
+                  "start": 326,
+                  "end": 764,
                   "loc": {
                     "start": {
-                      "line": 2,
+                      "line": 11,
                       "column": 26
                     },
                     "end": {
-                      "line": 7,
+                      "line": 32,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 66,
-                      "end": 79,
+                      "start": 418,
+                      "end": 431,
                       "loc": {
                         "start": {
-                          "line": 3,
+                          "line": 16,
                           "column": 4
                         },
                         "end": {
-                          "line": 3,
+                          "line": 16,
                           "column": 17
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 66,
-                        "end": 78,
+                        "start": 418,
+                        "end": 430,
                         "loc": {
                           "start": {
-                            "line": 3,
+                            "line": 16,
                             "column": 4
                           },
                           "end": {
-                            "line": 3,
+                            "line": 16,
                             "column": 16
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 66,
-                          "end": 73,
+                          "start": 418,
+                          "end": 425,
                           "loc": {
                             "start": {
-                              "line": 3,
+                              "line": 16,
                               "column": 4
                             },
                             "end": {
-                              "line": 3,
+                              "line": 16,
                               "column": 11
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 66,
-                            "end": 70,
+                            "start": 418,
+                            "end": 422,
                             "loc": {
                               "start": {
-                                "line": 3,
+                                "line": 16,
                                 "column": 4
                               },
                               "end": {
-                                "line": 3,
+                                "line": 16,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 71,
-                            "end": 73,
+                            "start": 423,
+                            "end": 425,
                             "loc": {
                               "start": {
-                                "line": 3,
+                                "line": 16,
                                 "column": 9
                               },
                               "end": {
-                                "line": 3,
+                                "line": 16,
                                 "column": 11
                               },
                               "identifierName": "id"
                             },
                             "name": "id"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 76,
-                          "end": 78,
+                          "start": 428,
+                          "end": 430,
                           "loc": {
                             "start": {
-                              "line": 3,
+                              "line": 16,
                               "column": 14
                             },
                             "end": {
-                              "line": 3,
+                              "line": 16,
                               "column": 16
                             },
                             "identifierName": "id"
                           },
                           "name": "id"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The unique identifier of this checkpoint\n     * @type {String}\n     ",
+                          "start": 332,
+                          "end": 413,
+                          "loc": {
+                            "start": {
+                              "line": 12,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 15,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The player associated with this checkpoint\n     * @type {Player}\n     ",
+                          "start": 436,
+                          "end": 519,
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 20,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 84,
-                      "end": 105,
+                      "start": 524,
+                      "end": 545,
                       "loc": {
                         "start": {
-                          "line": 4,
+                          "line": 21,
                           "column": 4
                         },
                         "end": {
-                          "line": 4,
+                          "line": 21,
                           "column": 25
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 84,
-                        "end": 104,
+                        "start": 524,
+                        "end": 544,
                         "loc": {
                           "start": {
-                            "line": 4,
+                            "line": 21,
                             "column": 4
                           },
                           "end": {
-                            "line": 4,
+                            "line": 21,
                             "column": 24
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 84,
-                          "end": 95,
+                          "start": 524,
+                          "end": 535,
                           "loc": {
                             "start": {
-                              "line": 4,
+                              "line": 21,
                               "column": 4
                             },
                             "end": {
-                              "line": 4,
+                              "line": 21,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 84,
-                            "end": 88,
+                            "start": 524,
+                            "end": 528,
                             "loc": {
                               "start": {
-                                "line": 4,
+                                "line": 21,
                                 "column": 4
                               },
                               "end": {
-                                "line": 4,
+                                "line": 21,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 89,
-                            "end": 95,
+                            "start": 529,
+                            "end": 535,
                             "loc": {
                               "start": {
-                                "line": 4,
+                                "line": 21,
                                 "column": 9
                               },
                               "end": {
-                                "line": 4,
+                                "line": 21,
                                 "column": 15
                               },
                               "identifierName": "player"
                             },
                             "name": "player"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 98,
-                          "end": 104,
+                          "start": 538,
+                          "end": 544,
                           "loc": {
                             "start": {
-                              "line": 4,
+                              "line": 21,
                               "column": 18
                             },
                             "end": {
-                              "line": 4,
+                              "line": 21,
                               "column": 24
                             },
                             "identifierName": "player"
                           },
                           "name": "player"
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The player associated with this checkpoint\n     * @type {Player}\n     ",
+                          "start": 436,
+                          "end": 519,
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 20,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The world instance from the player\n     * @type {World}\n     ",
+                          "start": 550,
+                          "end": 624,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 110,
-                      "end": 136,
+                      "start": 629,
+                      "end": 655,
                       "loc": {
                         "start": {
-                          "line": 5,
+                          "line": 26,
                           "column": 4
                         },
                         "end": {
-                          "line": 5,
+                          "line": 26,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 110,
-                        "end": 135,
+                        "start": 629,
+                        "end": 654,
                         "loc": {
                           "start": {
-                            "line": 5,
+                            "line": 26,
                             "column": 4
                           },
                           "end": {
-                            "line": 5,
+                            "line": 26,
                             "column": 29
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 110,
-                          "end": 120,
+                          "start": 629,
+                          "end": 639,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 26,
                               "column": 4
                             },
                             "end": {
-                              "line": 5,
+                              "line": 26,
                               "column": 14
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 110,
-                            "end": 114,
+                            "start": 629,
+                            "end": 633,
                             "loc": {
                               "start": {
-                                "line": 5,
+                                "line": 26,
                                 "column": 4
                               },
                               "end": {
-                                "line": 5,
+                                "line": 26,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 115,
-                            "end": 120,
+                            "start": 634,
+                            "end": 639,
                             "loc": {
                               "start": {
-                                "line": 5,
+                                "line": 26,
                                 "column": 9
                               },
                               "end": {
-                                "line": 5,
+                                "line": 26,
                                 "column": 14
                               },
                               "identifierName": "world"
                             },
                             "name": "world"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "MemberExpression",
-                          "start": 123,
-                          "end": 135,
+                          "start": 642,
+                          "end": 654,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 26,
                               "column": 17
                             },
                             "end": {
-                              "line": 5,
+                              "line": 26,
                               "column": 29
                             }
                           },
                           "object": {
                             "type": "Identifier",
-                            "start": 123,
-                            "end": 129,
+                            "start": 642,
+                            "end": 648,
                             "loc": {
                               "start": {
-                                "line": 5,
+                                "line": 26,
                                 "column": 17
                               },
                               "end": {
-                                "line": 5,
+                                "line": 26,
                                 "column": 23
                               },
                               "identifierName": "player"
@@ -480,15 +562,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 130,
-                            "end": 135,
+                            "start": 649,
+                            "end": 654,
                             "loc": {
                               "start": {
-                                "line": 5,
+                                "line": 26,
                                 "column": 24
                               },
                               "end": {
-                                "line": 5,
+                                "line": 26,
                                 "column": 29
                               },
                               "identifierName": "world"
@@ -496,140 +578,179 @@
                             "name": "world"
                           },
                           "computed": false
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The world instance from the player\n     * @type {World}\n     ",
+                          "start": 550,
+                          "end": 624,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The map instance from the world\n     * @type {Map}\n     ",
+                          "start": 660,
+                          "end": 729,
+                          "loc": {
+                            "start": {
+                              "line": 27,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 30,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 141,
-                      "end": 167,
+                      "start": 734,
+                      "end": 760,
                       "loc": {
                         "start": {
-                          "line": 6,
+                          "line": 31,
                           "column": 4
                         },
                         "end": {
-                          "line": 6,
+                          "line": 31,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 141,
-                        "end": 166,
+                        "start": 734,
+                        "end": 759,
                         "loc": {
                           "start": {
-                            "line": 6,
+                            "line": 31,
                             "column": 4
                           },
                           "end": {
-                            "line": 6,
+                            "line": 31,
                             "column": 29
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 141,
-                          "end": 149,
+                          "start": 734,
+                          "end": 742,
                           "loc": {
                             "start": {
-                              "line": 6,
+                              "line": 31,
                               "column": 4
                             },
                             "end": {
-                              "line": 6,
+                              "line": 31,
                               "column": 12
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 141,
-                            "end": 145,
+                            "start": 734,
+                            "end": 738,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 31,
                                 "column": 4
                               },
                               "end": {
-                                "line": 6,
+                                "line": 31,
                                 "column": 8
                               }
-                            }
+                            },
+                            "leadingComments": null
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 146,
-                            "end": 149,
+                            "start": 739,
+                            "end": 742,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 31,
                                 "column": 9
                               },
                               "end": {
-                                "line": 6,
+                                "line": 31,
                                 "column": 12
                               },
                               "identifierName": "map"
                             },
                             "name": "map"
                           },
-                          "computed": false
+                          "computed": false,
+                          "leadingComments": null
                         },
                         "right": {
                           "type": "MemberExpression",
-                          "start": 152,
-                          "end": 166,
+                          "start": 745,
+                          "end": 759,
                           "loc": {
                             "start": {
-                              "line": 6,
+                              "line": 31,
                               "column": 15
                             },
                             "end": {
-                              "line": 6,
+                              "line": 31,
                               "column": 29
                             }
                           },
                           "object": {
                             "type": "MemberExpression",
-                            "start": 152,
-                            "end": 162,
+                            "start": 745,
+                            "end": 755,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 31,
                                 "column": 15
                               },
                               "end": {
-                                "line": 6,
+                                "line": 31,
                                 "column": 25
                               }
                             },
                             "object": {
                               "type": "ThisExpression",
-                              "start": 152,
-                              "end": 156,
+                              "start": 745,
+                              "end": 749,
                               "loc": {
                                 "start": {
-                                  "line": 6,
+                                  "line": 31,
                                   "column": 15
                                 },
                                 "end": {
-                                  "line": 6,
+                                  "line": 31,
                                   "column": 19
                                 }
                               }
                             },
                             "property": {
                               "type": "Identifier",
-                              "start": 157,
-                              "end": 162,
+                              "start": 750,
+                              "end": 755,
                               "loc": {
                                 "start": {
-                                  "line": 6,
+                                  "line": 31,
                                   "column": 20
                                 },
                                 "end": {
-                                  "line": 6,
+                                  "line": 31,
                                   "column": 25
                                 },
                                 "identifierName": "world"
@@ -640,15 +761,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 163,
-                            "end": 166,
+                            "start": 756,
+                            "end": 759,
                             "loc": {
                               "start": {
-                                "line": 6,
+                                "line": 31,
                                 "column": 26
                               },
                               "end": {
-                                "line": 6,
+                                "line": 31,
                                 "column": 29
                               },
                               "identifierName": "map"
@@ -656,24 +777,209 @@
                             "name": "map"
                           },
                           "computed": false
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The map instance from the world\n     * @type {Map}\n     ",
+                          "start": 660,
+                          "end": 729,
+                          "loc": {
+                            "start": {
+                              "line": 27,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 30,
+                              "column": 7
+                            }
+                          }
                         }
-                      }
+                      ]
                     }
                   ],
                   "directives": []
-                }
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Default constructor\n   * @param {String} id the unique identifier of the checkpoint\n   * @param {Player} player the player associated with this checkpoint\n   ",
+                    "start": 130,
+                    "end": 299,
+                    "loc": {
+                      "start": {
+                        "line": 6,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Represents a checkpoint associated with a player's position in the world\n * @class\n ",
+              "start": 0,
+              "end": 93,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 0
+                },
+                "end": {
+                  "line": 4,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Represents a checkpoint associated with a player's position in the world\n * @class\n ",
+            "start": 0,
+            "end": 93,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Represents a checkpoint associated with a player's position in the world\n * @class\n ",
+      "start": 0,
+      "end": 93,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Default constructor\n   * @param {String} id the unique identifier of the checkpoint\n   * @param {Player} player the player associated with this checkpoint\n   ",
+      "start": 130,
+      "end": 299,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 2
+        },
+        "end": {
+          "line": 10,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The unique identifier of this checkpoint\n     * @type {String}\n     ",
+      "start": 332,
+      "end": 413,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The player associated with this checkpoint\n     * @type {Player}\n     ",
+      "start": 436,
+      "end": 519,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 4
+        },
+        "end": {
+          "line": 20,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The world instance from the player\n     * @type {World}\n     ",
+      "start": 550,
+      "end": 624,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The map instance from the world\n     * @type {Map}\n     ",
+      "start": 660,
+      "end": 729,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 4
+        },
+        "end": {
+          "line": 30,
+          "column": 7
+        }
+      }
+    }
+  ],
   "tokens": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Represents a checkpoint associated with a player's position in the world\n * @class\n ",
+      "start": 0,
+      "end": 93,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3
+        }
+      }
+    },
     {
       "type": {
         "label": "export",
@@ -689,15 +995,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 0,
-      "end": 6,
+      "start": 94,
+      "end": 100,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 6
         }
       }
@@ -717,15 +1023,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 7,
-      "end": 14,
+      "start": 101,
+      "end": 108,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 7
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 14
         }
       }
@@ -745,15 +1051,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 15,
-      "end": 20,
+      "start": 109,
+      "end": 114,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 15
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 20
         }
       }
@@ -771,15 +1077,15 @@
         "binop": null
       },
       "value": "Checkpoint",
-      "start": 21,
-      "end": 31,
+      "start": 115,
+      "end": 125,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 21
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 31
         }
       }
@@ -796,16 +1102,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 32,
-      "end": 33,
+      "start": 126,
+      "end": 127,
       "loc": {
         "start": {
-          "line": 1,
+          "line": 5,
           "column": 32
         },
         "end": {
-          "line": 1,
+          "line": 5,
           "column": 33
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Default constructor\n   * @param {String} id the unique identifier of the checkpoint\n   * @param {Player} player the player associated with this checkpoint\n   ",
+      "start": 130,
+      "end": 299,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 2
+        },
+        "end": {
+          "line": 10,
+          "column": 5
         }
       }
     },
@@ -822,15 +1144,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 36,
-      "end": 47,
+      "start": 302,
+      "end": 313,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 11,
           "column": 2
         },
         "end": {
-          "line": 2,
+          "line": 11,
           "column": 13
         }
       }
@@ -847,15 +1169,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 47,
-      "end": 48,
+      "start": 313,
+      "end": 314,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 11,
           "column": 13
         },
         "end": {
-          "line": 2,
+          "line": 11,
           "column": 14
         }
       }
@@ -873,15 +1195,15 @@
         "binop": null
       },
       "value": "id",
-      "start": 48,
-      "end": 50,
+      "start": 314,
+      "end": 316,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 11,
           "column": 14
         },
         "end": {
-          "line": 2,
+          "line": 11,
           "column": 16
         }
       }
@@ -899,15 +1221,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 50,
-      "end": 51,
+      "start": 316,
+      "end": 317,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 11,
           "column": 16
         },
         "end": {
-          "line": 2,
+          "line": 11,
           "column": 17
         }
       }
@@ -925,15 +1247,15 @@
         "binop": null
       },
       "value": "player",
-      "start": 52,
-      "end": 58,
+      "start": 318,
+      "end": 324,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 11,
           "column": 18
         },
         "end": {
-          "line": 2,
+          "line": 11,
           "column": 24
         }
       }
@@ -950,15 +1272,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 58,
-      "end": 59,
+      "start": 324,
+      "end": 325,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 11,
           "column": 24
         },
         "end": {
-          "line": 2,
+          "line": 11,
           "column": 25
         }
       }
@@ -975,16 +1297,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 60,
-      "end": 61,
+      "start": 326,
+      "end": 327,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 11,
           "column": 26
         },
         "end": {
-          "line": 2,
+          "line": 11,
           "column": 27
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The unique identifier of this checkpoint\n     * @type {String}\n     ",
+      "start": 332,
+      "end": 413,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 7
         }
       }
     },
@@ -1003,15 +1341,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 66,
-      "end": 70,
+      "start": 418,
+      "end": 422,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 16,
           "column": 4
         },
         "end": {
-          "line": 3,
+          "line": 16,
           "column": 8
         }
       }
@@ -1029,15 +1367,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 70,
-      "end": 71,
+      "start": 422,
+      "end": 423,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 16,
           "column": 8
         },
         "end": {
-          "line": 3,
+          "line": 16,
           "column": 9
         }
       }
@@ -1055,15 +1393,15 @@
         "binop": null
       },
       "value": "id",
-      "start": 71,
-      "end": 73,
+      "start": 423,
+      "end": 425,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 16,
           "column": 9
         },
         "end": {
-          "line": 3,
+          "line": 16,
           "column": 11
         }
       }
@@ -1082,15 +1420,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 74,
-      "end": 75,
+      "start": 426,
+      "end": 427,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 16,
           "column": 12
         },
         "end": {
-          "line": 3,
+          "line": 16,
           "column": 13
         }
       }
@@ -1108,15 +1446,15 @@
         "binop": null
       },
       "value": "id",
-      "start": 76,
-      "end": 78,
+      "start": 428,
+      "end": 430,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 16,
           "column": 14
         },
         "end": {
-          "line": 3,
+          "line": 16,
           "column": 16
         }
       }
@@ -1134,16 +1472,32 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 78,
-      "end": 79,
+      "start": 430,
+      "end": 431,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 16,
           "column": 16
         },
         "end": {
-          "line": 3,
+          "line": 16,
           "column": 17
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The player associated with this checkpoint\n     * @type {Player}\n     ",
+      "start": 436,
+      "end": 519,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 4
+        },
+        "end": {
+          "line": 20,
+          "column": 7
         }
       }
     },
@@ -1162,15 +1516,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 84,
-      "end": 88,
+      "start": 524,
+      "end": 528,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 4,
+          "line": 21,
           "column": 8
         }
       }
@@ -1188,15 +1542,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 88,
-      "end": 89,
+      "start": 528,
+      "end": 529,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 21,
           "column": 8
         },
         "end": {
-          "line": 4,
+          "line": 21,
           "column": 9
         }
       }
@@ -1214,15 +1568,15 @@
         "binop": null
       },
       "value": "player",
-      "start": 89,
-      "end": 95,
+      "start": 529,
+      "end": 535,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 21,
           "column": 9
         },
         "end": {
-          "line": 4,
+          "line": 21,
           "column": 15
         }
       }
@@ -1241,15 +1595,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 96,
-      "end": 97,
+      "start": 536,
+      "end": 537,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 21,
           "column": 16
         },
         "end": {
-          "line": 4,
+          "line": 21,
           "column": 17
         }
       }
@@ -1267,15 +1621,15 @@
         "binop": null
       },
       "value": "player",
-      "start": 98,
-      "end": 104,
+      "start": 538,
+      "end": 544,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 21,
           "column": 18
         },
         "end": {
-          "line": 4,
+          "line": 21,
           "column": 24
         }
       }
@@ -1293,20 +1647,36 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 104,
-      "end": 105,
+      "start": 544,
+      "end": 545,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 21,
           "column": 24
         },
         "end": {
-          "line": 4,
+          "line": 21,
           "column": 25
         }
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n     * The world instance from the player\n     * @type {World}\n     ",
+      "start": 550,
+      "end": 624,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+          "column": 7
+        }
+      }
+    },
+    {
       "type": {
         "label": "this",
         "keyword": "this",
@@ -1321,15 +1691,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 110,
-      "end": 114,
+      "start": 629,
+      "end": 633,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 5,
+          "line": 26,
           "column": 8
         }
       }
@@ -1347,15 +1717,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 114,
-      "end": 115,
+      "start": 633,
+      "end": 634,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 26,
           "column": 8
         },
         "end": {
-          "line": 5,
+          "line": 26,
           "column": 9
         }
       }
@@ -1373,15 +1743,15 @@
         "binop": null
       },
       "value": "world",
-      "start": 115,
-      "end": 120,
+      "start": 634,
+      "end": 639,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 26,
           "column": 9
         },
         "end": {
-          "line": 5,
+          "line": 26,
           "column": 14
         }
       }
@@ -1400,15 +1770,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 121,
-      "end": 122,
+      "start": 640,
+      "end": 641,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 26,
           "column": 15
         },
         "end": {
-          "line": 5,
+          "line": 26,
           "column": 16
         }
       }
@@ -1426,15 +1796,15 @@
         "binop": null
       },
       "value": "player",
-      "start": 123,
-      "end": 129,
+      "start": 642,
+      "end": 648,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 26,
           "column": 17
         },
         "end": {
-          "line": 5,
+          "line": 26,
           "column": 23
         }
       }
@@ -1452,15 +1822,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 129,
-      "end": 130,
+      "start": 648,
+      "end": 649,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 26,
           "column": 23
         },
         "end": {
-          "line": 5,
+          "line": 26,
           "column": 24
         }
       }
@@ -1478,15 +1848,15 @@
         "binop": null
       },
       "value": "world",
-      "start": 130,
-      "end": 135,
+      "start": 649,
+      "end": 654,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 26,
           "column": 24
         },
         "end": {
-          "line": 5,
+          "line": 26,
           "column": 29
         }
       }
@@ -1504,16 +1874,32 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 135,
-      "end": 136,
+      "start": 654,
+      "end": 655,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 26,
           "column": 29
         },
         "end": {
-          "line": 5,
+          "line": 26,
           "column": 30
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The map instance from the world\n     * @type {Map}\n     ",
+      "start": 660,
+      "end": 729,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 4
+        },
+        "end": {
+          "line": 30,
+          "column": 7
         }
       }
     },
@@ -1532,15 +1918,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 141,
-      "end": 145,
+      "start": 734,
+      "end": 738,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 4
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 8
         }
       }
@@ -1558,15 +1944,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 145,
-      "end": 146,
+      "start": 738,
+      "end": 739,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 8
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 9
         }
       }
@@ -1584,15 +1970,15 @@
         "binop": null
       },
       "value": "map",
-      "start": 146,
-      "end": 149,
+      "start": 739,
+      "end": 742,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 9
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 12
         }
       }
@@ -1611,15 +1997,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 150,
-      "end": 151,
+      "start": 743,
+      "end": 744,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 13
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 14
         }
       }
@@ -1639,15 +2025,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 152,
-      "end": 156,
+      "start": 745,
+      "end": 749,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 15
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 19
         }
       }
@@ -1665,15 +2051,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 156,
-      "end": 157,
+      "start": 749,
+      "end": 750,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 19
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 20
         }
       }
@@ -1691,15 +2077,15 @@
         "binop": null
       },
       "value": "world",
-      "start": 157,
-      "end": 162,
+      "start": 750,
+      "end": 755,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 20
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 25
         }
       }
@@ -1717,15 +2103,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 162,
-      "end": 163,
+      "start": 755,
+      "end": 756,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 25
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 26
         }
       }
@@ -1743,15 +2129,15 @@
         "binop": null
       },
       "value": "map",
-      "start": 163,
-      "end": 166,
+      "start": 756,
+      "end": 759,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 26
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 29
         }
       }
@@ -1769,15 +2155,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 166,
-      "end": 167,
+      "start": 759,
+      "end": 760,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 31,
           "column": 29
         },
         "end": {
-          "line": 6,
+          "line": 31,
           "column": 30
         }
       }
@@ -1794,15 +2180,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 170,
-      "end": 171,
+      "start": 763,
+      "end": 764,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 32,
           "column": 2
         },
         "end": {
-          "line": 7,
+          "line": 32,
           "column": 3
         }
       }
@@ -1819,15 +2205,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 172,
-      "end": 173,
+      "start": 765,
+      "end": 766,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 33,
           "column": 0
         },
         "end": {
-          "line": 8,
+          "line": 33,
           "column": 1
         }
       }
@@ -1845,15 +2231,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 174,
-      "end": 174,
+      "start": 767,
+      "end": 767,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 34,
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 34,
           "column": 0
         }
       }

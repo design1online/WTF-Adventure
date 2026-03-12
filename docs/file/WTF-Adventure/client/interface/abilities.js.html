@@ -172,12 +172,32 @@
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/interface/abilities.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import $ from &apos;jquery&apos;;
 
+/**
+ * Manages the abilities shortcut bar interface
+ * @class
+ */
 export default class Abilities {
+  /**
+   * Default constructor
+   * @param {Game} game an instance of the game
+   */
   constructor(game) {
+    /**
+     * The game instance
+     * @type {Game}
+     */
     this.game = game;
+    /**
+     * The ability shortcut bar container element
+     * @type {jQuery}
+     */
     this.shortcuts = $(&apos;#abilityShortcut&apos;);
   }
 
+  /**
+   * Returns the list element within the shortcuts container
+   * @return {jQuery}
+   */
   getList() {
     return this.shortcuts.find(&apos;ul&apos;);
   }

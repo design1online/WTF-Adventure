@@ -8,14 +8,34 @@ import Utils from '../../js/util/utils';
  *
  * And two death knights on (x + 1, y - 1) & (x - 1, y - 1)
  */
+/**
+ * Combat logic for the Skeleton King boss
+ * @class
+ */
 export default class SkeletonKing extends Combat {
+  /**
+   * Default constructor
+   * @param {Character} character the character instance for this boss
+   */
   constructor(character) {
     super(character);
 
+    /**
+     * The character instance with extended spawn configuration
+     * @type {Character}
+     */
     this.character = Object.assign(character, {
       spawnDistance: 10,
     });
+    /**
+     * Timestamp of the last minion spawn
+     * @type {Number}
+     */
     this.lastSpawn = 0;
+    /**
+     * Array of currently active minion characters
+     * @type {Array.<Character>}
+     */
     this.minions = [];
 
     character.onDeath(() => {
@@ -23,6 +43,9 @@ export default class SkeletonKing extends Combat {
     });
   }
 
+  /**
+   * Resets boss state and kills all active minions
+   */
   reset() {
     this.lastSpawn = 0;
 
@@ -33,6 +56,12 @@ export default class SkeletonKing extends Combat {
     }
   }
 
+  /**
+   * Handles a hit, triggering minion attacks and spawning as needed
+   * @param {Character} character the attacking character
+   * @param {Character} target the target being hit
+   * @param {Object} hitInfo hit information object
+   */
   hit(character, target, hitInfo) {
     if (this.isAttacked()) {
       this.beginMinionAttack();
@@ -45,6 +74,9 @@ export default class SkeletonKing extends Combat {
     super.hit(character, target, hitInfo);
   }
 
+  /**
+   * Spawns sorcerer and death knight minions around the boss
+   */
   spawnMinions() {
     const x = this.character.x;
     const y = this.character.y;
@@ -82,6 +114,9 @@ export default class SkeletonKing extends Combat {
     });
   }
 
+  /**
+   * Orders each minion to attack a random target
+   */
   beginMinionAttack() {
     if (!this.hasMinions()) {
       return;
@@ -96,6 +131,10 @@ export default class SkeletonKing extends Combat {
     });
   }
 
+  /**
+   * Returns a random attacker or the current target
+   * @return {Character|null}
+   */
   getRandomTarget() {
     if (this.isAttacked()) {
       const keys = Object.keys(this.attackers);
@@ -113,14 +152,26 @@ export default class SkeletonKing extends Combat {
     return null;
   }
 
+  /**
+   * Returns whether any minions are currently alive
+   * @return {Boolean}
+   */
   hasMinions() {
     return this.minions.length > 0;
   }
 
+  /**
+   * Returns whether only one minion remains
+   * @return {Boolean}
+   */
   isLast() {
     return this.minions.length === 1;
   }
 
+  /**
+   * Returns whether minions can be spawned
+   * @return {Boolean}
+   */
   canSpawn() {
     return (
       new Date().getTime() - this.lastSpawn > 25000

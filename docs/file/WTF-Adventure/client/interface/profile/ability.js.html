@@ -172,9 +172,21 @@
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/client/interface/profile/ability.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import GamePage from &apos;./gamePage&apos;;
 
+/**
+ * Represents the abilities/skills profile page
+ * @class
+ */
 export default class Ability extends GamePage {
+  /**
+   * Default constructor
+   * @param {Game} game an instance of the game
+   */
   constructor(game) {
     super(&apos;#skillPage&apos;);
+    /**
+     * The game instance
+     * @type {Game}
+     */
     this.game = game;
   }
 }

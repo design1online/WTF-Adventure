@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Trade from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber8">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/player/trade.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Trade from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber12">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/player/trade.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber8">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber12">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,9 +196,7 @@
 
   
   
-  <div class="description" data-ice="description"><p>We maintain a trade instance for every player,
-and we trigger it whenever the trading is
-started and/or requested.</p>
+  <div class="description" data-ice="description"><p>Manages a player&apos;s trade session with another player</p>
 </div>
   
 
@@ -231,13 +229,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -266,13 +265,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-oPlayer">oPlayer</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-oPlayer">oPlayer</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The other player involved in the trade</p>
+</div>
       </div>
     </td>
     <td>
@@ -294,13 +294,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-oPlayerItems">oPlayerItems</a></span></span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-oPlayerItems">oPlayerItems</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Items offered by the other player in the trade</p>
+</div>
       </div>
     </td>
     <td>
@@ -322,13 +323,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-player">player</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-player">player</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The player who owns this trade instance</p>
+</div>
       </div>
     </td>
     <td>
@@ -350,13 +352,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-playerItems">playerItems</a></span></span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-playerItems">playerItems</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Items offered by this player in the trade</p>
+</div>
       </div>
     </td>
     <td>
@@ -378,13 +381,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-requestee">requestee</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-requestee">requestee</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The player who was requested to trade</p>
+</div>
       </div>
     </td>
     <td>
@@ -406,13 +410,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-state">state</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-state">state</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The current state of the trade session</p>
+</div>
       </div>
     </td>
     <td>
@@ -434,13 +439,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-subState">subState</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-member-subState">subState</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The sub-state of the trade (e.g.</p>
+</div>
       </div>
     </td>
     <td>
@@ -475,7 +481,8 @@ started and/or requested.</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Marks this player as accepting the trade and finalizes if both have accepted</p>
+</div>
       </div>
     </td>
     <td>
@@ -503,7 +510,8 @@ started and/or requested.</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Declines the trade and stops the session</p>
+</div>
       </div>
     </td>
     <td>
@@ -531,7 +539,8 @@ started and/or requested.</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Finalizes the trade by transferring items between inventories</p>
+</div>
       </div>
     </td>
     <td>
@@ -553,13 +562,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-method-getRequestee">getRequestee</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-method-getRequestee">getRequestee</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns the instance ID of the requestee, or null if none</p>
+</div>
       </div>
     </td>
     <td>
@@ -581,13 +591,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-method-isStarted">isStarted</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-method-isStarted">isStarted</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Returns whether the trade session has been started</p>
+</div>
       </div>
     </td>
     <td>
@@ -609,13 +620,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-method-request">request</a></span></span><span class="code" data-ice="signature">(oPlayer: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-method-request">request</a></span></span><span class="code" data-ice="signature">(oPlayer: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Sends a trade request to another player</p>
+</div>
       </div>
     </td>
     <td>
@@ -637,13 +649,14 @@ started and/or requested.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-method-select">select</a></span></span><span class="code" data-ice="signature">(slot: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/trade.js~Trade.html#instance-method-select">select</a></span></span><span class="code" data-ice="signature">(slot: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Selects an inventory slot to include in the trade offer</p>
+</div>
       </div>
     </td>
     <td>
@@ -671,7 +684,8 @@ started and/or requested.</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Starts the trade session with the requestee</p>
+</div>
       </div>
     </td>
     <td>
@@ -699,7 +713,8 @@ started and/or requested.</p>
       <div>
         
         
-        
+        <div data-ice="description"><p>Stops and resets the trade session</p>
+</div>
       </div>
     </td>
     <td>
@@ -725,22 +740,40 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber17">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">player</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the player who owns this trade instance</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -771,18 +804,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">oPlayer</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">oPlayer</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber27">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The other player involved in the trade</p>
+</div>
 
   
 
@@ -814,18 +848,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">oPlayerItems</span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+    <span class="code" data-ice="name">oPlayerItems</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber52">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Items offered by the other player in the trade</p>
+</div>
 
   
 
@@ -857,18 +892,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">player</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">player</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber10">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The player who owns this trade instance</p>
+</div>
 
   
 
@@ -900,18 +936,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">playerItems</span><span class="code" data-ice="signature">: <span><span>*</span><span>[]</span></span></span>
+    <span class="code" data-ice="name">playerItems</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber47">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Items offered by this player in the trade</p>
+</div>
 
   
 
@@ -943,18 +980,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">requestee</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">requestee</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber12">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber32">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The player who was requested to trade</p>
+</div>
 
   
 
@@ -986,18 +1024,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">state</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">state</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber37">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The current state of the trade session</p>
+</div>
 
   
 
@@ -1029,18 +1068,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">subState</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">subState</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber42">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The sub-state of the trade (e.g. accepted)</p>
+</div>
 
   
 
@@ -1079,14 +1119,15 @@ started and/or requested.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber66">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber122">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Marks this player as accepting the trade and finalizes if both have accepted</p>
+</div>
 
   
 
@@ -1122,14 +1163,15 @@ started and/or requested.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber83">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber146">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Declines the trade and stops the session</p>
+</div>
 
   
 
@@ -1165,14 +1207,15 @@ started and/or requested.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber33">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber78">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Finalizes the trade by transferring items between inventories</p>
+</div>
 
   
 
@@ -1204,18 +1247,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">getRequestee</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">getRequestee</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber75">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber135">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns the instance ID of the requestee, or null if none</p>
+</div>
 
   
 
@@ -1227,7 +1271,7 @@ started and/or requested.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
           
         </tr>
       </tbody>
@@ -1259,18 +1303,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">isStarted</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">isStarted</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber87">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber154">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Returns whether the trade session has been started</p>
+</div>
 
   
 
@@ -1282,7 +1327,7 @@ started and/or requested.</p>
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -1314,18 +1359,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">request</span><span class="code" data-ice="signature">(oPlayer: <span>*</span>)</span>
+    <span class="code" data-ice="name">request</span><span class="code" data-ice="signature">(oPlayer: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber58">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber111">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Sends a trade request to another player</p>
+</div>
 
   
 
@@ -1339,9 +1385,10 @@ started and/or requested.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">oPlayer</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the player to request a trade with</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1373,18 +1420,19 @@ started and/or requested.</p>
     
     
     
-    <span class="code" data-ice="name">select</span><span class="code" data-ice="signature">(slot: <span>*</span>)</span>
+    <span class="code" data-ice="name">select</span><span class="code" data-ice="signature">(slot: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber48">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber97">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Selects an inventory slot to include in the trade offer</p>
+</div>
 
   
 
@@ -1398,9 +1446,10 @@ started and/or requested.</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">slot</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the inventory slot index to select</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1436,14 +1485,15 @@ started and/or requested.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber19">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber58">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Starts the trade session with the requestee</p>
+</div>
 
   
 
@@ -1479,14 +1529,15 @@ started and/or requested.</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber24">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/trade.js.html#lineNumber66">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Stops and resets the trade session</p>
+</div>
 
   
 

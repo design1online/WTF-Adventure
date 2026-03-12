@@ -4,6 +4,10 @@ import $ from 'jquery';
 
 /* global window, document, printStackTrace */
 /* eslint-disable */
+/**
+ * Provides colored, class-namespaced logging to the browser developer console
+ * @class
+ */
 class Logger {
 
   /**
@@ -11,13 +15,25 @@ class Logger {
    * @param {String|null} level debug|info|error
    */
   constructor(level) {
+    /**
+     * The current logging level (debug, info, prod)
+     * @type {String|null}
+     */
     this.level = level;
+    /**
+     * Reference to the jQuery-wrapped window object, or null in non-browser environments
+     * @type {Object|null}
+     */
     this.window = typeof window !== "undefined" ? $(window) : null;
-    
+
     if (this.window) {
       this.level = this.window.debugLevel || level;
     }
 
+    /**
+     * Map of class names to their associated log colors
+     * @type {Object}
+     */
     this.classMap = {};
 
     if (["debug", "info", "prod"].includes(this.level)) {
@@ -277,4 +293,8 @@ class Logger {
   }
 }
 
+/**
+ * Singleton Logger instance initialized at debug level
+ * @type {Logger}
+ */
 export default new Logger('debug');

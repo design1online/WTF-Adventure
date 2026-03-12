@@ -3,23 +3,75 @@ import _ from 'underscore';
 import GamePage from './gamePage';
 import Packets from '../../network/packets';
 
+/**
+ * Manages the player state profile page displaying equipment and stats
+ * @class
+ */
 export default class State extends GamePage {
+  /**
+   * Default constructor
+   * @param {Game} game an instance of the game
+   */
   constructor(game) {
     super('#statePage');
 
+    /**
+     * The game instance
+     * @type {Game}
+     */
     this.game = game;
+    /**
+     * The local player entity
+     * @type {Player}
+     */
     this.player = game.player;
 
+    /**
+     * The player name display element
+     * @type {jQuery}
+     */
     this.name = $('#profileName');
+    /**
+     * The player level display element
+     * @type {jQuery}
+     */
     this.level = $('#profileLevel');
+    /**
+     * The player experience display element
+     * @type {jQuery}
+     */
     this.experience = $('#profileExperience');
 
+    /**
+     * The weapon equipment slot element
+     * @type {jQuery}
+     */
     this.weaponSlot = $('#weaponSlot');
+    /**
+     * The armour equipment slot element
+     * @type {jQuery}
+     */
     this.armourSlot = $('#armourSlot');
+    /**
+     * The pendant equipment slot element
+     * @type {jQuery}
+     */
     this.pendantSlot = $('#pendantSlot');
+    /**
+     * The ring equipment slot element
+     * @type {jQuery}
+     */
     this.ringSlot = $('#ringSlot');
+    /**
+     * The boots equipment slot element
+     * @type {jQuery}
+     */
     this.bootsSlot = $('#bootsSlot');
 
+    /**
+     * The array of all equipment slot elements
+     * @type {Array}
+     */
     this.slots = [
       this.weaponSlot,
       this.armourSlot,
@@ -28,15 +80,25 @@ export default class State extends GamePage {
       this.bootsSlot,
     ];
 
+    /**
+     * Whether this page has been fully loaded with data
+     * @type {Boolean}
+     */
     this.loaded = false;
 
     this.loadState();
   }
 
+  /**
+   * Recalculates equipment slot images when the window is resized
+   */
   resize() {
     this.loadStateSlots();
   }
 
+  /**
+   * Loads player name, level, experience, and equipment slot images, then binds unequip handlers
+   */
   loadState() {
     if (!this.game.player.armour) {
       return;
@@ -86,6 +148,9 @@ export default class State extends GamePage {
     });
   }
 
+  /**
+   * Applies the current equipment images to all slot elements
+   */
   loadStateSlots() {
     this.weaponSlot.css(
       'background-image',
@@ -115,18 +180,29 @@ export default class State extends GamePage {
     }
   }
 
+  /**
+   * Refreshes the level, experience, and equipment slot displays with current player data
+   */
   update() {
     this.level.text(this.player.level);
     this.experience.text(this.player.experience);
     this.loadStateSlots();
   }
 
+  /**
+   * Invokes the given callback for each equipment slot
+   * @param {Function} callback a function called with each slot jQuery element
+   */
   forEachSlot(callback) {
     _.each(this.slots, (slot) => {
       callback(slot);
     });
   }
 
+  /**
+   * Returns the drawing scale from the game renderer
+   * @return {Number}
+   */
   getScale() {
     return this.game.renderer.getDrawingScale();
   }

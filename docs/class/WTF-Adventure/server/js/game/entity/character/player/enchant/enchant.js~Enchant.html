@@ -170,13 +170,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Enchant from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber13">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Enchant from &apos;<span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber17">WTF-Adventure/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber13">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber17">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -196,11 +196,7 @@
 
   
   
-  <div class="description" data-ice="description"><p>Tier 1 - Damage/Armour boost (1-5%)
-Tier 2 - Damage boost (1-10% &amp; 10% for special ability or special ability level up)
-Tier 3 - Damage boost (1-15% &amp; 15% for special ability or special ability level up)
-Tier 4 - Damage boost (1-20% &amp; 20% for special ability or special ability level up)
-Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability level up)</p>
+  <div class="description" data-ice="description"><p>Handles the item enchanting system for a player</p>
 </div>
   
 
@@ -233,13 +229,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Default constructor</p>
+</div>
       </div>
     </td>
     <td>
@@ -268,13 +265,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-member-player">player</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-member-player">player</a></span></span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The player performing enchantments</p>
+</div>
       </div>
     </td>
     <td>
@@ -296,13 +294,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-member-selectedItem">selectedItem</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-member-selectedItem">selectedItem</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The currently selected item to enchant</p>
+</div>
       </div>
     </td>
     <td>
@@ -324,13 +323,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-member-selectedShards">selectedShards</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-member-selectedShards">selectedShards</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>The currently selected shards to use for enchanting</p>
+</div>
       </div>
     </td>
     <td>
@@ -359,13 +359,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-add">add</a></span></span><span class="code" data-ice="signature">(type: <span>*</span>, item: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-add">add</a></span></span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, item: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Selects an item or shards for the enchanting process</p>
+</div>
       </div>
     </td>
     <td>
@@ -387,13 +388,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-convert">convert</a></span></span><span class="code" data-ice="signature">(shard: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-convert">convert</a></span></span><span class="code" data-ice="signature">(shard: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Converts 10 shards of the given tier into 1 shard of the next tier</p>
+</div>
       </div>
     </td>
     <td>
@@ -421,7 +423,8 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
       <div>
         
         
-        
+        <div data-ice="description"><p>Performs the enchantment on the selected item using the selected shards</p>
+</div>
       </div>
     </td>
     <td>
@@ -449,7 +452,8 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
       <div>
         
         
-        
+        <div data-ice="description"><p>Randomly generates an ability for the selected item based on its type</p>
+</div>
       </div>
     </td>
     <td>
@@ -471,13 +475,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-hasAbility">hasAbility</a></span></span><span class="code" data-ice="signature">(item: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-hasAbility">hasAbility</a></span></span><span class="code" data-ice="signature">(item: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Checks whether the given item has an ability assigned</p>
+</div>
       </div>
     </td>
     <td>
@@ -499,13 +504,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-remove">remove</a></span></span><span class="code" data-ice="signature">(type: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-remove">remove</a></span></span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Deselects an item or shards from the enchanting process</p>
+</div>
       </div>
     </td>
     <td>
@@ -527,13 +533,14 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-verify">verify</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js~Enchant.html#instance-method-verify">verify</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Checks whether the selected item and shards are valid for enchanting</p>
+</div>
       </div>
     </td>
     <td>
@@ -559,22 +566,40 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(player: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Default constructor</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">player</td>
+      <td data-ice="type" class="code"><span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>the player performing enchantments</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   
@@ -605,18 +630,19 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">player</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">player</span><span class="code" data-ice="signature">: <span><a href="class/WTF-Adventure/client/entity/character/player/player.js~Player.html">Player</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber15">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber27">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The player performing enchantments</p>
+</div>
 
   
 
@@ -648,18 +674,19 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">selectedItem</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">selectedItem</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber16">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber32">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The currently selected item to enchant</p>
+</div>
 
   
 
@@ -691,18 +718,19 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">selectedShards</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">selectedShards</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber17">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber37">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>The currently selected shards to use for enchanting</p>
+</div>
 
   
 
@@ -737,18 +765,19 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">add</span><span class="code" data-ice="signature">(type: <span>*</span>, item: <span>*</span>)</span>
+    <span class="code" data-ice="name">add</span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, item: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber133">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber172">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Selects an item or shards for the enchanting process</p>
+</div>
 
   
 
@@ -762,15 +791,17 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">type</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the slot type (&apos;item&apos; or &apos;shards&apos;)</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">item</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the item to select</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -802,18 +833,19 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">convert</span><span class="code" data-ice="signature">(shard: <span>*</span>)</span>
+    <span class="code" data-ice="name">convert</span><span class="code" data-ice="signature">(shard: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber20">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber44">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Converts 10 shards of the given tier into 1 shard of the next tier</p>
+</div>
 
   
 
@@ -827,9 +859,10 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">shard</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the shard item to convert</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -865,14 +898,15 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber43">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber70">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Performs the enchantment on the selected item using the selected shards</p>
+</div>
 
   
 
@@ -908,14 +942,15 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber90">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber120">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Randomly generates an ability for the selected item based on its type</p>
+</div>
 
   
 
@@ -947,18 +982,19 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">hasAbility</span><span class="code" data-ice="signature">(item: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">hasAbility</span><span class="code" data-ice="signature">(item: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber183">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber231">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Checks whether the given item has an ability assigned</p>
+</div>
 
   
 
@@ -972,9 +1008,10 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">item</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the item to check</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -986,7 +1023,7 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>
@@ -1018,18 +1055,19 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">remove</span><span class="code" data-ice="signature">(type: <span>*</span>)</span>
+    <span class="code" data-ice="name">remove</span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber162">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber205">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Deselects an item or shards from the enchanting process</p>
+</div>
 
   
 
@@ -1043,9 +1081,10 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">type</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>the slot type to deselect (&apos;item&apos; or &apos;shards&apos;)</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1077,18 +1116,19 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     
     
     
-    <span class="code" data-ice="name">verify</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">verify</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber126">source</a></span></span>
+      <span data-ice="source"><span><a href="file/WTF-Adventure/server/js/game/entity/character/player/enchant/enchant.js.html#lineNumber160">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Checks whether the selected item and shards are valid for enchanting</p>
+</div>
 
   
 
@@ -1100,7 +1140,7 @@ Tier 5 - Damage boost (1-40% &amp; 25% for special ability or special ability le
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
           
         </tr>
       </tbody>

@@ -172,8 +172,19 @@
 <div class="content" data-ice="content"><h1 data-ice="title">WTF-Adventure/tools/api/registrar.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import redis from &apos;redis&apos;;
 
+/**
+ * Manages a Redis client connection for server registration
+ * @class
+ */
 class Registrar {
+  /**
+   * Default constructor - creates a Redis client and invokes the ready callback
+   */
   constructor() {
+    /**
+     * The Redis client instance
+     * @type {Object}
+     */
     this.client = redis.createClient(&apos;127.0.0.1&apos;, 6379, {
       socket_nodelay: true,
     });
@@ -181,11 +192,19 @@ class Registrar {
     this.readyCallback();
   }
 
+  /**
+   * Registers a callback invoked when the registrar is ready
+   * @param {Function} callback the function to call when ready
+   */
   onReady(callback) {
+    /** @type {Function} */
     this.readyCallback = callback;
   }
 }
 
+/**
+ * Creates a Registrar instance and sets a no-op ready callback
+ */
 function load() {
   const registrar = new Registrar();
   registrar.onReady(() =&gt; {});

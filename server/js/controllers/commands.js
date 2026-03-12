@@ -3,12 +3,32 @@ import log from '../util/log.js';
 import Messages from '../network/messages.js';
 import Packets from '../network/packets.js';
 
+/**
+ * Handles parsing and dispatching of in-game chat commands
+ * @class
+ */
 export default class Commands {
+  /**
+   * Default constructor
+   * @param {Player} player the player issuing commands
+   */
   constructor(player) {
+    /**
+     * The world instance the player belongs to
+     * @type {World}
+     */
     this.world = player.world;
+    /**
+     * The player issuing commands
+     * @type {Player}
+     */
     this.player = player;
   }
 
+  /**
+   * Parses a raw command string and dispatches it to the appropriate handler
+   * @param {String} rawText the raw text of the command including the leading character
+   */
   parse(rawText) {
     const blocks = rawText.substring(1).split(' ');
 
@@ -29,6 +49,11 @@ export default class Commands {
     }
   }
 
+  /**
+   * Handles commands available to all players
+   * @param {String} command the command name
+   * @param {Array.<String>} blocks remaining command arguments
+   */
   handlePlayerCommands(command, blocks) {
     switch (command) {
       default:
@@ -85,6 +110,11 @@ export default class Commands {
     }
   }
 
+  /**
+   * Handles commands available to moderators and above
+   * @param {String} command the command name
+   * @param {Array.<String>} blocks remaining command arguments
+   */
   handleModeratorCommands(command, blocks) {
     switch (command) {
       default:
@@ -130,6 +160,11 @@ export default class Commands {
     }
   }
 
+  /**
+   * Handles commands available only to administrators
+   * @param {String} command the command name
+   * @param {Array.<String>} blocks remaining command arguments
+   */
   handleAdminCommands(command, blocks) {
     switch (command) {
       default:

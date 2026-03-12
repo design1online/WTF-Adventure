@@ -823,8 +823,98 @@ window.esdocSearchIndex = [
   ],
   [
     "client#constructor wtf-adventure/client/index.js~client#constructor,client#constructor",
-    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber16",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber21",
     "Client .constructor()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber128",
+    "Client .loadCharacter()",
+    "test"
+  ],
+  [
+    "client#loadclient wtf-adventure/client/index.js~client#loadclient,client#loadclient",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber28",
+    "Client .loadClient()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber74",
+    "Client .login()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber96",
+    "Client .login() returns false if cannot verify login form",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber75",
+    "Client .login() returns false if currently logging in",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber85",
+    "Client .login() returns false if game is not loaded",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber80",
+    "Client .login() returns false if no game",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber90",
+    "Client .login() returns false if there is a statusMessage",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber103",
+    "Client .login() returns true and connects to the game",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber113",
+    "Client .loginAsGuest()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber114",
+    "Client .loginAsGuest() returns false if no game",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber118",
+    "Client .loginAsGuest() returns true if game exists",
+    "test"
+  ],
+  [
+    "client#welcomecontinue wtf-adventure/client/index.js~client#welcomecontinue,client#welcomecontinue",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber41",
+    "Client .welcomeContinue()",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber49",
+    "Client .welcomeContinue() dismisses the welcome screen",
+    "test"
+  ],
+  [
+    "",
+    "test-file/WTF-Adventure/client/index.test.js.html#lineNumber43",
+    "Client .welcomeContinue() returns false if no game",
     "test"
   ],
   [
