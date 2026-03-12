@@ -24,7 +24,7 @@ jobs:
         CI: true
     - uses: actions/checkout@main
     - name: Upload coverage to codecov
-      uses: codecov/codecov-action@v5
+      uses: codecov/codecov-action@v5.5.2
       with:
         fail_ci_if_error: true # optional (default = false)
         directory: ./coverage
