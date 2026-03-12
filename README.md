@@ -1,7 +1,7 @@
 ![WTF?! Adventure](https://github.com/design1online/WTF-Adventure/blob/main/public/img/wtfadventure.png?raw=true "WTF?! Adventure")
 
 
-![Node CI](https://github.com/design1online/WTF-Adventure/workflows/node%20ci/badge.svg) ![Code Coverage](https://img.shields.io/codecov/c/gh/design1online/WTF-Adventure) ![WTFPL](https://img.shields.io/static/v1?label=license&message=wtfpl--2.0&color=blueviolet) ![ESDocs Coverage](https://design1online.github.io/WTF-Adventure/badge.svg?sanitize=true) ![Version](https://img.shields.io/github/package-json/v/design1online/WTF-Adventure)
+![Node CI](https://github.com/design1online/WTF-Adventure/workflows/node%20ci/badge.svg) [![codecov](https://codecov.io/github/design1online/WTF-Adventure/graph/badge.svg?token=G7B7I63DHL)](https://codecov.io/github/design1online/WTF-Adventure) ![WTFPL](https://img.shields.io/static/v1?label=license&message=wtfpl--2.0&color=blueviolet) ![ESDocs Coverage](https://design1online.github.io/WTF-Adventure/badge.svg?sanitize=true) ![Version](https://img.shields.io/github/package-json/v/design1online/WTF-Adventure)
 
 WTF?! Adventure is a massively multi-player online open-source project based on Little Workshop's 2012 demonstration for HTML5 WebSockets - [BrowserQuest (BQ)](https://github.com/browserquest/BrowserQuest) and a subsequent fork called [Tap Tap Adventure (TTA)](https://github.com/phinolex/Tap-Tap-Adventure).
 WTF?! Adventure is completely open-source, allowing its community to collaborate and aid in the perfection of the game. Anyone is free to create their own derivative of WTF?! Adventure, with no strings attached.
