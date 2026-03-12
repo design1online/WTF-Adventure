@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useCallback, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import { useClientContext, ClientContextProps } from './clientContext';
 import Game from '../game';
 
